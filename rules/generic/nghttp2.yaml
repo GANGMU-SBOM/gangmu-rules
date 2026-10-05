@@ -1,0 +1,177 @@
+id: generic/nghttp2
+component:
+  ships_as: nghttp2
+  marker_files:
+  - lib/nghttp2_session.c
+  - lib/nghttp2_frame.c
+  - lib/includes/nghttp2/nghttp2.h
+upstream:
+  name: nghttp2
+  purl: pkg:github/nghttp2/nghttp2
+  supplier: Tatsuhiro Tsujikawa and nghttp2 contributors
+  homepage: https://nghttp2.org/
+  license: MIT
+  cpe: cpe:2.3:a:nghttp2:nghttp2:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2016-1544
+  - CVE-2018-1000168
+  source:
+    kind: git
+    url: https://github.com/nghttp2/nghttp2
+    ref: v1.70.0
+version:
+  probes:
+  - file: configure.ac
+    patterns:
+      v: AC_INIT\(\[nghttp2\],\s*\[(\d+\.\d+\.\d+)
+    template: '{v}'
+  - file: CMakeLists.txt
+    patterns:
+      v: project\(nghttp2\s+VERSION\s+(\d+\.\d+\.\d+)
+    template: '{v}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: nghttp2 (HTTP/2) as vendored by WinnerMicro's wm_iot_sdk under wm_httpclient/http2, which carries 1.59.0 together with llhttp 9.0.1. Found by its library sources; the version is read from configure.ac or CMakeLists.txt, and the function signature covers 1.19.0 to 1.70.0 for copies that lost both.
+identity:
+  include:
+  - lib/**/*.c
+  - lib/**/*.h
+  anchors:
+  - path: configure.ac
+    sha256:
+      1.19.0: 686b3812ae261b7e9639a35b8601a09dc88020fc8090b5e8df2d4052158f40ed
+      1.20.0: 87a1268c8296d3e9c9c063729da7e376e2bbf59c31056798e3066b00b9762038
+      1.21.0: 0ca0a20c0d9dd9d13fb5ecd6c9fcf9c1481e31e87f2710ac33e535e1d32ab09d
+      1.21.1: 4cbf11fa3cfb36edfa77d40ed7efca2cc779dd73b8c8fc0540c71515a46b7000
+      1.22.0: 0bfa7ab6f1579a1d4588c76acb1e6fc0667e64e7ac2ce0a243588d56a7ef9983
+      1.23.0: 5c6fcf95bcd55f2ca38b04fbd8bd8810b41a8d2dd838d10c020df04d5caf16ad
+      1.23.1: 59837b8a46004465b0d81a893093bdbed9bcf63c6639e03dd9fe703cd7e37297
+      1.24.0: 54e85daa8fe77f3a650189045d48f230d16a4b76bb6bb9ffce1e045e8cf9ac35
+      1.25.0: 555551a6dce9e9b9a6d72e4b36af4c19b99c8ce8c382c3b0d5566273ae810cb1
+      1.26.0: 9849a5dc73eaa1886e5c319a62890d17c6f14d23bd747ac0ab65fb77f1ef8f50
+      1.27.0: 6e5c0875422a2ee82f765f02a0120447e2e4d1296fa37c61e591ee8796f617e6
+      1.28.0: ff24863a1e24f8b2008f808b729250d8fcd0dd1a05b77e72ba4ec7f68f50ef9d
+      1.29.0: e593d6f0864581754e5122aef8c24d4ef9ba29716c3a2bf5b3a0745d12b9824b
+      1.30.0: f412069988d5d889647eacf9b459e7441fbb5bbf65938764820ada0a9db4f6ec
+      1.31.0: 7887798025fc9e00ad84a1c40db556c15c3b08f4470aa521f35e322df6e8d8a5
+      1.31.1: 31c7fa889af91074da0b37bfa3e0b6dd1e5cb3eabfc1f2d220d326e70be5ae4e
+      1.32.0: 8c28b076c3dc41e7c63ed333b090d89893a33a50fe427c62bf253923f2c9b503
+      1.32.1: bc5c5edc7e47477eb49537dcb52ca598b3af54c95696144f4113748e47e22b71
+      1.33.0: b066f6b96f0a5e580bd551b30dfceb7168ce585797e96f1b82338647a9fae6af
+      1.34.0: eaad268b3ba447646882d56f2aafb5c48d90c8305bd497d2b49fb83fcfad1c72
+      1.35.0: d900c0162726b0cc0a7c14c4433f54b3c951158f1cda76e35e0e584f1a3ac5ec
+      1.35.1: 6bd576940b8a10110cf5a9509595cd28af009624d735926d2f58e0ca08bcfdbd
+      1.36.0: c4da9cd30711a21460233898ef57c99c2df0abeee69be04b77c9dc4a4822560d
+      1.37.0: 3ded5523ac466e421cd768068132be3348ecc311645e50f50e733d34b6cb1045
+      1.38.0: c7f1ea3161807bb5a6f186f9152f7035d38acefc49294de31705a4d6bcc7a12b
+      1.39.0: 749cf3ee77e7774ed79203774c0b33631b296f9da05793d41d29264eb74568c3
+      1.39.1: 74c98c5552b1ebd29b5d29f63386b7fb46de3c7400fb25f84b749ef9dcb83195
+      1.39.2: 1585702072239f49bb5a2302a1e0d721cfa7748ccc9ea078bad425e7859ca54c
+      1.40.0: eb04ceac4aed4aa0cbaf7b151a491e8718e2867f081a05ca84422a7cd580a7d4
+      1.41.0: d22baca41db28cf974226e67432429e647ab5f0931c0125d25eb063dc09fb4bb
+      1.42.0: 2b82e922b4259947860a50add23469d3b85a9a61483c2f9212a78c47ffb20052
+      1.43.0: 43636eafdd449abd9a7ce18be1adcbbca9ef236c3e5a752d8bdba0fbb6ab7642
+      1.44.0: 76242d1afad08179cb65215de9a0aa6789e158375e3d4970231991fc4c1cc94c
+      1.45.0: fa8f48f08f2079a3129cd402fe638570b314095ae2f8d7562d26b2970b80466a
+      1.45.1: dc2d45803c3458feac1ea574c03389daf74235225daaca7e77e0a9964290683c
+      1.46.0: fe067818a44731d54b217336f763cd7d5cbbf3d820df4a549942208a18e5cea0
+      1.47.0: c16c37ec74d344183058483229281bcecf89fe70867d25b48bf8cbfb1353b8d0
+      1.48.0: 7ee61ac6a3cb31a63625d5761f36ff9deaddecfa4588215f8b2badc3b7d05c61
+      1.49.0: b5f410af0a8bbf0eff4fad7683ac29147368e826371ca3620e1d40c847f695c4
+      1.50.0: 7812cfdf706c921a016f8eb045e6f4a048a21d266ba0a71d3ec5a359a1ea6f1a
+      1.51.0: fb692b3843994faedfe91a41cfc312bdf45309ee34103774750dcf6cab658615
+      1.52.0: f17577618d139a6d23a1a5cadfaa4cbedc72ee96be5ec281512f5c0bb1d3f0fe
+      1.53.0: cd668c09ab4dc50bd7316f3bda5c640f0e2796dad0d5dcbd3ebda8321d305bea
+      1.54.0: f7c504e870303dc9751758a64f1435212cb5ecdaba1ab29af6665cd5bc6794e4
+      1.55.0: 7dab5a56ec67aa6cf3f1569b532db8450ab20011ccd3c9ee446fc9609481e604
+      1.55.1: 9e5ff7749487c8a193b9661e0d80c2314097006498b1a45d88e455a1e32cc304
+      1.56.0: 90bfeb9e0eb28a269c0b7e51cc9c9994ce0f99e17e31cb8fb887fcae48e74f5a
+      1.57.0: 22061c6cbfaa4492a9b7676dafd421149390400b39dfc0858c46e6d8ba53c07d
+      1.58.0: 6441a034302de2d23789f1fb0467cf4988bb2e054a9a3dfae537e0b2a25b3d51
+      1.59.0: bbadb38974b676777ab69e087272bab379faecca9a579d43b1c6f4350e937449
+      1.60.0: 2325ab95462fb05ffe91ff7f4da063789bf90e2dc3426e4dadef12a1ba8efa63
+      1.61.0: 73bf3a7905fb7d6486804358aec1dd8cd9a3976936bcf14512b9fc0abd3c61ec
+      1.62.0: 9d173f93e03e8b3daa1955a22bfed0d49a6e5ada37ce0828817c47a6f717876c
+      1.62.1: b648a911f468b4eecb7e7eec35eb1bce1ad423fe986a9fb2893d81c31784a4b3
+      1.63.0: 625998a7ba77c5047724a5394af0837181d8a24ec521b4bf9eaf38310afd7c21
+      1.64.0: 918f3f4a764ea0ca78501500f54fd10f12661a50d0a4f0e910fd8acdec300f8b
+      1.65.0: d79378b8c2bb8276ae6c59a4d2aa9dd045d4247f3bf40635ce89da1cd206ef74
+      1.66.0: 2434c7b7c190ae9a95e87eedbb00df516ce090a60ad7aa738440acd435839f43
+      1.67.0: e6729b750d176978e765a54511cf9c091d18ecb3b0c3ce0720d92c7a1c3e9565
+      1.67.1: 18ab6ab4e07188a1605dc17c6fbd0439ea4576db9a2877b71ac28923ad58d46a
+      1.68.0: 920d850f2180c876eb26b9176c690b4805afdf8c27b67872fb4022c97e30023e
+      1.68.1: ba26a1910a510945156bce6bb30ab86aa0fa5dc448fdf05bffca177c42c4f5ca
+      1.69.0: 6d6f7b68b782079c7d58a44a5e25afb223351b19c0f5fb9072fb74405315cf7e
+      1.70.0: 91d64c10db204ee2fe7b19cb3d72dd38bcbb1c5943fe57a117339aa5927d8be2
+  functions:
+    file: nghttp2.fnsig
+    sha256: 2c673367659fbac3b979dc4bd1474abaa65a95dd0d2e295143fc09f704954627
+    count: 1308
+    versions:
+    - 1.19.0
+    - 1.20.0
+    - 1.21.0
+    - 1.21.1
+    - 1.22.0
+    - 1.23.0
+    - 1.23.1
+    - 1.24.0
+    - 1.25.0
+    - 1.26.0
+    - 1.27.0
+    - 1.28.0
+    - 1.29.0
+    - 1.30.0
+    - 1.31.0
+    - 1.31.1
+    - 1.32.0
+    - 1.32.1
+    - 1.33.0
+    - 1.34.0
+    - 1.35.0
+    - 1.35.1
+    - 1.36.0
+    - 1.37.0
+    - 1.38.0
+    - 1.39.0
+    - 1.39.1
+    - 1.39.2
+    - 1.40.0
+    - 1.41.0
+    - 1.42.0
+    - 1.43.0
+    - 1.44.0
+    - 1.45.0
+    - 1.45.1
+    - 1.46.0
+    - 1.47.0
+    - 1.48.0
+    - 1.49.0
+    - 1.50.0
+    - 1.51.0
+    - 1.52.0
+    - 1.53.0
+    - 1.54.0
+    - 1.55.0
+    - 1.55.1
+    - 1.56.0
+    - 1.57.0
+    - 1.58.0
+    - 1.59.0
+    - 1.60.0
+    - 1.61.0
+    - 1.62.0
+    - 1.62.1
+    - 1.63.0
+    - 1.64.0
+    - 1.65.0
+    - 1.66.0
+    - 1.67.0
+    - 1.67.1
+    - 1.68.0
+    - 1.68.1
+    - 1.69.0
+    - 1.70.0

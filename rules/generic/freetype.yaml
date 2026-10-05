@@ -1,0 +1,151 @@
+id: generic/freetype
+vendor: generic
+sdk: generic
+component:
+  ships_as: freetype
+  marker_files:
+  - src/base/ftobjs.c
+  - src/base/ftbase.c
+  - include/freetype/freetype.h
+upstream:
+  name: FreeType
+  purl: pkg:github/freetype/freetype
+  cpe: cpe:2.3:a:freetype:freetype:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2012-5668
+  - CVE-2012-5669
+  - CVE-2012-5670
+  - CVE-2014-2240
+  supplier: The FreeType Project
+  homepage: https://freetype.org/
+  license: FTL OR GPL-2.0-or-later
+  source:
+    kind: git
+    url: https://github.com/freetype/freetype
+    ref: 0a0221a1347e2f1e07c395263540026e9a0aa7c7
+version:
+  probes:
+  - file: include/freetype/freetype.h
+    patterns:
+      major: '#define\s+FREETYPE_MAJOR\s+(\d+)'
+      minor: '#define\s+FREETYPE_MINOR\s+(\d+)'
+      patch: '#define\s+FREETYPE_PATCH\s+(\d+)'
+    template: '{major}.{minor}.{patch}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: FreeType as vendored by chip-vendor GUI stacks. Allwinner's R128 SDK carries 2.13.0. Covers 49 releases, 2.4.0 to 2.14.3 (2.3.x and earlier, release candidates and betas are not covered).
+identity:
+  include:
+  - src/**/*.c
+  - src/**/*.h
+  - include/**/*.h
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  - '**/docs/**'
+  - '**/builds/**'
+  - '**/example/**'
+  - '**/examples/**'
+  - '**/contrib/**'
+  anchors:
+  - path: include/freetype/freetype.h
+    sha256:
+      2.4.0: 5608ae63f04b9dcb98b326a0ffa273e73dc56239017a65b5c7e9bc859cb2a46b
+      2.4.1: 7de88333c55728fb58006801c947f7a91011cd85331a37f88a8de64754e16442
+      2.4.2: 5169aaf7233acd0a8ad5373a82b9d75cfc2bc620864cacdc9313b2ec7962325c
+      2.4.3: dbe6db17f57888676988d58b77b330e55c0866a39449ccf57ffaf747d827cdfa
+      2.4.4: fdb7e11ed963eb50084c03d46a790c9791bfe8b4e1ddc5b21fd7a0a34331fbd1
+      2.4.5: ef5c002ff55b5c363f96561638cfbbe9ba14cbeb702ead1a7a0f73618c4ed97f
+      2.4.6: cf8f3ef6e3574170ce1cea75fa175f0d07ffbb802da5f5c763feac16ab47a925
+      2.4.7: b308c357d91902c3b46e6bc906113b863d167ad125cb0c8832d901c10dab8745
+      2.4.8: f39b37065ed79a3a902b3d394de75fde61e17f5801034fd91dafc248aebb7219
+      2.4.9: 7dd0f32a4577edee6800d2715ca84d83c1599246da0e1e11a36323dfe5b27bc3
+      2.4.10: 6dc90ff6c682814a13ee8dc08383e9683ea43316c96611d7b52d070815e7f880
+      2.4.11: 4344ed4fc6621cc9f393bd9197dbdac483746a60a41b1929495ad107259ce2e3
+      2.4.12: 3e53c3b2e31b4a804b0285925e57714adb323df459f77f6d26ae47eadcab99d4
+      2.5.0: 7fb402daf26ff9c15882e52b734a5169e4bfd5f3fe49401c7dbf64c32beca74b
+      2.6.1: 237b0b9ce62f357b64fb8ebaf937acb0dfe474d7e1d7d1bc1acdf645ea6ca473
+      2.6.2: 56e0b34d2a9d0c6eb8252999bdeef0f8d3bf796245ef753d8b2bd29a2133781c
+      2.6.3: 517c3da2ed386f655c42cae0f3d2c6de8335dccb52a5b5d694b28710496ae8c0
+      2.6.4: 3cd20f29d791825ab7af1833b76114e8ef37b43a0cc0b52b17ef8cadc80c94ba
+      2.6.5: 812e946595c7b372ffb6a4f8d373e8f5e3b348295ad56834eeb6e0a91d6cce8c
+      '2.7': 231765e20cd67c7fcbe526fd6a4231f428c301383ae79fd575199f3e486f96bd
+      2.7.1: 699bf3af52de9f68625b4c914a5c8efaf4c8e2e422a9d3a34ee1debf375ce793
+      '2.8': 05b89a4bd837839f5747588f01241f0c8569d874d487191bec744786991795b5
+      2.8.1: c14df12d1e70a0070ba541b701edec741f30ff4da07225f946265228addddd57
+      '2.9': ca178a0ad7c729990461596b7c0953e2a181db815d782489996a2e3dcf66cad8
+      2.9.1: fae2127cbca6199908b5f9b6ca05a8819f4add2a403634a5fc6ef96b7db7e43b
+      2.10.0: 8c6c12c0945b684d57fab286bb4610b7260a6bf5b815203fb20e97cc873bc1a1
+      2.10.1: a73a67474aed8d04de6a999762adeb3fc0407e388ae0ec260ea8185d1fd1e7dd
+      2.10.2: 939e575794c0f31b03efbab645e0329452669852101c741aa68cd07b682dcd94
+      2.10.3: 365d9f76d1d2d1407f1ba6cc6133f08230044003b3adfc4ba7b13916f9754d35
+      2.10.4: 62bea06f14c2edd426b129d14b0e57a4d3650f6c230eab8ec8b85eede156c53f
+      2.11.0: 8c9170998d28c127bacce87bbfe4cd5cca0028eabc3ccc86881e18a669ed84b4
+      2.11.1: ab6d59f1e4a3e891e8541c22fae7e457a2055769d8e3b020119777bcae030c3e
+      2.12.0: 741bb56d6f32cec1f26cff36f8288afb0686810b702b5f378c2fae23455bec89
+      2.12.1: 2ea3a624f713a48690ff59a9f30587fd3cb015a5ca2d8efbcb52abf74be97aa1
+      2.13.0: 066474a1288411380d15b1129062f9f3c5d9d2258f4f50566a4e61d3eff84bbb
+      2.13.1: 65d41437c73af5df96ab817ba4161bfab3ce60972f3148baa15c2522f1927a5e
+      2.13.2: f8405ec80687d9e6c5fddb301288c370fe702f159a98b6152e9d32b3f68c2d46
+      2.13.3: b8d8b9e32b2956cce3a9c5d9b8d18041fb7451acb747805c20b62bf1b4804cdb
+      2.14.0: 4078e4bc36dc4ec91de7fecead9682f8bf357f056f2e27d605a24ce357bfb61d
+      2.14.1: e6623a312cbc96b201f57e7f9b2b629b32481b49ed1b7372fb3c400c1b35ea8f
+      2.14.2: 28519f6bdbda31718a5ac2715ca0d3765b5594cad6ef20d0a817d780d6a4ae79
+      2.14.3: fd45e7ee01c8f0f2419186d3fc9dd58e25cd866ef0c49f0b347c2d141665a364
+  functions:
+    file: freetype.fnsig
+    sha256: bffe7d982273354be9662c4ca1a016afe4096ecc23b0d0e90fa5d330db09174e
+    count: 9350
+    versions:
+    - 2.4.0
+    - 2.4.1
+    - 2.4.2
+    - 2.4.3
+    - 2.4.4
+    - 2.4.5
+    - 2.4.6
+    - 2.4.7
+    - 2.4.8
+    - 2.4.9
+    - 2.4.10
+    - 2.4.11
+    - 2.4.12
+    - 2.5.0
+    - 2.5.1
+    - 2.5.2
+    - 2.5.3
+    - 2.5.4
+    - 2.5.5
+    - '2.6'
+    - 2.6.1
+    - 2.6.2
+    - 2.6.3
+    - 2.6.4
+    - 2.6.5
+    - '2.7'
+    - 2.7.1
+    - '2.8'
+    - 2.8.1
+    - '2.9'
+    - 2.9.1
+    - 2.10.0
+    - 2.10.1
+    - 2.10.2
+    - 2.10.3
+    - 2.10.4
+    - 2.11.0
+    - 2.11.1
+    - 2.12.0
+    - 2.12.1
+    - 2.13.0
+    - 2.13.1
+    - 2.13.2
+    - 2.13.3
+    - 2.14.0
+    - 2.14.1
+    - 2.14.2
+    - 2.14.3

@@ -1,0 +1,6 @@
+Community Data License Agreement - Permissive - Version 2.0
+https://cdla.dev/permissive-2-0/
+
+The rule data in this directory is licensed CDLA-Permissive-2.0, deliberately
+separate from the Apache-2.0 licence of the tool, so that any product --
+including a competing commercial one -- may use the rules without friction.

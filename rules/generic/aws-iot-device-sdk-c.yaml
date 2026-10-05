@@ -1,0 +1,47 @@
+id: generic/aws-iot-device-sdk-c
+component:
+  ships_as: aws-iot-device-sdk-embedded-C
+  marker_files:
+  - src/aws_iot_mqtt_client.c
+  - include/aws_iot_mqtt_client.h
+  - include/aws_iot_version.h
+upstream:
+  name: AWS IoT Device SDK for Embedded C (v2 and v3)
+  purl: pkg:github/aws/aws-iot-device-sdk-embedded-C
+  supplier: Amazon Web Services
+  homepage: https://github.com/aws/aws-iot-device-sdk-embedded-C
+  license: Apache-2.0
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword ''aws iot device sdk'', 2026-10-05); nothing is registered.'
+  source:
+    kind: git
+    url: https://github.com/aws/aws-iot-device-sdk-embedded-C
+    ref: v3.1.5
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'The pre-2020 generation of the AWS IoT Device SDK for Embedded C (v2.0.0 to v3.1.5), whose own MQTT client lives in src/. bl_iot_sdk carries v3.0.1. The 2020 and later releases are a bundle of separate libraries (coreMQTT and others) and are not covered by this rule. The version header is not used: upstream did not bump include/aws_iot_version.h for every release (v3.1.5 still says 3.0.1), so it would report 3.0.1 for any 3.x copy. The version comes from the function signature.'
+identity:
+  include:
+  - src/**/*.c
+  - include/**/*.h
+  functions:
+    file: aws-iot-device-sdk-c.fnsig
+    sha256: 609199bff69d20f00b6e719e7957024a05fb559a77da3773087bcf8a89a6716b
+    count: 312
+    versions:
+    - 2.0.0
+    - 2.1.0
+    - 2.1.1
+    - 2.2.0
+    - 2.2.1
+    - 2.3.0
+    - 3.0.0
+    - 3.0.1
+    - 3.1.0
+    - 3.1.1
+    - 3.1.2
+    - 3.1.3
+    - 3.1.4
+    - 3.1.5

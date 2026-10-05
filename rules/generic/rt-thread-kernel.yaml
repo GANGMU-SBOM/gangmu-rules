@@ -1,0 +1,56 @@
+id: generic/rt-thread-kernel
+component:
+  path_globs:
+  - '**/rt-thread'
+  marker_files:
+  - src/thread.c
+  - src/ipc.c
+  - include/rtthread.h
+upstream:
+  name: RT-Thread
+  purl: pkg:github/rt-thread/rt-thread
+  cpe: cpe:2.3:a:rt-thread:rt-thread:*:*:*:*:*:*:*:*
+  cpe_aliases:
+  - cpe:2.3:o:rt-thread:rt-thread:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2024-24334
+  - CVE-2025-1115
+  - CVE-2025-5866
+  supplier: RT-Thread Development Team (Shanghai Real-Thread Electronic Technology Co., Ltd.)
+  homepage: https://www.rt-thread.io
+  source:
+    kind: git
+    url: https://github.com/RT-Thread/rt-thread
+    ref: v5.3.0
+version:
+  probes:
+  - file: include/rtdef.h
+    patterns:
+      major: define\s+RT_VERSION_MAJOR\s+(\d+)
+      minor: define\s+RT_VERSION_MINOR\s+(\d+)
+      patch: define\s+RT_VERSION_PATCH\s+(\d+)
+    template: '{major}.{minor}.{patch}'
+  - file: include/rtdef.h
+    patterns:
+      major: define\s+RT_VERSION\s+(\d+)L?
+      minor: define\s+RT_SUBVERSION\s+(\d+)L?
+      patch: define\s+RT_REVISION\s+(\d+)L?
+    template: '{major}.{minor}.{patch}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: >-
+    The kernel only (src/ and include/), 3.0.0 to 5.3.0. RT-Thread is the most
+    widely used Chinese RTOS and ships inside chip-vendor SDKs (WCH's CH32 and
+    CH58x examples carry 3.1.3 and 3.1.5) as well as on its own. No licence is
+    recorded because it depends on the release: GPL-2.0 up to 3.1.x and
+    Apache-2.0 from 4.0.0; a reviewer must take it from the copy's own LICENSE.
+    Components and BSPs are out of scope for this rule.
+identity:
+  functions:
+    file: rt-thread-kernel.fnsig
+    sha256: d868da112f4f0d1fa470608705643f69dabdd5f220b62e6327a69c79e0bf0fad
+    count: 2108
+    versions: ["3.0.0", "3.0.1", "3.0.2", "3.0.3", "3.0.4", "3.1.0", "3.1.1", "3.1.2", "3.1.3", "3.1.4", "3.1.5", "4.0.0", "4.0.1", "4.0.2", "4.0.3", "4.0.4", "4.0.5", "4.1.0", "4.1.1", "5.0.0", "5.0.1", "5.0.2", "5.1.0", "5.2.0", "5.2.1", "5.2.2", "5.3.0"]

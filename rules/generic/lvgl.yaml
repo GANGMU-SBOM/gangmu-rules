@@ -1,0 +1,110 @@
+id: generic/lvgl
+component:
+  ships_as: lvgl
+  marker_files:
+  - core/lv_obj.c
+  - core/lv_group.c
+  - draw/lv_draw.c
+upstream:
+  name: LVGL
+  purl: pkg:github/lvgl/lvgl
+  supplier: LVGL Kft and contributors
+  homepage: https://lvgl.io/
+  license: MIT
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword lvgl, 2026-10-05) and the CVE API for lvgl:lvgl; nothing is registered.'
+  source:
+    kind: git
+    url: https://github.com/lvgl/lvgl
+    ref: v9.5.0
+version:
+  probes:
+  - file: lv_version.h
+    patterns:
+      major: LVGL_VERSION_MAJOR\s+(\d+)
+      minor: LVGL_VERSION_MINOR\s+(\d+)
+      patch: LVGL_VERSION_PATCH\s+(\d+)
+    template: '{major}.{minor}.{patch}'
+  - file: lvgl.h
+    patterns:
+      major: LVGL_VERSION_MAJOR\s+(\d+)
+      minor: LVGL_VERSION_MINOR\s+(\d+)
+      patch: LVGL_VERSION_PATCH\s+(\d+)
+    template: '{major}.{minor}.{patch}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'LVGL as vendored by Chinese SDKs: Bouffalo Lab''s bouffalo_sdk carries 8.4.0 and 9.5.0, WinnerMicro''s wm_iot_sdk 8.4.0. The signature covers upstream''s src/ directory for 54 releases, 6.0 to 9.6.0 (v8.4 is taken from the v8.4.0 tag). Vendors differ in where they put lvgl.h and lv_version.h (beside src/''s contents, or outside src/), so the anchors and probes name those two files at the component root and are skipped when the vendor moved them. 6.x has no anchor for lvgl.h; releases whose header is identical to another''s have none either. Images, QR code, GIF, JPEG and font helpers that LVGL bundles under libs/ or extra/libs/ are part of this rule''s code. Release 9.6.0 moved lv_version.h to include/lvgl/ and left a forwarding stub at the root, so it has no anchor and its version is read from functions only; the rule''s reference release is 9.5.0 for that reason.'
+identity:
+  include:
+  - '**/*.c'
+  - '**/*.h'
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  - '**/docs/**'
+  - '**/example/**'
+  - '**/examples/**'
+  - '**/demos/**'
+  - '**/env_support/**'
+  - '**/.git/**'
+  anchors:
+  - path: lv_version.h
+    sha256:
+      9.2.0: 5ddb858a3232d30258a9ac4b288075aa697440428d95974c8449f73309521529
+      9.2.1: 438a2f0404d1c8936edac706738802d40c42568544bdd4e1ec0535487f695ee2
+      9.2.2: aee0c9bb962e6c23d609e144c2fbc6a9ec0e4ce01da6d788edbb618e42dbf082
+      9.3.0: e8f4ea4dc519e39adc6164e6b38e2488ba5313544e7d67b1269f3b09f1624fff
+      9.4.0: 9cf9add2c92c0f70b6a764766605a4f199d3885e5d3ed4e9dac32043bbfb0448
+      9.5.0: fa0c49e41ae3125e82bedcc3e62e7202b5340f7dd4cd51fd212c414361b59879
+  - path: lvgl.h
+    sha256:
+      7.0.0: 1a98d3e3c8938dd52465ed200f1550607deb776186cc5ecd2e414f91e2975b8a
+      7.0.1: b0eb77b6e4118149c76af17c29e06c4a9de5a90085b8936d7de8930f4d2271be
+      7.0.2: 74b42bea3bab07f53b4da4c34b2a1115a2468027fb7b9b11f30688c8a2ad4d6c
+      7.1.0: 3971928c86c8230efa805a890c026b3e02d6a0ca5239ecdf75065ff9692e006f
+      7.2.0: 5c84a66a81ff53e500ae6160c2c33b8cdec8cdfb15e1dc1688b37905e5a748db
+      7.3.0: bb45cfdc76bdf9d25fadd8c63778d25102b92530314a0a284bc64fd50db480c1
+      7.3.1: 68cb37b403889d848ba4a7d7ca6ffa3de6ce0442c54438c0f3a27ea1c368ae90
+      7.4.0: 2bf9e97e5181cfc59908d101392109a00ff094bcd4dccc825e5499120849764b
+      7.5.0: ebfcd1258c09475b1f26476a423d6703dfbd97fbc50bc0896b1437fd65d22bd5
+      7.6.0: 3ca6a1814a3458fc9a8ae3c401e20c3aab561eeb5886123eaddadf1a3ec7a229
+      7.6.1: 996b4bb595e06e0444260b9afaadffcd83d8fcba027d5dc27b5757e322ce6af6
+      7.7.0: 094707e91d74d9b10dac6273354792c78943e75c47be8462f353c33d39b500e8
+      7.7.1: c1b6f3982b657a2910bfa0d793a810b2b3f5d5671d06fa3c45095aab452db5da
+      7.7.2: f0c9b4ff2105becde054fa6a05248e1df70a66296bbc39deb1610299f9e0acfb
+      7.8.0: 07607ba6cc868c00991d80dbd798e8ed375337ff2e164e6cfde4e9990507764c
+      7.8.1: 915924cc5978ff92d43307c2c6d5925680b2d98084fa3ed1445e7acfb02dbb4e
+      7.9.0: a88e828f4e74a326d8f6804e14311c1ce3535fbae94f6a9148df4a6d462f2cfb
+      7.9.1: aa489aac1270dc9cdb788ddd0a501ded6f2cac029b7cc75d626e7e88d0fcaefa
+      7.10.0: 7d7eef308a7e5d439f15b0136366dd34f0a43af500a7bff0db9859d7e0054149
+      7.10.1: 8c70d83c64d3ffe5312490a6d2b51ceafab161a088cb9530dae23a32c6660744
+      7.11.0: 55db5d77644f55f16c955c171cc2414e3bbaa87adc6c9abda4acf03691d96847
+      8.0.0: e1bbfd8397797d6acbd1dfcdb8cef49cfa1e8e96beb84f979be66622aef433c1
+      8.0.1: 00eadb81c1578b9e44115f89e1878d0fd3773b22645549dda94bb7836889f254
+      8.0.2: 3df6ea5da309d88fff65d42ed726ab81a04d2304426ce4c268b3674178b8f160
+      8.1.0: 85b95ff09710e28dbd01eca258ffc1b249333fa1218277b39d15901e07f7c41a
+      8.2.0: 874c8ae173efa6f779a98b11c141c3820c5787580f6e9173baaddac3638c8f81
+      8.3.0: 83d26c8e9a008d8387f907b45188a0628047ba49cadead1f5c4e97c67f3b1e9e
+      8.3.3: 5e0722c861f8847fd2dc5b09ae414ef9eaefcb78a31bfec82341bfb04252b8a3
+      8.3.4: b9c874a7cb6cebaa20358a5751f80fa00f703e8ad755c01674308901c9f14cdb
+      8.3.5: 2b76342de3d115fdd45671e3e25eb9d0df810cfb9b423723d06d025867f374ed
+      8.3.6: 28d682955d95cf961ec3878f6c0982678a8e624e54f99c2ba928c02be67f04c2
+      8.3.7: a0ce2df95cb99893d8b38a49099be5a0804510885d5af19d1103eac7a4281bfe
+      8.3.8: 30b3ece0110cee47527cfdaa36c5eeeb0021b86b8ccc9fcfd2a54e34612be563
+      8.3.9: 26ebff8924ca6fadbc2750f6befd5b57eb4691bc72a27ae1c3c495b5f409f692
+      8.3.10: 4f420d27b3e7eac64135adc5719cea35977380f2368da05f7a9e54a894e88bc7
+      8.3.11: 98c536dba790e1a30424fc95163147bf7005c5ffd0f637906c339890893872a3
+      8.4.0: 2f5c32f44c5489de31316ae76d4e0baaf3235fd8c72aa190683ec06086b17cdf
+      9.0.0: c8d319d24e201b9a12652ec4d8e43ea8f31584c25c4715ed69a69ea6fb72bd90
+      9.1.0: 2c462865b6724bf26ff16a9891a8a9fb48e78b8fd7df9dd37445bfce48a75a9a
+      9.3.0: 5b4b12f5629ce90d96e84fa71f9f7b7c0d90265d08e7aab4c9099a2a3e664e13
+      9.4.0: 9f421571d2fbeaee457e24f8aaa8a94bdc6e31e4202bf5e6a6223f343d211664
+      9.5.0: bfd10da864777a7c44afd4c7de6ec4ededef6e7371a4108b64b80d5161a84400
+  functions:
+    file: lvgl.fnsig
+    sha256: 55bb026acff14b37b53391573e5aa89dc723ee82e3161f154ae8aab99d2389a4
+    count: 22341
+    versions: ['6.0', 6.0.1, 6.0.2, '6.1', 6.1.1, 6.1.2, 7.0.0, 7.0.1, 7.0.2, 7.1.0, 7.2.0, 7.3.0, 7.3.1, 7.4.0, 7.5.0, 7.6.0, 7.6.1, 7.7.0, 7.7.1, 7.7.2, 7.8.0, 7.8.1, 7.9.0, 7.9.1, 7.10.0, 7.10.1, 7.11.0, 8.0.0, 8.0.1, 8.0.2, 8.1.0, 8.2.0, 8.3.0, 8.3.1, 8.3.2, 8.3.3, 8.3.4, 8.3.5, 8.3.6, 8.3.7, 8.3.8, 8.3.9, 8.3.10, 8.3.11, 8.4.0, 9.0.0, 9.1.0, 9.2.0, 9.2.1, 9.2.2, 9.3.0, 9.4.0, 9.5.0, 9.6.0]

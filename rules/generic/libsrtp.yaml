@@ -1,0 +1,59 @@
+id: generic/libsrtp
+component:
+  ships_as: libsrtp
+  marker_files:
+  - srtp/srtp.c
+  - srtp/ekt.c
+upstream:
+  name: libsrtp
+  purl: pkg:github/cisco/libsrtp
+  supplier: Cisco Systems
+  homepage: https://github.com/cisco/libsrtp
+  license: BSD-3-Clause
+  cpe: cpe:2.3:a:cisco:libsrtp:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2013-2139
+  - CVE-2015-6360
+  source:
+    kind: git
+    url: https://github.com/cisco/libsrtp
+    ref: v2.8.1
+version:
+  probes:
+  - file: configure.ac
+    patterns:
+      v: AC_INIT\(\[libsrtp2?\],\s*\[(\d+\.\d+\.\d+)
+    template: '{v}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: Cisco libsrtp, the SRTP library under WebRTC stacks such as the libpeer port in bouffalo_sdk (2.3.0, taken from the esp_ports tree). The version is the AC_INIT line of configure.ac; the function signature covers 1.5.0 to 2.8.1 of srtp/ and crypto/. The library was called libsrtp until 2.0, and 1.x tags use the same file layout.
+identity:
+  include:
+  - srtp/*.c
+  - crypto/**/*.c
+  functions:
+    file: libsrtp.fnsig
+    sha256: 3bf3e53e04941eac0759fd997343e7e1557ef25aa49dd08ca8949ccca26655d1
+    count: 928
+    versions:
+    - 1.5.0
+    - 1.5.1
+    - 1.5.2
+    - 1.5.3
+    - 1.5.4
+    - 1.6.0
+    - 2.0.0
+    - 2.1.0
+    - 2.2.0
+    - 2.3.0
+    - 2.4.0
+    - 2.4.1
+    - 2.4.2
+    - 2.5.0
+    - 2.6.0
+    - 2.7.0
+    - 2.8.0
+    - 2.8.1

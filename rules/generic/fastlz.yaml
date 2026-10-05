@@ -1,0 +1,42 @@
+id: generic/fastlz
+component:
+  ships_as: fastlz
+  marker_files:
+  - fastlz.c
+  - fastlz.h
+upstream:
+  name: FastLZ
+  purl: pkg:github/ariya/fastlz
+  supplier: Ariya Hidayat
+  homepage: https://ariya.github.io/FastLZ/
+  license: MIT
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword fastlz, 2026-10-05) and the CVE API (keyword fastlz); nothing is registered under a vendor:product for it.'
+  source:
+    kind: git
+    url: https://github.com/ariya/FastLZ
+    ref: 0.5.0
+version:
+  probes:
+  - file: fastlz.h
+    patterns:
+      major: FASTLZ_VERSION_MAJOR\s+(\d+)
+      minor: FASTLZ_VERSION_MINOR\s+(\d+)
+      rev: FASTLZ_VERSION_REVISION\s+(\d+)
+    template: '{major}.{minor}.{rev}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: FastLZ, the byte-aligned LZ77 compressor in LuatOS (components/fastlz, 0.5.0) and bl_iot_sdk (0.1.0). The version is FASTLZ_VERSION_MAJOR/MINOR/REVISION in fastlz.h. Upstream tags only 0.4.0 and 0.5.0, so older copies such as 0.1.0 read from the probe but have no function signature to check against.
+identity:
+  include:
+  - '*.c'
+  - '*.h'
+  functions:
+    file: fastlz.fnsig
+    sha256: 362fba5dd54b75c135b27340a821b788ea905e3dcfae22b1d7ec8db941f9061c
+    count: 32
+    versions:
+    - 0.4.0
+    - 0.5.0

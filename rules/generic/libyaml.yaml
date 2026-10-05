@@ -1,0 +1,57 @@
+id: generic/libyaml
+component:
+  ships_as: libyaml
+  marker_files:
+  - src/scanner.c
+  - src/parser.c
+  - include/yaml.h
+upstream:
+  name: LibYAML
+  purl: pkg:github/yaml/libyaml
+  supplier: Ingy dot Net and LibYAML contributors
+  homepage: https://pyyaml.org/wiki/LibYAML
+  license: MIT
+  cpe: cpe:2.3:a:pyyaml:libyaml:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2013-6393
+  - CVE-2014-2525
+  - CVE-2014-9130
+  source:
+    kind: git
+    url: https://github.com/yaml/libyaml
+    ref: 0.2.5
+version:
+  probes:
+  - file: CMakeLists.txt
+    patterns:
+      major: set\s*\(\s*YAML_VERSION_MAJOR\s+(\d+)
+      minor: set\s*\(\s*YAML_VERSION_MINOR\s+(\d+)
+      patch: set\s*\(\s*YAML_VERSION_PATCH\s+(\d+)
+    template: '{major}.{minor}.{patch}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: LibYAML, vendored by WinnerMicro wm_iot_sdk (components/yaml). The version is the YAML_VERSION_* set() lines of CMakeLists.txt (include/yaml.h has no version macro; wm_iot_sdk drops CMakeLists.txt, so its 0.2.5 comes from the function signature); the function signature covers 0.0.1 to 0.2.5 of src/. NVD files it under pyyaml:libyaml and its CVEs point at the old bitbucket.org/xi/libyaml history, which is the same project (now github.com/yaml/libyaml).
+identity:
+  include:
+  - src/*.c
+  functions:
+    file: libyaml.fnsig
+    sha256: 61d6178af0a21064418eb1f4885604852522f971cd8281d490d5dd227b1caefb
+    count: 352
+    versions:
+    - 0.0.1
+    - 0.1.1
+    - 0.1.2
+    - 0.1.3
+    - 0.1.4
+    - 0.1.5
+    - 0.1.6
+    - 0.1.7
+    - 0.2.1
+    - 0.2.2
+    - 0.2.3
+    - 0.2.4
+    - 0.2.5

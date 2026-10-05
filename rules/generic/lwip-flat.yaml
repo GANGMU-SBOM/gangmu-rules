@@ -1,0 +1,61 @@
+id: generic/lwip-flat
+component:
+  ships_as: lwip
+  marker_files:
+  - core/init.c
+  - core/tcp.c
+  - core/pbuf.c
+  - include/lwip/init.h
+upstream:
+  name: lwIP
+  purl: pkg:generic/lwip
+  cpe: cpe:2.3:a:lwip_project:lwip:*:*:*:*:*:*:*:*
+  supplier: lwIP Project (non-GNU)
+  homepage: https://savannah.nongnu.org/projects/lwip/
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://github.com/lwip-tcpip/lwip
+    ref: STABLE-2_2_0_RELEASE
+    subdir: src
+version:
+  probes:
+  - file: include/lwip/init.h
+    patterns:
+      major: LWIP_VERSION_MAJOR\s+(\d+)
+      minor: LWIP_VERSION_MINOR\s+(\d+)
+      revision: LWIP_VERSION_REVISION\s+(\d+)
+    template: '{major}.{minor}.{revision}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: >-
+    The same lwIP as generic/lwip, for SDKs that copy upstream's src/ directory
+    without the src/ level, so core/, api/, netif/ and include/ sit directly in
+    the component directory (LuatOS components/network/lwip22, 2.2.1). Identity
+    comes from the function signature generic/lwip uses; the sidecar file is
+    shared, since functions do not depend on the path. There is no whole-tree
+    signature or anchor because both are keyed by the src/ paths.
+identity:
+  include:
+  - core/**/*.c
+  - core/**/*.h
+  - api/**/*.c
+  - netif/**/*.c
+  - include/lwip/**/*.h
+  exclude: []
+  functions:
+    file: lwip.fnsig
+    sha256: 6aa531d577efe764c930cd7d41b54b2c448378f027bc78db858071838155554a
+    count: 3022
+    versions:
+    - 2.0.2
+    - 2.0.3
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.2.0
+    - 2.2.1

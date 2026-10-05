@@ -1,0 +1,119 @@
+id: generic/mbedtls
+component:
+  ships_as: mbedtls
+  config_symbols:                   # Kconfig option that builds it in that SDK (checked against upstream Kconfig)
+  - path: '**/modules/crypto/mbedtls'
+    symbols: [MBEDTLS]
+  marker_files:
+  - library/ssl_tls.c
+  - library/x509_crt.c
+  - include/mbedtls/ssl.h
+upstream:
+  name: Mbed TLS
+  purl: pkg:github/Mbed-TLS/mbedtls
+  cpe: cpe:2.3:a:arm:mbed_tls:*:*:*:*:*:*:*:*
+  cpe_aliases:
+  - cpe:2.3:a:trustedfirmware:mbed_tls:*:*:*:*:*:*:*:*
+  - cpe:2.3:a:mbed:mbedtls:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2024-45157
+  - CVE-2025-27809
+  supplier: Trusted Firmware (Mbed TLS project)
+  homepage: https://github.com/Mbed-TLS/mbedtls
+  license: Apache-2.0
+  source:
+    kind: git
+    url: https://github.com/Mbed-TLS/mbedtls
+    ref: mbedtls-3.6.5
+version:
+  probes:
+  - file: include/mbedtls/build_info.h
+    patterns:
+      major: MBEDTLS_VERSION_MAJOR\s+(\d+)
+      minor: MBEDTLS_VERSION_MINOR\s+(\d+)
+      patch: MBEDTLS_VERSION_PATCH\s+(\d+)
+    template: '{major}.{minor}.{patch}'
+  - file: include/mbedtls/version.h
+    patterns:
+      major: MBEDTLS_VERSION_MAJOR\s+(\d+)
+      minor: MBEDTLS_VERSION_MINOR\s+(\d+)
+      patch: MBEDTLS_VERSION_PATCH\s+(\d+)
+    template: '{major}.{minor}.{patch}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'Mbed TLS as vendored outside Zephyr and ESP-IDF, which have rules of their own that expect their own directory layouts. The most common third-party library in Chinese chip-vendor SDKs: 2.28.0 to 2.28.2 and 3.4.0 to 3.6.5 in Bouffalo Lab, WinnerMicro and Espressif''s ESP8266 SDK. The signature covers 63 releases of the mbedtls repository, 2.1.18 to 4.2.0, with 2.16.x, 2.17 to 2.28.x and 3.x each complete. From 4.0 the cryptography moved to the separate TF-PSA-Crypto repository, which this rule does not cover; for 4.x it identifies the TLS and X.509 layer only. In three upstream tags the version header was not bumped (2.16.4 says 2.16.3, 2.18.1 says 2.18.0, 2.20.0 says 2.19.1), so a probe on those copies reads the previous release, and the anchors for the shared headers are left out.'
+identity:
+  include:
+  - library/**/*.c
+  - library/**/*.h
+  - include/**/*.h
+  anchors:
+  - path: include/mbedtls/version.h
+    sha256:
+      2.1.18: 1af7d13a49fbb275d89de5eb87331813dbe411c464a316c7abf541518a6c57a1
+      2.4.2: 6c45e30f78291bd71179394515369d6824afaf9bc165bb25bc16232d8cb442e6
+      2.7.19: eff7d1d5b09b0e8bd22d32c451ffabada3e7aed81a515ce44c7093fdf31ddab6
+      2.15.1: 2c4013bf39075bdee084d6df3691ebd05ebbd6cab3f3e2b056723e518f326000
+      2.16.0: 66830fee57673629b3c4d8a8682e7092a25b3f60422d5f72e0654f3fe0c304ac
+      2.16.1: 4466ecacd8ea604acfe563c2b75158b0efbe8ee53ee8a20e73675d812f58ed95
+      2.16.2: dcd3cafe0bed96ab2cee4de76780f43942851f7a8743427cdafb7b80c884b283
+      2.16.5: ca0bfcad41eef72bf6a9b99dc43cfdb4b9172dc081752682b344867c01c74564
+      2.16.6: bd089a0e6e787dddf0ffee0585dde050114e41dd0a9b4c4431cfe1e3f9d9f6d9
+      2.16.7: 47a73b2cd7b2e055d598072c0e0362ff7407560afd3770f0de0487d96cb96d28
+      2.16.8: b565609959075c6002c1a41b2313b7dca626997108d3b2b4a51f167dd96d41a7
+      2.16.9: b2785118fa81d289a41be3248dd9257e40550ef47e14ab31a0578172e1551b1c
+      2.16.10: 96d2516e34eb9e1241688165c14e6c6d59d2830d84f1fccd01f23cd42bec4efe
+      2.16.11: f5a16a8d34ab5363937d3fa5025be8a6311fd1f56c1805f0f4d1b4eb5eabade1
+      2.16.12: 943e96f54b72a0da73431df9ac417a300ba3caccb77f1a4757a504d200422f9c
+      2.17.0: d4b4d2809eeac90395f195d59700ef88bed5dfecafbc12c7c05276f403209930
+      2.19.0: 38b92e6472557941b296a6ff3b2800be8e2e972e240bf6a07aefa89f9800a3a9
+      2.21.0: 334a16d6bc31105e99760d7e4df8ab416b2b748f95fa575cddeb9cd6689af8b1
+      2.22.0: 837491f5fa1ae0e35bb72d298f8a70528a4e610a03c357c3e2250751edc2c457
+      2.23.0: f916317dfc43742856ffc4f7f63e2236ce89729e128ea5889ed09ec06c9fd55e
+      2.24.0: 32c09a48d73629bd0003bad757af3a41c26084f4f43ebdb74dcaa0351f16dec3
+      2.25.0: 1dd1dde8bde7282f37f6037b4c6e2031a70084c95bb7f538ee5ac794f2fbdef9
+      2.26.0: 39e35734130cf0d4f5ccdde855bc08a60c5049009f2eb05a169785b1c2120231
+      2.27.0: dc24bd24f581fb6cc623bbba37aa47c3c24e4e2401c9196166cf0b9dc9cef09e
+      2.28.0: 2de82278168f243f79986d406b5f31dcbdeb36bf312e9986763bd4784b206a33
+      2.28.1: c6b984543691ee5f4087884c81497fa3af1dcc384b658d5f4e42c424baff417b
+      2.28.2: 2483829aee89e2de60978190bbe37515c6e0fb5b239fb7da523453eb9f0d5157
+      2.28.3: 74e6e7d84df3bffde25b8a3d6c1fb3c40b90b0cc5c8a723bb2ce26e993e189fd
+      2.28.4: d0f7df3d035f86689fa837df9dd3736c4c2e6f442e7c3f17cdc191733c602fb2
+      2.28.5: 8c7f6f327891c9c02f4ff26847823360c8bfba5a60f1bdc96f613b56f361b1f1
+      2.28.6: 4c4f24526d0931f0d172b0ce46258b6c2df1af8268e0ba2be5e8990cee12548a
+      2.28.7: d63dd5253dc2f4cae6abddf8358346c76abb244be820bdaebd00765f04e049d9
+      2.28.8: c3ae3c03e9998182709167d07463e7c7d728698bf4e96629462a66094d6c4501
+      2.28.9: d550881c5855fd1b9ce87683a296e8b56c16bc42edef9664585f3a0ad780f546
+      2.28.10: e97ee12f29052eeb59695d506919013e1da99a91f897baa546f6d9af6175b228
+  - path: include/mbedtls/build_info.h
+    sha256:
+      3.0.0: 930f9f666fa4ddc4b9ba149172e2bcf85c2fc350d60c300935093b1bbbe0e715
+      3.1.0: 7a732f23bf8ed09a10285841544a86698093bf0264d059182870621e90864e1c
+      3.2.0: 9c5f0f0531354ba1ea6200e70fc738fda739fa4db6290b217bf56529c729b0dd
+      3.2.1: 174d0da53b0e1099bc89439b596cbd455dfac92ade962a003dd0b57c8def4320
+      3.3.0: 7b04ae9b039c46a8aa298e161ee82cf969d46e2f904c65df128b283869f5aa67
+      3.4.0: 7a2a077ff17aacb1aa7ea7a377a12beb7ae34a8bc04fc3b78a36a98c7f217a52
+      3.4.1: 315e0f9ca952a458967617c7f2cfbd7df045892b8c78aa146e18293458e995a1
+      3.5.0: 7008fccd1480cc0e5833d791bf999c1541b7e61a3a184dd341964f45e0305bb4
+      3.5.1: 1e565d615784289798e13a524b1bb34fc5c2af992612818ee476e14a4a7cd0a4
+      3.5.2: 58b6b8a330b22699e3fe1aaacbe5dd10168d0cba71ba052cdc8ac01793b95bcd
+      3.6.0: a41db01557a053f04a8621ec675374c0d8258f65f143446a30b9b86570e485e4
+      3.6.1: d77dbc1cbe4245ce176b6714553129fc061aaf98cfd2edf105716be9952308f3
+      3.6.2: 71dcc5a8eb89cfed67796581c879c76da427549504067a4e529084a92a302ad1
+      3.6.3: a5b25d8281b0fb965bdb473b0f4d8433e40613158334410b9cf580b8b81fbb46
+      3.6.4: 6554f86a6d03491bc3f2c042535ca8bec68d2c3eff33371fc30b38bbe19069f7
+      3.6.5: a9ff45f478969aae4b4f610634a02ff02355189b15beb25777ec1cf2f87cd749
+      3.6.6: 9b599075b04e8d4629a9617bced2ff726a0b9407b6f343e01a32c86ea52a8998
+      3.6.7: 4bb715278f3199298220b930514ace4f461ed0e9ff27b656d6e2616a1ca3287f
+      4.0.0: f517c863f076caca036edee154be40a21a2fe34adefa32933a125cfaf0fccaa0
+      4.1.0: 1746baac0ebce39360b8837e4ee4fb956fe93bbf3b4bd0a4b69d5908388e72f9
+      4.1.1: 98a0db0008837772b9af56516a7127a8900ed97757a79503dc6fcedd5c22246d
+      4.2.0: 4dc8ea1524cd0870504481896eae9bd410f569452958363bedd297179ccd9198
+  functions:
+    file: mbedtls.fnsig
+    sha256: 33b70a1e127ad194a991cb505e96ccca711c50bd40c4df41e68c1c6e06863181
+    count: 11896
+    versions: [2.1.18, 2.4.2, 2.7.19, 2.15.1, 2.16.0, 2.16.1, 2.16.2, 2.16.3, 2.16.4, 2.16.5, 2.16.6, 2.16.7, 2.16.8, 2.16.9, 2.16.10, 2.16.11, 2.16.12, 2.17.0, 2.18.0, 2.18.1, 2.19.0, 2.19.1, 2.20.0, 2.21.0, 2.22.0, 2.23.0, 2.24.0, 2.25.0, 2.26.0, 2.27.0, 2.28.0, 2.28.1, 2.28.2, 2.28.3, 2.28.4, 2.28.5, 2.28.6, 2.28.7, 2.28.8, 2.28.9, 2.28.10, 3.0.0, 3.1.0, 3.2.0, 3.2.1, 3.3.0, 3.4.0, 3.4.1, 3.5.0, 3.5.1, 3.5.2, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 3.6.4, 3.6.5, 3.6.6, 3.6.7, 4.0.0, 4.1.0, 4.1.1, 4.2.0]

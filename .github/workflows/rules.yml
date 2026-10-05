@@ -1,0 +1,179 @@
+name: rules
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    # Upstream tags get moved and repositories get renamed. A weekly full
+    # verification catches that before a user does.
+    - cron: "17 4 * * 1"
+
+env:
+  # The gangmu revision the rules are checked against. Move it forward when a
+  # rule needs a newer tool, together with requires_gangmu in rules/rulebase.json.
+  GANGMU_REF: main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: GANGMU-SBOM/gangmu
+          ref: ${{ env.GANGMU_REF }}
+          path: .gangmu
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e . ./.gangmu
+      - name: the three version numbers agree
+        run: |
+          python - <<'PY'
+          import json, pathlib, tomllib
+          import gangmu_rules
+          py = tomllib.loads(pathlib.Path("pyproject.toml").read_text())["project"]["version"]
+          manifest = json.loads(pathlib.Path("rules/rulebase.json").read_text())["version"]
+          assert py == manifest == gangmu_rules.__version__, (py, manifest, gangmu_rules.__version__)
+          print("version", py)
+          PY
+      # No --rules: this also proves gangmu finds the installed pack.
+      - run: gangmu rules lint
+
+  tool-tests:
+    # gangmu's own test suite, against the rules in this pull request. Several
+    # of its tests scan fixtures with the real rule base.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: GANGMU-SBOM/gangmu
+          ref: ${{ env.GANGMU_REF }}
+          path: .gangmu
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e . "./.gangmu[dev,fast]"
+      - run: pytest -q .gangmu/tests
+        env:
+          GANGMU_RULES: ${{ github.workspace }}/rules
+          GANGMU_REQUIRE_RULES: "1"
+
+  performance:
+    # A seeded synthetic SDK scanned with this rule base at 1x, 4x and 16x.
+    # benchmarks/perf-baseline.json belongs to this repository: a rule that
+    # legitimately costs more updates it in the same pull request, with the
+    # before and after numbers in the description.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: GANGMU-SBOM/gangmu
+          ref: ${{ env.GANGMU_REF }}
+          path: .gangmu
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install . "./.gangmu[fast]"
+      - name: scan cost must not regress
+        run: |
+          gangmu perf --rules rules --rules .gangmu/tests/fixtures/rules \
+                 --embed .gangmu/tests/fixtures/upstream/tinynet --scale 1,4,16 \
+                 --check benchmarks/perf-baseline.json -o /tmp/perf.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: perf
+          path: /tmp/perf.json
+
+  changed-rules:
+    # Every rule asserts "this directory is <upstream> <version>". CI fetches
+    # that exact release from the URL the rule itself names and recomputes the
+    # evidence. A rule that cannot be reproduced does not get merged, which is
+    # what keeps review cost per rule near zero.
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          repository: GANGMU-SBOM/gangmu
+          ref: ${{ env.GANGMU_REF }}
+          path: .gangmu
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install . ./.gangmu
+      - name: Collect rule ids touched by this pull request
+        id: ids
+        run: |
+          git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- rules/ \
+            | grep -E '\.ya?ml$' > changed.txt || true
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import pathlib, yaml
+          ids = []
+          for line in pathlib.Path("changed.txt").read_text().splitlines():
+              path = pathlib.Path(line)
+              if not path.exists():
+                  continue
+              data = yaml.safe_load(path.read_text()) or {}
+              if data.get("id"):
+                  ids.append(f"--rule {data['id']}")
+          print("args=" + " ".join(ids))
+          PY
+      - name: Re-derive the evidence from upstream
+        if: steps.ids.outputs.args != ''
+        run: gangmu rules verify --rules rules ${{ steps.ids.outputs.args }}
+
+  all-rules:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: GANGMU-SBOM/gangmu
+          ref: ${{ env.GANGMU_REF }}
+          path: .gangmu
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install . ./.gangmu
+      - run: gangmu rules verify --rules rules
+
+  wheel:
+    # What `pip install gangmu-rules` users get: the wheel must carry every rule.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: GANGMU-SBOM/gangmu
+          ref: ${{ env.GANGMU_REF }}
+          path: .gangmu
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install build twine
+      - run: python -m build
+      - run: twine check dist/*
+      - name: install both wheels into a clean venv and lint with no --rules
+        run: |
+          python -m venv /tmp/venv
+          /tmp/venv/bin/pip install dist/*.whl ./.gangmu
+          cd "$(mktemp -d)"
+          /tmp/venv/bin/gangmu rules lint | tee lint.txt
+          grep -q "pack:community" lint.txt
+          test "$(find /tmp/venv -path '*gangmu_rules/data/*.yaml' | wc -l)" = \
+               "$(find "$GITHUB_WORKSPACE/rules" -name '*.yaml' | wc -l)"
+      - name: the packaged rule index is exactly what gangmu builds
+        run: |
+          data=$(/tmp/venv/bin/python -c "import gangmu_rules;print(gangmu_rules.path())")
+          rm -rf /tmp/cmp && cp -r "$data" /tmp/cmp && rm /tmp/cmp/.rule-index.json
+          /tmp/venv/bin/gangmu rules index /tmp/cmp
+          cmp /tmp/cmp/.rule-index.json "$data/.rule-index.json"

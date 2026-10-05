@@ -1,0 +1,52 @@
+id: generic/openthread
+component:
+  ships_as: openthread
+  config_symbols:                   # Kconfig option that builds it in that SDK (checked against upstream Kconfig)
+  - path: '**/components/openthread/openthread'
+    symbols: [OPENTHREAD_ENABLED]
+  marker_files:
+  - src/core/thread/mle.cpp
+  - include/openthread/instance.h
+  - src/core/openthread-core-config.h
+upstream:
+  name: OpenThread
+  purl: pkg:github/openthread/openthread
+  supplier: The OpenThread Authors (Google)
+  homepage: https://openthread.io/
+  license: BSD-3-Clause
+  cpe: cpe:2.3:o:google:openthread:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2019-20791
+  source:
+    kind: git
+    url: https://github.com/openthread/openthread
+    ref: v2026.10.0
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: OpenThread as vendored by Bouffalo Lab's bouffalo_sdk (API version 512) and bl_iot_sdk (commit 2ce3d3bf, 8 July 2022, API version 223). OpenThread has no version string; the signature is built from the thread-reference tags 20191113 to 20250612 and the v2026.06.0 to v2026.10.0 releases and the v2026.06.0 to v2026.10.0 releases, so a copy between two tags is reported as a range. Without this rule bouffalo_sdk's copy is reported as the Espressif fork of OpenThread.
+identity:
+  include:
+  - src/core/**/*.cpp
+  - src/core/**/*.hpp
+  - src/core/**/*.h
+  - src/core/**/*.c
+  - include/**/*.h
+  functions:
+    file: openthread.fnsig
+    sha256: bb4ad776db484bf15ed6e8402dd2625a935796b3262f8b92e6a720b02bce79e7
+    count: 2300
+    versions:
+    - 2026.06.0
+    - 2026.07.0
+    - 2026.08.0
+    - 2026.09.0
+    - 2026.10.0
+    - '20191113'
+    - '20200818'
+    - '20221027'
+    - '20230119'
+    - '20230706'
+    - '20250612'

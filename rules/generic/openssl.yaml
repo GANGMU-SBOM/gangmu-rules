@@ -1,0 +1,146 @@
+id: generic/openssl
+component:
+  path_globs:
+  - openssl
+  - '**/openssl'
+  - '**/openssl-*'
+  ships_as: openssl
+upstream:
+  name: OpenSSL
+  purl: pkg:github/openssl/openssl
+  cpe: cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*
+  supplier: OpenSSL Foundation and OpenSSL Corporation
+  homepage: https://www.openssl.org/
+  license: Apache-2.0
+  source:
+    kind: git
+    url: https://github.com/openssl/openssl
+    ref: openssl-3.5.9
+version:
+  probes:
+  - file: VERSION.dat
+    patterns:
+      major: (?m)^MAJOR=(\d+)
+      minor: (?m)^MINOR=(\d+)
+      patch: (?m)^PATCH=(\d+)
+    template: '{major}.{minor}.{patch}'
+  - file: include/openssl/opensslv.h
+    patterns:
+      version: OPENSSL_VERSION_TEXT\s+"OpenSSL\s+(\d+\.\d+\.\d+[a-z]?)
+    template: '{version}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'OpenSSL 3.x, the latest patch release of each minor line. Present mainly so that Tongsuo, an
+    OpenSSL 3.0 fork, can carry a function signature: with both rules loaded, functions the two share
+    count for neither, so each is identified by the code that is its own. OpenSSL 1.1.0 (1.1.0 to 1.1.0l)
+    and 1.1.1 (1.1.1 to 1.1.1w), every release, are in the function signature and anchored on include/openssl/opensslv.h,
+    for the same reason: Tongsuo 8.1 to 8.3 (BabaSSL) is an OpenSSL 1.1.1h fork and GmSSL 2.x an OpenSSL
+    1.1.0d fork, and without 1.1.x here an unmodified OpenSSL 1.1.x tree matched both. The 1.1.x signature
+    entries are pinned to the release tags peeled to commit ids (gangmu rules functions --tag 1.1.1w=<commit>),
+    since a bare OpenSSL_1_1_1w label would lose the letter.'
+identity:
+  include:
+  - crypto/**/*.c
+  - ssl/**/*.c
+  - providers/**/*.c
+  anchors:
+  - path: VERSION.dat
+    sha256:
+      3.0.22: 0f1c85fadfa2f1faa3c8aede761ac7c0311b0ef506dcbddf31ea7fa996dc60ef
+      3.1.8: 6124c946489b40b6aa24bfd4da4d15a29e9e693669bd737c2e43eb72dfb5b43e
+      3.2.6: 24690311dcbaea15c24fa338b5c23fb8e43728d3be85d159fb906999b44bcd14
+      3.3.7: 12081d67c5806ff31d1b5001b30b16c6a96d5a1d8d61a440288d6c0ccf730595
+      3.4.8: b7f81bc549c1c12d8d26729f5452ef3b8a36f424c7e4c357e04e10a0099bf1fa
+      3.5.9: 6dae52ea88792578bc22594ec2a0a26b2cf675b925ce81ce8792a1ccdf10cdb5
+      3.6.5: d58d46776eb00a7812bebbdfe1ffaa7be31c2987ef190bc1ded94c5495fed52e
+  - path: include/openssl/opensslv.h
+    sha256:
+      1.1.0: 59cf4bbd5d2726cb0225c829efd2c195a1dda60542f4b6a827e023591c168787
+      1.1.0a: 9ad94ac6b0322807b0adcab50728d3736b40ceab282148eee91c0e8804c4a35f
+      1.1.0b: 34c09b4178414d898b50a2c31dfd597521bccb58b9176678aac73e8a29c39a69
+      1.1.0c: 99ae2aa0f071136a62c21bf4bbfb43bc09f0a4b56c3eafd3db8b5c4242266181
+      1.1.0d: 7e59f5a4efeafb5ba8fc1a34bbefccc494320895f9696038330acdf00de6d416
+      1.1.0e: b0a0293368395e3fad75710f774e0cd5f43ff1fde8e8df6339238ca3088f3713
+      1.1.0f: 10041fa93b4a42788e30952f0e7ef556273d2a2bcfb13c0132203cad54cec1b8
+      1.1.0g: 365e7c2230e01b1aef7a4d8ba4bcc641c144ac7e36cf8b298df58c37760d571e
+      1.1.0h: 930682d9e7754c7638e67b00fe6f42c6292ea5e5588430e86a8ddeff18e81b78
+      1.1.0i: c829c04e79cb313b809dccff84b4756255b1fe5af751d4333cf4c790a25eb4e9
+      1.1.0j: 7a5d61b3ebb55fcebf799f88780855f65f852e4564e692a87b312f76b5f88b6e
+      1.1.0k: 50f66bae2e80f6d37f695b8ca85ccfb14484992eed5b2f79dc5973feaf854607
+      1.1.0l: cd714ecabbc678087d3dae99a9094de70140a7dbb11ab21a928ca04b44e4bf01
+      1.1.1: 7edc4259d9d9d275e9206b58fdd7d155e3b3bdbe36d33308103ec9f9a783afc1
+      1.1.1a: 9b447b185ab586b2b40cbe4154ce88e56deebaa98480b2d021de07527792de6e
+      1.1.1b: e238718397520f78ccaab497e8b9ac111a2d9a3b7272b8a585cd08c8e4a3b002
+      1.1.1c: 6900bbd24e027ac0a39de503c0a5cfe11e9dcb67a109a6a0685aa9ab432ddebc
+      1.1.1d: 7a5c71f058586eb0edbf098f366e5644a9fa9ede8a118e3add340fc9755cbc3b
+      1.1.1e: 459e662df824efd2f7c4dc15c0e92ccce17957fdfa9c5dfe4d6800bf5ebcc2ea
+      1.1.1f: d44749d91a61194f7f3e64b559c5cc863b79d852931517d55c4d49f1fea71fc5
+      1.1.1g: 4c9abcd2ca1587faf37a7f5a9510443c86ecfb0579a1acf94b4af4fe1935c5cf
+      1.1.1h: f712156ffdabb72450b3efc453e4f091f4a50bf9fcee628a569d52ee316c7355
+      1.1.1i: 668367a90ddcd6340fbe77aaf40beb489ad1e15d91da94bf0d69c08af843fedb
+      1.1.1j: 0ad7bfb76ac6dd2eaf4922343c85d8eba09b187021f341a91d1dbd42f20f70ac
+      1.1.1k: fc8a0502bd6d9f1e22ed9f3e582c42737b5a4137b9285d304260a49ce2508162
+      1.1.1l: 0bc426b46d9bef92180d5d4f520a046802c422af79486578c7e25afcf6dfc68d
+      1.1.1m: 9fdd9f0c0c4f2b7d13850ddb6e0fede53e9dc4f9ffb3d22ae4896ad25385e9c2
+      1.1.1n: 8f9489243ace5a8dfad2a70ed9c75713b7ff59aec8f65907c59b72c81edb968b
+      1.1.1o: 576679a82ace6f8696e420a0de53e50992630443365421ea1719511239e79ae1
+      1.1.1p: ddd8a4ac367077f0262271aa6d951ac2d374a880d929ba6b0113df5fd8131326
+      1.1.1q: 26b256cff90a00f9115bff9cfef6d0265d4baeb42798c516bc9221324f112511
+      1.1.1r: 3c0e023e58909b829770c747f0b228a365d71f29fab75d99e8531f75f8c982a4
+      1.1.1s: 3e1d75fde0afb2319363ef3a9268c5b664cf80203fc1abda29a19247dcd4de83
+      1.1.1t: 6b009b0eb1c012c437e13d3b9d07807e63ba78458cc94d72d75115191a1cc26b
+      1.1.1u: 4ea429921e7dbf53eb7a59abfb4ca36d28eef74659745e067dbb19f6cec46a37
+      1.1.1v: d0f7ee0fac07523cc81adc62169b4c3b23822f94e463b429620b5e09f2f60248
+      1.1.1w: 0ca12c2aba8bfbe24c4c06861e9d57b939c5e72d1c08f3798a442d698deb7599
+  functions:
+    file: openssl.fnsig
+    sha256: d128ea00fefd47a87142e582850a7d5887c158102c9509b50ca4fdc226e12322
+    count: 28592
+    versions:
+    - 1.1.0
+    - 1.1.0a
+    - 1.1.0b
+    - 1.1.0c
+    - 1.1.0d
+    - 1.1.0e
+    - 1.1.0f
+    - 1.1.0g
+    - 1.1.0h
+    - 1.1.0i
+    - 1.1.0j
+    - 1.1.0k
+    - 1.1.0l
+    - 1.1.1
+    - 1.1.1a
+    - 1.1.1b
+    - 1.1.1c
+    - 1.1.1d
+    - 1.1.1e
+    - 1.1.1f
+    - 1.1.1g
+    - 1.1.1h
+    - 1.1.1i
+    - 1.1.1j
+    - 1.1.1k
+    - 1.1.1l
+    - 1.1.1m
+    - 1.1.1n
+    - 1.1.1o
+    - 1.1.1p
+    - 1.1.1q
+    - 1.1.1r
+    - 1.1.1s
+    - 1.1.1t
+    - 1.1.1u
+    - 1.1.1v
+    - 1.1.1w
+    - 3.0.22
+    - 3.1.8
+    - 3.2.6
+    - 3.3.7
+    - 3.4.8
+    - 3.5.9
+    - 3.6.5

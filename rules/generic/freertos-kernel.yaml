@@ -1,0 +1,47 @@
+id: generic/freertos-kernel
+component:
+  path_globs:
+  - '**/FreeRTOS/Source'
+  - '**/FreeRTOS-Kernel'
+  marker_files:
+  - tasks.c
+  - queue.c
+  - list.c
+upstream:
+  name: FreeRTOS-Kernel
+  purl: pkg:github/freertos/freertos-kernel
+  cpe: cpe:2.3:o:amazon:freertos:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2021-31571
+  - CVE-2024-28115
+  - CVE-2026-77234
+  supplier: Amazon Web Services (FreeRTOS project)
+  homepage: https://www.freertos.org
+  license: MIT
+  source:
+    kind: git
+    url: https://github.com/FreeRTOS/FreeRTOS-Kernel
+    ref: V11.3.1
+version:
+  probes:
+  - file: include/task.h
+    patterns:
+      version: tskKERNEL_VERSION_NUMBER\s+"V?(\d+\.\d+\.\d+)
+    template: '{version}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: >-
+    The RTOS kernel most Chinese MCU and Wi-Fi SoC SDKs vendor (Bouffalo Lab,
+    WCH, WinnerMicro, Espressif ESP8266), usually renamed, moved and patched.
+    Releases up to 10.3.0 kept the kernel under FreeRTOS/Source; the signature
+    covers both layouts, 8.2.3 to 11.3.1. Ports differ per chip, so only the
+    portable kernel and the MemMang heaps are in the signature.
+identity:
+  functions:
+    file: freertos-kernel.fnsig
+    sha256: 04d5f7dde0fae2aa09af1ba42ec55fc50ff1d8ef5c78687251dbd20a620bbe44
+    count: 1168
+    versions: ["8.2.3", "9.0.0", "10.0.0", "10.0.1", "10.1.0", "10.1.1", "10.2.0", "10.2.1", "10.3.0", "10.3.1", "10.4.0", "10.4.1", "10.4.2", "10.4.3", "10.4.4", "10.4.5", "10.4.6", "10.5.0", "10.5.1", "10.6.0", "10.6.1", "10.6.2", "11.0.0", "11.0.1", "11.1.0", "11.2.0", "11.3.0", "11.3.1"]

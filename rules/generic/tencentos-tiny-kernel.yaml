@@ -1,0 +1,60 @@
+id: generic/tencentos-tiny-kernel
+component:
+  ships_as: tencentos-tiny
+  marker_files:
+  - tos_task.c
+  - tos_sys.c
+  - tos_mutex.c
+  - tos_event.c
+upstream:
+  name: TencentOS-tiny
+  purl: pkg:github/openatomfoundation/tencentos-tiny
+  cpe: cpe:2.3:o:tencent:tencentos-tiny:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2021-27439
+  supplier: Tencent (TobudOS / TencentOS tiny, now under the OpenAtom Foundation)
+  homepage: https://github.com/OpenAtomFoundation/TencentOS-tiny
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://github.com/OpenAtomFoundation/TencentOS-tiny
+    ref: 87fd8e839d042163954acb4365684a5401039840
+    subdir: kernel/core
+version:
+  probes:
+  - file: include/tos_version.h
+    patterns:
+      version: define\s+TOS_VERSION\s+"(\d+\.\d+\.\d+)"
+    template: '{version}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: >-
+    The portable kernel only (kernel/core: task, mutex, semaphore, event, queue,
+    timer, mmheap, tick, sys), 2.1.0 to 2.5.2 (13 releases).
+    Upstream tagged only v2.1.0, v2.4.5
+    and v2.5.0, so every other release is pinned to the commit that first carries
+    its TOS_VERSION in include/tos_version.h (2.2.0, 2.2.1, 2.3.1, 2.4.0 to 2.4.5,
+    2.5.0 to 2.5.2). 2.1.0 predates the version header and is the tag.
+    2.4.4 (67799dc, 2021-08-26) is a real release that carries its own TOS_VERSION
+    but was left out at first; without it the probe read 2.4.4 and the function
+    match flagged an unrecorded tree as vendor-patched.
+    The upstream tag v2.4.5 is mislabelled: its tos_version.h says 2.4.3, and the
+    commit that declares 2.4.5 comes 2 months later; a copy cut from that tag
+    therefore reports 2.4.3, which is what its header says. Markers are four
+    source files in kernel/core, not the headers in kernel/core/include, so a
+    vendor that renames or flattens the directory is still found. The
+    event-driven variant (kernel/evtdrv, 2.1.0 and 2.4.5 only) and ports (arch/,
+    board/) are out of scope. CPE: NVD registers tencent:tencentos-tiny with only
+    one version, 3.1.0, which upstream never released (its tags end at v2.5.0), so
+    the CPE is real but a CVE keyed to it will not match any copy this rule
+    versions; CVE-2021-27439 (CISA ICSA-21-119-04) is the only record, and its
+    reference is the CISA advisory, not the upstream repository.
+identity:
+  functions:
+    file: tencentos-tiny-kernel.fnsig
+    sha256: 39bebe52a83086d9722473c3ce5985e5e1318a5b2534589bd146a3892faf9a27
+    count: 432
+    versions: ["2.1.0", "2.2.0", "2.2.1", "2.3.1", "2.4.0", "2.4.1", "2.4.2", "2.4.3", "2.4.4", "2.4.5", "2.5.0", "2.5.1", "2.5.2"]

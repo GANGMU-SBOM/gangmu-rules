@@ -1,0 +1,99 @@
+{
+  "jobs": 1,
+  "numpy": true,
+  "calibration_s": 0.061,
+  "runs": [
+    {
+      "rules": 61,
+      "load_s": 0.269,
+      "scan_s": 3.05,
+      "peak_rss_mb": 81.6,
+      "worker_peak_rss_mb": 0.0,
+      "candidates": 59,
+      "findings": [
+        "vendor/tinynet=tinynet@1.4.2"
+      ],
+      "candidate_directories": 60,
+      "rule_checks": 1,
+      "rule_checks_skipped": 3659,
+      "files_hashed": 1276,
+      "files_tokenised": 1156,
+      "cache_hits": 0,
+      "stat_hits": 0,
+      "mode": "cold",
+      "scale": 1,
+      "scan_units": 50.0
+    },
+    {
+      "rules": 61,
+      "load_s": 0.268,
+      "scan_s": 1.313,
+      "peak_rss_mb": 72.5,
+      "worker_peak_rss_mb": 0.0,
+      "candidates": 59,
+      "findings": [
+        "vendor/tinynet=tinynet@1.4.2"
+      ],
+      "candidate_directories": 60,
+      "rule_checks": 1,
+      "rule_checks_skipped": 3659,
+      "files_hashed": 1276,
+      "files_tokenised": 0,
+      "cache_hits": 1156,
+      "stat_hits": 4,
+      "mode": "warm",
+      "scale": 1,
+      "scan_units": 21.52
+    },
+    {
+      "rules": 244,
+      "load_s": 0.922,
+      "scan_s": 4.095,
+      "peak_rss_mb": 103.3,
+      "worker_peak_rss_mb": 0.0,
+      "candidates": 59,
+      "findings": [
+        "vendor/tinynet=tinynet@1.4.2"
+      ],
+      "candidate_directories": 60,
+      "rule_checks": 4,
+      "rule_checks_skipped": 14636,
+      "files_hashed": 1276,
+      "files_tokenised": 1156,
+      "cache_hits": 0,
+      "stat_hits": 0,
+      "mode": "cold",
+      "scale": 4,
+      "scan_units": 67.13
+    },
+    {
+      "rules": 976,
+      "load_s": 2.958,
+      "scan_s": 7.783,
+      "peak_rss_mb": 188.0,
+      "worker_peak_rss_mb": 0.0,
+      "candidates": 59,
+      "findings": [
+        "vendor/tinynet=tinynet@1.4.2"
+      ],
+      "candidate_directories": 60,
+      "rule_checks": 16,
+      "rule_checks_skipped": 58544,
+      "files_hashed": 1276,
+      "files_tokenised": 1156,
+      "cache_hits": 0,
+      "stat_hits": 0,
+      "mode": "cold",
+      "scale": 16,
+      "scan_units": 127.59
+    }
+  ],
+  "tree": {
+    "synthetic": {
+      "components": 59,
+      "files": 1152,
+      "bytes": 6349801
+    },
+    "seed": 0
+  }
+}

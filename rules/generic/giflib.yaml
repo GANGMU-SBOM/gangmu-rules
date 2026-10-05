@@ -1,0 +1,127 @@
+id: generic/giflib
+vendor: generic
+sdk: generic
+component:
+  ships_as: giflib
+  marker_files:
+  - dgif_lib.c
+  - egif_lib.c
+  - gif_lib.h
+upstream:
+  name: GIFLIB
+  purl: pkg:generic/giflib
+  cpe: cpe:2.3:a:giflib_project:giflib:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2016-3177
+  - CVE-2016-3977
+  - CVE-2020-23922
+  - CVE-2021-40633
+  supplier: Eric S. Raymond and GIFLIB contributors
+  homepage: https://sourceforge.net/p/giflib/
+  license: MIT
+  source:
+    kind: git
+    url: https://git.code.sf.net/p/giflib/code
+    ref: edff4aed17f857442ab0cac31566572ba08f93d3
+version:
+  probes:
+  - file: gif_lib.h
+    patterns:
+      major: '#define\s+GIFLIB_MAJOR\s+(\d+)'
+      minor: '#define\s+GIFLIB_MINOR\s+(\d+)'
+      release: '#define\s+GIFLIB_RELEASE\s+(\d+)'
+    template: '{major}.{minor}.{release}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: GIFLIB as vendored by chip-vendor GUI and media stacks (Allwinner R128 carries 5.2.1). The git history is SourceForge's (git.code.sf.net/p/giflib/code); the GitHub copies are mirrors. Library sources only; the command-line tools in the same directory are excluded. Covers 4.1.4 to 6.1.3; 4.2.x and 5.0.x layouts that keep the library under lib/ are matched by the lib/ globs.
+identity:
+  include:
+  - dgif_lib.c
+  - egif_lib.c
+  - gifalloc.c
+  - gif_err.c
+  - gif_font.c
+  - gif_hash.c
+  - gif_hash.h
+  - gif_lib.h
+  - gif_lib_private.h
+  - quantize.c
+  - openbsd-reallocarray.c
+  - lib/*.c
+  - lib/*.h
+  anchors:
+  - path: NEWS
+    sha256:
+      4.1.4: cc136dfcd982ddc20d0a3e32ace8d32ec368c0eec7578981897d57658fd728e5
+      4.1.5: 179c10f3932de35f5870d038af2634615e63a966824b4eebe9a2e4e2f6b3e4bd
+      4.1.6: ea98e68062154acac3c3a3fbf73339360702684eaa355446d3822eeedaf5f71e
+      5.0.0: ab750b0653854727ebe2f6a7452c0ab72251e778e04cc41ae428b1f09e444eb6
+      5.0.1: 8683e2f915ff4138b5b4b96716f524d24847d68757547a6e7430801d918cce72
+      5.0.2: bf34344b573eaa8eb93cf103d1c1c546aa5fe03e01d46a1b444a7d05467b1e32
+      5.0.3: b3c10f5baa7365347de3727db82bb5716e498038f83c00a848b28cc57de06e50
+      5.0.4: 7f236ab8a4262cd7c947d90ce2c4c2371d7996df4687d2d14da5ce7d78263c91
+      5.0.5: 7b39666ac9bdb36ef7f777681d87db4ed1ce1822efd0a2fd1da48060751d8d9d
+      5.0.6: 23f24d28a3467251329faf18b7dd5ad0bc8b6d08db4ca77ba3e264d6513d9b5d
+      5.1.0: 5baf65356bfd8cb3034b20ab4c8089390b54a16522ebf8cf197c3b591eb45041
+      5.1.1: 7e37fe6cac00653d154780e4a1592141fc1e10b9decc3e250d7b46f369fb54e2
+      5.1.2: e17ee17d5e4870ea89d3902eb762a0396ddd4004192c2666e7060b8fe55bb203
+      5.1.3: a606374491e371825bdee36eab2bedaf7d371b266f6b83a7871e4b080ff248a0
+      5.1.4: 0caa59da2fac970151b2b4f5103194850de4a92f2cbf09b960ab9708bea1e15a
+      5.1.5: 5dd1183f130ea5a483accc67c730a53a0ce7cc483cba9d8b3015a2f68dca1d90
+      5.1.6: 8e1243f79c1ec834e03e067941a1bf69c1b8da1a835e8a08b9c4f68997c67ce8
+      5.1.7: 822fc1c19c101552bffdf36d3e5b87972102573dd83aa61e4992b9d89dbfe85c
+      5.1.8: 7ca1342b0adeb4e494585ef923afbb7efa404ae09936bc89b7b0d7511b150199
+      5.1.9: 63f6d2e0756b9daab33d1e291c8a3913892bdc1466f58a15e642935f84c8fc24
+      5.2.0: 7a7e81119fcfca26ef55f84e7db69589028472e26cb1c00cd4fd7250e979df36
+      5.2.1: cab33086905ecd78aa666c789e489e092a223d52cf9146feee78766b639bec2b
+      5.2.2: a37e0b8eae6c27a25dd16cd02ffd428697b65d1611ad0ecdeedc4602709b6bfa
+      6.1.1: ce003d8f4e1f3a3647fae5694fed883640c697327787b7eb157d3a0d8a157cac
+      6.1.2: e301b761793bc1e776e142f7ef25571b4769e3690f00915eaf60b56e32693d58
+      6.1.3: 338aaf91220a15e5f8d1a87a8ad5324313d6f943ba13fa9260eea09a47b65b4f
+  - path: gif_lib.h
+    sha256:
+      5.1.5: e9bb0d9db0fc18913f09a8667458698e53c8926a679773661aff12ff9475df3f
+      5.1.6: b4306c847f4437a2dec1b1ad3ea94f026f12439dd8ae5d53e39cd049cddb2349
+      5.1.7: 8692bc49d10b645cf0c6cf269b32158687d654a83a0214800d31faff665c3981
+      5.1.8: c89fbadce5e80f3c5c0ba2faedeacf9fb6c76dfd008bc21e93743d94411e6b94
+      5.1.9: 7c4f19c7d7900268e2123cb2afe4efda9e722a51e02b8375d66c41cae864d3ae
+      5.2.0: 08eb0d2cc16e54fb57407600f33e55d839b6a430707809e128de10343e46a43c
+      5.2.1: 7c73854e2d7be4fc50e475c098cfcda5d704d5a10414db668c93c362d0c92db8
+      5.2.2: 153c9b429d0be6799ad655e6bbea0ed89ecf5a9ecf94d439d5d992bd4adc0c72
+      6.1.1: 3d4b2f120d812945a7b62aaefe3a7acf87932ee4dfdfa07748191dadf42de32f
+      6.1.2: 77e774dc1c570fa28a4df176a6fd3f921f5097fb8648c9801ae9fc4d1debde24
+      6.1.3: fa87f58874aa1fc59395999ef6f069326b125a7b147bd7fd62a51791dec2c21f
+  functions:
+    file: giflib.fnsig
+    sha256: f318a63354602bb82a2427281e18c4e0912c1de2a617c91492b1f04454c7cd83
+    count: 253
+    versions:
+    - 4.1.4
+    - 4.1.5
+    - 4.1.6
+    - 5.0.0
+    - 5.0.1
+    - 5.0.2
+    - 5.0.3
+    - 5.0.4
+    - 5.0.5
+    - 5.0.6
+    - 5.1.0
+    - 5.1.1
+    - 5.1.2
+    - 5.1.3
+    - 5.1.4
+    - 5.1.5
+    - 5.1.6
+    - 5.1.7
+    - 5.1.8
+    - 5.1.9
+    - 5.2.0
+    - 5.2.1
+    - 5.2.2
+    - 6.1.1
+    - 6.1.2
+    - 6.1.3

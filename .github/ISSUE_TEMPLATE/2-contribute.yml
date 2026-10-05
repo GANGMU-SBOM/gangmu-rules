@@ -1,0 +1,31 @@
+name: 我想贡献规则 · I want to contribute rules
+description: 想认领某个 SDK、补一批规则，或手上有真实固件样本愿意帮忙验证。Claim an SDK, add a batch of rules, or help verify with real firmware samples.
+title: "[共建] "
+labels: ["contribution"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        先说一声可以避免重复劳动。也可以发邮件到 64031875@qq.com。这是公开 issue，请不要填写保密信息。
+        Telling us first avoids duplicated work. You can also email 64031875@qq.com. This is a public issue; do not include confidential details.
+  - type: input
+    id: target
+    attributes:
+      label: 想认领的 SDK 或组件 · SDK or component
+      placeholder: "例如 全志 Tina、国密分支 mbedTLS / e.g. a vendor SDK"
+    validations:
+      required: true
+  - type: dropdown
+    id: help
+    attributes:
+      label: 你能做什么 · How you can help
+      multiple: true
+      options:
+        - 写规则并提 PR · Write rules and open a PR
+        - 提供真实固件或 SDK 样本供验证 · Provide real samples for verification
+        - 核对 CPE / 版本 · Check CPEs and versions
+        - 其他 · Other
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式（可选）· Preferred contact (optional)

@@ -1,0 +1,84 @@
+id: generic/tongsuo
+component:
+  path_globs:
+  - Tongsuo
+  - '**/Tongsuo'
+  - '**/tongsuo'
+  - '**/Tongsuo-*'
+  ships_as: Tongsuo
+upstream:
+  name: Tongsuo
+  purl: pkg:github/tongsuo-project/tongsuo
+  cpe_status: 'none-in-nvd: no record in a full NVD mirror (read 2026-10-04 with gangmu rules cpe-evidence)
+    cites github.com/Tongsuo-Project/Tongsuo or names Tongsuo. Match by purl via OSV. Not re-checked for
+    this change: the session that widened version coverage could not reach NVD (host denied by the environment''s
+    network policy), so records naming BabaSSL (Tongsuo before 8.4) or citing GmSSL 2.x specifically are
+    unverified. Re-run gangmu rules cpe-evidence against a current mirror before relying on this.'
+  supplier: Tongsuo Project (OpenAtom Foundation)
+  homepage: https://www.tongsuo.net/
+  license: Apache-2.0
+  source:
+    kind: git
+    url: https://github.com/Tongsuo-Project/Tongsuo
+    ref: 8.5.0
+version:
+  probes:
+  - file: VERSION.dat
+    patterns:
+      major: TONGSUO_MAJOR=(\d+)
+      minor: TONGSUO_MINOR=(\d+)
+      patch: TONGSUO_PATCH=(\d+)
+    template: '{major}.{minor}.{patch}'
+  - file: include/openssl/opensslv.h
+    patterns:
+      major: BABASSL_VERSION_TEXT\s+"BabaSSL\s+(\d+)\.
+      minor: BABASSL_VERSION_TEXT\s+"BabaSSL\s+\d+\.(\d+)\.
+      patch: BABASSL_VERSION_TEXT\s+"BabaSSL\s+\d+\.\d+\.(\d+)
+    template: '{major}.{minor}.{patch}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'Tongsuo is an OpenSSL 3.0 fork and shares most of its functions with OpenSSL. Its function signature
+    is only safe because generic/openssl sits beside it: functions the two share count for neither rule,
+    so Tongsuo is identified by its own code (NTLS, SM2/SM3/SM4, and the rest). VERSION.dat carries TONGSUO_*
+    fields that OpenSSL does not, which makes it a safe anchor. 8.1.3 to 8.3.3 are the BabaSSL-named releases
+    of the same project (an OpenSSL 1.1.1h base, no VERSION.dat, no providers/): they are anchored on
+    include/openssl/opensslv.h and read through BABASSL_VERSION_TEXT. Because generic/openssl does not
+    carry 1.1.1 yet, those releases share most of their functions with an OpenSSL 1.1.1 that is not in
+    the rule base.'
+identity:
+  include:
+  - crypto/**/*.c
+  - ssl/**/*.c
+  - providers/**/*.c
+  - include/**/*.h
+  anchors:
+  - path: VERSION.dat
+    sha256:
+      8.4.0: 5ea9e1f81aa3aa132621317d1104f3a914c11e78aac8a556fc5732455284eed0
+      8.5.0: 7708848668c52c068d316e84a599c495485b8a804d15ac576c9888a4fb35b058
+  - path: include/openssl/opensslv.h
+    sha256:
+      8.1.3: 16880d5259e0f3f7cdd938b9be666ab77af92de41346842e5305106cceae576d
+      8.2.0: 5ae991ad751cad90dd4b7b0c39071a85933f01065cb932dc38c56e2c8925bf7f
+      8.2.1: 4046c7184306f7b4eaee07b3b9b47857b2625505732d6367c4ca5420ce0b3290
+      8.3.0: 75ca50e7d4df9bb7ec8bceb8b662a71a337ab204fce6594764c0a5f1120bad69
+      8.3.1: 3f615112b1fa783db2a26bb7e2c2fb07fab163851624fa814aef77baf88cd5fe
+      8.3.2: a5de074e87818e87a194aa8a56a6be5653c21b0fe469d22593aaa88652e31bf2
+      8.3.3: 60a8c3cdb2fad5a0dea817f2fac399d128b24cff879bcd9ba5f4aa84d2ec92c1
+  functions:
+    file: tongsuo.fnsig
+    sha256: 399185400d29d5b03d713d427063a69abf8b2320a2ea633a57d86c9118a5c999
+    count: 24737
+    versions:
+    - 8.1.3
+    - 8.2.0
+    - 8.2.1
+    - 8.3.0
+    - 8.3.1
+    - 8.3.2
+    - 8.3.3
+    - 8.4.0
+    - 8.5.0

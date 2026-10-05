@@ -1,0 +1,50 @@
+id: generic/nimble
+component:
+  ships_as: nimble
+  config_symbols:                   # Kconfig option that builds it in that SDK (checked against upstream Kconfig)
+  - path: '**/components/bt/host/nimble/nimble'
+    symbols: [BT_NIMBLE_ENABLED]
+  marker_files:
+  - nimble/host/src/ble_hs.c
+  - nimble/host/src/ble_gap.c
+upstream:
+  name: Apache Mynewt NimBLE
+  purl: pkg:github/apache/mynewt-nimble
+  supplier: The Apache Software Foundation
+  homepage: https://mynewt.apache.org/
+  license: Apache-2.0
+  cpe: cpe:2.3:a:apache:nimble:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2024-24746
+  - CVE-2024-47248
+  - CVE-2025-52435
+  source:
+    kind: git
+    url: https://github.com/apache/mynewt-nimble
+    ref: nimble_1_10_0_tag
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: Apache Mynewt NimBLE, the Bluetooth LE host used by ESP-IDF, RT-Thread packages, Zephyr ports and several Chinese BLE SDKs. The host stack (nimble/host/src and the GATT services) is fingerprinted for releases 1.0.0 to 1.10.0. Release candidates are left out, so an rc copy gets the nearest release as a span. LuatOS components/nimble is only the Lua glue, not the library, and is correctly not reported.
+identity:
+  include:
+  - nimble/host/src/*.c
+  - nimble/host/services/*/src/*.c
+  functions:
+    file: nimble.fnsig
+    sha256: 4181d60aaa362851c7276b925675b0b51e6e5a061ca82c242c5db18caa497dfa
+    count: 2415
+    versions:
+    - 1.0.0
+    - 1.1.0
+    - 1.2.0
+    - 1.3.0
+    - 1.4.0
+    - 1.5.0
+    - 1.6.0
+    - 1.7.0
+    - 1.8.0
+    - 1.9.0
+    - 1.10.0

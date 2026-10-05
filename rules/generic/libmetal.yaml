@@ -1,0 +1,47 @@
+id: generic/libmetal
+component:
+  ships_as: libmetal
+  marker_files:
+  - lib/alloc.h
+  - lib/device.c
+  - lib/shmem.c
+upstream:
+  name: libmetal
+  purl: pkg:github/openamp/libmetal
+  supplier: The OpenAMP Project
+  homepage: https://github.com/OpenAMP/libmetal
+  license: BSD-3-Clause
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword libmetal, 2026-10-05) and the CVE API (keyword libmetal); nothing is registered under a vendor:product for it.'
+  source:
+    kind: git
+    url: https://github.com/openamp/libmetal
+    ref: v2025.04.0
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: libmetal, the bare-metal and RTOS abstraction layer under OpenAMP (bouffalo_sdk ipc/libmetal). Releases are tagged by year and month (v2025.04.0), while the VERSION file carries the library number (1.8.0 is v2025.04.0, 1.9.0 is v2025.10.0). The bouffalo_sdk copy says 1.8.0 but its functions match 2025.10.0 or later, so VERSION is not trusted and no probe is used and the version comes from the function signature, v2020.01.0 to v2026.04.0. Pair with generic/open-amp.
+identity:
+  include:
+  - lib/**/*.c
+  functions:
+    file: libmetal.fnsig
+    sha256: 3e97e4ef11329e6f14a2d1b159e193f359fc47c6b0d10492b4e19f7b6af6192b
+    count: 226
+    versions:
+    - 2020.01.0
+    - 2020.04.0
+    - 2020.10.0
+    - 2021.04.0
+    - 2021.10.0
+    - 2022.04.0
+    - 2022.10.0
+    - 2023.04.0
+    - 2023.10.0
+    - 2024.05.0
+    - 2024.10.0
+    - 2025.04.0
+    - 2025.10.0
+    - 2025.10.1
+    - 2026.04.0

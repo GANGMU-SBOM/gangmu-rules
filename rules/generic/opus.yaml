@@ -1,0 +1,89 @@
+id: generic/opus
+vendor: generic
+sdk: generic
+component:
+  ships_as: opus
+  marker_files:
+  - src/opus_decoder.c
+  - celt/celt.c
+  - include/opus.h
+upstream:
+  name: Opus audio codec
+  purl: pkg:github/xiph/opus
+  cpe: cpe:2.3:a:opus-codec:opus:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2013-0899
+  supplier: Xiph.Org Foundation and Opus contributors
+  homepage: https://opus-codec.org/
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://github.com/xiph/opus
+    ref: 22244de5a79bd1d6d623c32e72bf1954b56235be
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: The Opus codec as vendored by chip-vendor audio stacks (found in Allwinner's R128 SDK). Covers the 20 releases v1.0.0 to v1.6.1 (alphas, betas, release candidates excluded). The vendored copy found in R128 is built from a git snapshot whose configure.ac still says CURRENT_VERSION, so its version comes from the functions.
+identity:
+  include:
+  - src/*.c
+  - src/*.h
+  - celt/**/*.c
+  - celt/**/*.h
+  - silk/**/*.c
+  - silk/**/*.h
+  - include/*.h
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  - '**/dump_modes/**'
+  - '**/training/**'
+  anchors:
+  - path: configure.ac
+    sha256:
+      1.0.0: dd91458d78d8b143a39dfa2adfcc2fbf586f17f64e5fd59142021b31b42de7a6
+      1.0.1: 5847d95b2743be38962061fab80c98e5af2992ba529558b174e0de4d9789b681
+      1.0.2: bfd53fa19e0d3eb84290e9a14d4ec22f78cdf5953d9ea19333e0d6fecf298f98
+      1.0.3: 969c2a7445f9d588f28e6a7f235a9e638968771a6e6c3c9d6cc2cfdd26bf6f7b
+      '1.1': 13542cae76071ed0b7c2dd3604eb532b366c148d0212eb9943b76410475f033d
+      1.1.1: dbf310e3e72fa81b9d5869c544f7d0b72ab1becdcae740bf304c276b4128fea8
+      1.1.2: 44bd6aae846718eb8543ca3eff31761e9492f461b4aaf10958c2e362a9e61ee1
+      1.1.3: 5f6fb727da6091810a2ff65489a0385598117171ca6c43715d1f04e267b761b2
+      1.1.4: ae416e828a6e62e0b8875332f9313f17d0fd0a8144dc035e61ee24cdc437d40a
+      1.1.5: 036d3ea17b17a59fd8594de6b37e0c7133172fa91e1a9acb666fcf8a5131b49e
+      '1.2': 99df198327487c614fac0f4195a14f47f9d99257ac3f4591dec964f0469e4a51
+      1.2.1: 42bb3868c8ba5d82f41bbc4d85b1f59d93858a387f1a0c9a4b6b73e57b02eac5
+      '1.3': f1b93d71e2a848577e969284eb8980fc0f8ee08b74b70c07ea74332c65fdfe8b
+      1.3.1: 887acb7d1a514fe658f45c04cf5bcb4175890b6de7b1d6ce65e9477ff614e6e3
+      '1.4': 36f7ed2cc4fff5f154d8598310dd54f4e877e05ad4310c2b61feecefc6ea3647
+      1.5.2: 0b5de6a56ff917df361f5118568e08c4f3eab789ad67753d8000a956f5407869
+      '1.6': 59805bac008aec501ee54e4d9df4b2fe3c944ae8b317f3773d4bddcfd6d78c49
+      1.6.1: 3ea2e11ef34ca70ef4e861594398da52ef846a07f688f17a99ed1e6b596b9415
+  functions:
+    file: opus.fnsig
+    sha256: a7d5599045c0b97ffb9d7beb02693da0abb8fbbf3ec69f02b02aca3fc8bfa27c
+    count: 2498
+    versions:
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.0.3
+    - '1.1'
+    - 1.1.1
+    - 1.1.2
+    - 1.1.3
+    - 1.1.4
+    - 1.1.5
+    - '1.2'
+    - 1.2.1
+    - '1.3'
+    - 1.3.1
+    - '1.4'
+    - '1.5'
+    - 1.5.1
+    - 1.5.2
+    - '1.6'
+    - 1.6.1

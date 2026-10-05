@@ -1,0 +1,31 @@
+id: generic/tinycrypt
+component:
+  ships_as: tinycrypt
+  marker_files:
+  - include/tinycrypt/ecc.h
+  - include/tinycrypt/aes.h
+  - include/tinycrypt/sha256.h
+upstream:
+  name: TinyCrypt
+  purl: pkg:github/intel/tinycrypt
+  supplier: Intel Corporation
+  homepage: https://github.com/intel/tinycrypt
+  license: BSD-3-Clause
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword tinycrypt, 2026-10-05) and the CVE API for intel:tinycrypt; nothing is registered.'
+  source:
+    kind: git
+    url: https://github.com/intel/tinycrypt
+    ref: v0.2.8
+    subdir: lib
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'Intel TinyCrypt, the crypto library under the Bluetooth host stacks that Bouffalo Lab (bl_iot_sdk, bouffalo_sdk) and WinnerMicro ship (all three carry 0.2.7). Found by its headers, so the source directory may be called source or src. Releases 0.1.0 to 0.2.8 are in the signature; most of them have identical code, so a copy is usually reported as a range (the Zephyr fork, which these SDKs copy, is 0.2.7 plus patches). No anchors: ecc.c is the same file in nearly every release.'
+identity:
+  functions:
+    file: tinycrypt.fnsig
+    sha256: 6ca30e97319316d1e76cbeeeb68be2ce744234a3a4fd50939cad377b05138708
+    count: 221
+    versions: [0.1.0, 0.1.5, 0.2.0, 0.2.5, 0.2.6, 0.2.7, 0.2.8]

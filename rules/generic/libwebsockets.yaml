@@ -1,0 +1,111 @@
+id: generic/libwebsockets
+component:
+  ships_as: libwebsockets
+  marker_files:
+  - lib/core/libwebsockets.c
+  - lib/core/context.c
+  - include/libwebsockets.h
+upstream:
+  name: libwebsockets
+  purl: pkg:github/warmcat/libwebsockets
+  supplier: Andy Green and libwebsockets contributors
+  homepage: https://libwebsockets.org/
+  license: MIT
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword libwebsockets, 2026-10-05) and the CVE API for libwebsockets:libwebsockets and warmcat:libwebsockets; nothing is registered.'
+  source:
+    kind: git
+    url: https://github.com/warmcat/libwebsockets
+    ref: v4.5.8
+version:
+  probes:
+  - file: CMakeLists.txt
+    patterns:
+      major: CPACK_PACKAGE_VERSION_MAJOR\s+"(\d+)"
+      minor: CPACK_PACKAGE_VERSION_MINOR\s+"(\d+)"
+      patch: CPACK_PACKAGE_VERSION_PATCH_NUMBER\s+"(\d+)"
+    template: '{major}.{minor}.{patch}'
+  - file: CMakeLists.txt
+    patterns:
+      major: CPACK_PACKAGE_VERSION_MAJOR\s+"(\d+)"
+      minor: CPACK_PACKAGE_VERSION_MINOR\s+"(\d+)"
+      patch: CPACK_PACKAGE_VERSION_PATCH\s+"(\d+)"
+    template: '{major}.{minor}.{patch}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: libwebsockets as vendored by WinnerMicro's wm_iot_sdk (components/websockets), which carries 4.3.3. Found by its core sources; the version is read from the CMake project, and the function signature covers 3.0.0 to 4.5.8.
+identity:
+  include:
+  - lib/**/*.c
+  - lib/**/*.h
+  - include/**/*.h
+  functions:
+    file: libwebsockets.fnsig
+    sha256: 723a1cac86bfb5a15c0f7930a73af6490701e2b294b5ff164869be894bf984ad
+    count: 6717
+    versions:
+    - 3.0.0
+    - 3.0.1
+    - 3.1.0
+    - 3.2.0
+    - 3.2.1
+    - 3.2.2
+    - 3.2.3
+    - 4.0.0
+    - 4.0.1
+    - 4.0.2
+    - 4.0.3
+    - 4.0.4
+    - 4.0.5
+    - 4.0.6
+    - 4.0.7
+    - 4.0.08
+    - 4.0.9
+    - 4.0.10
+    - 4.0.12
+    - 4.0.13
+    - 4.0.15
+    - 4.0.16
+    - 4.0.17
+    - 4.0.18
+    - 4.0.19
+    - 4.0.20
+    - 4.0.21
+    - 4.1.0
+    - 4.1.1
+    - 4.1.2
+    - 4.1.3
+    - 4.1.4
+    - 4.1.5
+    - 4.1.6
+    - 4.2.0
+    - 4.2.1
+    - 4.2.2
+    - 4.3.0
+    - 4.3.1
+    - 4.3.2
+    - 4.3.3
+    - 4.3.4
+    - 4.3.5
+    - 4.3.6
+    - 4.3.7
+    - 4.3.8
+    - 4.3.9
+    - 4.3.10
+    - 4.4.0
+    - 4.4.1
+    - 4.4.2
+    - 4.4.3
+    - 4.4.4
+    - 4.4.5
+    - 4.5.0
+    - 4.5.1
+    - 4.5.2
+    - 4.5.3
+    - 4.5.4
+    - 4.5.5
+    - 4.5.6
+    - 4.5.7
+    - 4.5.8

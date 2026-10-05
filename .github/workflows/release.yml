@@ -1,0 +1,59 @@
+name: release
+
+# Tag vYYYY.MM.N to publish. The rule base is released on its own schedule,
+# independently of the tool.
+# One-time setup by a maintainer: create the `gangmu-rules` project on PyPI and
+# add this repository + workflow + the `pypi` environment as a trusted publisher.
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: the tag matches the version
+        run: |
+          v=$(python -c "import json;print(json.load(open('rules/rulebase.json'))['version'])")
+          test "v$v" = "${GITHUB_REF_NAME}"
+      - run: pip install build twine
+      - run: python -m build
+      - run: twine check dist/*
+      - name: offline bundle with a sha256 manifest
+        # For networks that cannot reach PyPI: unpack and point GANGMU_RULES at it.
+        run: |
+          name="gangmu-rules-offline-${GITHUB_REF_NAME#v}"
+          mkdir -p "bundle/$name"
+          cp -r rules/. "bundle/$name/"
+          unzip -p dist/*.whl gangmu_rules/data/.rule-index.json > "bundle/$name/.rule-index.json"
+          (cd "bundle/$name" && find . -type f ! -name SHA256SUMS -print0 | sort -z \
+              | xargs -0 sha256sum > SHA256SUMS)
+          tar -C bundle -czf "dist/$name.tar.gz" "$name"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: GitHub release with the offline bundle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/gangmu-rules-offline-*.tar.gz --repo "$GITHUB_REPOSITORY" --generate-notes
+      - name: PyPI
+        run: rm dist/gangmu-rules-offline-*.tar.gz
+      - uses: pypa/gh-action-pypi-publish@release/v1

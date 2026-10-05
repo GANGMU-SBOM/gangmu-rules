@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 工具本身的问题 · Problems with the gangmu tool
+    url: https://github.com/GANGMU-SBOM/gangmu/issues
+    about: 扫描崩溃、命令行、输出格式等问题请提到工具仓库。Crashes, CLI and output format issues go to the tool repository.
+  - name: 常见问题 · FAQ
+    url: https://github.com/GANGMU-SBOM/gangmu/blob/main/docs/FAQ.md
+    about: 提问前请先看常见问题。Please check the FAQ first.

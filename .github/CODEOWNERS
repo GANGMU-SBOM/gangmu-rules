@@ -1,0 +1,5 @@
+# Each rule directory can have its own maintainers.
+*                        @GANGMU-SBOM
+/rules/generic/          @GANGMU-SBOM
+/rules/zephyrproject/    @GANGMU-SBOM
+/rules/rulebase.json     @GANGMU-SBOM

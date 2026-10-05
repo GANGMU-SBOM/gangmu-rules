@@ -1,0 +1,67 @@
+id: generic/liteos-m-kernel
+component:
+  ships_as: liteos-m
+  marker_files:
+  - src/los_task.c
+  - src/los_mux.c
+  - src/los_sem.c
+  - src/los_queue.c
+upstream:
+  name: OpenHarmony LiteOS-M
+  purl: pkg:generic/openharmony/kernel_liteos_m
+  cpe_status: 'none-in-nvd: NVD has no CPE for LiteOS-M and no CVE that names kernel_liteos_m (keyword searches liteos, LiteOS-M, kernel_liteos, Huawei LiteOS, 2026-10-04). The OpenHarmony CPEs (o:openatom:openharmony, a:openharmony:openharmony) are OS-wide, so using one here would attach every OpenHarmony CVE to a kernel copy; the only CVEs that name a LiteOS kernel (CVE-2022-41802, -43662, -45126) are against kernel_liteos_a.'
+  supplier: OpenAtom OpenHarmony project (kernel originally by Huawei Technologies)
+  homepage: https://gitcode.com/openharmony/kernel_liteos_m
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://gitcode.com/openharmony/kernel_liteos_m
+    ref: OpenHarmony-v6.0-Release
+    subdir: kernel
+  mirrors:
+  - kind: git
+    url: https://gitcode.com/openharmony/kernel_liteos_m
+    ref: 32beca78be1fd2a23c8b275a6c5853fa38dbd67f
+    subdir: kernel
+  - kind: git
+    url: https://gitee.com/openharmony/kernel_liteos_m
+    ref: OpenHarmony-v6.0-Release
+    subdir: kernel
+  - kind: git
+    url: https://github.com/openharmony/kernel_liteos_m
+    ref: 32beca78be1fd2a23c8b275a6c5853fa38dbd67f
+    subdir: kernel
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: >-
+    The LiteOS-M kernel (kernel/src and kernel/include; the per-CPU ports under
+    arch/ differ for every chip and are excluded), the kernel inside OpenHarmony's
+    mini systems and HiSilicon SDKs such as Hi3861. Versions are OpenHarmony
+    release names, spelled as upstream tags them (3.2, not 3.2.0, so OSV tag lists
+    compare): 1.0, 1.1.0 to 7.0, 48 releases, 724 functions; many patch releases
+    carry identical kernel code and are reported as ranges. Functions inside a
+    file-wide extern "C" { } wrapper (every source file of 1.1.x has one) are
+    seen by the extractor. There is no version probe: the kernel states no
+    version (no macro in kernel/ or utils/ in any release).
+    The source is GitCode, where OpenHarmony moved in September 2025 (gitcode.com/openharmony);
+    Gitee is now a mirror whose last commit predates the move and which has no tag
+    after OpenHarmony-v6.0-Release. GitCode has the tags for 6.0.0.1, 6.0.0.2, 6.1 and
+    7.0, which this rule covers; its OpenHarmony-v7.0-Release commit is the one the
+    GitHub mirror github.com/openharmony/kernel_liteos_m is pinned to (compared 2026-10-05). The primary stays
+    at OpenHarmony-v6.0-Release, because the recorded evidence was taken at
+    that tag; the 7.0 commit is listed under mirrors, along with Gitee and GitHub.
+identity:
+  include:
+  - '**/*.c'
+  - '**/*.h'
+  exclude:
+  - '**/arch/**'
+  - '**/test*/**'
+  functions:
+    file: liteos-m-kernel.fnsig
+    sha256: 3da29b25a94d992184f68433c2124a850c81cf0cfc98faa934178af9f7022303
+    count: 724
+    versions: ["1.0", "1.1.0", "1.1.1", "1.1.2", "1.1.3", "1.1.4", "1.1.5", "3.0", "3.0.1", "3.0.2", "3.0.3", "3.0.5", "3.0.6", "3.0.7", "3.0.8", "3.1", "3.1.1", "3.1.2", "3.1.3", "3.1.4", "3.1.5", "3.1.6", "3.1.7", "3.2", "3.2.1", "3.2.2", "3.2.3", "3.2.4", "4.0", "4.0.1", "4.0.2", "4.0.3", "4.0.4", "4.1", "4.1.1", "4.1.2", "4.1.3", "4.1.4", "5.0.0", "5.0.1", "5.0.2", "5.0.3", "5.1.0", "6.0", "6.0.0.1", "6.0.0.2", "6.1", "7.0"]

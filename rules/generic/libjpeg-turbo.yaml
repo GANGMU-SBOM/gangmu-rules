@@ -1,0 +1,147 @@
+id: generic/libjpeg-turbo
+vendor: generic
+sdk: generic
+component:
+  ships_as: libjpeg-turbo
+  marker_files:
+  - jpeglib.h
+  - jdhuff.c
+  - jcapimin.c
+upstream:
+  name: libjpeg-turbo
+  purl: pkg:github/libjpeg-turbo/libjpeg-turbo
+  cpe: cpe:2.3:a:libjpeg-turbo:libjpeg-turbo:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2017-15232
+  - CVE-2018-1152
+  - CVE-2018-14498
+  - CVE-2018-19664
+  supplier: The libjpeg-turbo Project
+  homepage: https://libjpeg-turbo.org/
+  license: BSD-3-Clause AND IJG AND Zlib
+  source:
+    kind: git
+    url: https://github.com/libjpeg-turbo/libjpeg-turbo
+    ref: f29eda648547b36aa594c4116c7764a6c8a079b9
+version:
+  probes:
+  - file: jconfig.h
+    patterns:
+      version: LIBJPEG_TURBO_VERSION\s+(\d+(?:\.\d+)+)
+    template: '{version}'
+  - file: CMakeLists.txt
+    patterns:
+      version: set\(VERSION\s+(\d+(?:\.\d+)+)
+    template: '{version}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: libjpeg-turbo as vendored by chip-vendor SDKs (Allwinner R128 carries 2.1.5.1 with the generated jconfig.h). Covers the 30 releases from 1.3.0 to 3.0.4 (3.1.0 and later moved the library into src/, which this rule does not follow, so they are not covered and a 3.1+ copy is not identified) on the root-level library sources (SIMD, Java, tests and tools excluded); the generated jconfig.h, when kept, is read by the version probe. libjpeg-turbo 2.0.7-esr and 2.0.8-esr are extended-support releases labelled 2.0.7 and 2.0.8.
+identity:
+  include:
+  - '*.c'
+  - '*.h'
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  - '**/fuzz/**'
+  - '**/java/**'
+  - '**/md5/**'
+  anchors:
+  - path: CMakeLists.txt
+    sha256:
+      1.3.0: 31b932253e336fa765f52158370b9bca1f2e3a5f88fb77ae2666604ca32ca58e
+      1.3.1: 38a33b269ae676031d75ec995d34cd6545082956859e08df396e1141c8de505e
+      1.4.0: e9b193884f760a96897b46b5dc9c70349e63a3c6339e0d755ee173088bc4e1b0
+      1.4.1: b967778c56222046298dad927baa83529cb565eff963c52928d9d2f8136f72a1
+      1.4.2: f60699e1057595c66e19b3849e1c697f122581bdc5a34393a4e9f201a1419abb
+      1.5.0: a6286a7801234e1ed482d338b1fc5e3e357a54f73d88d8ccb67d558767434270
+      1.5.1: fce319d9541533eba949e1ac19469cc20dde62080001f6fc6be3088d26089c76
+      1.5.2: c5f40df3b180f5d7d1b247a5641a7f4ca07052eea53b6289120c004842d58cd6
+      1.5.3: 06b7f17721aeec7792e0fe6778032d36a81167df76124ff1f7b3efdfdeb0fb01
+      2.0.0: fb2f855a210c2f395d11a99d876c3160c1589c3736f23c8cb97d7da3bd8baa07
+      2.0.1: c65134767c5777062dfb2fa137bb309859bc9561239f49795c9e03a4d7bda554
+      2.0.2: 2a1b6d305a35a99219d9fcb305f41e5de6863862e448ec8a22135a9d1b998b25
+      2.0.3: e8fc97772195f0172d3153dafde94bf7f1d82dfa2db082ca94ca7fad19896b8b
+      2.0.4: 16adfcfabddbb993a6f3f1ff10fa1c6c0cec7ae3f2060ecff3d1abf413d33c54
+      2.0.5: 1b7ac8b4d90aaf26d109fb6587debec39604061e60d0bc55008a79b1f605bd0a
+      2.0.6: f02977e48cb35dc2df232fb1122d95489fe8c169939d474b570c6885b80b6068
+      2.0.7: 3625b770b81ccdd48cd6e4f68477ce0b5f590ac54daa34862a08de694020ddcd
+      2.0.8: 05d7a980ffcacebb9bf0b56f3a762ca1025f47fcccd54c34775ae274d16c82f9
+      2.1.0: b55137b394cceb0854ec300c36310faf35a6499ca3186aeb245d597511f9c098
+      2.1.1: 4a869b7ae8df13935b91915e53b58abd01c6004ff212f2b3103dd353078d93ee
+      2.1.2: 84d1ca5b97b5d684ded0f3ed5a139d59574d2126af3373451d485f7c855c9c47
+      2.1.3: d0d54163b83fdc36360fae497dc8c9d2fce085b6bcfdcf12edc200506f4622c8
+      2.1.4: d814653645ef651e58014d9cff7376efd0400ea1b87e95d40e41e843946c9da9
+      2.1.5: 2b0ae2fe3a47e1f0ef1e78851c151724b32fc63df7bd2b1296b620430a334384
+      2.1.5.1: 8f16b39bfd86c7c33d4a6a61f8d89557aa7f5ccbc1c9dfa9f85ad76306f978a7
+      3.0.0: 3720674e8112ac04f08bc6eae86243dcd3922601f21745afaef1fdf6ebfb4d70
+      3.0.1: 8a025bc2a67d13ba9a1a5e8a2a754ff02d34a99317df2e3b86f40321db517f17
+      3.0.2: 1e89ee82397417730d53776463eb26b016e75df9edcd9450464ff41f93dabe63
+      3.0.3: a50811d7f15eba78dc7258401569ef0f0afa72ead21df55226761c42036b2e8d
+      3.0.4: 3738e1882df668bf97f89e1d31363cc3f29f3f7dd1cce65060297959c4830306
+  - path: ChangeLog.md
+    sha256:
+      1.5.0: 3b32bc9fd0abb554c491471d5e50d9468325eae7267f5243104124efa7fb72b9
+      1.5.1: 4947ae5bc8e8736446f613df41c1757e861408f1f27b165eb15815909be44151
+      1.5.2: bd646f865ac4b33acf7a5abe833cf3eb3239d36c687eda17b6eef72fd6e75c6a
+      1.5.3: 6d23e995b0bc62cd6e9ee6e44c2c3627ff510b84621ad73ec8f3a822881b54a7
+      2.0.0: efdb497f4088741c1e4ef76d7d4dfc8a4569e7e34c14a52707f6f0f1ed3ae7ed
+      2.0.1: e969f57923329bc0e3adbf6141ee200d2d1f55e91937207cda0b1774cb42d5c1
+      2.0.2: 1d32980f83581142a0c84d46367f939de5049c9bc348e97a7d9d9320323a614e
+      2.0.3: ff7c836df30929366129bf27a63328da0d378047d25d6b78a14011b4d6a8f465
+      2.0.4: d50c528f9a1391f66efc762aa34d192cc13a361e9507ba3f87ed52c391c87368
+      2.0.5: 02e13a2e8085b204fa609b1bd8514da13ff94ba074a8a1286c27c05d8ac6b2ee
+      2.0.6: 4f33076807e43fa9f7a61285d3b1403c5544711e819eea0419dac6d487df3747
+      2.0.7: 3e12d4bd0cdad304eabbd5e98b4ce1b0285de6ca34e59fa684b9eaed52d17722
+      2.0.8: 9e2f45589085d0e4e16a241d2f4baed02cecd5c16432020bd891384546bf042f
+      2.1.0: cb63007f3fce24cac4d9071c1ed11e395090dda3acfad838f7a218fe3fa2e436
+      2.1.1: f678609d20a7a3f1996c5c64e1c057f71f6f502de1e16b7e344bad9b1bb684dc
+      2.1.2: b855c4d3c015df7dde3d980910dea366e4ae57ca1357c27a47ec2483d7bcc10d
+      2.1.3: 8a428d38c7b679ab473d51d5b4cbe548d1f9d9bebb7545a4299770b849f237b0
+      2.1.4: dcbd9a6c2d20a8dfde69687f8003c18f468b87142f0146a4cf0364d3c9d7eeb0
+      2.1.5: 4c9630d9c29cf4c542f067c640b4185a2b50b34d090d2fbefe63034bc3e00080
+      2.1.5.1: 8251eaa7b4498c03b6360f19753fe38f3f8a81a8262568e1e083099268cab9fa
+      3.0.0: fc430c3495255ce1f510c68459e9d467316ebd6b54286290ca85e2f0c08be9c8
+      3.0.1: a5830846916b4fb1cf6823fa249fc223905c9d6a0c9985b9ecd7eccefe0fe045
+      3.0.2: 2bb02651531c2730983ddb9df6edf3d0e2f97bb5bbde3257584c417409c62092
+      3.0.3: f47496a759c6062c0be122d369d7ccdc5c62baa1fec3ccf1db643cc4234fb4f1
+      3.0.4: 90bfdebe6f1b95b04e1fef04330fb2de939d83368ff3c91902f0de4a75d082d1
+  functions:
+    file: libjpeg-turbo.fnsig
+    sha256: 354711ac1c4ee496b32f0aeac322f2dd1c4b430d5e99ed241a620aa50182f85a
+    count: 2496
+    versions:
+    - 1.3.0
+    - 1.3.1
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.5.0
+    - 1.5.1
+    - 1.5.2
+    - 1.5.3
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    - 2.0.7
+    - 2.0.8
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.1.5.1
+    - 3.0.0
+    - 3.0.1
+    - 3.0.2
+    - 3.0.3
+    - 3.0.4

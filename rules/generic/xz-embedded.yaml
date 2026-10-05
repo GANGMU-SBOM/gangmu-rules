@@ -1,0 +1,35 @@
+id: generic/xz-embedded
+component:
+  ships_as: xz-embedded
+  marker_files:
+  - xz_dec_stream.c
+  - xz_dec_lzma2.c
+upstream:
+  name: XZ Embedded
+  purl: pkg:github/tukaani-project/xz-embedded
+  supplier: Lasse Collin
+  homepage: https://tukaani.org/xz/embedded.html
+  license: 0BSD
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword xz-embedded, 2026-10-05) and the CVE API (keyword xz-embedded); nothing is registered under a vendor:product for it.'
+  source:
+    kind: git
+    url: https://github.com/tukaani-project/xz-embedded
+    ref: v2024-12-30
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: XZ Embedded, the small XZ/LZMA2 decoder (bouffalo_sdk components/lzma/xz, a flat copy with xz_dec_*.c). Upstream has no version macro and only four tags, v20240124 to v2024-12-30, so older copies (the SDK carries a 2021 snapshot) score about 0.5 against v20240124 and are listed only as a possible match (--include-possible), not asserted. Not xz-utils (liblzma), whose CVEs do not apply.
+identity:
+  include:
+  - '*.c'
+  functions:
+    file: xz-embedded.fnsig
+    sha256: d9f12d992df36bd731207e574b78b34f070e904eb24a1e64d97b751a47713aac
+    count: 91
+    versions:
+    - 2024.04.05
+    - 2024.12.30
+    - '20240124'
+    - '20240322'

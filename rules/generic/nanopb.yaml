@@ -1,0 +1,81 @@
+id: generic/nanopb
+component:
+  ships_as: nanopb
+  config_symbols:                   # Kconfig option that builds it in that SDK (checked against upstream Kconfig)
+  - path: '**/modules/lib/nanopb'
+    symbols: [NANOPB]
+  marker_files:
+  - pb_encode.c
+  - pb_decode.c
+  - pb.h
+upstream:
+  name: nanopb
+  purl: pkg:github/nanopb/nanopb
+  supplier: Petteri Aimonen
+  homepage: https://jpa.kapsi.fi/nanopb/
+  license: Zlib
+  cpe: cpe:2.3:a:nanopb_project:nanopb:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2020-5235
+  - CVE-2020-26243
+  - CVE-2021-21401
+  source:
+    kind: git
+    url: https://github.com/nanopb/nanopb
+    ref: 0.4.9.2
+version:
+  probes:
+  - file: pb.h
+    patterns:
+      v: NANOPB_VERSION\s+"(?:nanopb-)?(\d+\.\d+(?:\.\d+)*)
+    template: '{v}'
+  - file: include/pb.h
+    patterns:
+      v: NANOPB_VERSION\s+"(?:nanopb-)?(\d+\.\d+(?:\.\d+)*)
+    template: '{v}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: nanopb, the Protocol Buffers decoder for microcontrollers (LuatOS components/nanopb carries 0.4.9.1, laid out as include/ and src/). The version is the NANOPB_VERSION macro in pb.h; the function signature covers 0.3.6 to 0.4.92 (pb_common/pb_decode/pb_encode).
+identity:
+  include:
+  - pb*.c
+  - pb*.h
+  - src/*.c
+  - include/*.h
+  functions:
+    file: nanopb.fnsig
+    sha256: 71bbd23687982d92e61f37d2ede666295fa30415c348ccfb56a6eed4824df82f
+    count: 281
+    versions:
+    - 0.3.6
+    - 0.3.7
+    - 0.3.8
+    - 0.3.9
+    - 0.3.9.1
+    - 0.3.9.2
+    - 0.3.9.3
+    - 0.3.9.4
+    - 0.3.9.5
+    - 0.3.9.6
+    - 0.3.9.7
+    - 0.3.9.8
+    - 0.3.9.9
+    - 0.3.9.10
+    - 0.4.0
+    - 0.4.1
+    - 0.4.2
+    - 0.4.3
+    - 0.4.4
+    - 0.4.5
+    - 0.4.6
+    - 0.4.6.4
+    - 0.4.7
+    - 0.4.8
+    - 0.4.9
+    - 0.4.9.1
+    - 0.4.9.2
+    - 0.4.91
+    - 0.4.92

@@ -1,0 +1,75 @@
+id: generic/littlefs
+component:
+  ships_as: littlefs
+  config_symbols:                   # Kconfig option that builds it in that SDK (checked against upstream Kconfig)
+  - path: '**/modules/fs/littlefs'
+    symbols: [FILE_SYSTEM_LITTLEFS]
+  marker_files:
+  - lfs.c
+  - lfs.h
+  - lfs_util.h
+upstream:
+  name: littlefs
+  purl: pkg:github/littlefs-project/littlefs
+  cpe_status: 'none-found: searched the NVD CPE dictionary on 2026-10-03, no application CPE for littlefs (finding carried from zephyrproject/zephyr/littlefs). Match by purl via OSV.'
+  supplier: Christopher Haster and littlefs contributors, ARM Limited
+  homepage: https://github.com/littlefs-project/littlefs
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://github.com/littlefs-project/littlefs
+    ref: v2.11.3
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'littlefs as vendored by chip-vendor SDKs under any directory name: Bouffalo Lab carries 2.11 and WinnerMicro 2.10, and WCH''s LiteOS example tree references it. The signature covers 1.7.2 and every 2.x release, 2.0.0 to 2.11.3. lfs.h does not change between patch releases (it records only ''major.minor'' in LFS_VERSION), so the main anchors are on lfs.c, which does; 2.4.0 and 2.4.1 share one lfs.c and have no anchor there. There is deliberately no version probe: LFS_VERSION is a hexadecimal ''major.minor'' with no patch level, and a probe would override the more precise function-level version.'
+identity:
+  include:
+  - lfs*.c
+  - lfs*.h
+  anchors:
+  - path: lfs.c
+    sha256:
+      1.7.2: c203d128553f892c645ae61572c6af622e95254e1a256ea6d729db24352b2e1d
+      2.0.0: 2d71f54f884f22b7dcdda76dcad1590468d6936a7439f24ef5a0b5973dfb68a5
+      2.0.1: fd0a278f86fb6daa38e1ec4d29ecb708b889220b3519627c32250f20ba35ec99
+      2.0.2: 9d2d5ab8d692db9d4e94ce1a761c0ecb2076982d5ead8277f413eba809fc00f7
+      2.0.3: 9fa5258a278c935ce6c792bfd17bb1e372a50da36b9142fa8da4bfee9275c430
+      2.0.4: a8d01049844d3d282fc99f400fcc9109feb2b9c4f663f2847d0e52f569f9c307
+      2.0.5: e7ba7619428b75f7bbb1744ea0762b4225753d220dcea952a136d741670d0f14
+      2.1.0: 6910db88bcfd8b9a45e5449a5496964da6ea58a7db86ddd9b90e865700ca6d82
+      2.1.1: 819cdd4b4da370aff9c67559cc06407db4668d283f33b4cae18861e0b65773eb
+      2.1.2: e0e765fc330b7ecf198faaebded70c4750f64cc996436a161eff4dd45e0374a9
+      2.1.3: 8d85fbb0316be67e9c5930a639329c4ff5b2c854fbe92a2ef3e17e9141b3fe66
+      2.1.4: 4a07080907b7e00514deff0e42aa044e0c836124a978604e6068b0dd5a767227
+      2.2.0: 0ebbd42ca95fb5c57edd3e58c9be55924bce6dcff184aaf256eb92c85b6ee7e4
+      2.2.1: 5988595be9b4c863d74d94a11570b0196c9f811869f55baed0a9554bfe2e41f8
+      2.3.0: 925da5ee8b1a4944937ed5b91cea43c7c74461dae846cf2f6a1b2e9f79d31981
+      2.4.2: dd5bdb60425c2699cad3fda4e7a93f6e25ec784808744feed37f154c8f714f3b
+      2.5.0: c4de0850d8629f511b91217334c2cc2e75e89cd24f1f7b40b483df3d5762a918
+      2.5.1: 8c28c80018293820d5400759f4918359b09d869c1a1240959b0647cc844783b5
+      2.6.0: 9db86e9c3bf0b48ca5b341598f9774a168da3d9598d3de4a5d67a7d7d1173e8c
+      2.6.1: a6ae32fe9f2ce9052f7dbb86139fd8c390bab4966a86e8da99e4e19b259719a1
+      2.7.0: 86988154fd99f2992304ee0849cea803808e0f710ad4fc81dd4f220cd435957d
+      2.7.1: 26c406f99a3da3271bf33badfdfc70ce8c46cfa1c4d92cd4b8642b251433471f
+      2.8.0: 55cc2ea6c692e2595afeeb75e65d9efdc34a74c0cd21a55e577722cab4547544
+      2.8.1: 084e8694cbd81987f172cdb3dc945526a4bbb0af990b319027d6dfc7dc570b3d
+      2.8.2: e3fdd487ba642ea4d6033da165527ee0e25e8a8cf12b7c82bc85b02261d47d79
+      2.9.0: 0b9845f350c33aa448a916847d2246b76c8e296eed8e7e296ae0430242cfda6c
+      2.9.1: 0ed052c99e246c84977052cac04043f5a6e45b2ca31a2ff218995a76aef38ac9
+      2.9.2: 1f2bce8a63ccfec56724aa22495e360f7115e3db205c5fa65d7839eea42599c1
+      2.9.3: 4a221443c1936be4d41d8f400cd2fd055695196acadef35fcb227eb7e90f6db5
+      2.10.0: e968d56a513d9b80bd30ce40f8ba70cd7c659c66df9df53411e329e211634da7
+      2.10.1: 81a209e8551754d13b24fc0a2b6707fb3b2475e14feba00bf0df722b98a31398
+      2.10.2: 2121ccdfc6840236b72aaf34e003c6ff333d0b8ed8f7e715096bfeeb4d868846
+      2.11.0: 723f48c516b3451e9b7202739c692fa6ebe48a531ee202974a7b896e0abf4022
+      2.11.1: 11b13e3d47847f2dcef45bb2572d9944a20d3edf97c8c7da40d2fc5829db072f
+      2.11.2: 41b7aa8d6e1601ef26129399cc2e5988e736c82a4b89e31183be787722aebf07
+      2.11.3: a36d6a095785ddea9571d541d68d3e4ef01d5b255a99d17d3f07fb6ea60ea132
+  functions:
+    file: littlefs.fnsig
+    sha256: 2d83048277ce68926761655104297ab382778f9379e5da2d4926bad9e7ab0c72
+    count: 455
+    versions: [1.7.2, 2.0.0, 2.0.1, 2.0.2, 2.0.3, 2.0.4, 2.0.5, 2.1.0, 2.1.1, 2.1.2, 2.1.3, 2.1.4, 2.2.0, 2.2.1, 2.3.0, 2.4.0, 2.4.1, 2.4.2, 2.5.0, 2.5.1, 2.6.0, 2.6.1, 2.7.0, 2.7.1, 2.8.0, 2.8.1, 2.8.2, 2.9.0, 2.9.1, 2.9.2, 2.9.3, 2.10.0, 2.10.1, 2.10.2, 2.11.0, 2.11.1, 2.11.2, 2.11.3]

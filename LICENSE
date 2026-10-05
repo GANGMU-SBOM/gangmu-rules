@@ -1,0 +1,8 @@
+The rule data under rules/ is licensed under the Community Data License
+Agreement - Permissive - Version 2.0: https://cdla.dev/permissive-2-0/
+(see rules/LICENSE).
+
+The packaging code (src/, setup.py, .github/) is licensed under the Apache
+License 2.0: https://www.apache.org/licenses/LICENSE-2.0
+
+Copyright 2026 the gangmu-sbom authors.

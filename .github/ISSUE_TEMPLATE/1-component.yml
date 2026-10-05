@@ -1,0 +1,44 @@
+name: 组件识别请求 · Component identification
+description: 缺少某个组件或 SDK 的规则，或者识别结果有误（误认、漏认、版本错、CPE 错）。Missing rule, wrong identification, wrong version or wrong CPE.
+title: "[规则] "
+labels: ["rules"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型 · Kind
+      options:
+        - 缺少规则 · Missing rule
+        - 误认 · Wrong component
+        - 漏认 · Component not found
+        - 版本错误 · Wrong version
+        - CPE / PURL 错误 · Wrong CPE or PURL
+    validations:
+      required: true
+  - type: input
+    id: component
+    attributes:
+      label: 组件与版本 · Component and version
+      placeholder: "例如 lwIP 2.2.0 / e.g. lwIP 2.2.0"
+    validations:
+      required: true
+  - type: input
+    id: sdk
+    attributes:
+      label: 芯片 SDK 与版本 · Chip SDK and version
+      placeholder: "例如 ESP-IDF v5.3、全志 Tina、RT-Thread 5.1"
+  - type: input
+    id: upstream
+    attributes:
+      label: 上游地址（标签或提交）· Upstream URL (tag or commit)
+      description: 规则必须能从固定的上游版本复现。Rules must reproduce from a pinned upstream release.
+  - type: textarea
+    id: output
+    attributes:
+      label: gangmu 输出 · gangmu output
+      description: "`gangmu scan ... --format table` 的相关行。请勿粘贴专有源码。Do not paste proprietary source."
+      render: text
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明 · Notes

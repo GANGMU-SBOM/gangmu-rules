@@ -1,0 +1,46 @@
+id: generic/flashdb
+component:
+  ships_as: flashdb
+  marker_files:
+  - src/fdb_kvdb.c
+  - src/fdb_tsdb.c
+  - inc/fdb_def.h
+upstream:
+  name: FlashDB
+  purl: pkg:github/armink/flashdb
+  supplier: Armink (Zhang Chao) and FlashDB contributors
+  homepage: https://github.com/armink/FlashDB
+  license: Apache-2.0
+  cpe_status: 'none-found: searched the NVD CPE dictionary and the CVE API (keyword flashdb, 2026-10-05); nothing is registered under a vendor:product for it.'
+  source:
+    kind: git
+    url: https://github.com/armink/FlashDB
+    ref: 2.2.0
+version:
+  probes:
+  - file: inc/fdb_def.h
+    patterns:
+      v: FDB_SW_VERSION\s+"(\d+\.\d+\.\d+)"
+    template: '{v}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: FlashDB, the embedded key-value and time-series database that LuatOS vendors (components/flashdb, 1.1.0) and many Chinese RT-Thread-based SDKs use. The version is FDB_SW_VERSION in inc/fdb_def.h; the function signature covers the eight upstream tags, 1.0.0 to 2.2.0.
+identity:
+  include:
+  - src/**/*.c
+  functions:
+    file: flashdb.fnsig
+    sha256: 985592c92e6fe84896e54f9ae9cfd7e3ad5bbd51d6863b7bd06069cde51f358b
+    count: 262
+    versions:
+    - 1.0.0
+    - 1.1.0
+    - 1.1.1
+    - 1.1.2
+    - 2.0.0
+    - 2.1.0
+    - 2.1.1
+    - 2.2.0

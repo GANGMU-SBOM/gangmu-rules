@@ -1,0 +1,81 @@
+id: generic/liteos-kernel
+component:
+  ships_as: huawei-liteos
+  marker_files:
+  - base/los_task.c
+  - base/los_mux.c
+  - base/los_sem.c
+  - base/los_queue.c
+upstream:
+  name: Huawei LiteOS
+  purl: pkg:generic/huawei-liteos
+  cpe_status: 'none-in-nvd: NVD has no CPE for Huawei LiteOS and no CVE that names it (CPE dictionary: cpe:2.3:o:huawei:liteos, liteos_a, liteos_m, liteos_iot and keyword liteos all empty; CVE keywords liteos, Huawei LiteOS, LiteOS-M, liteos_a; 2026-10-04). OSV has no record.'
+  supplier: Huawei Technologies Co., Ltd. (LiteOS project)
+  homepage: https://gitee.com/LiteOS/LiteOS
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://gitee.com/LiteOS/LiteOS
+    ref: v5.1.0
+    subdir: kernel
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: >-
+    Huawei's own LiteOS kernel (kernel/ of LiteOS/LiteOS) in its 5.x layout, where
+    the sources sit flat in kernel/base: v5.0.0 and v5.1.0, the only 5.x tags
+    (v5.1.0 is the tip of master). This is a different tree from the OpenHarmony
+    LiteOS-A and LiteOS-M kernels, which have their own rules. The source is
+    Gitee, the project's primary repository: the GitHub mirror github.com/LiteOS/LiteOS
+    has no 5.x tags and its master is behind. The function signature
+    (1149 functions, built from the two tags on Gitee on 2026-10-05) separates the
+    two releases by function content; the kernel wraps every source file in
+    extern "C" {, which the extractor could not see when the rule was first
+    written (about 60 functions) and sees through now (891 in v5.0.0, 920 in
+    v5.1.0). Identity is also the winnowed
+    sketch of v5.1.0, and the version can come from exact hashes of five kernel
+    files (all five differ between the two releases); the functions are what
+    still give the version of a copy patched in those files. HW_LITEOS_VERSION in include/los_config.h is
+    empty in v5.0.0 and "V200R005C20B053" in v5.1.0, so it is not a probe. Not
+    covered: tags v1.1.0 to v1.1.2 (a different layout, kernel/base/core and
+    kernel/base/ipc) and the thirteen LiteOSV200R001C50B0xx build tags (kernel
+    under iot_link/os/os_imp/liteos), whose names normalise to the number 200.
+identity:
+  include: ["**/*.c", "**/*.h", "**/*.cc", "**/*.cpp", "**/*.hpp"]
+  anchors:
+    - path: base/los_task.c
+      sha256:
+        "5.0.0": "0f2445aac199d7add444027e2239cd3dcc51699899c15a1e6a7847d53b755ba7"
+        "5.1.0": "58a8c97036e2ca5ba929798a8c25d43bd73f8a74566d76e73e56e89b3b77dd53"
+    - path: base/los_mux.c
+      sha256:
+        "5.0.0": "a4b3d97992911787051a7b0036b45b85eee8a0a2e9f959a443ce5e5834b171d2"
+        "5.1.0": "b2223efb08f04770cf3df57760a1c253adc8332021a5484eb8284a23e2fb7445"
+    - path: base/los_sem.c
+      sha256:
+        "5.0.0": "f94b875078f00dc174fe53d3d89390b4f2206f711202fd102882eeff1526deb4"
+        "5.1.0": "a5cb84f42acf7a777ed1d4909a5b22546cbe520a02922fe044daedac8620005e"
+    - path: base/los_queue.c
+      sha256:
+        "5.0.0": "7cf2b7092687954d4a75951a73b9854e042a88b95a35b56a220fd79ad55c0463"
+        "5.1.0": "aafec58742291bbb7daee2abc06e664164b49d54fb409c2717bc3731602f6029"
+    - path: base/los_swtmr.c
+      sha256:
+        "5.0.0": "3870c949df5dd8817ea44b49c99a02d2e30cd1fb7cb1f3066e8b02edba76d2d0"
+        "5.1.0": "0e6cb5488303b0b7d801d7a6f96e113ce9f192b9487628a5a9640f2512975646"
+  signature:
+    algo: winnow-bottomk
+    k: 16
+    window: 8
+    size: 256
+    reference_version: "5.1.0"
+    fileset_sha256: "7bd235595c483566ff333b257d8f2f9922eae3d6070e18d19abb30f9fb541bfc"
+    values: >-
+      0000467383d183d7000080ceb8dacf660000979a6160bd52000165758dc6285b0001671f0ae364350001dad97b3e62750001f549e3824b1d00022af0b314aa5a0002817076dc99c80002f223af0ceb42000501ecfa34a4d9000506997733648c0005f26cfbd8e7870006aefe6e5ca3d000072374e3c1662500075a82e33f69080007df963450742d000831aa447b4c46000848ea91785de400098dc7fb9f7270000a19c0b290535c000a1b18b77aa277000aa72987327d0a000b4f32b7d42700000b7143aa0f3c8f000bbd13d854b5fa000c2e3839ef6faa000c7fb07caf3855000cd15663f1c4fc000dd9dc604a42ac000e0384daa4f404000e0d97075ea031000e18f17e80f501000e41faba1a964f000f3d61590837a0000f3d783ec8354500106792a8ceaca1001086621d97f9db0010ab56422ee9b500111597d4d225fe00111a6b0bbc5e980013c2997e7c17b10013c9bdc700549600141c8e3271b4150014a950fee88411001669cfe315ace600169ce9cc8e685200177c4abbc7efcd001891056523b48d00193a5fe56a3510001a762ebc296f0c001bdb79bc829afc001be74136394ea9001c0237996da76b001c1940bbc8da23001c541cc105b805001d6bf2a6b50124001db66be35ec082001fe7f46d1d6f8a00209008e63901ba00212ab706919e19002157dbbd0568650021fcf368bce9ad00222ffc3c40d95600224e586f64f50e00231db9bf9fdad70023795f6a3649ec0023d9f96a9be6b500240b9fd159398f00252439a90a8453002650b58cc8587d002693a59caec31600269bcf6a697e1500269d2605e1e4170028236e8d39901100282d3f130c35340028d7ec578b5833002988f82b26bfaa0029d7f93e01a382002ad54f9974ff66002b17aa70741fed002c92746d2d1405002cbfed33cbda8e002cf7146a79e6b4002d577cfa9d2290002eaec7e07599580030067533332c4c0032cfd5d4d6fb0800339e8a567fdff20033c8d258bc733000349f62aa3c02dc0034d8415da7898b0034e10a7a10cc450035921c297d737b00364aa3177e245c0037b0d625fbb7bc0039d7706c74d53c003a777f2b3b43a7003ab2ad7afaab03003ac0cd31865f0f003b8422996426a2003d26ececf13aeb003d59cd97c04cf9003d7a6a1d161607003da09ddea7b3bd003db09879a06679003e03802cdb21f3003eb201359c371e003fc2a167327b3c003ffad92b5aeade0041b2298f14f4d50041e8d912154bca0043c863411f63350043f41b0105936b004403743416fa070044baedab876f740044efaa4d9ef36e0044efedf2912d7f00453a2ff18969b50045a8bdcacc42500045dcdb34db7bdd0046b25f37c5978d00479c698aa160b5004944cbc3b91271004a29540e0ef270004b08e38c291d73004cb99ca679c433004e122b732cb68a004e697607209d170050ba419eb7cbf8005100cc14431253005136b5a9e4ea4a00515eebd730953200527cf43ec3f9fc005533b14a0328270055634fa7ecbdbd0055b852b009e0e20055b9d30c7e4ee300563b60ae04d22500580d17704922070058b2f786756f6b00598cc8c14a2e27005a596f4a0bd2d7005cd1da37567a96005d472a074ea6e5005dbbe635aea94c005ef9443b407c010060325dcc37bc8c0060914ed0b3d0190060ff0f28db36d200611eb67eedb96f00618674ff517aa00061bf7f702b3b1b0063324a286b69150063c8eb5135fd0800645f3cffae4ff10065a4c219aa5d620066cd72bc7bb8fb00670b78eea0351c00681f3036cb9bc7006850f6c69035a200687c69aadcea1700688678509dfdae00697170a53265f30069cb6c19a48d0f006a0eaf889028a1006ab5cbd1eab43c006bb4e87506bd61006bce1773da0551006c49bdd7fea782006c743863157bd5006daf1bc8f41ad4006deb7a680522a3006ded72da893401006e698b99147ac7006ee0c22d9119b3006efb800c15a7ce006efef502cc6bed00704dacaab841be0072aee42c79afab007309b407a5e73600730fa08db3fff700744a622823058500746dc4a6a8e9da0074a20e67ef3c1f00757dfd96164bf60075c1154cbf34f300761fe52f9a9f5000770cd01e2d523b0077fdc48af366a0007800909e9d53fb0078945f1f732666007941b8f7684094007a14cd71181c4e007a166019986360007a3fc3e1b8e717007a9b7bc023b467007e2dfea694d3880080a2d840915cd50081d74135590cae0081de9ae12b8fa400829b01c79948540083d596cd2505200083f4002eef9e4a0084e5e8daa15e8b0085392a1c5b439200861329bb1f4d1d0086fa259a59a59e0088123baca400ec008951a4f753f4b4008986a9cdf5327c008a072e65ed3f4e008afb1652e61eba008b1f6f9a982b03008b8e9a3e95b739008bb3770cd27f4b008bce0fe15be197008be797415a6401008c33d9ddc6c5d0008d3d1d2579041f008e92985e9cf730009010f0b76d3bda009022b51bdf04060092eaffb8baf09200947cf53400c8d50094b260e0f8d5f900961c104183007200977b45b5a0db2c0097952e6e59f0e20097dd55b729d8390099c0210649623f009a9a59cd6119a8009b7b5ce84c3347009b8480a0d63907009c599260744a47009d63b2c3a2e591009d788360e21ede009d86bf2c786127009d93b0081b2c94009ed037b000d2de009f9e38eb2eaf5d00a068b6493013bc00a0b39b8b7f900a00a0b9b90bfd4d9600a0f8c2b847e40400a173e8f923301100a1a50133e6ddc700a2b4d2d830aa4700a2e2495fcfeae900a312519915fa0f00a445883a94cd2300a4fc377d418a4700a6aff2119a7b8500a70485c76577b400a7574bdc2c264800a75c1d811c13c9
+  functions:
+    file: liteos-kernel.fnsig
+    sha256: 1f7c3f7deee41bd9f9f6cd39a79beba0cca2dc17f08ffb44db27a9404eeb1df1
+    count: 1149
+    versions: ["5.0.0", "5.1.0"]

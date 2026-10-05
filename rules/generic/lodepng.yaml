@@ -1,0 +1,92 @@
+id: generic/lodepng
+component:
+  ships_as: lodepng
+  marker_files:
+  - lodepng.c
+  - lodepng.h
+upstream:
+  name: LodePNG
+  purl: pkg:github/lvandeve/lodepng
+  cpe: cpe:2.3:a:lodev:lodepng:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2022-44081
+  supplier: Lode Vandevenne and LodePNG contributors
+  homepage: https://lodev.org/lodepng/
+  license: Zlib
+  source:
+    kind: git
+    url: https://github.com/lvandeve/lodepng
+    ref: ff206aa97444bd39fad60ebaae7a959c2b88ba83
+version:
+  probes:
+  - file: lodepng.h
+    patterns:
+      y: LodePNG version (\d{4})\d{4}
+      m: LodePNG version \d{4}(\d{2})\d{2}
+      d: LodePNG version \d{6}(\d{2})
+    template: '{y}-{m}-{d}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: LodePNG, the PNG codec in one file that LuatOS vendors (components/luat_image/libs/lodepng, 20210627) and that LVGL bundles. Upstream has no tags and no release numbers, only a date in the lodepng.h banner; the function signature covers the 50 banner dates from 2017-09-17 on, each pinned to the commit where the banner first reads that date. Versions are written 2022-07-17, the way the NVD writes them, not 20220717, so CPE matching can compare them. Upstream names the file lodepng.cpp; vendors rename it lodepng.c, so the include accepts both.
+identity:
+  include:
+  - lodepng.c
+  - lodepng.cpp
+  functions:
+    file: lodepng.fnsig
+    sha256: adead5d4a66813fd702e29af6a11e40f8b2cb163c0bac290ef999bffe01dd1f4
+    count: 660
+    versions:
+    - 2017-09-17
+    - 2018-01-14
+    - 2018-03-26
+    - 2018-06-11
+    - 2018-08-09
+    - 2018-08-19
+    - 2018-09-10
+    - 2018-12-30
+    - 2019-02-10
+    - 2019-06-15
+    - 2019-06-30
+    - 2019-07-14
+    - 2019-08-05
+    - 2019-08-14
+    - 2019-08-24
+    - 2019-09-01
+    - 2019-09-08
+    - 2019-09-09
+    - 2019-09-14
+    - 2019-10-20
+    - 2019-11-05
+    - 2019-11-06
+    - 2019-11-07
+    - 2019-11-09
+    - 2019-12-19
+    - 2020-01-12
+    - 2020-02-11
+    - 2020-02-14
+    - 2020-02-15
+    - 2020-02-19
+    - 2020-03-06
+    - 2020-10-17
+    - 2021-06-27
+    - 2022-01-09
+    - 2022-06-13
+    - 2022-06-18
+    - 2022-07-17
+    - 2022-11-08
+    - 2023-04-10
+    - 2024-10-14
+    - 2024-10-15
+    - 2024-12-15
+    - 2024-12-22
+    - 2024-12-23
+    - 2024-12-27
+    - 2024-12-28
+    - 2025-05-06
+    - 2026-01-02
+    - 2026-01-19
+    - 2026-10-01

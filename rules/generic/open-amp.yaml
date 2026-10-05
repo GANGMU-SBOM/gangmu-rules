@@ -1,0 +1,65 @@
+id: generic/open-amp
+vendor: generic
+sdk: generic
+component:
+  ships_as: open-amp
+  marker_files:
+  - rpmsg/rpmsg.c
+  - remoteproc/remoteproc.c
+upstream:
+  name: OpenAMP
+  purl: pkg:github/OpenAMP/open-amp
+  cpe_status: 'none-in-nvd: NVD CPE dictionary API read 2026-10-04 has no product open-amp or libmetal under vendors openamp or openamp_project (cpeMatchString cpe:2.3:a:<vendor>:open-amp:*).'
+  supplier: OpenAMP project (Linux Foundation / Zephyr, Xilinx and contributors)
+  homepage: https://www.openampproject.org/
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://github.com/OpenAMP/open-amp
+    ref: 5bcc7c0401cace5e3d6719a06a0d1f92e30251aa
+    subdir: lib
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: OpenAMP (rpmsg, remoteproc, virtio) as vendored by multi-core SoC SDKs; Allwinner's R128 and Melis SDKs carry sunxi-adapted copies. Covers v2020.10.0 to v2026.04.0 on the lib/ directory; the release tag (not the library's own VERSION, which moves slower) is the version. Earlier layouts and libmetal are not covered.
+identity:
+  include:
+  - '**/*.c'
+  - '**/*.h'
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  anchors:
+  - path: remoteproc/remoteproc.c
+    sha256:
+      2020.10.0: 5a2998f1f981e9ade9ec0190a725e36897adbb6954dd98a82d04aa8035c2d77e
+      2022.04.0: 5e4b2033704cb5e50c65d2d83e36b40ad05a315c8cde38378cce3e58fde235b9
+      2026.04.0: a7c846957979817ed34bebfdbf00f5c79dc1ecc21c519fe922fa12072c786cb7
+  - path: rpmsg/rpmsg.c
+    sha256:
+      2020.10.0: 83921fe7420231766c913c4255b886e429274148e7ae19b6cc872bedaaef2013
+      2022.04.0: c81f154755eb60ad88e0b0386c756564bccfa8b44bbca2d4b00c47101aa63071
+      2024.05.0: 3a379acfb75e2ab9e6e9d3c7321ef23c86783c6bdca79c24a50599d48477ad43
+      2024.05.1: a3deadb6a83f35bb7412632abea19099ea30e3f0d2b6d75827b93acade1419fc
+  functions:
+    file: open-amp.fnsig
+    sha256: 72e306599b98be2fae96936d8f03edf552c9d8a899f5c6a13fb65708ba40433c
+    count: 465
+    versions:
+    - 2020.10.0
+    - 2021.04.0
+    - 2021.10.0
+    - 2022.04.0
+    - 2022.10.0
+    - 2022.10.1
+    - 2023.04.0
+    - 2023.10.0
+    - 2024.05.0
+    - 2024.05.1
+    - 2024.10.0
+    - 2025.04.0
+    - 2025.10.0
+    - 2026.04.0

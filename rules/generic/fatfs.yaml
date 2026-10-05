@@ -1,0 +1,80 @@
+id: generic/fatfs
+component:
+  ships_as: fatfs
+  config_symbols:                   # Kconfig option that builds it in that SDK (checked against upstream Kconfig)
+  - path: '**/modules/fs/fatfs'
+    symbols: [FAT_FILESYSTEM_ELM]
+  marker_files:
+  - ff.c
+  - ff.h
+  - diskio.h
+upstream:
+  name: FatFs
+  purl: pkg:generic/fatfs
+  cpe: cpe:2.3:a:elm-chan:fatfs:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2026-6682
+  - CVE-2026-6686
+  supplier: ChaN (Electronic Lives Mfg.)
+  homepage: http://elm-chan.org/fsw/ff/
+  license: BSD-1-Clause
+  source:
+    kind: git
+    url: https://github.com/abbrev/fatfs
+    ref: 30ca13c62615df0d2e9104ab41256985b96590c1
+    subdir: source
+version:
+  probes:
+  - file: ff.h
+    patterns:
+      version: 'FatFs - (?:Generic )?FAT [Ff]ile ?[Ss]ystem [Mm]odule(?: include(?: file)?)?\s+R(\d+\.\d+[a-z]?)'
+    template: '{version}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-04'
+  by:
+  - '@gangmu'
+  note: 'FatFs as vendored by chip-vendor SDKs, whatever the directory is called: Bouffalo Lab and WinnerMicro carry R0.15, WCH R0.14b, Espressif''s ESP8266 SDK R0.13c. ChaN publishes FatFs as zip archives only, so releases are taken from the unofficial git mirror github.com/abbrev/fatfs, which tags every release from R0.10a to R0.16 and is pinned here by commit. The mirror is faithful where it can be checked: ff.c of R0.12b and R0.16 is byte for byte the file Zephyr imported for those releases. Its tags sometimes include ChaN''s later patches (its R0.15 is R0.15 w/patch3, the copies in vendor SDKs are w/patch1), so a vendor copy of a plain release can differ by a few functions. diskio.c and ffsystem.c are left out of the signature: they are the port layer every vendor rewrites. The CPE and its evidence CVEs are the ones the Zephyr FatFs rule carries, where they were checked against NVD.'
+identity:
+  include:
+  - '**/*.c'
+  - '**/*.h'
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  - '**/docs/**'
+  - '**/documents/**'
+  - '**/example/**'
+  - '**/examples/**'
+  - '**/diskio.c'
+  - '**/ffsystem.c'
+  - '**/syscall.c'
+  anchors:
+  - path: ff.h
+    sha256:
+      0.10a: 2d4ed8b737d4a90541e614f53b88932493fc996847464d183f089257e184caae
+      0.10b: 75d2f11d3e7d2ac2e5651df758f455c0efd528662a2ee5beffcc35132628b02f
+      0.10c: 911a5d4aabffa2f8a6ad1c07627ad648a1c1d5bfe8afa35d5ffd759710c01406
+      '0.11': d4fbf751105313be95f603a0b120f5d553cb200fc084cfabc2f20575b0a3b90f
+      0.11a: 5bdb63b0e2d6eb92fe1f9842ef03d9aac06744518005f745f353ad64c8c7caf6
+      '0.12': 1b1da70a8b49422183323d944854f19cdab2cc62087542c6974584d0413240a6
+      0.12a: eb49c1fc536c34fcf1120e07a265a38958511f069d08c3c35f15d52f92081c36
+      0.12b: ce730d57d0b76d0e4e99fef4a5bec3aeddcd094f00fd797fd36cd535e6561f62
+      0.12c: 5c0177ae08633863d6cb374a4f4d3bcae7e37d71c42408ecda9a1525f4b72be5
+      '0.13': 031e574d78a31e550bf624fe211d6241622a6b6dc715dd91397dcb4f6b9f3d9e
+      0.13a: f14800ef179f4d8fafbdb84dac0283474d41150c838250a565d3d0c08aca6446
+      0.13b: 7a6e2f63f1ab93c27bda7372e5433f2892d164752ace3314c5f9243f64992699
+      0.13c: 4f206bc340f28e1ac4cf5bf1d4d67f03e14f580b5d3ea0e5194f844bdcb3fbff
+      '0.14': 071723e5b81b3a1f312b525207b6bd4ec50ea4b217a32d328f4be32c217ab479
+      0.14a: 70dec33065d8af0606ca4985880a8a4c1a7a656d38f62393606b44cf59ec8e67
+      0.14b: 46e9a88e181289ff68a5bf7faf63a6ac2cc0f04f49f6cbd94073e42720960d95
+      '0.15': d8a6671be75cc8ce2e4ebf79edd3bcc37a28676060a90de5d43604208464e3f9
+      0.15a: 432bde036a1570d16de4716f9daf96fdeb04fb45726ca8560108222b625ee7a5
+      0.15b: 06eab56f88e2c0d1d3f7dc745726b626112279224e52fa2260ea0cb74115557c
+      '0.16': 42920ae4d6080bfc2a72d92a9969b5e94eeaff070e5e71d90da9ab6d7d8e158e
+  functions:
+    file: fatfs.fnsig
+    sha256: bc8db2ea8d65f7d48911a43d2b286b3d5d2e5f1157dbc4b8d3ae48aa84c08ad5
+    count: 305
+    versions: [0.10a, 0.10b, 0.10c, '0.11', 0.11a, '0.12', 0.12a, 0.12b, 0.12c, '0.13', 0.13a, 0.13b, 0.13c, '0.14', 0.14a, 0.14b, '0.15', 0.15a, 0.15b, '0.16']

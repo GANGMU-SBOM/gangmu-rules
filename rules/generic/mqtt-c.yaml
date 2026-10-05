@@ -1,0 +1,49 @@
+id: generic/mqtt-c
+component:
+  ships_as: mqtt-c
+  marker_files:
+  - src/mqtt.c
+  - src/mqtt_pal.c
+  - include/mqtt.h
+upstream:
+  name: MQTT-C
+  purl: pkg:github/liambindle/mqtt-c
+  supplier: Liam Bindle
+  homepage: https://github.com/LiamBindle/MQTT-C
+  license: MIT
+  cpe_status: 'none-found: searched the NVD CPE dictionary (keyword mqtt-c, 2026-10-05) and the CVE API (keyword mqtt-c); nothing is registered under a vendor:product for it.'
+  source:
+    kind: git
+    url: https://github.com/LiamBindle/MQTT-C
+    ref: 1.1.5
+version:
+  probes:
+  - file: CMakeLists.txt
+    patterns:
+      v: project\(\s*MQTT-C\s+VERSION\s+(\d+\.\d+\.\d+)
+    template: '{v}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: 'MQTT-C, the portable MQTT 3.1.1 client vendored by Bouffalo bouffalo_sdk (net/lib/mqtt/MQTT-C, 1.1.2). Not Eclipse Paho (generic/paho-mqtt-c) and not an NVD product: CVE-2026-54412 names it in a reference but carries no CPE, so there is no cpe here. The version is the CMake project line; the function signature covers 1.0.0 to 1.1.6.'
+identity:
+  include:
+  - src/*.c
+  functions:
+    file: mqtt-c.fnsig
+    sha256: 6e46c72257bfb03440c72b476af53bc8bda8e770348a370f263494d3bb6f07ba
+    count: 94
+    versions:
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.0.3
+    - 1.1.0
+    - 1.1.1
+    - 1.1.2
+    - 1.1.3
+    - 1.1.4
+    - 1.1.5
+    - 1.1.6

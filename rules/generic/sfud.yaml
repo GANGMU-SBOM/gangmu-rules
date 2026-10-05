@@ -1,0 +1,45 @@
+id: generic/sfud
+component:
+  ships_as: sfud
+  marker_files:
+  - sfud.c
+  - sfud_sfdp.c
+  - sfud_def.h
+upstream:
+  name: SFUD
+  purl: pkg:github/armink/sfud
+  supplier: Armink (Zhang Chao) and SFUD contributors
+  homepage: https://github.com/armink/SFUD
+  license: MIT
+  cpe_status: 'none-found: searched the NVD CPE dictionary and the CVE API (keyword sfud, 2026-10-05); nothing is registered under a vendor:product for it.'
+  source:
+    kind: git
+    url: https://github.com/armink/SFUD
+    ref: 1.1.0
+    subdir: sfud
+version:
+  probes:
+  - file: sfud_def.h
+    patterns:
+      v: SFUD_SW_VERSION\s+"(\d+\.\d+\.\d+)"
+    template: '{v}'
+  - file: inc/sfud_def.h
+    patterns:
+      v: SFUD_SW_VERSION\s+"(\d+\.\d+\.\d+)"
+    template: '{v}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: SFUD, the serial-flash (SFDP) driver library that LuatOS vendors (components/sfud, 1.1.0) and many RT-Thread-based SDKs use. Upstream keeps sources in sfud/src and headers in sfud/inc; vendors flatten them, so the markers and the include globs accept both. The version is SFUD_SW_VERSION in sfud_def.h. Upstream has a single tag, 1.1.0, so there is nothing to tell versions apart by.
+identity:
+  include:
+  - '*.c'
+  - src/**/*.c
+  functions:
+    file: sfud.fnsig
+    sha256: de99bfdc4744502f82c1674e6b02b92a1a7ea06e2fc42ed10bc3dad8c7de245c
+    count: 17
+    versions:
+    - 1.1.0

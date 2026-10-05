@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "pyyaml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gangmu-rules"
+version = "2026.10.5"
+description = "Free rule base for gangmu: the general upstream open-source components that embedded SDKs copy, mapped to their upstream identities"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "CDLA-Permissive-2.0 (rules); Apache-2.0 (packaging code)" }
+keywords = ["sbom", "embedded", "firmware", "software-composition-analysis",
+            "zephyr", "rt-thread", "openharmony", "gangmu"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Natural Language :: Chinese (Simplified)",
+    "Natural Language :: English",
+    "Topic :: Security",
+    "Topic :: Software Development :: Embedded Systems",
+]
+
+[project.urls]
+Homepage = "https://github.com/GANGMU-SBOM/gangmu-rules"
+Tool = "https://github.com/GANGMU-SBOM/gangmu"
+Issues = "https://github.com/GANGMU-SBOM/gangmu-rules/issues"
+
+[project.entry-points."gangmu.rule_packs"]
+community = "gangmu_rules:path"
+
+[tool.setuptools.packages.find]
+where = ["src"]

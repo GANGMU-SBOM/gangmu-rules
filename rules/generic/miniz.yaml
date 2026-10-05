@@ -1,0 +1,51 @@
+id: generic/miniz
+component:
+  ships_as: miniz
+  marker_files:
+  - miniz.c
+  - miniz.h
+upstream:
+  name: miniz
+  purl: pkg:github/richgel999/miniz
+  supplier: Rich Geldreich
+  homepage: https://github.com/richgel999/miniz
+  license: MIT
+  cpe: cpe:2.3:a:miniz_project:miniz:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2018-12913
+  source:
+    kind: git
+    url: https://github.com/richgel999/miniz
+    ref: 3.1.2
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-05'
+  by:
+  - '@gangmu'
+  note: 'miniz, the single-file deflate/zip library vendored by LuatOS (components/miniz) and the ESP8266 SDK flasher stub. MZ_VERSION in miniz.h is the zlib-compatibility number (10.x / 11.x), not the miniz release, so no version probe is used; the release is read from the function signature, 2.0.0 to 3.1.2. Related but distinct: minizip (zlib contrib) and minizip-ng, which NVD files under other CPEs.'
+identity:
+  include:
+  - '*.c'
+  - '*.h'
+  functions:
+    file: miniz.fnsig
+    sha256: 4fd7c88be5ddbcbda832f209aa3ee5d8b3f9863a239f3f72e33640773119977a
+    count: 334
+    versions:
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    - 2.0.7
+    - 2.0.8
+    - 2.1.0
+    - 2.2.0
+    - 3.0.0
+    - 3.0.1
+    - 3.0.2
+    - 3.1.0
+    - 3.1.1
+    - 3.1.2
