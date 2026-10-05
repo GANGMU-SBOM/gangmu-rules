@@ -1,7 +1,7 @@
 {
   "format": 1,
   "name": "community",
-  "version": "2026.10.5",
+  "version": "2026.10.6",
   "requires_gangmu": "0.6.0",
   "license": "CDLA-Permissive-2.0"
 }
