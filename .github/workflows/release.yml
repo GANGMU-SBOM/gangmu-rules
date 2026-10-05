@@ -53,7 +53,15 @@ jobs:
       - name: GitHub release with the offline bundle
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" dist/gangmu-rules-offline-*.tar.gz --repo "$GITHUB_REPOSITORY" --generate-notes
+        # A release may already exist (for example one created in the web UI when
+        # the tag was pushed); attach the bundle to it instead of failing, so the
+        # PyPI step below still runs.
+        run: |
+          if gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/gangmu-rules-offline-*.tar.gz --repo "$GITHUB_REPOSITORY" --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/gangmu-rules-offline-*.tar.gz --repo "$GITHUB_REPOSITORY" --generate-notes
+          fi
       - name: PyPI
         run: rm dist/gangmu-rules-offline-*.tar.gz
       - uses: pypa/gh-action-pypi-publish@release/v1
