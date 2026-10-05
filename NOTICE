@@ -1,0 +1,6 @@
+Gangmu Rules
+Copyright 2026 the gangmu-sbom authors.
+
+The rule data under rules/ is licensed under the Community Data License Agreement -
+Permissive - Version 2.0 (see rules/LICENSE). The packaging code (src/, setup.py,
+.github/) is licensed under the Apache License, Version 2.0 (see LICENSE).
