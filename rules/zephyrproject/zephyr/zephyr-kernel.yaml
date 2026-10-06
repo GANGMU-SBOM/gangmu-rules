@@ -15,6 +15,7 @@ upstream:
   purl: pkg:github/zephyrproject-rtos/zephyr
   cpe: cpe:2.3:o:zephyrproject:zephyr:*:*:*:*:*:*:*:*
   supplier: Zephyr Project
+  advisory_scope: subsystem
   homepage: https://www.zephyrproject.org/
   license: Apache-2.0
 identity:
