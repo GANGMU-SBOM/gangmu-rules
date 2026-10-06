@@ -2,6 +2,9 @@
 
 **免费的规则库：被各家 SDK 拷贝最多的上游开源组件，社区共同维护。**
 
+[![rules](https://github.com/GANGMU-SBOM/gangmu-rules/actions/workflows/rules.yml/badge.svg?branch=main)](https://github.com/GANGMU-SBOM/gangmu-rules/actions/workflows/rules.yml)
+[![PyPI](https://img.shields.io/pypi/v/gangmu-rules.svg)](https://pypi.org/project/gangmu-rules/)
+
 [纲目 Gangmu](https://github.com/GANGMU-SBOM/gangmu) 用这份规则库在嵌入式 C/C++ 源码树里认出被改名、魔改、
 静态链接的开源组件，并生成 SBOM。工具和规则分开维护：工具按版本发布，规则按日期发布，
 新增一条规则不用等工具发版。
