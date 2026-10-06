@@ -74,6 +74,43 @@ right, is the fork note honest.
   (The first version of the shipped cJSON rule did exactly this and CI caught
   it -- the signature came from `HEAD`, the rule said `v1.7.19`.)
 
+## Adding a patch record
+
+A rule says which component and release a directory is. A **patch record** says,
+for one advisory, whether the *fix* is in that copy: it holds the functions the
+fix commit changed, with a hash of each body before and after (and the token
+windows the fix added and removed, so a lightly edited copy can still be placed).
+`gangmu vuln --source ROOT` reads them from `rules/patches/` on its own. For a
+vendor fork that reports the release it started from, this is the difference
+between `in_triage` for every advisory fixed since and a real answer.
+
+```bash
+gangmu patch-build CVE-2020-26243 --db advisories/ -o rules/patches/nanopb.json   # repo and fix commit from the OSV record
+gangmu patch-build CVE-2018-12436 --repo https://github.com/wolfSSL/wolfssl --fix <commit> --first-parent -o rules/patches/wolfssl.json
+gangmu patch-verify rules/patches/nanopb.json                                    # rebuild from the commits; CI does this again
+```
+
+One file per component, named like the rule (`rules/patches/<component>.json`).
+What we ask for, and why:
+
+* **A fix commit that the advisory itself names** (an OSV GIT range, or the
+  project's own advisory), never one found by guessing from the description.
+  Several commits are fine (one per release branch); `--first-parent` for a fix
+  merged as a pull request, which the record remembers.
+* **A check against something other than the record.** Test it on upstream trees
+  at release tags around the advisory's fix version: older releases must not test
+  `fixed`, newer ones must not test `vulnerable`. Put what you found in the
+  record's `note`. A record with no usable fix version to test against waits.
+* **A fix that changes a C function body.** A fix made in a build flag, a header
+  macro or a configuration default leaves nothing to compare; do not force one.
+* **Small.** `patch-build` refuses a commit that changes more than 40 functions
+  (a refactor): name the ones that matter with `--function`.
+
+A record can only say the fixed *code* is present (or the vulnerable code is). It
+cannot see a renamed function, or a fix whose effect lies outside the recorded
+functions. It never changes a finding on a copy the vendor edited beyond
+recognition: that stays `in_triage`, with the reason.
+
 ## Sign your commits (DCO)
 
 We use the [Developer Certificate of Origin](https://developercertificate.org/)
