@@ -41,6 +41,25 @@ jobs:
       # No --rules: this also proves gangmu finds the installed pack.
       - run: gangmu rules lint
 
+  patches:
+    # A patch record is only worth shipping if anyone can reproduce it: every
+    # record in rules/patches/ is rebuilt from the upstream commits it names and
+    # compared, so review is about whether the advisory and the commit match, not
+    # about whether the hashes are right.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: GANGMU-SBOM/gangmu
+          ref: ${{ env.GANGMU_REF }}
+          path: .gangmu
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e . ./.gangmu
+      - run: gangmu patch-verify rules/patches/*.json
+
   tool-tests:
     # gangmu's own test suite, against the rules in this pull request. Several
     # of its tests scan fixtures with the real rule base.
