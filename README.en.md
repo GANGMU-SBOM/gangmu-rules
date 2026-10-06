@@ -2,6 +2,9 @@
 
 **The free rule base: the upstream open-source components that vendor SDKs copy most, maintained by the community.**
 
+[![rules](https://github.com/GANGMU-SBOM/gangmu-rules/actions/workflows/rules.yml/badge.svg?branch=main)](https://github.com/GANGMU-SBOM/gangmu-rules/actions/workflows/rules.yml)
+[![PyPI](https://img.shields.io/pypi/v/gangmu-rules.svg)](https://pypi.org/project/gangmu-rules/)
+
 [Gangmu (纲目)](https://github.com/GANGMU-SBOM/gangmu) uses this rule base to recognise renamed, modified and
 statically linked open-source components in embedded C/C++ trees and to produce an SBOM. The tool and the rules
 are released separately: the tool by version, the rules by date, so a new rule never waits for a tool release.
