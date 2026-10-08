@@ -73,3 +73,20 @@ identity:
     sha256: 2d83048277ce68926761655104297ab382778f9379e5da2d4926bad9e7ab0c72
     count: 455
     versions: [1.7.2, 2.0.0, 2.0.1, 2.0.2, 2.0.3, 2.0.4, 2.0.5, 2.1.0, 2.1.1, 2.1.2, 2.1.3, 2.1.4, 2.2.0, 2.2.1, 2.3.0, 2.4.0, 2.4.1, 2.4.2, 2.5.0, 2.5.1, 2.6.0, 2.6.1, 2.7.0, 2.7.1, 2.8.0, 2.8.1, 2.8.2, 2.9.0, 2.9.1, 2.9.2, 2.9.3, 2.10.0, 2.10.1, 2.10.2, 2.11.0, 2.11.1, 2.11.2, 2.11.3]
+  binary_functions:
+    file: littlefs.fnprint
+    sha256: fc0fff55afab461dc90741205307f9b1b8d5075f32e94fc22fa5562816b485e0
+    count: 467
+    versions: [1.7.2, 2.0.4, 2.1.0, 2.1.4, 2.2.1, 2.5.1, 2.6.1, 2.7.1, 2.8.2, 2.9.3]
+    calibration:
+      version: 1
+      releases: 10
+      builds_per_release: 2
+      fingerprintable: 467
+      cross_build: {exact: 20, range: 0, wrong: 0, none: 0}
+      same_build: {exact: 20, range: 0, wrong: 0, none: 0}
+      negative_pairs: 8
+      false_positives: 0
+      min_features: 2
+      tie_share: 0.85
+      passed: true
