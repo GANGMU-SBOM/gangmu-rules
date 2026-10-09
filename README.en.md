@@ -49,6 +49,8 @@ set can also be shipped as a Python package that registers a `gangmu.rule_packs`
 | [gangmu](https://github.com/GANGMU-SBOM/gangmu) | The tool: scanning, SBOMs, vulnerability matching, CRA and MIIT drafts. Tool bugs go there |
 | **gangmu-rules** (this repo) | The free rule base: a general component in some SDK is not recognised, or the version is wrong; open an issue or PR here |
 | [gangmu-bench](https://github.com/GANGMU-SBOM/gangmu-bench) | The benchmark: checks the rules against real upstream releases; rerun it after any rule change |
+| [gangmu-cbom-rules](https://github.com/GANGMU-SBOM/gangmu-cbom-rules) | Cryptographic algorithm and library capability tables read by `gangmu cbom` (a different format from this repo) |
+| [gangmu-action](https://github.com/GANGMU-SBOM/gangmu-action) | A GitHub Action: SBOM, CBOM and a post-quantum readiness report in CI |
 
 The commercial edition adds continuous monitoring, a reporting workbench and rule services on top of the open-source
 one; see [editions](https://github.com/GANGMU-SBOM/gangmu/blob/main/docs/EDITIONS.md#open-source-and-commercial-editions).
