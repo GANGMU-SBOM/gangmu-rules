@@ -37,7 +37,7 @@ review:
   added: '2026-10-09'
   by:
   - '@gangmu'
-  note: WAMR runtime core (the core/ directory of the upstream repository) as copied into SDKs and firmware trees. Covers 1.2.1 to 2.4.5, the 20 most recent releases; core/version.h is present in all of them and serves as both anchor and version probe.
+  note: WAMR runtime core (the core/ directory of the upstream repository) as copied into SDKs and firmware trees. Covers 1.2.1 to 2.4.5, the 20 most recent releases. The anchor is iwasm/include/wasm_export.h, which changes between releases; the version probe reads core/version.h, present in all of them.
 identity:
   include:
   - '**/*.c'
@@ -46,28 +46,28 @@ identity:
   - '**/test/**'
   - '**/tests/**'
   anchors:
-  - path: version.h
+  - path: iwasm/include/wasm_export.h
     sha256:
-      1.2.1: 4be5f9ac6ada965715f1e358629658142b6442893471ec59e0ba41851cb4d895
-      1.2.2: 2b3bc7bc0566ff9dd1d91a223e98f4325da6c453798b14806d7a8edfac4d47a7
-      1.2.3: 8b723f070f8d4ea676a71a17dfcf773bdf8b1e76f81a8efb85cd7d9221481907
-      1.3.0: 6d3d127358ad59ae48c07f9b838667215f60fd04209ffe728ba9aac3d2a47138
-      1.3.1: 2e189cc637a0c6a59151e3e00c9bfdb20bb5f21a5788d5af1dc414a46df40762
-      1.3.2: 8da397cade90583219715453bd011abaabe2387692db97b26df6b04a1a7a3307
-      1.3.3: 0b555e16fa69bf4cbe4a92c41ab7729af9ae31bb1ac3ce4aad7ddccb07a117c1
-      2.0.0: 5adaed49ee8d1972c111aafff5fccea63fb5a6be97fd4f4f0674b02b23a47df3
-      2.1.0: 41925199f59874fd2f6f8f21864331b567ef9ea52a55e3fe129456e85e3255db
-      2.1.1: 90c5009d2d56b3591fa0baf4302aa5257a5ad9f25573d987c90ec1124d1fb4f5
-      2.1.2: 32c17ca22798395180e72e446220cb3e26ccdf8314bdb1627d44a427d255e38b
-      2.2.0: 9749f4db37e35500c04857a9158040c038241095f34f050f01a358b230fcdbbc
-      2.3.0: f4c657b750e88f40df3e17aac61aa14bbebb15f3740affd25ea56e07b58cfa44
-      2.3.1: 4fac75b6e16a3959eddc8ac3283178ff4e9227c7047a7306bd105a30a48ba37a
-      2.4.0: e261247beea436dbfe08733658c79d0fd30d81aad22a62dbd1448b4366653adc
-      2.4.1: 5df33314c0271553fbcb850c4f9ca3146d10bc80f71c9232fdb33576cba9eb1d
-      2.4.2: d13216d2706477d0b3b8dda5f749ecb2cdb6efcc0dadbb72d943e58219992813
-      2.4.3: ad268295f76632dfe1f633f6347bee73177f29098af04d1baed5a0d07d337663
-      2.4.4: 453eef7de304409b089e100667c7fbd6147a3dad7c7c2051a7d7b7ac5101e6f6
-      2.4.5: 01f4cf6e441e0372b5c70d685f6d803a00c4a1b2c3c72e4edf8014e91b951c65
+      1.2.1: 07bbde0c35865d77cf2521dd4181f4ca93f4e82bee76454f6ddfe32d7ed214c7
+      1.2.2: 07bbde0c35865d77cf2521dd4181f4ca93f4e82bee76454f6ddfe32d7ed214c7
+      1.2.3: 5f01fe2c33ee4e4836d6797cc7f48355246f8470b38c21316de08b8df13fe7d4
+      1.3.0: 61bfc4926899000998cebf6d30eb1a0b5740c8fe677d761fe4ebbd7db523bd25
+      1.3.1: 3ee7f310bf27f064c9578153c1874dc51631b916c1f2c82430c5bc96af75a76f
+      1.3.2: a5144883bfa24acc3038758ebac110e687644abb77d0865ffb0e39240e109a26
+      1.3.3: a5144883bfa24acc3038758ebac110e687644abb77d0865ffb0e39240e109a26
+      2.0.0: b7a18e1ba9e6d57d231bfc9faf58f0d3b98d718fffd932da96be30b777e1bcf1
+      2.1.0: 4ed9c354ed1e665b46a254099b14a68c1104757bc3bcb3de77a67fbb4e6886f9
+      2.1.1: d8099191356b07884cc8d69846a28ad0fb40e5500516c93715d44648655a0575
+      2.1.2: d8099191356b07884cc8d69846a28ad0fb40e5500516c93715d44648655a0575
+      2.2.0: 4651b67a063f88705ac5776361ad2a064c77fbeb3270733347a634336caf241f
+      2.3.0: e428b8ee48278360e1112de65e3912942462b38a9152abca71981b957daf79fc
+      2.3.1: bcc84869c73cd3f2d2cb7d33362bcf4a84b429f4934bfc7ddc019f14b2f04746
+      2.4.0: 2cae24a651cc736b8f860fd7415bfe71b156feea94350e0082001dce476b234e
+      2.4.1: 779ee0870da26f129afe26f58881d286e0bef1537d995acf9cdd27c8a50c3ee0
+      2.4.2: 779ee0870da26f129afe26f58881d286e0bef1537d995acf9cdd27c8a50c3ee0
+      2.4.3: 779ee0870da26f129afe26f58881d286e0bef1537d995acf9cdd27c8a50c3ee0
+      2.4.4: 779ee0870da26f129afe26f58881d286e0bef1537d995acf9cdd27c8a50c3ee0
+      2.4.5: 779ee0870da26f129afe26f58881d286e0bef1537d995acf9cdd27c8a50c3ee0
   signature:
     algo: winnow-bottomk
     k: 16
