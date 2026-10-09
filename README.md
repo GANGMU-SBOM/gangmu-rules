@@ -56,6 +56,8 @@ gangmu scan firmware/ --rules "$(python -c 'import gangmu_rules;print(gangmu_rul
 | [gangmu](https://github.com/GANGMU-SBOM/gangmu) | 工具本体：扫描、SBOM、漏洞比对、CRA 与工信部草稿。工具本身的问题去那里提 |
 | **gangmu-rules**（本仓库） | 免费规则库：认不出某个 SDK 里的通用组件、认错了版本，在这里提 issue 或 PR |
 | [gangmu-bench](https://github.com/GANGMU-SBOM/gangmu-bench) | 评测：用真实上游发布版检验规则认得对不对，每次规则变动后都可以重跑 |
+| [gangmu-cbom-rules](https://github.com/GANGMU-SBOM/gangmu-cbom-rules) | 密码算法与库能力表：`gangmu cbom` 读的规则，格式和本仓库不同 |
+| [gangmu-action](https://github.com/GANGMU-SBOM/gangmu-action) | GitHub Action：在 CI 里生成 SBOM、CBOM 并给出后量子就绪报告 |
 
 商业版在开源版之上叠加持续监测、报送工作台和规则企业服务，见[开源版与商业版](https://github.com/GANGMU-SBOM/gangmu/blob/main/docs/EDITIONS.md)。
 
