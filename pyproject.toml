@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gangmu-rules"
-version = "2026.10.9"
+version = "2026.10.10"
 description = "Free rule base for gangmu: the general upstream open-source components that embedded SDKs copy, mapped to their upstream identities"
 readme = "README.md"
 requires-python = ">=3.9"
