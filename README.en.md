@@ -24,7 +24,7 @@ Air-gapped: download `gangmu-rules-offline-<version>.tar.gz` from Releases, chec
 
 ## What is in it
 
-60 rules, all free: `rules/generic/` (lwIP, Mbed TLS, FreeRTOS, RT-Thread, LiteOS, GmSSL, Tongsuo, wolfSSL and the other
+80 rules, all free: `rules/generic/` (lwIP, Mbed TLS, FreeRTOS, RT-Thread, LiteOS, GmSSL, Tongsuo, wolfSSL and the other
 upstream components SDKs copy most) and `rules/zephyrproject/` (Zephyr and its HAL modules). Contributions welcome.
 
 `rules/patches/` holds **patch records**: for an advisory, the functions its fix changed, so `gangmu vuln --source ROOT` can
