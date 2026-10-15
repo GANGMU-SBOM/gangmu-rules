@@ -30,7 +30,7 @@ gangmu rules lint            # 查看当前加载了哪些规则
 | `rules/zephyrproject/` | Zephyr 及其 HAL 模块 |
 | `rules/patches/` | 补丁记录：某条公告的修复改了哪些函数。`gangmu vuln --source ROOT` 据此判断厂商那份代码里**修复本身**在不在，而不是只看版本号去猜（目前 9 条：nanopb、nimble、wolfSSL、libjpeg-turbo）。每条记录在 CI 里都从它写明的上游提交重新生成并比对，见 [CONTRIBUTING.md](CONTRIBUTING.md#adding-a-patch-record) |
 
-共 97 条规则，全部免费，欢迎社区贡献。
+共 98 条规则，全部免费，欢迎社区贡献。
 
 ## 厂商专属的规则
 
