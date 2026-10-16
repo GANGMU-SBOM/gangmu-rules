@@ -22,16 +22,18 @@ review:
   added: '2026-10-05'
   by:
   - '@gangmu'
-  note: 'miniz, the single-file deflate/zip library vendored by LuatOS (components/miniz) and the ESP8266 SDK flasher stub. MZ_VERSION in miniz.h is the zlib-compatibility number (10.x / 11.x), not the miniz release, so no version probe is used; the release is read from the function signature, 2.0.0 to 3.1.2. Related but distinct: minizip (zlib contrib) and minizip-ng, which NVD files under other CPEs.'
+  note: 'miniz, the single-file deflate/zip library vendored by LuatOS (components/miniz) and the ESP8266 SDK flasher stub. MZ_VERSION in miniz.h is the zlib-compatibility number (10.x / 11.x), not the miniz release, so no version probe is used; the release is read from the function signature, 1.14 and 1.15 (the single-file miniz.c before the 1.16 split, pinned by commit because upstream tagged only v114) and 2.0.0 to 3.1.2. Copies that split miniz.h out of the 1.15 file, such as the esptool flasher stub, match 1.15 only on the functions they still share. Related but distinct: minizip (zlib contrib) and minizip-ng, which NVD files under other CPEs.'
 identity:
   include:
   - '*.c'
   - '*.h'
   functions:
     file: miniz.fnsig
-    sha256: 4fd7c88be5ddbcbda832f209aa3ee5d8b3f9863a239f3f72e33640773119977a
-    count: 334
+    sha256: 8572e6dcf4b187b6ba1e640b26b9e79b823f69e5932366775048a2857ed6b17c
+    count: 432
     versions:
+    - '1.14'
+    - '1.15'
     - 2.0.0
     - 2.0.1
     - 2.0.2
