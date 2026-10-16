@@ -19,6 +19,12 @@ upstream:
     kind: git
     url: https://github.com/obgm/libcoap
     ref: v4.3.5
+version:
+  probes:
+  - file: ChangeLog
+    patterns:
+      version: 'Change summary for version (\d+\.\d+\.\d+)'
+    template: '{version}'
 confidence_ceiling: 0.95
 review:
   added: '2026-10-04'
