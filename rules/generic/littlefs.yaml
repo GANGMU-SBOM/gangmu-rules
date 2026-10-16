@@ -19,6 +19,13 @@ upstream:
     kind: git
     url: https://github.com/littlefs-project/littlefs
     ref: v2.11.3
+version:
+  probes:
+  - file: lfs.h
+    patterns:
+      hex_major: LFS_VERSION\s+0x([0-9a-fA-F]{4})[0-9a-fA-F]{4}
+      hex_minor: LFS_VERSION\s+0x[0-9a-fA-F]{4}([0-9a-fA-F]{4})
+    template: '{major}.{minor}'
 confidence_ceiling: 0.95
 review:
   added: '2026-10-04'

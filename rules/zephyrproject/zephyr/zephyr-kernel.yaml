@@ -50,7 +50,8 @@ version:
       major: VERSION_MAJOR\s*=\s*(\d+)
       minor: VERSION_MINOR\s*=\s*(\d+)
       patch: PATCHLEVEL\s*=\s*(\d+)
-    template: '{major}.{minor}.{patch}'
+      dash_extra: EXTRAVERSION[ \t]*=[ \t]*(\S*)
+    template: '{major}.{minor}.{patch}{extra}'
 review:
   added: '2026-10-06'
   by:
