@@ -25,6 +25,14 @@ vendor_fork:
   patched: true
   note: Zephyr maintains this fork for build integration; files will not hash to https://github.com/NordicSemiconductor/zcbor.
   upstream_of_fork: https://github.com/NordicSemiconductor/zcbor
+version:
+  probes:
+  - file: include/zcbor_common.h
+    patterns:
+      major: ZCBOR_VERSION_MAJOR\s+(\d+)
+      minor: ZCBOR_VERSION_MINOR\s+(\d+)
+      patch: ZCBOR_VERSION_BUGFIX\s+(\d+)
+    template: '{major}.{minor}.{patch}'
 identity:
   include:
   - '**/*.c'

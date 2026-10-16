@@ -23,6 +23,14 @@ upstream:
   supplier: Trusted Firmware (Mbed TLS project), via the Zephyr Project
   homepage: https://github.com/Mbed-TLS/mbedtls
   license: Apache-2.0
+version:
+  probes:
+  - file: include/mbedtls/build_info.h
+    patterns:
+      major: MBEDTLS_VERSION_MAJOR\s+(\d+)
+      minor: MBEDTLS_VERSION_MINOR\s+(\d+)
+      patch: MBEDTLS_VERSION_PATCH\s+(\d+)
+    template: '{major}.{minor}.{patch}'
 identity:
   include:
   - '**/*.c'
