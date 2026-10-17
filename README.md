@@ -26,11 +26,11 @@ gangmu rules lint            # 查看当前加载了哪些规则
 
 | 目录 | 内容 |
 | --- | --- |
-| `rules/generic/` | 被各家 SDK 拷贝最多的上游组件：lwIP、Mbed TLS、Mbed Crypto、FreeRTOS、RT-Thread、LiteOS、GmSSL、铜锁、wolfSSL，以及 zlib、libpng、curl、Expat、LZ4、Lua、ThreadX、NetX Duo、FileX、USBX、GUIX、LevelX、CMSIS-Core、CMSIS-DSP、CMSIS-NN、CMSIS-RTX、mJS、Elk、msgpack-c、SPIFFS、libcsp、MPack、Unity、libcanard、lwext4、CMSIS-Driver、coreMQTT Agent、FreeRTOS Cellular Interface、µC/OS-II、µC/OS-III 及 µC/LIB、CPU、FS、TCP-IP、Common、BTstack、zstd、LibTomCrypt、U8g2、Contiki-NG、Mynewt、NuttX、wolfMQTT、wolfBoot、wolfSSH、wolfTPM、Paho 嵌入式 C、heatshrink、coreHTTP、coreJSON、corePKCS11、AWS IoT 嵌入式 SDK 各库、WAMR、coreMQTT、TinyUSB、MCUboot、FreeRTOS-Plus-TCP、libsodium、Mongoose、MicroPython、Jansson、libxml2、c-ares、Newlib 等 |
+| `rules/generic/` | 被各家 SDK 拷贝最多的上游组件：lwIP、Mbed TLS、Mbed Crypto、eRPC、FreeRTOS、RT-Thread、LiteOS、GmSSL、铜锁、wolfSSL，以及 zlib、libpng、curl、Expat、LZ4、Lua、ThreadX、NetX Duo、FileX、USBX、GUIX、LevelX、CMSIS-Core、CMSIS-DSP、CMSIS-NN、CMSIS-RTX、mJS、Elk、msgpack-c、SPIFFS、libcsp、MPack、Unity、libcanard、lwext4、CMSIS-Driver、coreMQTT Agent、FreeRTOS Cellular Interface、µC/OS-II、µC/OS-III 及 µC/LIB、CPU、FS、TCP-IP、Common、BTstack、zstd、LibTomCrypt、U8g2、Contiki-NG、Mynewt、NuttX、wolfMQTT、wolfBoot、wolfSSH、wolfTPM、Paho 嵌入式 C、heatshrink、coreHTTP、coreJSON、corePKCS11、AWS IoT 嵌入式 SDK 各库、WAMR、coreMQTT、TinyUSB、MCUboot、FreeRTOS-Plus-TCP、libsodium、Mongoose、MicroPython、Jansson、libxml2、c-ares、Newlib 等 |
 | `rules/zephyrproject/` | Zephyr 及其 HAL 模块 |
 | `rules/patches/` | 补丁记录：某条公告的修复改了哪些函数。`gangmu vuln --source ROOT` 据此判断厂商那份代码里**修复本身**在不在，而不是只看版本号去猜（目前 9 条：nanopb、nimble、wolfSSL、libjpeg-turbo）。每条记录在 CI 里都从它写明的上游提交重新生成并比对，见 [CONTRIBUTING.md](CONTRIBUTING.md#adding-a-patch-record) |
 
-共 151 条规则，全部免费，欢迎社区贡献。
+共 152 条规则，全部免费，欢迎社区贡献。
 
 ## 厂商专属的规则
 
