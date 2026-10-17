@@ -1,0 +1,69 @@
+id: generic/backoffalgorithm
+component:
+  ships_as: backoffalgorithm
+  path_globs:
+  - backoffAlgorithm
+  - '**/backoffAlgorithm'
+  - '**/backoff_algorithm'
+  marker_files:
+  - backoff_algorithm.c
+  - include/backoff_algorithm.h
+upstream:
+  name: backoffAlgorithm
+  purl: pkg:github/FreeRTOS/backoffAlgorithm
+  cpe_status: 'none-in-nvd: no record in an NVD mirror (fkie-cad feeds, CVE years 2010 to 2026, read 2026-10-17 with gangmu rules cpe-evidence) cites github.com/FreeRTOS/backoffAlgorithm or names it.'
+  supplier: Amazon Web Services and FreeRTOS contributors
+  homepage: https://github.com/FreeRTOS/backoffAlgorithm
+  license: MIT
+  source:
+    kind: git
+    url: https://github.com/FreeRTOS/backoffAlgorithm
+    ref: v1.4.2
+    subdir: source
+version:
+  probes:
+  - file: include/backoff_algorithm.h
+    patterns:
+      version: define\s+BACKOFF_ALGORITHM_LIBRARY_VERSION\s+"v?([0-9][0-9.]*)"
+    template: '{version}'
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-17'
+  by:
+  - '@gangmu'
+  note: "The exponential backoff with jitter library of the FreeRTOS libraries (a very small library: six functions): the source/ directory of FreeRTOS/backoffAlgorithm, releases v1.0.0 to v1.4.2 (8 releases). Vendors copy the library whole into their SDKs. The version probe reads the library version macro."
+identity:
+  include: ["**/*.c", "**/*.h"]
+  anchors:
+    - path: include/backoff_algorithm.h
+      sha256:
+        1.0.0: 2c053b3ec1ac8ae4b28baac746c4b42eceddd80b5928d958d89b5851e4626b84
+        1.0.1: 3464f7e6e861574bf06312c852d0f26a836c03ea2ce25f9565c815226042b19c
+        1.1.0: 6913de234a0ca9d24a5bfbacc03beb80db2c46fd5a9f995858ad3a9de3a9ad94
+        1.2.0: 482a7d9bee1142c2048518f0dcaf4b62710cca5366d6802f38128b8da221b420
+        1.3.0: 8face6a9fbe755239b39508c7c599e52d0fa57a0afa53f1e726b1c0b0033f36c
+        1.4.0: 8face6a9fbe755239b39508c7c599e52d0fa57a0afa53f1e726b1c0b0033f36c
+        1.4.1: 5c7919771b2276d3e71277505e1b5004f61f1ee0fe01e6125fe1818118761485
+        1.4.2: aaec4bb9cd4441d95dd3833f0dab6ba8c269a89e0e715d1f1e7e6bbc67ba3638
+  signature:
+    algo: winnow-bottomk
+    k: 16
+    window: 8
+    size: 256
+    reference_version: "1.4.2"
+    fileset_sha256: "4fb2c023d4da2dcd156e3708bf9e0b3832c9b7e4b076ea782d1e734c2d699dd7"
+    values: >-
+      0007837ca4534128002fc40757c4f01600416c4d4b3df36002028e62303b166b029e99a67b90010502d0dd292119709b0348a9028fa5801003a6e149ee56abf005acce2f42d735290977bd3d0b4b32e60dd853a33c7df9690f6274ef848610c31113f3684ab275f311c76810efd0bf0711fb1f6b6d017b68132e65fa3c949080151e3ccd61f9c7e71616abfbb95327a6164e8085b3abb3721d15fc28afa1a3171d1719a31aa4fd901da682b1a8b95fb91f9c8aaff012b8a52067b0f7a37fc4e623370077178fe95224b248274d4e1f5b25387376c4457105256b4d5705e8d65f258a0a3caabe85f82615a59d5e07adf926cf085cfbbcf2e328c32fe049057b4d2a24eba08d69dce42a736051cad561962b4e97fd33f682ee2cda41d2d11e5e7b2d36833108643aa72ee880fef1a7cfd92f015f7cb38547b831d76eea915a5eca32bf69e9ebd5f29e33f55a86daa2523d346d2b8f9a185aa035da331da3bf78823640f610ad65e5e939630b40ef95de293c80b90415a8b3c6461cb6738c1e6a0e47f3d50ea926f0a84d5d5f95b263d9d7531227f6ef3d923d54553bedb0c0baae557020112f0b248a591e67fece05b6275aa9d7f550449b125e9d95126af505ca612cdb188a6e01a365f4b9833fd8031d69fd065fef783f806f1e896c795f26c9718451fc4744e027
+  functions:
+    file: backoffalgorithm.fnsig
+    sha256: bc389d1dcb6c90412ba9fd064271238c3dc38b211c769908d36c614755f84a14
+    count: 6
+    versions:
+    - 1.0.0
+    - 1.0.1
+    - 1.1.0
+    - 1.2.0
+    - 1.3.0
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
