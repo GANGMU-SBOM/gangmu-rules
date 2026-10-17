@@ -1,13 +1,12 @@
 {
   "jobs": 1,
   "numpy": true,
-  "calibration_s": 0.0453,
   "runs": [
     {
-      "rules": 95,
-      "load_s": 0.353,
-      "scan_s": 2.853,
-      "peak_rss_mb": 85.7,
+      "rules": 159,
+      "load_s": 0.148,
+      "scan_s": 4.35,
+      "peak_rss_mb": 107.8,
       "worker_peak_rss_mb": 0.0,
       "candidates": 59,
       "findings": [
@@ -15,20 +14,20 @@
       ],
       "candidate_directories": 60,
       "rule_checks": 1,
-      "rule_checks_skipped": 5699,
+      "rule_checks_skipped": 9539,
       "files_hashed": 1276,
       "files_tokenised": 1156,
       "cache_hits": 0,
       "stat_hits": 0,
       "mode": "cold",
       "scale": 1,
-      "scan_units": 62.98
+      "scan_units": 72.9
     },
     {
-      "rules": 95,
-      "load_s": 0.357,
-      "scan_s": 1.672,
-      "peak_rss_mb": 80.0,
+      "rules": 159,
+      "load_s": 0.086,
+      "scan_s": 2.42,
+      "peak_rss_mb": 95.4,
       "worker_peak_rss_mb": 0.0,
       "candidates": 59,
       "findings": [
@@ -36,20 +35,20 @@
       ],
       "candidate_directories": 60,
       "rule_checks": 1,
-      "rule_checks_skipped": 5699,
+      "rule_checks_skipped": 9539,
       "files_hashed": 1272,
       "files_tokenised": 0,
       "cache_hits": 1156,
       "stat_hits": 4,
       "mode": "warm",
       "scale": 1,
-      "scan_units": 36.91
+      "scan_units": 40.5
     },
     {
-      "rules": 380,
-      "load_s": 0.949,
-      "scan_s": 3.986,
-      "peak_rss_mb": 115.8,
+      "rules": 636,
+      "load_s": 1.559,
+      "scan_s": 6.67,
+      "peak_rss_mb": 150.1,
       "worker_peak_rss_mb": 0.0,
       "candidates": 59,
       "findings": [
@@ -57,20 +56,20 @@
       ],
       "candidate_directories": 60,
       "rule_checks": 4,
-      "rule_checks_skipped": 22796,
+      "rule_checks_skipped": 38156,
       "files_hashed": 1276,
       "files_tokenised": 1156,
       "cache_hits": 0,
       "stat_hits": 0,
       "mode": "cold",
       "scale": 4,
-      "scan_units": 87.99
+      "scan_units": 111.8
     },
     {
-      "rules": 1520,
-      "load_s": 2.933,
-      "scan_s": 9.413,
-      "peak_rss_mb": 235.0,
+      "rules": 2544,
+      "load_s": 3.789,
+      "scan_s": 16.94,
+      "peak_rss_mb": 317.6,
       "worker_peak_rss_mb": 0.0,
       "candidates": 59,
       "findings": [
@@ -78,16 +77,18 @@
       ],
       "candidate_directories": 60,
       "rule_checks": 16,
-      "rule_checks_skipped": 91184,
+      "rule_checks_skipped": 152624,
       "files_hashed": 1276,
       "files_tokenised": 1156,
       "cache_hits": 0,
       "stat_hits": 0,
       "mode": "cold",
       "scale": 16,
-      "scan_units": 207.79
+      "scan_units": 283.8
     }
   ],
+  "calibration_s": 0.0597,
+  "calibration_drift": 1.0,
   "tree": {
     "synthetic": {
       "components": 59,
