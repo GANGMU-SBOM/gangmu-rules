@@ -39,6 +39,8 @@ review:
   - '@gangmu'
   note: The MicroPython core (the py/ directory of the upstream repository). Covers 1.17 to 1.29.0. Ports, extmod and drivers are not fingerprinted, because vendors rewrite them for each board.
 identity:
+  binary_banners:
+  - 'MicroPython v(\d+\.\d+(?:\.\d+)?)(?= on )'
   include:
   - '*.c'
   - '*.h'

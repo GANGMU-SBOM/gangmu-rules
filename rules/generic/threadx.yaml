@@ -39,6 +39,8 @@ review:
   - '@gangmu'
   note: ThreadX kernel (common/src and common/inc of the upstream repository) as copied into SDKs and firmware trees. Port directories (ports/) are the vendor's and are not fingerprinted. Releases are labelled major.minor.patch; the date suffix of recent tags is dropped, and the two 6.5.1 tags (…202602 and …202602a) collapse to one label.
 identity:
+  binary_banners:
+  - 'ThreadX [A-Za-z0-9/ +_-]{0,40}Version G?(\d+\.\d+\.\d+)'
   include:
   - src/*.c
   - inc/*.h
