@@ -39,6 +39,8 @@ review:
   - '@gangmu'
   note: "NetX Duo TCP/IP stack (common/src and common/inc of the upstream repository) as copied into SDKs and firmware trees. Port and example directories are not fingerprinted. Releases are labelled major.minor.patch (the date suffix of recent tags is dropped). Releases up to v6.1.x were distributed under Microsoft's Azure RTOS licence terms and later ones under MIT; the file headers of the copy carry whichever applies."
 identity:
+  binary_banners:
+  - 'NetX Duo [A-Za-z0-9/ +_-]{0,40}Version G?(\d+\.\d+\.\d+)'
   include: ["src/*.c", "inc/*.h"]
   anchors:
     - path: inc/nx_api.h
