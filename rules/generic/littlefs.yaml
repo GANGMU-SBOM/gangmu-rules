@@ -114,3 +114,20 @@ identity:
       tie_share: null
       shared_dropped: 48
       passed: true
+  - file: littlefs.x86-64.fnprint
+    sha256: 0e842e34d86dcd0582211ccd147f0cf341ef5f1e3265a3fcd3995fbbd530ade5
+    count: 59
+    versions: [2.0.4, 2.1.0, 2.1.4, 2.5.1, 2.6.1, 2.7.1, 2.8.2, 2.9.3, 2.10.2, 2.11.0]
+    calibration:
+      builds_per_release: 2
+      cross_build: {exact: 0, none: 0, range: 20, wrong: 0}
+      false_positives: 0
+      fingerprintable: 59
+      min_features: 2
+      negative_pairs: 34
+      passed: true
+      releases: 10
+      same_build: {exact: 0, none: 0, range: 20, wrong: 0}
+      shared_dropped: 5
+      tie_share: null
+      version: 1

@@ -79,7 +79,7 @@ identity:
     - 1.3.1.2
     - 1.3.2
   binary_functions:
-    file: zlib.fnprint
+  - file: zlib.fnprint
     sha256: 3bf1c055ab007999e33e23f3ed5853fac4b3c9d7de4ba91a39a3801e8c624c8a
     count: 74
     versions: [1.2.8, 1.2.11, 1.2.12, 1.2.13, '1.3', 1.3.1, 1.3.2]
@@ -95,3 +95,20 @@ identity:
       min_features: 2
       tie_share: null
       passed: true
+  - file: zlib.x86-64.fnprint
+    sha256: 651e42f5584a0fc137136e799cade0090346e080b40df55c306599baa14f8549
+    count: 25
+    versions: [1.2.8, 1.2.11, 1.2.12, 1.2.13, '1.3', 1.3.1, 1.3.2]
+    calibration:
+      builds_per_release: 2
+      cross_build: {exact: 0, none: 0, range: 14, wrong: 0}
+      false_positives: 0
+      fingerprintable: 25
+      min_features: 2
+      negative_pairs: 34
+      passed: true
+      releases: 7
+      same_build: {exact: 0, none: 0, range: 14, wrong: 0}
+      shared_dropped: 16
+      tie_share: null
+      version: 1
