@@ -68,3 +68,21 @@ identity:
     - 1.0.6
     - 1.0.7
     - 1.0.8
+  binary_functions:
+  - file: bzip2.x86-64.fnprint
+    sha256: 224c4ec14379bfe66b89f4d44dff1679228798c7cc05f1db08a73bd1b64fe4c9
+    count: 17
+    versions: [1.0.6, 1.0.7, 1.0.8]
+    calibration:
+      version: 1
+      releases: 3
+      builds_per_release: 2
+      fingerprintable: 17
+      cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 6
+      passed: true
