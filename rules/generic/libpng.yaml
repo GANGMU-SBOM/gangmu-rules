@@ -109,3 +109,21 @@ identity:
     - 1.6.57
     - 1.6.58
     - 1.6.59
+  binary_functions:
+  - file: libpng.x86-64.fnprint
+    sha256: 1d2f8a1c28ce8fad2f0339ee73d094ec171cf281fc81f41d6b0e29ee96adb41c
+    count: 231
+    versions: [1.6.34, 1.6.37, 1.6.39, 1.6.40, 1.6.43, 1.6.44, 1.6.47, 1.6.50]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 231
+      cross_build: {exact: 0, range: 16, wrong: 0, none: 0}
+      same_build: {exact: 0, range: 16, wrong: 0, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 118
+      passed: true

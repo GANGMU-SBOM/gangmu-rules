@@ -71,3 +71,21 @@ identity:
     - 1.0.9
     - 1.1.0
     - 1.2.0
+  binary_functions:
+  - file: brotli.x86-64.fnprint
+    sha256: 3110668731a4b63b8a066f0f5a0dbb5c14b2b90dd9a99d00da2957a8588e51fc
+    count: 147
+    versions: [1.0.5, 1.0.7, 1.0.9, 1.1.0, 1.2.0]
+    calibration:
+      version: 1
+      releases: 5
+      builds_per_release: 2
+      fingerprintable: 147
+      cross_build: {exact: 1, range: 9, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 8, wrong: 0, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 42
+      passed: true

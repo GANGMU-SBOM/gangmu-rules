@@ -78,3 +78,21 @@ identity:
     - 0.11.1
     - 0.12.0
     - 0.13.0
+  binary_functions:
+  - file: yyjson.x86-64.fnprint
+    sha256: 4abd4a870b7e1a57198dd1b8bae08234a47e0038eaab7de25087f68fb40361a1
+    count: 75
+    versions: [0.5.1, 0.6.0, 0.7.0, 0.8.0, 0.9.0, 0.10.0, 0.11.1, 0.12.0]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 75
+      cross_build: {exact: 2, range: 14, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 13, wrong: 1, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 36
+      passed: true

@@ -102,3 +102,22 @@ identity:
     - 10.47
     - 10.48
     - 10.49
+  binary_functions:
+  - file: pcre2.x86-64.fnprint
+    sha256: a5a020baf070235055a5a08f4a57fb043839512965f5bc60b7b549f995062319
+    count: 130
+    versions: ['10.34', '10.35', '10.37', '10.39', '10.40', '10.42', '10.43', '10.44',
+      '10.45']
+    calibration:
+      version: 1
+      releases: 9
+      builds_per_release: 2
+      fingerprintable: 130
+      cross_build: {exact: 2, range: 16, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 16, wrong: 0, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 36
+      passed: true

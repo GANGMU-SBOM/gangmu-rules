@@ -111,3 +111,21 @@ identity:
     - 2.8.4
     - 2.8.5
     - 2.9.0
+  binary_functions:
+  - file: expat.x86-64.fnprint
+    sha256: 98516778a40588fc86cdb267e1ce1f9b49f94a63f35185be0588ececd7821f9f
+    count: 133
+    versions: [2.2.0, 2.2.5, 2.2.10, 2.4.1, 2.4.8, 2.5.0, 2.6.0, 2.6.2, 2.7.1, 2.7.3]
+    calibration:
+      version: 1
+      releases: 10
+      builds_per_release: 2
+      fingerprintable: 133
+      cross_build: {exact: 14, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 14, range: 6, wrong: 0, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 45
+      passed: true

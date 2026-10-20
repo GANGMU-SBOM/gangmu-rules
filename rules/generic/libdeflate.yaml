@@ -97,3 +97,21 @@ identity:
     - 1.24
     - 1.25
     - 1.26
+  binary_functions:
+  - file: libdeflate.x86-64.fnprint
+    sha256: 40112ed597262fef45b73539cb934ec3ad41de2f2795bd0ee28e303255cc3638
+    count: 68
+    versions: ['1.8', '1.9', '1.10', '1.14', '1.17', '1.19', '1.20', '1.22', '1.24']
+    calibration:
+      version: 1
+      releases: 9
+      builds_per_release: 1
+      fingerprintable: 68
+      cross_build: {exact: 2, range: 14, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 15, wrong: 0, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 78
+      passed: true

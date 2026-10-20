@@ -124,3 +124,21 @@ identity:
     - 1.5.5
     - 1.5.6
     - 1.5.7
+  binary_functions:
+  - file: zstd.x86-64.fnprint
+    sha256: fd3bd5a7ac657774d669d0e788a36cefac7088fecc6a5c41e296739122400ac6
+    count: 242
+    versions: [1.3.8, 1.4.4, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 242
+      cross_build: {exact: 10, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 15, range: 1, wrong: 0, none: 0}
+      negative_pairs: 114
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 915
+      passed: true
