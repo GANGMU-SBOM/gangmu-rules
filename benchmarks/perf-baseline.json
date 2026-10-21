@@ -13,7 +13,7 @@
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 4,
+   "rule_checks": 5,
    "rule_checks_skipped": 21116,
    "loose_findings": 0,
    "files_hashed": 1276,
@@ -35,7 +35,7 @@
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 4,
+   "rule_checks": 5,
    "rule_checks_skipped": 21116,
    "loose_findings": 0,
    "files_hashed": 1272,
@@ -57,7 +57,7 @@
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 16,
+   "rule_checks": 20,
    "rule_checks_skipped": 84464,
    "loose_findings": 0,
    "files_hashed": 1276,
@@ -79,7 +79,7 @@
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 64,
+   "rule_checks": 80,
    "rule_checks_skipped": 337856,
    "loose_findings": 0,
    "files_hashed": 1276,
