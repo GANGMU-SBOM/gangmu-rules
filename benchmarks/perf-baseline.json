@@ -1,100 +1,104 @@
 {
-  "jobs": 1,
-  "numpy": true,
-  "runs": [
-    {
-      "rules": 207,
-      "load_s": 0.184,
-      "scan_s": 3.55,
-      "peak_rss_mb": 113.3,
-      "worker_peak_rss_mb": 0.0,
-      "candidates": 59,
-      "findings": [
-        "vendor/tinynet=tinynet@1.4.2"
-      ],
-      "candidate_directories": 60,
-      "rule_checks": 1,
-      "rule_checks_skipped": 12419,
-      "files_hashed": 1276,
-      "files_tokenised": 1156,
-      "cache_hits": 0,
-      "stat_hits": 0,
-      "mode": "cold",
-      "scale": 1,
-      "scan_units": 113.3
-    },
-    {
-      "rules": 207,
-      "load_s": 0.138,
-      "scan_s": 2.31,
-      "peak_rss_mb": 101.9,
-      "worker_peak_rss_mb": 0.0,
-      "candidates": 59,
-      "findings": [
-        "vendor/tinynet=tinynet@1.4.2"
-      ],
-      "candidate_directories": 60,
-      "rule_checks": 1,
-      "rule_checks_skipped": 12419,
-      "files_hashed": 1272,
-      "files_tokenised": 0,
-      "cache_hits": 1156,
-      "stat_hits": 4,
-      "mode": "warm",
-      "scale": 1,
-      "scan_units": 73.8
-    },
-    {
-      "rules": 828,
-      "load_s": 1.009,
-      "scan_s": 5.14,
-      "peak_rss_mb": 162.7,
-      "worker_peak_rss_mb": 0.0,
-      "candidates": 59,
-      "findings": [
-        "vendor/tinynet=tinynet@1.4.2"
-      ],
-      "candidate_directories": 60,
-      "rule_checks": 4,
-      "rule_checks_skipped": 49676,
-      "files_hashed": 1276,
-      "files_tokenised": 1156,
-      "cache_hits": 0,
-      "stat_hits": 0,
-      "mode": "cold",
-      "scale": 4,
-      "scan_units": 164.2
-    },
-    {
-      "rules": 3312,
-      "load_s": 7.98,
-      "scan_s": 14.4,
-      "peak_rss_mb": 358.2,
-      "worker_peak_rss_mb": 0.0,
-      "candidates": 59,
-      "findings": [
-        "vendor/tinynet=tinynet@1.4.2"
-      ],
-      "candidate_directories": 60,
-      "rule_checks": 16,
-      "rule_checks_skipped": 198704,
-      "files_hashed": 1276,
-      "files_tokenised": 1156,
-      "cache_hits": 0,
-      "stat_hits": 0,
-      "mode": "cold",
-      "scale": 16,
-      "scan_units": 460.2
-    }
-  ],
-  "calibration_s": 0.0313,
-  "calibration_drift": 1.03,
-  "tree": {
-    "synthetic": {
-      "components": 59,
-      "files": 1152,
-      "bytes": 6349801
-    },
-    "seed": 0
+ "jobs": 1,
+ "numpy": true,
+ "runs": [
+  {
+   "rules": 352,
+   "load_s": 0.245,
+   "scan_s": 8.148,
+   "peak_rss_mb": 159.4,
+   "worker_peak_rss_mb": 0.0,
+   "candidates": 59,
+   "findings": [
+    "vendor/tinynet=tinynet@1.4.2"
+   ],
+   "candidate_directories": 60,
+   "rule_checks": 4,
+   "rule_checks_skipped": 21116,
+   "loose_findings": 0,
+   "files_hashed": 1276,
+   "files_tokenised": 1156,
+   "cache_hits": 0,
+   "stat_hits": 0,
+   "mode": "cold",
+   "scale": 1,
+   "scan_units": 136.48
+  },
+  {
+   "rules": 352,
+   "load_s": 0.247,
+   "scan_s": 4.977,
+   "peak_rss_mb": 159.4,
+   "worker_peak_rss_mb": 0.0,
+   "candidates": 59,
+   "findings": [
+    "vendor/tinynet=tinynet@1.4.2"
+   ],
+   "candidate_directories": 60,
+   "rule_checks": 4,
+   "rule_checks_skipped": 21116,
+   "loose_findings": 0,
+   "files_hashed": 1272,
+   "files_tokenised": 0,
+   "cache_hits": 1156,
+   "stat_hits": 4,
+   "mode": "warm",
+   "scale": 1,
+   "scan_units": 83.37
+  },
+  {
+   "rules": 1408,
+   "load_s": 2.245,
+   "scan_s": 14.71,
+   "peak_rss_mb": 242.2,
+   "worker_peak_rss_mb": 0.0,
+   "candidates": 59,
+   "findings": [
+    "vendor/tinynet=tinynet@1.4.2"
+   ],
+   "candidate_directories": 60,
+   "rule_checks": 16,
+   "rule_checks_skipped": 84464,
+   "loose_findings": 0,
+   "files_hashed": 1276,
+   "files_tokenised": 1156,
+   "cache_hits": 0,
+   "stat_hits": 0,
+   "mode": "cold",
+   "scale": 4,
+   "scan_units": 246.4
+  },
+  {
+   "rules": 5632,
+   "load_s": 9.066,
+   "scan_s": 44.236,
+   "peak_rss_mb": 602.6,
+   "worker_peak_rss_mb": 0.0,
+   "candidates": 59,
+   "findings": [
+    "vendor/tinynet=tinynet@1.4.2"
+   ],
+   "candidate_directories": 60,
+   "rule_checks": 64,
+   "rule_checks_skipped": 337856,
+   "loose_findings": 0,
+   "files_hashed": 1276,
+   "files_tokenised": 1156,
+   "cache_hits": 0,
+   "stat_hits": 0,
+   "mode": "cold",
+   "scale": 16,
+   "scan_units": 740.97
   }
+ ],
+ "calibration_s": 0.0597,
+ "calibration_drift": 1.0,
+ "tree": {
+  "synthetic": {
+   "components": 59,
+   "files": 1152,
+   "bytes": 6349801
+  },
+  "seed": 0
+ }
 }
