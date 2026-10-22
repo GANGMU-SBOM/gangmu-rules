@@ -3,17 +3,17 @@
  "numpy": true,
  "runs": [
   {
-   "rules": 495,
+   "rules": 535,
    "load_s": 0.245,
    "scan_s": 8.148,
-   "peak_rss_mb": 219.9,
+   "peak_rss_mb": 250.4,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 7,
+   "rule_checks": 9,
    "rule_checks_skipped": 21116,
    "loose_findings": 0,
    "files_hashed": 1276,
@@ -22,20 +22,20 @@
    "stat_hits": 0,
    "mode": "cold",
    "scale": 1,
-   "scan_units": 165.5
+   "scan_units": 206.8
   },
   {
-   "rules": 495,
+   "rules": 535,
    "load_s": 0.247,
    "scan_s": 4.977,
-   "peak_rss_mb": 219.7,
+   "peak_rss_mb": 250.4,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 7,
+   "rule_checks": 9,
    "rule_checks_skipped": 21116,
    "loose_findings": 0,
    "files_hashed": 1272,
@@ -44,20 +44,20 @@
    "stat_hits": 4,
    "mode": "warm",
    "scale": 1,
-   "scan_units": 110.2
+   "scan_units": 162.4
   },
   {
-   "rules": 1980,
+   "rules": 2140,
    "load_s": 2.245,
    "scan_s": 14.71,
-   "peak_rss_mb": 330.1,
+   "peak_rss_mb": 374.1,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 28,
+   "rule_checks": 36,
    "rule_checks_skipped": 84464,
    "loose_findings": 0,
    "files_hashed": 1276,
@@ -66,20 +66,20 @@
    "stat_hits": 0,
    "mode": "cold",
    "scale": 4,
-   "scan_units": 343.0
+   "scan_units": 473.2
   },
   {
-   "rules": 7920,
+   "rules": 8560,
    "load_s": 9.066,
    "scan_s": 44.236,
-   "peak_rss_mb": 792.9,
+   "peak_rss_mb": 877.2,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 112,
+   "rule_checks": 144,
    "rule_checks_skipped": 337856,
    "loose_findings": 0,
    "files_hashed": 1276,
@@ -88,7 +88,7 @@
    "stat_hits": 0,
    "mode": "cold",
    "scale": 16,
-   "scan_units": 1077.5
+   "scan_units": 1527.3
   }
  ],
  "calibration_s": 0.0597,
