@@ -3,18 +3,18 @@
  "numpy": true,
  "runs": [
   {
-   "rules": 711,
+   "rules": 817,
    "load_s": 0.245,
-   "scan_s": 11.4,
-   "peak_rss_mb": 404.2,
+   "scan_s": 16.01,
+   "peak_rss_mb": 485.9,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 11,
-   "rule_checks_skipped": 42650,
+   "rule_checks": 12,
+   "rule_checks_skipped": 49009,
    "loose_findings": 0,
    "files_hashed": 1276,
    "files_tokenised": 1156,
@@ -22,21 +22,21 @@
    "stat_hits": 0,
    "mode": "cold",
    "scale": 1,
-   "scan_units": 250.5
+   "scan_units": 266.4
   },
   {
-   "rules": 711,
+   "rules": 817,
    "load_s": 0.247,
-   "scan_s": 9.35,
-   "peak_rss_mb": 404.1,
+   "scan_s": 12.41,
+   "peak_rss_mb": 486.0,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 11,
-   "rule_checks_skipped": 42650,
+   "rule_checks": 12,
+   "rule_checks_skipped": 49009,
    "loose_findings": 0,
    "files_hashed": 1272,
    "files_tokenised": 0,
@@ -44,21 +44,21 @@
    "stat_hits": 4,
    "mode": "warm",
    "scale": 1,
-   "scan_units": 205.4
+   "scan_units": 206.5
   },
   {
-   "rules": 2844,
+   "rules": 3268,
    "load_s": 2.245,
-   "scan_s": 27.14,
-   "peak_rss_mb": 614.9,
+   "scan_s": 38.34,
+   "peak_rss_mb": 741.3,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 38,
-   "rule_checks_skipped": 170603,
+   "rule_checks": 44,
+   "rule_checks_skipped": 196039,
    "loose_findings": 0,
    "files_hashed": 1276,
    "files_tokenised": 1156,
@@ -66,21 +66,21 @@
    "stat_hits": 0,
    "mode": "cold",
    "scale": 4,
-   "scan_units": 596.5
+   "scan_units": 637.9
   },
   {
-   "rules": 11376,
+   "rules": 13072,
    "load_s": 9.066,
-   "scan_s": 92.72,
-   "peak_rss_mb": 1452.0,
+   "scan_s": 131.68,
+   "peak_rss_mb": 1759.6,
    "worker_peak_rss_mb": 0.0,
    "candidates": 59,
    "findings": [
     "vendor/tinynet=tinynet@1.4.2"
    ],
    "candidate_directories": 60,
-   "rule_checks": 146,
-   "rule_checks_skipped": 682415,
+   "rule_checks": 170,
+   "rule_checks_skipped": 784159,
    "loose_findings": 0,
    "files_hashed": 1276,
    "files_tokenised": 1156,
@@ -88,7 +88,7 @@
    "stat_hits": 0,
    "mode": "cold",
    "scale": 16,
-   "scan_units": 2037.9
+   "scan_units": 2190.9
   }
  ],
  "calibration_s": 0.0597,
