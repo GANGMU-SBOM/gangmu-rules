@@ -1,0 +1,127 @@
+{
+ "format": 1,
+ "patches": {
+  "CVE-2023-43641": {
+   "commits": [
+    "cfb98a060fd79dbc3463d85f0f29c3c335dfa0ea",
+    "fdf72c8bded8d24cfa0608b8e97f2eed210a920e"
+   ],
+   "functions": [
+    {
+     "file": "cd.c",
+     "fixed": [
+      "e8e60ad64bfe4582"
+     ],
+     "fixedAbstract": [
+      "a1822d32e632a1db"
+     ],
+     "function": "track_set_index",
+     "near": {
+      "added": [
+       "0957f80fd7d7395d",
+       "221482cc5bcc48d8",
+       "4346afdfccd65a90",
+       "52d743d45612aabe",
+       "830070cfe9d4e9ca",
+       "f9a3250605ab4767"
+      ],
+      "fixed": [
+       "07a5ea97592523e5",
+       "087572cedb7d79e0",
+       "0957f80fd7d7395d",
+       "118c1102077a83e5",
+       "143518fbfd48b6ce",
+       "17ceb00e5af27154",
+       "221482cc5bcc48d8",
+       "26d894fcaf79a049",
+       "3b79f6662ac49bcf",
+       "4346afdfccd65a90",
+       "43fe21af8c5f1557",
+       "50767dc3fc8e50d7",
+       "52d743d45612aabe",
+       "71285cabbe03f823",
+       "74dbbfe70a183a37",
+       "7826b06f022b8137",
+       "7ba02145062e3227",
+       "830070cfe9d4e9ca",
+       "84d43ae0ec6926f4",
+       "86ee50159675cb75",
+       "8e336e028c0624bc",
+       "97882520e779d636",
+       "9991208ba0892741",
+       "9b3737a0f0be6ce2",
+       "a5a4faabf388ff56",
+       "a91a5f3ef1d705ae",
+       "ac777f68d464387d",
+       "b95159726ffe32f0",
+       "bafc57f38c69cf18",
+       "bbb56b61ce59ab35",
+       "bcd9c4c694de35ce",
+       "cdeccb7a0faf3b9a",
+       "d489f9455be81ae7",
+       "d808977efbacf24e",
+       "de268fc44883e611",
+       "de2a2272240fabe3",
+       "defa7772a35e3c6e",
+       "eff47b1ef691a199",
+       "f9a3250605ab4767",
+       "fb74406d4e155a48",
+       "fec06cec3e6def27"
+      ],
+      "removed": [
+       "ac41d1c5971690e0",
+       "c934f2f43fb68fa4"
+      ],
+      "vulnerable": [
+       "07a5ea97592523e5",
+       "087572cedb7d79e0",
+       "118c1102077a83e5",
+       "143518fbfd48b6ce",
+       "17ceb00e5af27154",
+       "26d894fcaf79a049",
+       "3b79f6662ac49bcf",
+       "43fe21af8c5f1557",
+       "50767dc3fc8e50d7",
+       "71285cabbe03f823",
+       "74dbbfe70a183a37",
+       "7826b06f022b8137",
+       "7ba02145062e3227",
+       "84d43ae0ec6926f4",
+       "86ee50159675cb75",
+       "8e336e028c0624bc",
+       "97882520e779d636",
+       "9991208ba0892741",
+       "9b3737a0f0be6ce2",
+       "a5a4faabf388ff56",
+       "a91a5f3ef1d705ae",
+       "ac41d1c5971690e0",
+       "ac777f68d464387d",
+       "b95159726ffe32f0",
+       "bafc57f38c69cf18",
+       "bbb56b61ce59ab35",
+       "bcd9c4c694de35ce",
+       "c934f2f43fb68fa4",
+       "cdeccb7a0faf3b9a",
+       "d489f9455be81ae7",
+       "d808977efbacf24e",
+       "de268fc44883e611",
+       "de2a2272240fabe3",
+       "defa7772a35e3c6e",
+       "eff47b1ef691a199",
+       "fb74406d4e155a48",
+       "fec06cec3e6def27"
+      ]
+     },
+     "vulnerable": [
+      "eafb0a53b2f5122e"
+     ],
+     "vulnerableAbstract": [
+      "a320d311fea12d11"
+     ]
+    }
+   ],
+   "note": "Tested on upstream trees 2026-10-22: v2.2.1 vulnerable, v2.3.0 fixed. Both fix commits recorded.",
+   "repo": "https://github.com/lipnitsk/libcue"
+  }
+ }
+}
