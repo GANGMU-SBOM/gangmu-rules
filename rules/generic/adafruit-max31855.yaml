@@ -1,0 +1,74 @@
+id: generic/adafruit-max31855
+component:
+  ships_as: adafruit-max31855
+  path_globs:
+  - Adafruit-MAX31855-library
+  - '**/Adafruit-MAX31855-library'
+  - adafruit-max31855
+  - '**/adafruit-max31855'
+upstream:
+  name: adafruit-max31855
+  purl: pkg:github/adafruit/Adafruit-MAX31855-library
+  homepage: https://github.com/adafruit/Adafruit-MAX31855-library
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://github.com/adafruit/Adafruit-MAX31855-library
+    ref: 1.4.2
+  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-24).'
+identity:
+  include:
+  - '**/*.c'
+  - '**/*.h'
+  - '**/*.cc'
+  - '**/*.cpp'
+  - '**/*.hpp'
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  - '**/docs/**'
+  - '**/example/**'
+  - '**/examples/**'
+  - '**/contrib/**'
+  - '**/.git/**'
+  anchors:
+  - path: Adafruit_MAX31855.h
+    sha256:
+      1.4.2: 8c1ba4cf4f1078a1426f42e01ca3dcf14713254844333260436917dc76b1eaba
+  signature:
+    algo: winnow-bottomk
+    k: 16
+    window: 8
+    size: 256
+    reference_version: 1.4.2
+    fileset_sha256: 2515d63c41bab10c64abccf790e21543c5a3062ad5e0fc12bef485e70d5682ee
+    values: 0030407047ec5e550082aee62f5164ac0097a40337d0f03701201a50b7f2af5601f84230bb87e035026bf806684b7cc803b93c882020459004a6cc6cafabf15e0672acd8c4ed8ef8068ed9b2c6a8b6d906fa94ba56c5fd6e0742dbd708ec4813083ed80034e82d4d084629df121b9e7c08a85920fa4de2f60918dd5a29e1250809b13985471a829d0a6fb8a2011934990a828cf32ed41e0d0a8dd03c956026a00b74a93b5bf2b9bf0ba93a2c937bf87d0bc0c96f997e45440cd67cbb354e6b460cd93cf87515874f0cdcbc1e63d223950d46071cd09891350d5c720ae7c13ac40dbbb3243dd2c0f40dc4a1b02836bfe40dd879c8d5be88830e55f021cca07aac0e9eb37a7bf1910e0f751143efbf384a0f8e0574a3f3445d0fa0cc22fb86e90f1001cd82a334721a10d9c6534af7f792113d1c54c1660dfd119b53f4f56917ff11baa974982649dc11d07aead42369231215a0347cde52c3127bb6294e9e86d4139e0e48ef1c640d142770a63c310386153bd1268c202aca1595e5783ff91ee21726c4bee4e023c317d6b2dc5d834af6186059d91e0fd86718bc08a70d2a250e1914028f89b1db1c19e88912650cbba019f638f435d3eaf91ac80ca2a49b936e1ae70bb32e052fa41b79102dbf4bbdf21bc5acb630a052b51d1992529d782aa51d3835a7b92966961def16f5c9c6aca11f19f3df35581bb21f690562ef734d1720755b76104b52fc233762c6c0916b1d236ef1e9479d2f5e23cba0ce57991883241ecb9436096e86245cddccfffa2c0c257596aacfc8fe0c25cd991798d71d6c27b96b8fc7c1a3662d2931e3ee00bb1c2d9c79ef6cc7b2262df6ce3bab3e921b30abde0131416ecd324f1682fbeb1d533301aa7e2d9562a9331a2c6b1a018f42347ab295920e656e37a71a936abee75f38558175621438d738631c0729d489d638fab6ecaa689a903c2f4a65798540963e19add4a2db04393e8b4500bfdd05b23f6b5169691efd653fb83d51c0c115394297f060e272907a430b0d7db327399b436e4a510ad9d22743e1e09aeb13fbf7445997496a32f00745fcfbd09887d543466118c0207020af488b680b36848c2e4cf912dea7096d6c4e57e0c99666bb754f2fb90f3da541144f5d69a9f44a462b53c9c5127dca15af5813e4c887b933405983d889602daa0959ee25e0b66f3c175ec5aa4a0f13759362bf1a400380d1ac637722a2c625f54a64397337479cfd5f6dc95ca37f9413a272a809142d801adc7429ca7de93d22758ef9533cbc0c1ef0
+  functions:
+    file: adafruit-max31855.fnsig
+    sha256: 80e722ca0ac145c72a9d5028a3bf36bedd0a195c55c25c2019dee5eaa31863db
+    count: 28
+    versions:
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.0.3
+    - 1.0.4
+    - 1.0.5
+    - 1.1.0
+    - 1.1.1
+    - 1.2.0
+    - 1.2.1
+    - 1.3.0
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    subset: true
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-24'
+  by:
+  - '@gangmu'
+  imported_from: https://github.com/adafruit/Adafruit-MAX31855-library@1.4.2
+  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
+  note: MAX31855 thermocouple library.
