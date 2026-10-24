@@ -1,0 +1,77 @@
+id: generic/adafruit-sht31
+component:
+  ships_as: adafruit-sht31
+  path_globs:
+  - Adafruit_SHT31
+  - '**/Adafruit_SHT31'
+  - adafruit-sht31
+  - '**/adafruit-sht31'
+upstream:
+  name: adafruit-sht31
+  purl: pkg:github/adafruit/Adafruit_SHT31
+  homepage: https://github.com/adafruit/Adafruit_SHT31
+  license: BSD-3-Clause
+  source:
+    kind: git
+    url: https://github.com/adafruit/Adafruit_SHT31
+    ref: 2.2.2
+  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-24).'
+identity:
+  include:
+  - '**/*.c'
+  - '**/*.h'
+  - '**/*.cc'
+  - '**/*.cpp'
+  - '**/*.hpp'
+  exclude:
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/doc/**'
+  - '**/docs/**'
+  - '**/example/**'
+  - '**/examples/**'
+  - '**/contrib/**'
+  - '**/.git/**'
+  anchors:
+  - path: Adafruit_SHT31.h
+    sha256:
+      2.2.2: 87d81e31ab8e50ab943c5b4f08544fcca3bea8a068b572ba69340aff5180f764
+  signature:
+    algo: winnow-bottomk
+    k: 16
+    window: 8
+    size: 256
+    reference_version: 2.2.2
+    fileset_sha256: bc522ddda102881e3e17f77b899aedbdc3d7a376784a6f454f3eb5d9cab6917d
+    values: 00e5c9528981953500ea1246f72cbf0b010a88473bc9b96101a03c3be354813001a3a2aaaa6e8c1101a83ea51dbd5ca301eea934b4f6cb0d023b8e095a18e4e7024208fca581aaa102aea4a1b1ae9ef40361a46e38607d0a03dfd263bf0ba90903ea85119caa3f540404e1bae4e1d8c004850a11cb6c79af048eb5d818ef8f5e052254d5f557abe005cf28bd11e41eef05e2fbf677be1b870612d0159f38d38206a09ff6c090e7d006abde041d6809cc071b24487bd5909c078563a655aa718f07da1efcdfb205c107dea287ca79be2b07df154a896c721f08a18d45eb3b1bde0947e8a09a95afdc09a8d6cb2b10e3780a3494cabddae0660b64af5fc2c9525c0b8e94f02c7c17950bd9c3be330da1040c435d760fd36f710c9c23c7b5bd85d90d0fb5d12710c2580d62fc19c9d856990dd5439124e4a5e70deaf8bee2488ea50ded403225b87d4e0e85f00ddb6381a80e91c388638392030ea28d25826053070f669771f1ea295f0f7fec9a0d26c0c30f9126e785bff61b0f933615763f1b080ff76bae7fee347410a379ade099f0ac10d4c0f7c4ebff6b117275b8ebe6186211eb624ac654c5ea1206b7fa671439b9122b30d431c8143912eb4226470e2413130657aeb5f5046013a19fca0ff6d0591428ad844d55339a143d3eaaf6510e9d1458792c5ecccd7816a0c0626be4eae51735485ee65f25821753e88f6b51f6a5177288c3101a09ec17a21ca0277667f718107996ccd57c31182dc24ea1284c511830010d2b7c2b271913ccf3e753f5bf197a53b99ff69df219fa843631b26c331a60e6ab7d34205d1a6d3d42e15dd7441b37bd87094f68c51bfe744e4532d8771c832a5505ba979a1c8ecb163a3c9b311cb28255b2bb55861d2040312c0f07761d783bf38223136b1e2eb958c9b7118d1e4c4985cb4886f21e5389973438cf3f1e60aef3b9b374851f3a353aef4d16e71ff085e240418278202bfa33c933fb1a204f4a16e92969e42062bf798651867e20fd30d9128c8de2210e76fb1b3af585211b0421861fcc87228b58679b70b47122cfb4725ab9c73223177bfb5143854b233d79fec58066742374503e6d74b19023b1f5546a74560023e55bf5a694a58b23ffe8eb423b92a42448f50154978d262457a016be408a2c25bd21d1cbe1eca625d29635d0deaeb32603e39b94bc0c61263dbf3e589f9bf326c953fd7182712b281b7f4ac889bd84292612183b3ecf1629442f872ded1f9e29ee84d6205aeed72bac5c10fe11a84b2c717672c088bd752c972f3d5ef2e2e22cd84c32d0ebbe0d2cf143365dd5a4642d2721c745c5defe2d6603fecddc978b2dc77eb9769861702dd4de0c337104162e82bf2b1f4ed8962e9c61eb81eca7cb2fdea309a2952d453000329a12bacb1630542183833d243e32ca61fd4177bdeb32ccc724c98f26b1333a86f2eaa0ad443358fc3d93af2de033e8c0cf74c06cb33685005b849860dd36ae4ba9380134f43711853579f4d51c37f15a02452827543820931792bad9b43b141e83bd7751523d39fe63590d3e8c3d8e2b7e98ee42d93e3a47dc13da396a3f089fcd6d08eb323f8663ba5f88a8083fb84cb1c306475c4021df852e679fa2421431288b97be3d42571161f0e7e236453942078804fbdc45442bd41de0f97845b35bd0b4befc0e47869d3f8aa82bf247abbc1c3d45e4d14b64c16a0b8ee5834d52921660c865c14df206d425a9dd074ede21a25eb47c7c514d45b5f03d96765308bc7ffdf05190536651bf4e072cad54b76738d367a6c5564e908980d3cb575f869a6146d259ca6094d3af23c3fcc3674055e2dd8988966b1835f1326720416cf9dd13aa5613d26d7c6cd335c8fba370bbc9498adaa4b4746331cc579981aa802ae7a47a494363805b96b7976b2e79818f72443e6871c38c7a6ffabbfb04a6
+  functions:
+    file: adafruit-sht31.fnsig
+    sha256: 307eff18ee82617e9964f444dca08980252a40e09d04ca4699a8f4af5d079603
+    count: 34
+    versions:
+    - 1.0.0
+    - 1.0.3
+    - 1.1.0
+    - 1.1.1
+    - 1.1.2
+    - 1.1.3
+    - 1.1.4
+    - 1.1.5
+    - 1.1.6
+    - 1.1.7
+    - 1.1.8
+    - 1.2.0
+    - 2.0.0
+    - 2.1.0
+    - 2.2.0
+    - 2.2.1
+    - 2.2.2
+    subset: true
+confidence_ceiling: 0.95
+review:
+  added: '2026-10-24'
+  by:
+  - '@gangmu'
+  imported_from: https://github.com/adafruit/Adafruit_SHT31@2.2.2
+  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
+  note: SHT31 sensor library.
