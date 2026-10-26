@@ -26,7 +26,7 @@ version:
       minor: LWIP_VERSION_MINOR\s+(\d+)
       revision: LWIP_VERSION_REVISION\s+(\d+)
     template: '{major}.{minor}.{revision}'
-confidence_ceiling: 0.95
+confidence_ceiling: 0.80
 review:
   added: '2026-10-05'
   by:
@@ -37,14 +37,17 @@ review:
     the component directory (LuatOS components/network/lwip22, 2.2.1). Identity
     comes from the function signature generic/lwip uses; the sidecar file is
     shared, since functions do not depend on the path. There is no whole-tree
-    signature or anchor because both are keyed by the src/ paths.
+    signature or anchor because both are keyed by the src/ paths. The include
+    list is generic/lwip's (src/**/*.c, src/**/*.h) one level up: the shared
+    signature records apps/, netif/ppp and the other headers too, so a narrower
+    list caps an untouched copy at about 0.72 containment and marks it as
+    vendor-modified. The ceiling is 0.80, below generic/lwip's: with nothing but
+    the functions to go on, this rule would otherwise tie with generic/lwip on a
+    full upstream tree and take it to src/, the deeper directory.
 identity:
   include:
-  - core/**/*.c
-  - core/**/*.h
-  - api/**/*.c
-  - netif/**/*.c
-  - include/lwip/**/*.h
+  - '**/*.c'
+  - '**/*.h'
   exclude: []
   functions:
     file: lwip.fnsig
