@@ -5,6 +5,13 @@ component:
   - '**/lwip'
   - '**/lwip-*'
   ships_as: lwip
+  # Under src/ as upstream lays it out; the scan also looks for them without src/,
+  # where a vendor copied only its contents (LuatOS components/network/lwip22).
+  marker_files:
+  - src/core/init.c
+  - src/core/tcp.c
+  - src/core/pbuf.c
+  - src/include/lwip/init.h
 upstream:
   name: lwIP
   purl: pkg:generic/lwip
