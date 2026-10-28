@@ -47,8 +47,8 @@ identity:
   - include/*.h
   functions:
     file: nanopb.fnsig
-    sha256: 71bbd23687982d92e61f37d2ede666295fa30415c348ccfb56a6eed4824df82f
-    count: 281
+    sha256: 2cdf89388e4ce78093d2becc4f1c682ff3988e4a3af763b41b00959dabcfe1fc
+    count: 307
     versions:
     - 0.3.6
     - 0.3.7

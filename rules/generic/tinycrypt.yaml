@@ -26,6 +26,13 @@ review:
 identity:
   functions:
     file: tinycrypt.fnsig
-    sha256: 6ca30e97319316d1e76cbeeeb68be2ce744234a3a4fd50939cad377b05138708
-    count: 221
-    versions: [0.1.0, 0.1.5, 0.2.0, 0.2.5, 0.2.6, 0.2.7, 0.2.8]
+    sha256: 3c7c74fb79c74a18cb39ca34de62e5690f32237763efc140d10a0e5d67aef861
+    count: 226
+    versions:
+    - 0.1.0
+    - 0.1.5
+    - 0.2.0
+    - 0.2.5
+    - 0.2.6
+    - 0.2.7
+    - 0.2.8

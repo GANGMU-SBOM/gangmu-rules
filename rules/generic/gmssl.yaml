@@ -46,8 +46,8 @@ identity:
       3.2.0: b232e4a7091cc66a3a0edbaf79c5e1084bb55ecb12846bf7f63cbcadefdf895f
   functions:
     file: gmssl.fnsig
-    sha256: e667ba505a670cdb056d7e40faa41c2398c1810dd17b16a87ca632ef8b549e82
-    count: 3959
+    sha256: 144b4a7fa81b195533e4dbe1f0739feda2b645afe7d7b24baea2c40a4428fdb3
+    count: 3988
     versions:
     - 3.0.0
     - 3.1.0
