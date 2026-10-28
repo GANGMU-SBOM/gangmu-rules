@@ -70,8 +70,8 @@ identity:
       8.3.3: 60a8c3cdb2fad5a0dea817f2fac399d128b24cff879bcd9ba5f4aa84d2ec92c1
   functions:
     file: tongsuo.fnsig
-    sha256: 399185400d29d5b03d713d427063a69abf8b2320a2ea633a57d86c9118a5c999
-    count: 24737
+    sha256: c1d24d32867e98c28d594918ce69c57cfb73ffa106b0da26feb9902b1c019b0b
+    count: 25203
     versions:
     - 8.1.3
     - 8.2.0

@@ -49,8 +49,8 @@ identity:
       2.2.0: e61c4c6c58e7d784947675dd6ac97f473c55bbb17a63e47888538eb7fb15a779
   functions:
     file: lwip.fnsig
-    sha256: 6aa531d577efe764c930cd7d41b54b2c448378f027bc78db858071838155554a
-    count: 3022
+    sha256: 002020f9d5bdf778b38cbded598f573aafaaaed689d643da7c3518c3c6d3bd28
+    count: 3195
     versions:
     - 2.0.2
     - 2.0.3

@@ -26,10 +26,12 @@ identity:
   - '*.c'
   functions:
     file: xz-embedded.fnsig
-    sha256: d9f12d992df36bd731207e574b78b34f070e904eb24a1e64d97b751a47713aac
+    sha256: 6ee0b33fdb79d5de7acc1f71739f505ea5cb8b3f164373ffb5b190e888293586
     count: 91
+    # Built from linux/lib/xz, where upstream keeps the decoder.
+    subdir: linux/lib/xz
     versions:
-    - 2024.04.05
-    - 2024.12.30
-    - '20240124'
-    - '20240322'
+    - '2024.01.24'
+    - '2024.03.22'
+    - '2024.04.05'
+    - '2024.12.30'

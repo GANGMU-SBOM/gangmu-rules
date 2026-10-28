@@ -36,8 +36,8 @@ identity:
   - include/**/*.h
   functions:
     file: openthread.fnsig
-    sha256: bb4ad776db484bf15ed6e8402dd2625a935796b3262f8b92e6a720b02bce79e7
-    count: 2300
+    sha256: 361ee13b9e77896788465a10e5e0b539ffbf896f1a7b63dfcd8aa154c742f5e5
+    count: 15474
     versions:
     - 2026.06.0
     - 2026.07.0
