@@ -54,7 +54,6 @@ identity:
     sha256: dd2cebfff4142b5bbffe409d5fb2ab7c727954438dcfd2b26e773908f1dbe904
     count: 10382
     versions:
-    - 2.5.0
     - 2.6.0
     - 3.0.0
     - 3.5.0
@@ -62,6 +61,7 @@ identity:
     - 4.0.0
     - 4.2.0
     - 4.5.0
+    - '4.6'
     - '5.0'
     - '5.5'
     - '6.0'
