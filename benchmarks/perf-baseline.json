@@ -3,7 +3,7 @@
   "numpy": true,
   "runs": [
     {
-      "rules": 1028,
+      "rules": 1125,
       "load_s": 0.529,
       "scan_s": 18.145,
       "peak_rss_mb": 593.9,
@@ -13,7 +13,7 @@
         "vendor/tinynet=tinynet@1.4.2"
       ],
       "candidate_directories": 60,
-      "rule_checks": 11,
+      "rule_checks": 12,
       "rule_checks_skipped": 61669,
       "loose_findings": 0,
       "files_hashed": 1276,
@@ -25,7 +25,7 @@
       "scan_units": 383.5
     },
     {
-      "rules": 1028,
+      "rules": 1125,
       "load_s": 0.522,
       "scan_s": 15.256,
       "peak_rss_mb": 593.9,
@@ -35,7 +35,7 @@
         "vendor/tinynet=tinynet@1.4.2"
       ],
       "candidate_directories": 60,
-      "rule_checks": 11,
+      "rule_checks": 12,
       "rule_checks_skipped": 61669,
       "loose_findings": 0,
       "files_hashed": 0,
@@ -47,7 +47,7 @@
       "scan_units": 326.47
     },
     {
-      "rules": 4112,
+      "rules": 4500,
       "load_s": 9.448,
       "scan_s": 44.566,
       "peak_rss_mb": 911.9,
@@ -57,7 +57,7 @@
         "vendor/tinynet=tinynet@1.4.2"
       ],
       "candidate_directories": 60,
-      "rule_checks": 41,
+      "rule_checks": 42,
       "rule_checks_skipped": 246679,
       "loose_findings": 0,
       "files_hashed": 1276,
@@ -69,7 +69,7 @@
       "scan_units": 925.2
     },
     {
-      "rules": 16448,
+      "rules": 18000,
       "load_s": 36.235,
       "scan_s": 158.099,
       "peak_rss_mb": 2177.4,
@@ -79,7 +79,7 @@
         "vendor/tinynet=tinynet@1.4.2"
       ],
       "candidate_directories": 60,
-      "rule_checks": 161,
+      "rule_checks": 162,
       "rule_checks_skipped": 986719,
       "loose_findings": 0,
       "files_hashed": 1276,
