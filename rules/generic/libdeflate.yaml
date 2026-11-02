@@ -116,7 +116,7 @@ identity:
       shared_dropped: 78
       passed: true
   - file: libdeflate.aarch64.fnprint
-    sha256: fcfac015c0cd2071d2e14e08dce35151acecb17065369b97b57a4cfedf3f6acf
+    sha256: cfc0fd57974a723f0aeef062c8994dba3eb72468f07550fc48f20b072bc4d2fe
     count: 103
     versions: ['1.8', '1.9', '1.10', '1.14', '1.17', '1.19', '1.20', '1.22', '1.24']
     calibration:
@@ -126,14 +126,14 @@ identity:
       fingerprintable: 103
       cross_build: {exact: 2, range: 16, wrong: 0, none: 0}
       same_build: {exact: 4, range: 14, wrong: 0, none: 0}
-      negative_pairs: 162
+      negative_pairs: 184
       false_positives: 0
       min_features: 2
       tie_share: null
       shared_dropped: 138
       passed: true
   - file: libdeflate.thumb.fnprint
-    sha256: 1ed7c126ea62624783a7faf2c8d423dcc0d3af8b8f25be02fbdfb9f83973a2ba
+    sha256: f65576f44c915f9708de2eec67a8d2c951aa666d2a3a543c38c9228f37214a34
     count: 97
     versions: ['1.8', '1.9', '1.10', '1.14', '1.17', '1.19', '1.20', '1.22', '1.24']
     calibration:
@@ -143,7 +143,7 @@ identity:
       fingerprintable: 97
       cross_build: {exact: 2, range: 16, wrong: 0, none: 0}
       same_build: {exact: 2, range: 16, wrong: 0, none: 0}
-      negative_pairs: 146
+      negative_pairs: 168
       false_positives: 0
       min_features: 2
       tie_share: null

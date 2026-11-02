@@ -128,19 +128,19 @@ identity:
       shared_dropped: 118
       passed: true
   - file: libpng.aarch64.fnprint
-    sha256: f29e31922a1feff2e5ee7dc6a68f86d9b676148d4946ea5728cd79b204539dff
-    count: 328
+    sha256: 439117557ccfa9a90210987e3c30483ce5f4dca0af959124a159a44b88c72c58
+    count: 327
     versions: [1.6.34, 1.6.37, 1.6.39, 1.6.40, 1.6.43, 1.6.44, 1.6.47, 1.6.50]
     calibration:
       version: 1
       releases: 8
       builds_per_release: 2
-      fingerprintable: 328
+      fingerprintable: 327
       cross_build: {exact: 0, range: 16, wrong: 0, none: 0}
       same_build: {exact: 0, range: 16, wrong: 0, none: 0}
-      negative_pairs: 164
+      negative_pairs: 186
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 265
+      shared_dropped: 321
       passed: true

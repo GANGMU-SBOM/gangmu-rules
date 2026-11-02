@@ -87,7 +87,7 @@ identity:
       shared_dropped: 6
       passed: true
   - file: bzip2.aarch64.fnprint
-    sha256: 283e221c7f554705113bcd650d146e95d149ea00042e62349d020da179f5d079
+    sha256: 230cb030b3b8ec17996930dea82c6a52fbccad8f4790097eb97c351b094e8e22
     count: 34
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:
@@ -97,14 +97,14 @@ identity:
       fingerprintable: 34
       cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
       same_build: {exact: 0, range: 6, wrong: 0, none: 0}
-      negative_pairs: 174
+      negative_pairs: 196
       false_positives: 0
       min_features: 2
       tie_share: null
       shared_dropped: 42
       passed: true
   - file: bzip2.riscv32.fnprint
-    sha256: b665dbb647608fa65a6508b52351ec3e5443948b5cb8654ac77bf5af83a9703b
+    sha256: 4e4fc288c39f96c7a40cddb17cecfa0645e2c6051692999a07cc2eaf3f7e6550
     count: 22
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:
@@ -114,14 +114,14 @@ identity:
       fingerprintable: 22
       cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
       same_build: {exact: 0, range: 6, wrong: 0, none: 0}
-      negative_pairs: 158
+      negative_pairs: 180
       false_positives: 0
       min_features: 2
       tie_share: null
       shared_dropped: 0
       passed: true
   - file: bzip2.thumb.fnprint
-    sha256: c07dc69f714cf9b1aba9d92d67bf5d5ad65efada77e3c804ba97a0f0ae3f5396
+    sha256: 79a39cd321a0df4280dd785ce388fe90e3e45bcfbc2fa095ca1c1df6c748f5ef
     count: 22
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:
@@ -131,14 +131,14 @@ identity:
       fingerprintable: 22
       cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
       same_build: {exact: 0, range: 6, wrong: 0, none: 0}
-      negative_pairs: 158
+      negative_pairs: 180
       false_positives: 0
       min_features: 2
       tie_share: null
       shared_dropped: 42
       passed: true
   - file: bzip2.xtensa.fnprint
-    sha256: 3a2b8ce6cb332bc6a36e5565e9b23572f93debd9606fd8f6182d1ecb6d0bb387
+    sha256: f082d8ad4f2f8a9b7d74906f42d1b4af954ffd703ba59f52c8e97acd0f25e122
     count: 22
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:
@@ -148,7 +148,7 @@ identity:
       fingerprintable: 22
       cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
       same_build: {exact: 0, range: 6, wrong: 0, none: 0}
-      negative_pairs: 158
+      negative_pairs: 180
       false_positives: 0
       min_features: 2
       tie_share: null
