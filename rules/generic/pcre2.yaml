@@ -121,3 +121,54 @@ identity:
       tie_share: null
       shared_dropped: 36
       passed: true
+  - file: pcre2.aarch64.fnprint
+    sha256: c8330576cfd54279a66f8dc6a2cac85aa7993cccfcd6bcc455efa0e6ba2dc502
+    count: 172
+    versions: ['10.34', '10.35', '10.37', '10.39', '10.40', '10.42', '10.43', '10.44', '10.45']
+    calibration:
+      version: 1
+      releases: 9
+      builds_per_release: 2
+      fingerprintable: 172
+      cross_build: {exact: 2, range: 16, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 16, wrong: 0, none: 0}
+      negative_pairs: 162
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 190
+      passed: true
+  - file: pcre2.riscv32.fnprint
+    sha256: 6491e12b37fb4b521415321c43b04888b7eabac20f7a0975d7c1b18c1cfb735b
+    count: 109
+    versions: ['10.34', '10.35', '10.37', '10.39', '10.40', '10.42', '10.43', '10.44', '10.45']
+    calibration:
+      version: 1
+      releases: 9
+      builds_per_release: 2
+      fingerprintable: 109
+      cross_build: {exact: 1, range: 17, wrong: 0, none: 0}
+      same_build: {exact: 1, range: 17, wrong: 0, none: 0}
+      negative_pairs: 146
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 5
+      passed: true
+  - file: pcre2.xtensa.fnprint
+    sha256: e1b57346b0a1d2e6e4f343d6dec7bf53c15cea0b4727f4735953239ef1c730c2
+    count: 377
+    versions: ['10.34', '10.35', '10.37', '10.39', '10.40', '10.42', '10.43', '10.44', '10.45']
+    calibration:
+      version: 1
+      releases: 9
+      builds_per_release: 2
+      fingerprintable: 377
+      cross_build: {exact: 4, range: 14, wrong: 0, none: 0}
+      same_build: {exact: 18, range: 0, wrong: 0, none: 0}
+      negative_pairs: 146
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 27
+      passed: true

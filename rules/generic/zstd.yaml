@@ -142,3 +142,54 @@ identity:
       tie_share: null
       shared_dropped: 915
       passed: true
+  - file: zstd.aarch64.fnprint
+    sha256: f84f9fd8c89e302c67a5b7ad3aa4f08ebfc0c45bdfb82c90ddaf7d96b1620bcc
+    count: 435
+    versions: [1.3.8, 1.4.4, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 435
+      cross_build: {exact: 12, range: 4, wrong: 0, none: 0}
+      same_build: {exact: 16, range: 0, wrong: 0, none: 0}
+      negative_pairs: 164
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 1337
+      passed: true
+  - file: zstd.riscv32.fnprint
+    sha256: 12e7f47929530c54fa03b43f3264186797e641017cb264292c37136108bc7495
+    count: 210
+    versions: [1.3.8, 1.4.4, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 210
+      cross_build: {exact: 11, range: 5, wrong: 0, none: 0}
+      same_build: {exact: 13, range: 3, wrong: 0, none: 0}
+      negative_pairs: 148
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 291
+      passed: true
+  - file: zstd.thumb.fnprint
+    sha256: 893f208cf090bc844265080b20b4727402d3068cdb291f2a7f316027bab52638
+    count: 247
+    versions: [1.3.8, 1.4.4, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 247
+      cross_build: {exact: 8, range: 8, wrong: 0, none: 0}
+      same_build: {exact: 13, range: 3, wrong: 0, none: 0}
+      negative_pairs: 148
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 990
+      passed: true

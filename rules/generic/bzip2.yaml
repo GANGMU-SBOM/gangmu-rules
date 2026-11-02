@@ -86,3 +86,71 @@ identity:
       tie_share: null
       shared_dropped: 6
       passed: true
+  - file: bzip2.aarch64.fnprint
+    sha256: 283e221c7f554705113bcd650d146e95d149ea00042e62349d020da179f5d079
+    count: 34
+    versions: [1.0.6, 1.0.7, 1.0.8]
+    calibration:
+      version: 1
+      releases: 3
+      builds_per_release: 2
+      fingerprintable: 34
+      cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      negative_pairs: 174
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 42
+      passed: true
+  - file: bzip2.riscv32.fnprint
+    sha256: b665dbb647608fa65a6508b52351ec3e5443948b5cb8654ac77bf5af83a9703b
+    count: 22
+    versions: [1.0.6, 1.0.7, 1.0.8]
+    calibration:
+      version: 1
+      releases: 3
+      builds_per_release: 2
+      fingerprintable: 22
+      cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      negative_pairs: 158
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 0
+      passed: true
+  - file: bzip2.thumb.fnprint
+    sha256: c07dc69f714cf9b1aba9d92d67bf5d5ad65efada77e3c804ba97a0f0ae3f5396
+    count: 22
+    versions: [1.0.6, 1.0.7, 1.0.8]
+    calibration:
+      version: 1
+      releases: 3
+      builds_per_release: 2
+      fingerprintable: 22
+      cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      negative_pairs: 158
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 42
+      passed: true
+  - file: bzip2.xtensa.fnprint
+    sha256: 3a2b8ce6cb332bc6a36e5565e9b23572f93debd9606fd8f6182d1ecb6d0bb387
+    count: 22
+    versions: [1.0.6, 1.0.7, 1.0.8]
+    calibration:
+      version: 1
+      releases: 3
+      builds_per_release: 2
+      fingerprintable: 22
+      cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 0, range: 6, wrong: 0, none: 0}
+      negative_pairs: 158
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 0
+      passed: true

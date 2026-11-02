@@ -115,3 +115,37 @@ identity:
       tie_share: null
       shared_dropped: 78
       passed: true
+  - file: libdeflate.aarch64.fnprint
+    sha256: fcfac015c0cd2071d2e14e08dce35151acecb17065369b97b57a4cfedf3f6acf
+    count: 103
+    versions: ['1.8', '1.9', '1.10', '1.14', '1.17', '1.19', '1.20', '1.22', '1.24']
+    calibration:
+      version: 1
+      releases: 9
+      builds_per_release: 2
+      fingerprintable: 103
+      cross_build: {exact: 2, range: 16, wrong: 0, none: 0}
+      same_build: {exact: 4, range: 14, wrong: 0, none: 0}
+      negative_pairs: 162
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 138
+      passed: true
+  - file: libdeflate.thumb.fnprint
+    sha256: 1ed7c126ea62624783a7faf2c8d423dcc0d3af8b8f25be02fbdfb9f83973a2ba
+    count: 97
+    versions: ['1.8', '1.9', '1.10', '1.14', '1.17', '1.19', '1.20', '1.22', '1.24']
+    calibration:
+      version: 1
+      releases: 9
+      builds_per_release: 2
+      fingerprintable: 97
+      cross_build: {exact: 2, range: 16, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 16, wrong: 0, none: 0}
+      negative_pairs: 146
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 90
+      passed: true
