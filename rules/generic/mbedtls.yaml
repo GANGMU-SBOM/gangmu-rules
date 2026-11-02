@@ -170,3 +170,37 @@ identity:
       tie_share: null
       shared_dropped: 620
       passed: true
+  - file: mbedtls.aarch64.fnprint
+    sha256: f740398db1800a8927e4097f100e03ef995ce97d1820ae95788f85aefc0c2196
+    count: 288
+    versions: [2.16.12, 2.28.0, 2.28.2, 2.28.4, 2.28.8, 3.1.0, 3.3.0, 3.5.2, 3.6.0, 3.6.2, 3.6.5]
+    calibration:
+      version: 1
+      releases: 11
+      builds_per_release: 2
+      fingerprintable: 288
+      cross_build: {exact: 5, range: 17, wrong: 0, none: 0}
+      same_build: {exact: 7, range: 15, wrong: 0, none: 0}
+      negative_pairs: 180
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 2878
+      passed: true
+  - file: mbedtls.xtensa.fnprint
+    sha256: 91d8065f144ef0f450988984b29aee473d6b448bde1e668c08c76ae769f1aec7
+    count: 522
+    versions: [2.16.12, 2.28.0, 2.28.2, 2.28.4, 2.28.8, 3.1.0, 3.3.0, 3.5.2, 3.6.0, 3.6.2, 3.6.5]
+    calibration:
+      version: 1
+      releases: 11
+      builds_per_release: 2
+      fingerprintable: 522
+      cross_build: {exact: 0, range: 22, wrong: 0, none: 0}
+      same_build: {exact: 17, range: 5, wrong: 0, none: 0}
+      negative_pairs: 164
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 303
+      passed: true

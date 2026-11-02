@@ -96,3 +96,37 @@ identity:
       tie_share: null
       shared_dropped: 36
       passed: true
+  - file: yyjson.aarch64.fnprint
+    sha256: 7a3e2e07d74f4de92434aeffa87739d079ad24d208051289a6506401c56f46cf
+    count: 129
+    versions: [0.5.1, 0.6.0, 0.7.0, 0.8.0, 0.9.0, 0.10.0, 0.11.1, 0.12.0]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 129
+      cross_build: {exact: 2, range: 14, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 14, wrong: 0, none: 0}
+      negative_pairs: 186
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 96
+      passed: true
+  - file: yyjson.riscv32.fnprint
+    sha256: 3265b3165020f769d6f4faf901862660d4209e8e5be7fc2edc4ee613144b0e6d
+    count: 250
+    versions: [0.5.1, 0.6.0, 0.7.0, 0.8.0, 0.9.0, 0.10.0, 0.11.1, 0.12.0]
+    calibration:
+      version: 1
+      releases: 8
+      builds_per_release: 2
+      fingerprintable: 250
+      cross_build: {exact: 2, range: 14, wrong: 0, none: 0}
+      same_build: {exact: 4, range: 11, wrong: 1, none: 0}
+      negative_pairs: 170
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 43
+      passed: true

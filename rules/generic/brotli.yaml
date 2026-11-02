@@ -89,3 +89,37 @@ identity:
       tie_share: null
       shared_dropped: 42
       passed: true
+  - file: brotli.aarch64.fnprint
+    sha256: d0e3ef5e40c896b9d4828b8394a34a4bb1d2fffd987ca98ed78c776cbc5ba6cc
+    count: 194
+    versions: [1.0.5, 1.0.7, 1.0.9, 1.1.0, 1.2.0]
+    calibration:
+      version: 1
+      releases: 5
+      builds_per_release: 2
+      fingerprintable: 194
+      cross_build: {exact: 2, range: 8, wrong: 0, none: 0}
+      same_build: {exact: 6, range: 4, wrong: 0, none: 0}
+      negative_pairs: 192
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 246
+      passed: true
+  - file: brotli.riscv32.fnprint
+    sha256: 7c9bcaba3d9e916b503bf3cfa5ba42a229b7ea382487a65aee3ea76c3e748061
+    count: 117
+    versions: [1.0.5, 1.0.7, 1.0.9, 1.1.0, 1.2.0]
+    calibration:
+      version: 1
+      releases: 5
+      builds_per_release: 2
+      fingerprintable: 117
+      cross_build: {exact: 2, range: 8, wrong: 0, none: 0}
+      same_build: {exact: 3, range: 7, wrong: 0, none: 0}
+      negative_pairs: 176
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 67
+      passed: true
