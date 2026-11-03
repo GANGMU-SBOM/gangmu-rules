@@ -143,53 +143,53 @@ identity:
       shared_dropped: 915
       passed: true
   - file: zstd.aarch64.fnprint
-    sha256: b12da21e391f1641928993c3c8bd79da2b7ee31cafd55d98a0bdde95635f560f
-    count: 415
+    sha256: 240022b32bb724fe74b81cf93c0f836e17aa31ffa29f5ede991b549aff282cdc
+    count: 509
     versions: [1.3.8, 1.4.4, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7]
     calibration:
       version: 1
       releases: 8
       builds_per_release: 2
-      fingerprintable: 415
-      cross_build: {exact: 14, range: 2, wrong: 0, none: 0}
+      fingerprintable: 509
+      cross_build: {exact: 11, range: 5, wrong: 0, none: 0}
       same_build: {exact: 16, range: 0, wrong: 0, none: 0}
       negative_pairs: 186
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 1770
+      shared_dropped: 1792
       passed: true
   - file: zstd.riscv32.fnprint
-    sha256: a88f255502b67556e9cbe311b9e93b142364d189c5fe1f59d69f6d158e1808c8
-    count: 199
+    sha256: 755d7eb70266714492ee5fc98615f661dd85c73eaf8458b2bf0cffecc40cb187
+    count: 229
     versions: [1.3.8, 1.4.4, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7]
     calibration:
       version: 1
       releases: 8
       builds_per_release: 2
-      fingerprintable: 199
-      cross_build: {exact: 12, range: 4, wrong: 0, none: 0}
-      same_build: {exact: 13, range: 3, wrong: 0, none: 0}
+      fingerprintable: 229
+      cross_build: {exact: 10, range: 6, wrong: 0, none: 0}
+      same_build: {exact: 15, range: 1, wrong: 0, none: 0}
       negative_pairs: 170
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 590
+      shared_dropped: 659
       passed: true
   - file: zstd.thumb.fnprint
-    sha256: fdb97ee52eb9ad2f6f74d4717989c0d47e63b07a390693039e2f591085329c62
-    count: 232
+    sha256: af2155b1ded5cab309037543d3600f36c266b763689e3dfcd63a2dbeda96412b
+    count: 245
     versions: [1.3.8, 1.4.4, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7]
     calibration:
       version: 1
       releases: 8
       builds_per_release: 2
-      fingerprintable: 232
-      cross_build: {exact: 8, range: 8, wrong: 0, none: 0}
-      same_build: {exact: 13, range: 3, wrong: 0, none: 0}
+      fingerprintable: 245
+      cross_build: {exact: 5, range: 11, wrong: 0, none: 0}
+      same_build: {exact: 15, range: 1, wrong: 0, none: 0}
       negative_pairs: 170
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 1299
+      shared_dropped: 1283
       passed: true

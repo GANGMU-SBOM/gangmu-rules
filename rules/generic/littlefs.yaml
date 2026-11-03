@@ -119,39 +119,6 @@ identity:
     - 2.11.2
     - 2.11.3
   binary_functions:
-  - file: littlefs.fnprint
-    sha256: 8bd906ca7b3738a280daed662188686625b807c10dc761400b051642dd699c2c
-    count: 102
-    versions: [2.0.4, 2.1.0, 2.1.4, 2.5.1, 2.6.1, 2.7.1, 2.8.2, 2.9.3]
-    calibration:
-      version: 1
-      releases: 8
-      builds_per_release: 2
-      fingerprintable: 102
-      cross_build: {exact: 0, range: 16, wrong: 0, none: 0}
-      same_build: {exact: 2, range: 14, wrong: 0, none: 0}
-      negative_pairs: 10
-      false_positives: 0
-      min_features: 2
-      tie_share: 0.85
-      passed: true
-  - file: littlefs.riscv32.fnprint
-    sha256: fb78b61e7dbd361e4c7320c0aa2b5a20554c416d09558c99160d7d0b85f21ebe
-    count: 22
-    versions: [2.0.4, 2.1.0, 2.1.4, 2.5.1, 2.6.1, 2.7.1, 2.8.2, 2.9.3, 2.10.2, 2.11.0]
-    calibration:
-      version: 1
-      releases: 10
-      builds_per_release: 2
-      fingerprintable: 22
-      cross_build: {exact: 0, range: 20, wrong: 0, none: 0}
-      same_build: {exact: 0, range: 20, wrong: 0, none: 0}
-      negative_pairs: 20
-      false_positives: 0
-      min_features: 2
-      tie_share: null
-      shared_dropped: 48
-      passed: true
   - file: littlefs.x86-64.fnprint
     sha256: 0e842e34d86dcd0582211ccd147f0cf341ef5f1e3265a3fcd3995fbbd530ade5
     count: 59
@@ -170,19 +137,53 @@ identity:
       tie_share: null
       version: 1
   - file: littlefs.aarch64.fnprint
-    sha256: e002b58355b40d2d69fbc01bfb0e2a44721c969c70546e9f8192bbf9e3dc9b42
-    count: 98
+    sha256: 99e1cda95ce15d55fdbbaedc18f13c3d07b09a03a70757ffb361492445447471
+    count: 101
     versions: [2.0.4, 2.1.0, 2.1.4, 2.5.1, 2.6.1, 2.7.1, 2.8.2, 2.9.3, 2.10.2, 2.11.0]
     calibration:
       version: 1
       releases: 10
       builds_per_release: 2
-      fingerprintable: 98
+      fingerprintable: 101
       cross_build: {exact: 1, range: 19, wrong: 0, none: 0}
       same_build: {exact: 0, range: 20, wrong: 0, none: 0}
       negative_pairs: 182
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 175
+      shared_dropped: 168
+      passed: true
+  - file: littlefs.riscv32.fnprint
+    sha256: 3b7c5e73c035f495c24e6ce6638ff2c567709e9e2037b2067f0bd8be5f36e076
+    count: 22
+    versions: [2.0.4, 2.1.0, 2.1.4, 2.5.1, 2.6.1, 2.7.1, 2.8.2, 2.9.3, 2.10.2, 2.11.0]
+    calibration:
+      version: 1
+      releases: 10
+      builds_per_release: 2
+      fingerprintable: 22
+      cross_build: {exact: 0, range: 20, wrong: 0, none: 0}
+      same_build: {exact: 0, range: 20, wrong: 0, none: 0}
+      negative_pairs: 166
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 48
+      passed: true
+  - file: littlefs.thumb.fnprint
+    sha256: 1eee7cad6aeb5dec5355c919d9e033541b51abc9eb77ac887d0581c7a1d71e8b
+    count: 128
+    versions: [2.0.4, 2.1.0, 2.1.4, 2.5.1, 2.6.1, 2.7.1, 2.8.2, 2.9.3, 2.10.2, 2.11.0]
+    calibration:
+      version: 1
+      releases: 10
+      builds_per_release: 2
+      fingerprintable: 128
+      cross_build: {exact: 0, range: 20, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 18, wrong: 0, none: 0}
+      negative_pairs: 166
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 45
       passed: true

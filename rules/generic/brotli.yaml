@@ -90,36 +90,53 @@ identity:
       shared_dropped: 42
       passed: true
   - file: brotli.aarch64.fnprint
-    sha256: d0e3ef5e40c896b9d4828b8394a34a4bb1d2fffd987ca98ed78c776cbc5ba6cc
-    count: 194
+    sha256: a5a94dc0f46a204e6d83de15be6258265c003069bdc28d056df3cc67cd3991c9
+    count: 372
     versions: [1.0.5, 1.0.7, 1.0.9, 1.1.0, 1.2.0]
     calibration:
       version: 1
       releases: 5
       builds_per_release: 2
-      fingerprintable: 194
-      cross_build: {exact: 2, range: 8, wrong: 0, none: 0}
-      same_build: {exact: 6, range: 4, wrong: 0, none: 0}
+      fingerprintable: 372
+      cross_build: {exact: 1, range: 9, wrong: 0, none: 0}
+      same_build: {exact: 10, range: 0, wrong: 0, none: 0}
       negative_pairs: 192
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 246
+      shared_dropped: 211
       passed: true
   - file: brotli.riscv32.fnprint
-    sha256: 7c9bcaba3d9e916b503bf3cfa5ba42a229b7ea382487a65aee3ea76c3e748061
-    count: 117
+    sha256: 31cc65739a95cb4aa66752c02aaa534ac79ebfb58405b4e4a78e9f2ff424693a
+    count: 130
     versions: [1.0.5, 1.0.7, 1.0.9, 1.1.0, 1.2.0]
     calibration:
       version: 1
       releases: 5
       builds_per_release: 2
-      fingerprintable: 117
+      fingerprintable: 130
       cross_build: {exact: 2, range: 8, wrong: 0, none: 0}
       same_build: {exact: 3, range: 7, wrong: 0, none: 0}
       negative_pairs: 176
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 67
+      shared_dropped: 110
+      passed: true
+  - file: brotli.xtensa.fnprint
+    sha256: e613929bdc0540cd18bce6390b0aa8bb553c3595fb7368f1a5db1491e835de19
+    count: 189
+    versions: [1.0.5, 1.0.7, 1.0.9, 1.1.0, 1.2.0]
+    calibration:
+      version: 1
+      releases: 5
+      builds_per_release: 2
+      fingerprintable: 189
+      cross_build: {exact: 1, range: 9, wrong: 0, none: 0}
+      same_build: {exact: 3, range: 7, wrong: 0, none: 0}
+      negative_pairs: 176
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      shared_dropped: 164
       passed: true
