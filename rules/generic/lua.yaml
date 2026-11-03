@@ -164,19 +164,19 @@ identity:
       shared_dropped: 265
       passed: true
   - file: lua.xtensa.fnprint
-    sha256: e74eae53adb8586fa3625bcdb019b505182360439f28aeb96e884c115923ce1d
-    count: 403
+    sha256: 0a6bca5073292e2c0fb41045abd9e1a4c691537ec5ef8ba66753cd2b6644a98e
+    count: 287
     versions: [5.3.0, 5.3.2, 5.3.4, 5.3.6, 5.4.0, 5.4.2, 5.4.4, 5.4.6, 5.4.8]
     calibration:
       version: 1
       releases: 9
       builds_per_release: 2
-      fingerprintable: 403
-      cross_build: {exact: 0, range: 18, wrong: 0, none: 0}
-      same_build: {exact: 16, range: 2, wrong: 0, none: 0}
+      fingerprintable: 287
+      cross_build: {exact: 4, range: 14, wrong: 0, none: 0}
+      same_build: {exact: 10, range: 8, wrong: 0, none: 0}
       negative_pairs: 168
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 116
+      shared_dropped: 108
       passed: true

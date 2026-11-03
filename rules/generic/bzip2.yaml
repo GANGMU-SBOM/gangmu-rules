@@ -138,14 +138,14 @@ identity:
       shared_dropped: 42
       passed: true
   - file: bzip2.xtensa.fnprint
-    sha256: f082d8ad4f2f8a9b7d74906f42d1b4af954ffd703ba59f52c8e97acd0f25e122
-    count: 22
+    sha256: d519fd110b207656269c3df7b0d542297da1436515ef6a13ff75416fdbbd3047
+    count: 25
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:
       version: 1
       releases: 3
       builds_per_release: 2
-      fingerprintable: 22
+      fingerprintable: 25
       cross_build: {exact: 0, range: 6, wrong: 0, none: 0}
       same_build: {exact: 0, range: 6, wrong: 0, none: 0}
       negative_pairs: 180

@@ -156,19 +156,19 @@ identity:
       shared_dropped: 7
       passed: true
   - file: pcre2.xtensa.fnprint
-    sha256: 1d9952b6e7044da6134b9e4bc3873252a3abac2ffc76bea8424d927aaa2a5148
-    count: 377
+    sha256: 9dd07780bedb862a5431746ffab6fc536f9e8e4d0bbff4957dbce835f9761e38
+    count: 146
     versions: ['10.34', '10.35', '10.37', '10.39', '10.40', '10.42', '10.43', '10.44', '10.45']
     calibration:
       version: 1
       releases: 9
       builds_per_release: 2
-      fingerprintable: 377
-      cross_build: {exact: 4, range: 14, wrong: 0, none: 0}
+      fingerprintable: 146
+      cross_build: {exact: 6, range: 12, wrong: 0, none: 0}
       same_build: {exact: 18, range: 0, wrong: 0, none: 0}
       negative_pairs: 168
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 27
+      shared_dropped: 23
       passed: true
