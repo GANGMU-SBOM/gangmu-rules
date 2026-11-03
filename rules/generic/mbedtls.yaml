@@ -188,7 +188,7 @@ identity:
       shared_dropped: 2878
       passed: true
   - file: mbedtls.xtensa.fnprint
-    sha256: b0ee6f9dd7db3859e74ae19befa10506a55f4a5e5583a29e782671a4c30ff04d
+    sha256: 011c677bb4089149b371c2a316d3d78b84b508d7182bcb3bd982c6262fca352d
     count: 310
     versions: [2.16.12, 2.28.0, 2.28.2, 2.28.4, 2.28.8, 3.1.0, 3.3.0, 3.5.2, 3.6.0, 3.6.2, 3.6.5]
     calibration:
@@ -196,8 +196,8 @@ identity:
       releases: 11
       builds_per_release: 2
       fingerprintable: 310
-      cross_build: {exact: 0, range: 22, wrong: 0, none: 0}
-      same_build: {exact: 6, range: 16, wrong: 0, none: 0}
+      cross_build: {exact: 4, range: 18, wrong: 0, none: 0}
+      same_build: {exact: 13, range: 9, wrong: 0, none: 0}
       negative_pairs: 164
       false_positives: 0
       min_features: 2

@@ -147,7 +147,7 @@ identity:
       shared_dropped: 7
       passed: true
   - file: zlib.xtensa.fnprint
-    sha256: 4c84e5c5ce1f84ac83e53ce7baab33505aeba07fcf9322be808ed1cedd290e22
+    sha256: c9a39b49014b1f44e36a30993c28067cf857abacc58ee5d2430cfc7d834517ad
     count: 30
     versions: [1.2.8, 1.2.11, 1.2.12, 1.2.13, '1.3', 1.3.1, 1.3.2]
     calibration:
@@ -155,7 +155,7 @@ identity:
       releases: 7
       builds_per_release: 2
       fingerprintable: 30
-      cross_build: {exact: 1, range: 13, wrong: 0, none: 0}
+      cross_build: {exact: 0, range: 14, wrong: 0, none: 0}
       same_build: {exact: 1, range: 13, wrong: 0, none: 0}
       negative_pairs: 172
       false_positives: 0

@@ -124,7 +124,7 @@ identity:
       shared_dropped: 67
       passed: true
   - file: brotli.xtensa.fnprint
-    sha256: e613929bdc0540cd18bce6390b0aa8bb553c3595fb7368f1a5db1491e835de19
+    sha256: 31cda3aa18b75b0a5717ec0fa16de86d2eb5dab6044672c5cd72d42c167bef2c
     count: 189
     versions: [1.0.5, 1.0.7, 1.0.9, 1.1.0, 1.2.0]
     calibration:
@@ -132,8 +132,8 @@ identity:
       releases: 5
       builds_per_release: 2
       fingerprintable: 189
-      cross_build: {exact: 1, range: 9, wrong: 0, none: 0}
-      same_build: {exact: 3, range: 7, wrong: 0, none: 0}
+      cross_build: {exact: 6, range: 4, wrong: 0, none: 0}
+      same_build: {exact: 6, range: 4, wrong: 0, none: 0}
       negative_pairs: 176
       false_positives: 0
       min_features: 2
