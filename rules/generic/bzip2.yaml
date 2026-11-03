@@ -87,7 +87,7 @@ identity:
       shared_dropped: 6
       passed: true
   - file: bzip2.aarch64.fnprint
-    sha256: d79788b24c36cbca69f96c4c8cc702c81c95708bedd074c127c808fdc5f67bac
+    sha256: 230cb030b3b8ec17996930dea82c6a52fbccad8f4790097eb97c351b094e8e22
     count: 34
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:
@@ -104,7 +104,7 @@ identity:
       shared_dropped: 42
       passed: true
   - file: bzip2.riscv32.fnprint
-    sha256: 556a597ff29392accff316dc25e676890a500e5b1341e8c124c7676296f738a4
+    sha256: 4e4fc288c39f96c7a40cddb17cecfa0645e2c6051692999a07cc2eaf3f7e6550
     count: 22
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:
@@ -121,7 +121,7 @@ identity:
       shared_dropped: 0
       passed: true
   - file: bzip2.thumb.fnprint
-    sha256: 0f0e75b2eebeee4831078a65e4b7a90c4a25b574f305f6cdac5a7a79df0743a0
+    sha256: 79a39cd321a0df4280dd785ce388fe90e3e45bcfbc2fa095ca1c1df6c748f5ef
     count: 22
     versions: [1.0.6, 1.0.7, 1.0.8]
     calibration:

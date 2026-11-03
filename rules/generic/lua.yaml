@@ -113,38 +113,38 @@ identity:
       shared_dropped: 163
       passed: true
   - file: lua.aarch64.fnprint
-    sha256: 7464b346ca8b4200f49ff1f30de5f09ce28db48e4937e811a8056324ea514af6
-    count: 499
+    sha256: 1bd0470785ec1e6db3ea1f5fe760bfb518c4f68b0a7b3c7e877c51a3051abc95
+    count: 408
     versions: [5.3.0, 5.3.2, 5.3.4, 5.3.6, 5.4.0, 5.4.2, 5.4.4, 5.4.6, 5.4.8]
     calibration:
       version: 1
       releases: 9
       builds_per_release: 2
-      fingerprintable: 499
+      fingerprintable: 408
       cross_build: {exact: 3, range: 15, wrong: 0, none: 0}
-      same_build: {exact: 14, range: 4, wrong: 0, none: 0}
+      same_build: {exact: 9, range: 9, wrong: 0, none: 0}
       negative_pairs: 184
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 965
+      shared_dropped: 990
       passed: true
   - file: lua.riscv32.fnprint
-    sha256: 0c83f2026ab0f5ed47bdabb6c7e0f6e319ce3109c8255c839002ad313e615b8c
-    count: 225
+    sha256: 64991bb862de8b7502b7103d0dbadaf25ad49a628c3c938d77a686a5aa30b0b0
+    count: 205
     versions: [5.3.0, 5.3.2, 5.3.4, 5.3.6, 5.4.0, 5.4.2, 5.4.4, 5.4.6, 5.4.8]
     calibration:
       version: 1
       releases: 9
       builds_per_release: 2
-      fingerprintable: 225
+      fingerprintable: 205
       cross_build: {exact: 4, range: 14, wrong: 0, none: 0}
       same_build: {exact: 4, range: 14, wrong: 0, none: 0}
       negative_pairs: 168
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 41
+      shared_dropped: 46
       passed: true
   - file: lua.thumb.fnprint
     sha256: de4a5a53ab0aad99b31f61371c093f492bef49370c655ea3016d0b90878c35bb

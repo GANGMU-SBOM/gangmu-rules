@@ -79,6 +79,22 @@ identity:
     - 1.3.1.2
     - 1.3.2
   binary_functions:
+  - file: zlib.fnprint
+    sha256: 3bf1c055ab007999e33e23f3ed5853fac4b3c9d7de4ba91a39a3801e8c624c8a
+    count: 74
+    versions: [1.2.8, 1.2.11, 1.2.12, 1.2.13, '1.3', 1.3.1, 1.3.2]
+    calibration:
+      version: 1
+      releases: 7
+      builds_per_release: 2
+      fingerprintable: 74
+      cross_build: {exact: 0, range: 14, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 12, wrong: 0, none: 0}
+      negative_pairs: 12
+      false_positives: 0
+      min_features: 2
+      tie_share: null
+      passed: true
   - file: zlib.x86-64.fnprint
     sha256: 651e42f5584a0fc137136e799cade0090346e080b40df55c306599baa14f8549
     count: 25
@@ -97,55 +113,38 @@ identity:
       tie_share: null
       version: 1
   - file: zlib.aarch64.fnprint
-    sha256: 4c060d7d178a1724f75d1067f6f6cad0757e17ae18285c37528927baac50195b
-    count: 109
+    sha256: f09b2c9d3db108fa109d72b8e54aa15a255a71f7e36f61e5c8598323dadbffe9
+    count: 66
     versions: [1.2.8, 1.2.11, 1.2.12, 1.2.13, '1.3', 1.3.1, 1.3.2]
     calibration:
       version: 1
       releases: 7
       builds_per_release: 2
-      fingerprintable: 109
-      cross_build: {exact: 1, range: 13, wrong: 0, none: 0}
-      same_build: {exact: 9, range: 5, wrong: 0, none: 0}
+      fingerprintable: 66
+      cross_build: {exact: 2, range: 12, wrong: 0, none: 0}
+      same_build: {exact: 2, range: 12, wrong: 0, none: 0}
       negative_pairs: 188
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 270
+      shared_dropped: 280
       passed: true
   - file: zlib.riscv32.fnprint
-    sha256: 0dcdd1e8c8b0a63388666c9e829433e6616721897118151978a1d46d625b9081
-    count: 39
+    sha256: a5d1cc836e2a4ee772c2b03807ec297fb690d3fa7e27d66f55869322eb50c141
+    count: 27
     versions: [1.2.8, 1.2.11, 1.2.12, 1.2.13, '1.3', 1.3.1, 1.3.2]
     calibration:
       version: 1
       releases: 7
       builds_per_release: 2
-      fingerprintable: 39
-      cross_build: {exact: 1, range: 13, wrong: 0, none: 0}
-      same_build: {exact: 2, range: 12, wrong: 0, none: 0}
-      negative_pairs: 172
-      false_positives: 0
-      min_features: 2
-      tie_share: null
-      shared_dropped: 28
-      passed: true
-  - file: zlib.thumb.fnprint
-    sha256: 55408711fd08151fdaf49bc4363b0edb30dfd64b3c11afac1ed4f0bd635009ca
-    count: 70
-    versions: [1.2.8, 1.2.11, 1.2.12, 1.2.13, '1.3', 1.3.1, 1.3.2]
-    calibration:
-      version: 1
-      releases: 7
-      builds_per_release: 2
-      fingerprintable: 70
+      fingerprintable: 27
       cross_build: {exact: 0, range: 14, wrong: 0, none: 0}
       same_build: {exact: 0, range: 14, wrong: 0, none: 0}
       negative_pairs: 172
       false_positives: 0
       min_features: 2
       tie_share: null
-      shared_dropped: 98
+      shared_dropped: 7
       passed: true
   - file: zlib.xtensa.fnprint
     sha256: 4c84e5c5ce1f84ac83e53ce7baab33505aeba07fcf9322be808ed1cedd290e22

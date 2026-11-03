@@ -132,23 +132,6 @@ identity:
       tie_share: null
       shared_dropped: 138
       passed: true
-  - file: libdeflate.riscv32.fnprint
-    sha256: 2d8d1bffac946584bf55d24568404f9e2c5eddd31d76dbc47a2df17178da3fca
-    count: 76
-    versions: ['1.8', '1.9', '1.10', '1.14', '1.17', '1.19', '1.20', '1.22', '1.24']
-    calibration:
-      version: 1
-      releases: 9
-      builds_per_release: 2
-      fingerprintable: 76
-      cross_build: {exact: 3, range: 15, wrong: 0, none: 0}
-      same_build: {exact: 4, range: 13, wrong: 1, none: 0}
-      negative_pairs: 168
-      false_positives: 0
-      min_features: 2
-      tie_share: null
-      shared_dropped: 80
-      passed: true
   - file: libdeflate.thumb.fnprint
     sha256: f65576f44c915f9708de2eec67a8d2c951aa666d2a3a543c38c9228f37214a34
     count: 97
