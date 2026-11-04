@@ -7,6 +7,9 @@ component:
 upstream:
   name: glib
   purl: pkg:github/GNOME/glib
+  identifiers:
+  - pkg:generic/gitlab.gnome.org/gnome/glib
+  - pkg:deb/debian/glib2.0
   homepage: https://github.com/GNOME/glib
   license: LGPL-2.1-or-later
   source:

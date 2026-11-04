@@ -8,6 +8,8 @@ component:
 upstream:
   name: OpenSSL
   purl: pkg:github/openssl/openssl
+  identifiers:
+  - pkg:deb/debian/openssl
   cpe: cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*
   supplier: OpenSSL Foundation and OpenSSL Corporation
   homepage: https://www.openssl.org/

@@ -11,6 +11,8 @@ component:
 upstream:
   name: libpng
   purl: pkg:github/pnggroup/libpng
+  identifiers:
+  - pkg:deb/debian/libpng1.6
   cpe: cpe:2.3:a:libpng:libpng:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2004-0421

@@ -7,6 +7,8 @@ component:
 upstream:
   name: busybox
   purl: pkg:github/mirror/busybox
+  identifiers:
+  - pkg:deb/debian/busybox
   homepage: https://github.com/mirror/busybox
   license: GPL-2.0-only
   source:
