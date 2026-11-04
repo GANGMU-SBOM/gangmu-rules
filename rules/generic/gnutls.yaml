@@ -10,6 +10,8 @@ upstream:
   identifiers:
   - pkg:gitlab/gnutls/gnutls
   - pkg:deb/debian/gnutls28
+  - pkg:deb/ubuntu/gnutls28
+  - pkg:apk/alpine/gnutls
   homepage: https://github.com/gnutls/gnutls
   license: LGPL-2.1-or-later
   source:

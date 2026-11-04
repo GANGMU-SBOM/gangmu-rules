@@ -9,6 +9,8 @@ upstream:
   purl: pkg:github/mirror/busybox
   identifiers:
   - pkg:deb/debian/busybox
+  - pkg:deb/ubuntu/busybox
+  - pkg:apk/alpine/busybox
   homepage: https://github.com/mirror/busybox
   license: GPL-2.0-only
   source:

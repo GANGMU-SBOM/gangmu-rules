@@ -13,6 +13,8 @@ upstream:
   purl: pkg:github/madler/zlib
   identifiers:
   - pkg:deb/debian/zlib
+  - pkg:deb/ubuntu/zlib
+  - pkg:apk/alpine/zlib
   cpe: cpe:2.3:a:zlib:zlib:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2002-0059

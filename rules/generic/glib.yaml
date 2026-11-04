@@ -10,6 +10,8 @@ upstream:
   identifiers:
   - pkg:generic/gitlab.gnome.org/gnome/glib
   - pkg:deb/debian/glib2.0
+  - pkg:deb/ubuntu/glib2.0
+  - pkg:apk/alpine/glib
   homepage: https://github.com/GNOME/glib
   license: LGPL-2.1-or-later
   source:
