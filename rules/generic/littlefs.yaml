@@ -77,8 +77,8 @@ identity:
       2.11.3: a36d6a095785ddea9571d541d68d3e4ef01d5b255a99d17d3f07fb6ea60ea132
   functions:
     file: littlefs.fnsig
-    sha256: affda52d156beee573a50eb31d1169400c75548e562f1c1484ad85c750ff6ddf
-    count: 479
+    sha256: 1acafda0594bbe94d25640dfc9b101652a9dc1dce5e32dae88c767ac448a5a82
+    count: 682
     versions:
     - 1.7.2
     - 2.0.0

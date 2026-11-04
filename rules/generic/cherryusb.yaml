@@ -34,8 +34,8 @@ identity:
   - class/**/*.c
   functions:
     file: cherryusb.fnsig
-    sha256: 1f433311d55915a8c1def3b14c51d05bc9472d692eb231a63367ad479afda218
-    count: 1744
+    sha256: eda13614f7b8e60c6efa1f1c631e7de2dfcfcc132e63033cf1291fbdb571f285
+    count: 1934
     versions:
     - 0.7.0
     - 0.8.0
