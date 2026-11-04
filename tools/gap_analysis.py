@@ -84,6 +84,26 @@ def load_rule_keys(rules_dir):
     return keys
 
 
+def load_rule_meta(rules_dir):
+    """rule id -> {purl, names, identifiers} for every rule that has a purl."""
+    meta = {}
+    for path in sorted(Path(rules_dir).rglob("*.yaml")):
+        try:
+            doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not isinstance(doc, dict) or "id" not in doc:
+            continue
+        up = doc.get("upstream") or {}
+        if up.get("purl"):
+            names = {str(doc["id"]).rsplit("/", 1)[-1], (doc.get("component") or {}).get("ships_as"),
+                     up.get("name"), str(up["purl"]).split("@")[0].rsplit("/", 1)[-1]}
+            meta[doc["id"]] = {"purl": up["purl"], "path": str(path),
+                               "names": {norm_name(n) for n in names if n},
+                               "identifiers": list(up.get("identifiers") or [])}
+    return meta
+
+
 def norm_name(text):
     return re.sub(r"[^a-z0-9]", "", str(text or "").lower())
 
@@ -144,25 +164,83 @@ def analyse_git(zip_path):
     return repos
 
 
-def debian_aliases(zip_path, cve_to_repos):
-    """repo key -> {debian source package: count} via shared CVE ids."""
-    out = defaultdict(lambda: defaultdict(int))
+FAMILIES = {  # label -> (OSV ecosystem prefix, purl prefix)
+    "debian": ("Debian", "pkg:deb/debian/"),
+    "ubuntu": ("Ubuntu", "pkg:deb/ubuntu/"),
+    "alpine": ("Alpine", "pkg:apk/alpine/"),
+}
+
+
+def distro_aliases(zip_path, cve_to_repos, ecosystem):
+    """repo key -> {source package: shared CVE count} for one distribution's dump."""
+    out = defaultdict(lambda: defaultdict(set))
     for rec in records(zip_path):
         cves = set(CVE_RE.findall(" ".join([rec.get("id", ""), *rec.get("aliases", []),
                                             *rec.get("upstream", [])])))
         pkgs = {a["package"]["name"] for a in rec.get("affected", [])
-                if (a.get("package") or {}).get("ecosystem", "").startswith("Debian")}
+                if (a.get("package") or {}).get("ecosystem", "").startswith(ecosystem)}
         for cve in cves:
             for repo in cve_to_repos.get(cve, ()):
                 for p in pkgs:
-                    out[repo][p] += 1
-    return out
+                    out[repo][p].add(cve)
+    return {repo: {p: len(c) for p, c in pk.items()} for repo, pk in out.items()}
+
+
+def debian_aliases(zip_path, cve_to_repos):
+    return distro_aliases(zip_path, cve_to_repos, "Debian")
+
+
+def alias_candidates(rows, deb_like, rule_meta, rule_keys):
+    """For each covered upstream: the distro purls to add as ``upstream.identifiers``.
+
+    A package qualifies when it carries at least half as many of the upstream's CVEs as the
+    best package of its distribution (dependents carry few), and is marked ``name`` when
+    its name matches a name the rule goes by, ``review`` otherwise.
+    """
+    by_id = {rid: m for rid, m in rule_meta.items()}
+    result = []
+    for x in rows:
+        rid = x["covered_by"]
+        if not rid or rid not in by_id:
+            continue
+        meta = by_id[rid]
+        have = {i.lower().split("?")[0] for i in meta["identifiers"]}
+        proposals = []
+        for fam, (_, prefix) in FAMILIES.items():
+            counts = deb_like.get(fam, {}).get(x["purl"], {})
+            if not counts:
+                continue
+            top = max(counts.values())
+            for pkg, n in sorted(counts.items(), key=lambda kv: -kv[1]):
+                if n * 2 < top or n < 2:
+                    continue
+                purl = f"{prefix}{pkg}"
+                if purl.lower() in have:
+                    continue
+                same_name = norm_name(pkg) in meta["names"] or any(
+                    norm_name(pkg).startswith(nm) or nm.startswith(norm_name(pkg))
+                    for nm in meta["names"] if len(nm) >= 3)
+                # A matching name is not enough on its own: Ubuntu's `zephyr` is MIT's
+                # notification system and shares 19 of the RTOS's 274 CVEs by coincidence of
+                # name. It must also carry a real share of the upstream's CVEs.
+                confidence = "name" if same_name and n * 10 >= x["cves"] * 3 else "review"
+                proposals.append({"purl": purl, "shared_cves": n, "of": x["cves"],
+                                  "confidence": confidence})
+        if proposals:
+            result.append({"rule": rid, "file": meta["path"], "upstream": meta["purl"],
+                           "existing": meta["identifiers"], "add": proposals})
+    return result
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--git", required=True, help="OSV GIT/all.zip")
     ap.add_argument("--debian", help="OSV Debian/all.zip (adds distro aliases)")
+    ap.add_argument("--ubuntu", help="OSV Ubuntu/all.zip")
+    ap.add_argument("--alpine", help="OSV Alpine/all.zip")
+    ap.add_argument("--alias-candidates", metavar="OUT.json",
+                    help="write upstream.identifiers candidates for covered rules (needs a distro dump)")
+    ap.add_argument("--alias-md", metavar="OUT.md", help="the same as a table for review")
     ap.add_argument("--rules", default=str(Path(__file__).resolve().parent.parent / "rules"))
     ap.add_argument("--top", type=int, default=300)
     ap.add_argument("--min-cves", type=int, default=3)
@@ -186,6 +264,13 @@ def main():
         for c in r["cves"]:
             cve_to_repos[c].add(key)
     deb = debian_aliases(a.debian, cve_to_repos) if a.debian else {}
+    dumps = {"debian": a.debian, "ubuntu": a.ubuntu, "alpine": a.alpine}
+    by_family = {}
+    for fam, path in dumps.items():
+        if path and (a.alias_candidates or a.alias_md):
+            by_family[fam] = deb if fam == "debian" else distro_aliases(path, cve_to_repos, FAMILIES[fam][0])
+    if "debian" not in by_family and a.debian:
+        by_family["debian"] = deb
 
     rows = []
     for key, r in repos.items():
@@ -232,6 +317,23 @@ def main():
     if a.embedded_only:
         shown = [x for x in shown if x["embedded_hint"]]
     shown = shown[:a.top]
+
+    if a.alias_candidates or a.alias_md:
+        cands = alias_candidates(rows, by_family, load_rule_meta(a.rules), rule_keys)
+        if a.alias_candidates:
+            Path(a.alias_candidates).write_text(json.dumps(cands, indent=1, ensure_ascii=False))
+        if a.alias_md:
+            out = ["# upstream.identifiers candidates\n",
+                   "Generated by `tools/gap_analysis.py --alias-candidates`. `name`: the package name matches a "
+                   "name the rule goes by and it carries 30%+ of the upstream's CVEs; `review`: it shares CVEs but its name does not match (often a "
+                   "dependent or a bundled copy), so check it before adding.\n",
+                   "| rule | add | shared CVEs | confidence |", "|---|---|---|---|"]
+            for c in cands:
+                for p in c["add"]:
+                    out.append(f"| `{c['rule']}` | `{p['purl']}` | {p['shared_cves']}/{p['of']} | {p['confidence']} |")
+            Path(a.alias_md).write_text("\n".join(out) + "\n")
+        print(f"{len(cands)} rules with candidates, "
+              f"{sum(len(c['add']) for c in cands)} identifiers", file=sys.stderr)
 
     summary = {"c_cpp_repos_with_cves": len(rows), "covered": len(rows) - len(missing),
                "missing": len(missing), "missing_but_name_matches_a_rule": len(likely), "rules_indexed": len(set(rule_keys.values()))}
