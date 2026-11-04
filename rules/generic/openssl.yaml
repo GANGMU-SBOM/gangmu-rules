@@ -101,8 +101,8 @@ identity:
       1.1.1w: 0ca12c2aba8bfbe24c4c06861e9d57b939c5e72d1c08f3798a442d698deb7599
   functions:
     file: openssl.fnsig
-    sha256: d128ea00fefd47a87142e582850a7d5887c158102c9509b50ca4fdc226e12322
-    count: 28592
+    sha256: 69c2be32af1cfc5c95689e44e1a4fa14a733ec478a64c16108b75287829f261c
+    count: 28667
     versions:
     - 1.1.0
     - 1.1.0a

@@ -39,7 +39,7 @@ identity:
   - src/**/*.c
   functions:
     file: sfud.fnsig
-    sha256: de99bfdc4744502f82c1674e6b02b92a1a7ea06e2fc42ed10bc3dad8c7de245c
-    count: 17
+    sha256: b7397b0c8c8a55053dc4071b78d797b8703071a9d661f86967a917cacb2df35e
+    count: 30
     versions:
     - 1.1.0

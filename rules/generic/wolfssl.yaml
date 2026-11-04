@@ -44,8 +44,8 @@ identity:
   - wolfssl/openssl/*.h
   functions:
     file: wolfssl.fnsig
-    sha256: e408313875caf78f0e0c1c9213805b7fc330179e9446d88e183ec1dccf904490
-    count: 45181
+    sha256: 1b7a68b626837c5171b6bb2df7184bf70a3bd1c101af0561f2611b56a1453264
+    count: 52920
     versions:
     - 3.12.0
     - 3.12.2

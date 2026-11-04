@@ -38,8 +38,8 @@ identity:
   - src/**/*.h
   functions:
     file: paho-mqtt-c.fnsig
-    sha256: e306d6c42621ea0382d32f75ca780e3c7eb06fccab398911bbfe95cbde44a76f
-    count: 1916
+    sha256: bc166b4604858decd5c8786c292f8c7741164f06fdbd8ca387ca8435cf58b136
+    count: 1977
     versions:
     - 1.0.1
     - 1.0.2
