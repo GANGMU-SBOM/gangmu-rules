@@ -7,6 +7,9 @@ component:
 upstream:
   name: firejail
   purl: pkg:github/netblue30/firejail
+  identifiers:
+  - pkg:deb/debian/firejail
+  - pkg:deb/ubuntu/firejail
   homepage: https://github.com/netblue30/firejail
   license: GPL-2.0-or-later
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: proftpd
   purl: pkg:github/proftpd/proftpd
+  identifiers:
+  - pkg:deb/debian/proftpd-dfsg
+  - pkg:deb/ubuntu/proftpd-dfsg
+  - pkg:apk/alpine/proftpd
   homepage: https://github.com/proftpd/proftpd
   license: GPL-2.0-or-later
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: qpdf
   purl: pkg:github/qpdf/qpdf
+  identifiers:
+  - pkg:deb/debian/qpdf
+  - pkg:deb/ubuntu/qpdf
+  - pkg:apk/alpine/qpdf
   homepage: https://github.com/qpdf/qpdf
   license: Apache-2.0
   source:

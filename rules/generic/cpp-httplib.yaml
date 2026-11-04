@@ -7,6 +7,9 @@ component:
 upstream:
   name: cpp-httplib
   purl: pkg:github/yhirose/cpp-httplib
+  identifiers:
+  - pkg:deb/debian/cpp-httplib
+  - pkg:deb/ubuntu/cpp-httplib
   homepage: https://github.com/yhirose/cpp-httplib
   license: MIT
   source:

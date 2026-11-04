@@ -7,6 +7,10 @@ component:
 upstream:
   name: openvpn
   purl: pkg:github/OpenVPN/openvpn
+  identifiers:
+  - pkg:deb/debian/openvpn
+  - pkg:deb/ubuntu/openvpn
+  - pkg:apk/alpine/openvpn
   homepage: https://github.com/OpenVPN/openvpn
   license: GPL-2.0-only
   source:

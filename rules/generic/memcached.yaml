@@ -7,6 +7,9 @@ component:
 upstream:
   name: memcached
   purl: pkg:github/memcached/memcached
+  identifiers:
+  - pkg:deb/debian/memcached
+  - pkg:deb/ubuntu/memcached
   homepage: https://github.com/memcached/memcached
   license: BSD-3-Clause
   source:

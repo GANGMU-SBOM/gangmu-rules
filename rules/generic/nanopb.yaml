@@ -11,6 +11,9 @@ component:
 upstream:
   name: nanopb
   purl: pkg:github/nanopb/nanopb
+  identifiers:
+  - pkg:deb/debian/nanopb
+  - pkg:deb/ubuntu/nanopb
   supplier: Petteri Aimonen
   homepage: https://jpa.kapsi.fi/nanopb/
   license: Zlib

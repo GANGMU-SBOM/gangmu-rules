@@ -7,6 +7,9 @@ component:
 upstream:
   name: kamailio
   purl: pkg:github/kamailio/kamailio
+  identifiers:
+  - pkg:deb/debian/kamailio
+  - pkg:deb/ubuntu/kamailio
   homepage: https://github.com/kamailio/kamailio
   license: GPL-2.0-or-later
   source:

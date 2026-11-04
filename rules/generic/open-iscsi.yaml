@@ -7,6 +7,9 @@ component:
 upstream:
   name: open-iscsi
   purl: pkg:github/open-iscsi/open-iscsi
+  identifiers:
+  - pkg:deb/debian/open-iscsi
+  - pkg:deb/ubuntu/open-iscsi
   homepage: https://github.com/open-iscsi/open-iscsi
   license: GPL-2.0-or-later
   source:

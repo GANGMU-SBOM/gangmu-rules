@@ -11,6 +11,10 @@ component:
 upstream:
   name: libssh2
   purl: pkg:github/libssh2/libssh2
+  identifiers:
+  - pkg:deb/debian/libssh2
+  - pkg:deb/ubuntu/libssh2
+  - pkg:apk/alpine/libssh2
   cpe: cpe:2.3:a:libssh2:libssh2:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on 25 CVEs; four are cited.
   cpe_evidence:

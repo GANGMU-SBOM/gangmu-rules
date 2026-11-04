@@ -11,6 +11,9 @@ component:
 upstream:
   name: libmodbus
   purl: pkg:github/stephane/libmodbus
+  identifiers:
+  - pkg:deb/debian/libmodbus
+  - pkg:deb/ubuntu/libmodbus
   cpe: cpe:2.3:a:libmodbus:libmodbus:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2019-14462

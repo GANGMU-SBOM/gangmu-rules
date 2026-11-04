@@ -7,6 +7,10 @@ component:
 upstream:
   name: util-linux
   purl: pkg:github/util-linux/util-linux
+  identifiers:
+  - pkg:deb/debian/util-linux
+  - pkg:deb/ubuntu/util-linux
+  - pkg:apk/alpine/util-linux
   homepage: https://github.com/util-linux/util-linux
   license: GPL-2.0-or-later
   source:

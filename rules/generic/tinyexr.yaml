@@ -7,6 +7,8 @@ component:
 upstream:
   name: tinyexr
   purl: pkg:github/syoyo/tinyexr
+  identifiers:
+  - pkg:deb/ubuntu/tinyexr
   homepage: https://github.com/syoyo/tinyexr
   license: BSD-3-Clause
   source:

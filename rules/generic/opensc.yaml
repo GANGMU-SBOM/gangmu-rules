@@ -9,6 +9,10 @@ component:
 upstream:
   name: opensc
   purl: pkg:github/OpenSC/OpenSC
+  identifiers:
+  - pkg:deb/debian/opensc
+  - pkg:deb/ubuntu/opensc
+  - pkg:apk/alpine/opensc
   homepage: https://github.com/OpenSC/OpenSC
   license: LGPL-2.1-or-later
   source:

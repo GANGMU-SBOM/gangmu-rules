@@ -7,6 +7,9 @@ component:
 upstream:
   name: libgd
   purl: pkg:github/libgd/libgd
+  identifiers:
+  - pkg:deb/debian/libgd2
+  - pkg:deb/ubuntu/libgd2
   homepage: https://github.com/libgd/libgd
   license: BSD-like
   source:

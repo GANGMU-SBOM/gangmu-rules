@@ -9,6 +9,10 @@ component:
 upstream:
   name: dovecot
   purl: pkg:github/dovecot/core
+  identifiers:
+  - pkg:deb/debian/dovecot
+  - pkg:deb/ubuntu/dovecot
+  - pkg:apk/alpine/dovecot
   homepage: https://github.com/dovecot/core
   license: MIT AND LGPL-2.1-only
   source:

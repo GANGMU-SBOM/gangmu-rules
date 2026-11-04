@@ -7,6 +7,10 @@ component:
 upstream:
   name: libsndfile
   purl: pkg:github/libsndfile/libsndfile
+  identifiers:
+  - pkg:deb/debian/libsndfile
+  - pkg:deb/ubuntu/libsndfile
+  - pkg:apk/alpine/libsndfile
   homepage: https://github.com/libsndfile/libsndfile
   license: LGPL-2.1-or-later
   source:

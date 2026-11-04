@@ -7,6 +7,8 @@ component:
 upstream:
   name: samurai
   purl: pkg:github/michaelforney/samurai
+  identifiers:
+  - pkg:apk/alpine/samurai
   homepage: https://github.com/michaelforney/samurai
   license: ISC AND Apache-2.0
   source:

@@ -11,6 +11,8 @@ component:
 upstream:
   name: wolfSSH
   purl: pkg:github/wolfSSL/wolfSSH
+  identifiers:
+  - pkg:apk/alpine/wolfssh
   cpe: cpe:2.3:a:wolfssh:wolfssh:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2022-32073

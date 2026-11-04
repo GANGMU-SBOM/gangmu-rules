@@ -7,6 +7,9 @@ component:
 upstream:
   name: optee_os
   purl: pkg:github/OP-TEE/optee_os
+  identifiers:
+  - pkg:deb/debian/optee-os
+  - pkg:deb/ubuntu/optee-os
   cpe: cpe:2.3:a:trustedfirmware:op-tee:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2019-1010293

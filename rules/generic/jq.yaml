@@ -7,6 +7,10 @@ component:
 upstream:
   name: jq
   purl: pkg:github/jqlang/jq
+  identifiers:
+  - pkg:deb/debian/jq
+  - pkg:deb/ubuntu/jq
+  - pkg:apk/alpine/jq
   homepage: https://github.com/jqlang/jq
   license: MIT
   source:

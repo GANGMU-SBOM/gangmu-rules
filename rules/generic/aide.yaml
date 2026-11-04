@@ -7,6 +7,9 @@ component:
 upstream:
   name: aide
   purl: pkg:github/aide/aide
+  identifiers:
+  - pkg:deb/debian/aide
+  - pkg:deb/ubuntu/aide
   homepage: https://github.com/aide/aide
   license: GPL-2.0-or-later
   source:

@@ -7,6 +7,9 @@ component:
 upstream:
   name: ntfs-3g
   purl: pkg:github/tuxera/ntfs-3g
+  identifiers:
+  - pkg:deb/debian/ntfs-3g
+  - pkg:deb/ubuntu/ntfs-3g
   homepage: https://github.com/tuxera/ntfs-3g
   license: GPL-2.0-or-later
   source:

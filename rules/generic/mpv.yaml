@@ -7,6 +7,10 @@ component:
 upstream:
   name: mpv
   purl: pkg:github/mpv-player/mpv
+  identifiers:
+  - pkg:deb/debian/mpv
+  - pkg:deb/ubuntu/mpv
+  - pkg:apk/alpine/mpv
   homepage: https://github.com/mpv-player/mpv
   license: GPL-2.0-or-later
   source:

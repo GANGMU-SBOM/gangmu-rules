@@ -7,6 +7,10 @@ component:
 upstream:
   name: cups
   purl: pkg:github/OpenPrinting/cups
+  identifiers:
+  - pkg:deb/debian/cups
+  - pkg:deb/ubuntu/cups
+  - pkg:apk/alpine/cups
   homepage: https://github.com/OpenPrinting/cups
   license: Apache-2.0
   source:

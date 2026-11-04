@@ -7,6 +7,10 @@ component:
 upstream:
   name: openldap
   purl: pkg:github/openldap/openldap
+  identifiers:
+  - pkg:deb/debian/openldap
+  - pkg:deb/ubuntu/openldap
+  - pkg:apk/alpine/openldap
   homepage: https://github.com/openldap/openldap
   license: OLDAP-2.8
   source:

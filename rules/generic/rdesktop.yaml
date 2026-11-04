@@ -7,6 +7,10 @@ component:
 upstream:
   name: rdesktop
   purl: pkg:github/rdesktop/rdesktop
+  identifiers:
+  - pkg:deb/debian/rdesktop
+  - pkg:deb/ubuntu/rdesktop
+  - pkg:apk/alpine/rdesktop
   homepage: https://github.com/rdesktop/rdesktop
   license: GPL-3.0-or-later
   source:

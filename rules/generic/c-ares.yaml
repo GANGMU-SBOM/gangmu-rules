@@ -11,6 +11,10 @@ component:
 upstream:
   name: c-ares
   purl: pkg:github/c-ares/c-ares
+  identifiers:
+  - pkg:deb/debian/c-ares
+  - pkg:deb/ubuntu/c-ares
+  - pkg:apk/alpine/c-ares
   cpe: cpe:2.3:a:c-ares:c-ares:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:c-ares_project:c-ares:*:*:*:*:*:*:*:*

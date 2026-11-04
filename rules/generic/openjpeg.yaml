@@ -7,6 +7,11 @@ component:
 upstream:
   name: openjpeg
   purl: pkg:github/uclouvain/openjpeg
+  identifiers:
+  - pkg:deb/debian/openjpeg2
+  - pkg:deb/ubuntu/openjpeg2
+  - pkg:deb/ubuntu/openjpeg
+  - pkg:apk/alpine/openjpeg
   homepage: https://github.com/uclouvain/openjpeg
   license: BSD-2-Clause
   source:

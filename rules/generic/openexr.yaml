@@ -7,6 +7,10 @@ component:
 upstream:
   name: openexr
   purl: pkg:github/AcademySoftwareFoundation/openexr
+  identifiers:
+  - pkg:deb/debian/openexr
+  - pkg:deb/ubuntu/openexr
+  - pkg:apk/alpine/openexr
   homepage: https://github.com/AcademySoftwareFoundation/openexr
   license: BSD-3-Clause
   source:

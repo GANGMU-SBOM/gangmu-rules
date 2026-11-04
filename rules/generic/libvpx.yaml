@@ -7,6 +7,10 @@ component:
 upstream:
   name: libvpx
   purl: pkg:github/webmproject/libvpx
+  identifiers:
+  - pkg:deb/debian/libvpx
+  - pkg:deb/ubuntu/libvpx
+  - pkg:apk/alpine/libvpx
   homepage: https://github.com/webmproject/libvpx
   license: BSD-3-Clause
   source:

@@ -7,6 +7,9 @@ component:
 upstream:
   name: pacemaker
   purl: pkg:github/ClusterLabs/pacemaker
+  identifiers:
+  - pkg:deb/debian/pacemaker
+  - pkg:deb/ubuntu/pacemaker
   homepage: https://github.com/ClusterLabs/pacemaker
   license: GPL-2.0-or-later
   source:

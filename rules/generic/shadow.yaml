@@ -7,6 +7,10 @@ component:
 upstream:
   name: shadow
   purl: pkg:github/shadow-maint/shadow
+  identifiers:
+  - pkg:deb/debian/shadow
+  - pkg:deb/ubuntu/shadow
+  - pkg:apk/alpine/shadow
   homepage: https://github.com/shadow-maint/shadow
   license: BSD-3-Clause
   source:

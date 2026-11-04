@@ -9,6 +9,10 @@ component:
 upstream:
   name: varnish
   purl: pkg:github/varnishcache/varnish-cache
+  identifiers:
+  - pkg:deb/debian/varnish
+  - pkg:deb/ubuntu/varnish
+  - pkg:apk/alpine/varnish
   homepage: https://github.com/varnishcache/varnish-cache
   license: BSD-2-Clause
   source:

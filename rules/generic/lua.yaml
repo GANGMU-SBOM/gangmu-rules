@@ -11,6 +11,8 @@ component:
 upstream:
   name: Lua
   purl: pkg:github/lua/lua
+  identifiers:
+  - pkg:deb/debian/lua5.4
   cpe: cpe:2.3:a:lua:lua:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2014-5461

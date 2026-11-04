@@ -7,6 +7,10 @@ component:
 upstream:
   name: libreswan
   purl: pkg:github/libreswan/libreswan
+  identifiers:
+  - pkg:deb/debian/libreswan
+  - pkg:deb/ubuntu/libreswan
+  - pkg:apk/alpine/libreswan
   homepage: https://github.com/libreswan/libreswan
   license: GPL-2.0-or-later
   source:

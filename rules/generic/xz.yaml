@@ -7,6 +7,8 @@ component:
 upstream:
   name: xz
   purl: pkg:github/tukaani-project/xz
+  identifiers:
+  - pkg:apk/alpine/xz
   homepage: https://github.com/tukaani-project/xz
   license: 0BSD AND LGPL-2.1-or-later
   source:

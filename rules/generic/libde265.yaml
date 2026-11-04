@@ -7,6 +7,10 @@ component:
 upstream:
   name: libde265
   purl: pkg:github/strukturag/libde265
+  identifiers:
+  - pkg:deb/debian/libde265
+  - pkg:deb/ubuntu/libde265
+  - pkg:apk/alpine/libde265
   homepage: https://github.com/strukturag/libde265
   license: LGPL-3.0-or-later
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: taglib
   purl: pkg:github/taglib/taglib
+  identifiers:
+  - pkg:deb/debian/taglib
+  - pkg:deb/ubuntu/taglib
+  - pkg:apk/alpine/taglib
   homepage: https://github.com/taglib/taglib
   license: LGPL-2.1-only OR MPL-1.1
   source:

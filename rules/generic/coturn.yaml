@@ -7,6 +7,9 @@ component:
 upstream:
   name: coturn
   purl: pkg:github/coturn/coturn
+  identifiers:
+  - pkg:deb/debian/coturn
+  - pkg:deb/ubuntu/coturn
   homepage: https://github.com/coturn/coturn
   license: BSD-3-Clause
   source:

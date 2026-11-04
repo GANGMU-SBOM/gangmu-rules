@@ -7,6 +7,10 @@ component:
 upstream:
   name: flatpak
   purl: pkg:github/flatpak/flatpak
+  identifiers:
+  - pkg:deb/debian/flatpak
+  - pkg:deb/ubuntu/flatpak
+  - pkg:apk/alpine/flatpak
   homepage: https://github.com/flatpak/flatpak
   license: LGPL-2.1-or-later
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: libexif
   purl: pkg:github/libexif/libexif
+  identifiers:
+  - pkg:deb/debian/libexif
+  - pkg:deb/ubuntu/libexif
+  - pkg:apk/alpine/libexif
   homepage: https://github.com/libexif/libexif
   license: LGPL-2.1-or-later
   source:

@@ -9,6 +9,10 @@ component:
 upstream:
   name: wavpack
   purl: pkg:github/dbry/WavPack
+  identifiers:
+  - pkg:deb/debian/wavpack
+  - pkg:deb/ubuntu/wavpack
+  - pkg:apk/alpine/wavpack
   homepage: https://github.com/dbry/WavPack
   license: BSD-3-Clause
   source:

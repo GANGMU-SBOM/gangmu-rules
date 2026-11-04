@@ -7,6 +7,9 @@ component:
 upstream:
   name: janus-gateway
   purl: pkg:github/meetecho/janus-gateway
+  identifiers:
+  - pkg:deb/debian/janus
+  - pkg:deb/ubuntu/janus
   homepage: https://github.com/meetecho/janus-gateway
   license: GPL-3.0-only
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: crun
   purl: pkg:github/containers/crun
+  identifiers:
+  - pkg:deb/debian/crun
+  - pkg:deb/ubuntu/crun
+  - pkg:apk/alpine/crun
   homepage: https://github.com/containers/crun
   license: GPL-2.0-or-later
   source:

@@ -7,6 +7,9 @@ component:
 upstream:
   name: swupdate
   purl: pkg:github/sbabic/swupdate
+  identifiers:
+  - pkg:deb/debian/swupdate
+  - pkg:deb/ubuntu/swupdate
   cpe: cpe:2.3:a:swupdate:swupdate:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2026-28525

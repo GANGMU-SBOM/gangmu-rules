@@ -7,6 +7,9 @@ component:
 upstream:
   name: libyang
   purl: pkg:github/CESNET/libyang
+  identifiers:
+  - pkg:deb/debian/libyang
+  - pkg:deb/ubuntu/libyang
   homepage: https://github.com/CESNET/libyang
   license: BSD-3-Clause
   source:

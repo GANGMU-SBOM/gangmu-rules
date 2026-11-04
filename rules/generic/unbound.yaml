@@ -7,6 +7,10 @@ component:
 upstream:
   name: unbound
   purl: pkg:github/NLnetLabs/unbound
+  identifiers:
+  - pkg:deb/debian/unbound
+  - pkg:deb/ubuntu/unbound
+  - pkg:apk/alpine/unbound
   homepage: https://github.com/NLnetLabs/unbound
   license: BSD-3-Clause
   source:

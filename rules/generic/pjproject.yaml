@@ -7,6 +7,9 @@ component:
 upstream:
   name: pjproject
   purl: pkg:github/pjsip/pjproject
+  identifiers:
+  - pkg:deb/ubuntu/pjproject
+  - pkg:apk/alpine/pjproject
   homepage: https://github.com/pjsip/pjproject
   license: GPL-2.0-or-later
   source:

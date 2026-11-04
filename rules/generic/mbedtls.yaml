@@ -11,6 +11,11 @@ component:
 upstream:
   name: Mbed TLS
   purl: pkg:github/Mbed-TLS/mbedtls
+  identifiers:
+  - pkg:deb/debian/mbedtls
+  - pkg:deb/ubuntu/mbedtls
+  - pkg:apk/alpine/mbedtls3
+  - pkg:apk/alpine/mbedtls
   cpe: cpe:2.3:a:arm:mbed_tls:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:trustedfirmware:mbed_tls:*:*:*:*:*:*:*:*

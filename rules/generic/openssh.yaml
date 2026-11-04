@@ -9,6 +9,11 @@ component:
 upstream:
   name: openssh
   purl: pkg:github/openssh/openssh-portable
+  identifiers:
+  - pkg:deb/debian/openssh
+  - pkg:deb/ubuntu/openssh
+  - pkg:deb/ubuntu/openssh-ssh1
+  - pkg:apk/alpine/openssh
   homepage: https://github.com/openssh/openssh-portable
   license: SSH-OpenSSH
   source:

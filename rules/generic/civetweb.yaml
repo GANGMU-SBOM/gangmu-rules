@@ -10,6 +10,9 @@ component:
 upstream:
   name: CivetWeb
   purl: pkg:github/civetweb/civetweb
+  identifiers:
+  - pkg:deb/debian/civetweb
+  - pkg:deb/ubuntu/civetweb
   cpe: cpe:2.3:a:civetweb_project:civetweb:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2018-12684

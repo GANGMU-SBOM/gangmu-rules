@@ -7,6 +7,9 @@ component:
 upstream:
   name: libavif
   purl: pkg:github/AOMediaCodec/libavif
+  identifiers:
+  - pkg:deb/debian/libavif
+  - pkg:deb/ubuntu/libavif
   homepage: https://github.com/AOMediaCodec/libavif
   license: BSD-2-Clause
   source:

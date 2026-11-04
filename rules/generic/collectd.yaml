@@ -7,6 +7,10 @@ component:
 upstream:
   name: collectd
   purl: pkg:github/collectd/collectd
+  identifiers:
+  - pkg:deb/debian/collectd
+  - pkg:deb/ubuntu/collectd
+  - pkg:apk/alpine/collectd
   homepage: https://github.com/collectd/collectd
   license: GPL-2.0-only
   source:

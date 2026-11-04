@@ -7,6 +7,9 @@ component:
 upstream:
   name: dlt-daemon
   purl: pkg:github/COVESA/dlt-daemon
+  identifiers:
+  - pkg:deb/debian/dlt-daemon
+  - pkg:deb/ubuntu/dlt-daemon
   homepage: https://github.com/COVESA/dlt-daemon
   license: MPL-2.0
   source:

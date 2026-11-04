@@ -7,6 +7,9 @@ component:
 upstream:
   name: frr
   purl: pkg:github/FRRouting/frr
+  identifiers:
+  - pkg:deb/debian/frr
+  - pkg:deb/ubuntu/frr
   homepage: https://github.com/FRRouting/frr
   license: GPL-2.0-or-later
   source:

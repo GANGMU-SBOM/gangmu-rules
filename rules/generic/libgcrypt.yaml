@@ -7,6 +7,11 @@ component:
 upstream:
   name: libgcrypt
   purl: pkg:github/gpg/libgcrypt
+  identifiers:
+  - pkg:deb/debian/libgcrypt20
+  - pkg:deb/ubuntu/libgcrypt20
+  - pkg:deb/ubuntu/libgcrypt11
+  - pkg:apk/alpine/libgcrypt
   homepage: https://github.com/gpg/libgcrypt
   license: LGPL-2.1-or-later
   source:

@@ -7,6 +7,9 @@ component:
 upstream:
   name: mupdf
   purl: pkg:github/ArtifexSoftware/mupdf
+  identifiers:
+  - pkg:deb/debian/mupdf
+  - pkg:deb/ubuntu/mupdf
   homepage: https://github.com/ArtifexSoftware/mupdf
   license: AGPL-3.0-or-later
   source:

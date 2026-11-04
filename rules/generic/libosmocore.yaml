@@ -7,6 +7,9 @@ component:
 upstream:
   name: libosmocore
   purl: pkg:github/osmocom/libosmocore
+  identifiers:
+  - pkg:deb/debian/libosmocore
+  - pkg:deb/ubuntu/libosmocore
   homepage: https://github.com/osmocom/libosmocore
   license: GPL-2.0-or-later
   source:

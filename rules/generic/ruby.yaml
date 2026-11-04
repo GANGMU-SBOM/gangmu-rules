@@ -7,6 +7,14 @@ component:
 upstream:
   name: ruby
   purl: pkg:github/ruby/ruby
+  identifiers:
+  - pkg:deb/debian/ruby2.3
+  - pkg:deb/debian/ruby2.1
+  - pkg:deb/debian/ruby2.5
+  - pkg:deb/ubuntu/ruby2.3
+  - pkg:deb/ubuntu/ruby2.5
+  - pkg:deb/ubuntu/ruby1.9.1
+  - pkg:apk/alpine/ruby
   homepage: https://github.com/ruby/ruby
   license: Ruby OR BSD-2-Clause
   source:

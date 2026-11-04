@@ -7,6 +7,10 @@ component:
 upstream:
   name: lldpd
   purl: pkg:github/lldpd/lldpd
+  identifiers:
+  - pkg:deb/debian/lldpd
+  - pkg:deb/ubuntu/lldpd
+  - pkg:apk/alpine/lldpd
   homepage: https://github.com/lldpd/lldpd
   license: ISC
   source:

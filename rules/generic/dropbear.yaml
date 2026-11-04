@@ -7,6 +7,10 @@ component:
 upstream:
   name: dropbear
   purl: pkg:github/mkj/dropbear
+  identifiers:
+  - pkg:deb/debian/dropbear
+  - pkg:deb/ubuntu/dropbear
+  - pkg:apk/alpine/dropbear
   cpe: cpe:2.3:a:dropbear_ssh_project:dropbear_ssh:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2004-2486

@@ -10,6 +10,10 @@ component:
 upstream:
   name: FreeType
   purl: pkg:github/freetype/freetype
+  identifiers:
+  - pkg:deb/debian/freetype
+  - pkg:deb/ubuntu/freetype
+  - pkg:apk/alpine/freetype
   cpe: cpe:2.3:a:freetype:freetype:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2012-5668

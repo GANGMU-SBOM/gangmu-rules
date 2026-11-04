@@ -7,6 +7,9 @@ component:
 upstream:
   name: libcupsfilters
   purl: pkg:github/OpenPrinting/libcupsfilters
+  identifiers:
+  - pkg:deb/debian/libcupsfilters
+  - pkg:deb/ubuntu/libcupsfilters
   homepage: https://github.com/OpenPrinting/libcupsfilters
   license: Apache-2.0
   source:

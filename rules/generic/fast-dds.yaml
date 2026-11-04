@@ -9,6 +9,9 @@ component:
 upstream:
   name: fast-dds
   purl: pkg:github/eProsima/Fast-DDS
+  identifiers:
+  - pkg:deb/debian/fastdds
+  - pkg:deb/ubuntu/fastdds
   homepage: https://github.com/eProsima/Fast-DDS
   license: Apache-2.0
   source:

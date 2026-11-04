@@ -7,6 +7,9 @@ component:
 upstream:
   name: libheif
   purl: pkg:github/strukturag/libheif
+  identifiers:
+  - pkg:deb/debian/libheif
+  - pkg:deb/ubuntu/libheif
   homepage: https://github.com/strukturag/libheif
   license: LGPL-3.0-or-later
   source:

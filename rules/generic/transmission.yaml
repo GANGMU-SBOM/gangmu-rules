@@ -7,6 +7,9 @@ component:
 upstream:
   name: transmission
   purl: pkg:github/transmission/transmission
+  identifiers:
+  - pkg:deb/debian/transmission
+  - pkg:deb/ubuntu/transmission
   homepage: https://github.com/transmission/transmission
   license: GPL-2.0-only OR GPL-3.0-only
   source:
