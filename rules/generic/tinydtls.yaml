@@ -7,6 +7,8 @@ component:
 upstream:
   name: tinydtls
   purl: pkg:github/eclipse/tinydtls
+  identifiers:
+  - pkg:github/eclipse-tinydtls/tinydtls
   homepage: https://github.com/eclipse/tinydtls
   license: EPL-1.0 OR BSD-3-Clause
   source:

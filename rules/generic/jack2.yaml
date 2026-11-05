@@ -9,13 +9,16 @@ upstream:
   purl: pkg:github/jackaudio/jack2
   identifiers:
   - pkg:generic/jack2
+  cpe: cpe:2.3:a:jackaudio:jack2:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2019-13351
   homepage: https://github.com/jackaudio/jack2
   license: GPL-2.0-or-later AND LGPL-2.1-or-later
   source:
     kind: git
     url: https://github.com/jackaudio/jack2
     ref: v1.9.22
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

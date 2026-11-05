@@ -9,6 +9,8 @@ component:
 upstream:
   name: procps-ng
   purl: pkg:github/procps-ng/procps
+  identifiers:
+  - pkg:gitlab/procps-ng/procps
   homepage: https://github.com/procps-ng/procps
   license: GPL-2.0-or-later
   source:

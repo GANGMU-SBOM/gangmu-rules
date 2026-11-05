@@ -6,6 +6,9 @@ component:
   - '**/bridge-utils'
 upstream:
   name: bridge-utils
+  purl: pkg:generic/git.kernel.org/pub/scm/linux/kernel/git/shemminger/bridge-utils
+  identifiers:
+  - pkg:generic/bridge-utils
   homepage: https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/bridge-utils
   license: GPL-2.0-or-later
   source:

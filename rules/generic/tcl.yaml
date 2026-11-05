@@ -7,13 +7,16 @@ component:
 upstream:
   name: tcl
   purl: pkg:github/tcltk/tcl
+  cpe: cpe:2.3:a:tcl:tcl:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2021-35331
   homepage: https://github.com/tcltk/tcl
   license: TCL
   source:
     kind: git
     url: https://github.com/tcltk/tcl
     ref: core-8-6-18
-  cpe_status: 'none-in-nvd: no CPE for the Tcl core is registered in NVD; the keyword results name an unrelated TCL router (CVE API keyword search, read 2026-10-22).'
 identity:
   include:
   - '**/*.c'

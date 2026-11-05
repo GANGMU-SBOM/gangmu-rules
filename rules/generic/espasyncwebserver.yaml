@@ -9,6 +9,8 @@ component:
 upstream:
   name: espasyncwebserver
   purl: pkg:github/mathieucarbou/ESPAsyncWebServer
+  identifiers:
+  - pkg:github/esp32async/espasyncwebserver
   homepage: https://github.com/mathieucarbou/ESPAsyncWebServer
   license: LGPL-3.0-or-later
   source:

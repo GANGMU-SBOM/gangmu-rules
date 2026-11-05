@@ -6,6 +6,11 @@ component:
   - '**/iwd'
 upstream:
   name: iwd
+  purl: pkg:generic/git.kernel.org/pub/scm/network/wireless/iwd
+  identifiers:
+  - pkg:deb/debian/iwd
+  - pkg:deb/ubuntu/iwd
+  - pkg:apk/alpine/iwd
   homepage: https://git.kernel.org/pub/scm/network/wireless/iwd
   license: LGPL-2.1-or-later
   source:

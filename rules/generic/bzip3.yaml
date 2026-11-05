@@ -7,6 +7,8 @@ component:
 upstream:
   name: bzip3
   purl: pkg:github/kspalaiologos/bzip3
+  identifiers:
+  - pkg:github/iczelia/bzip3
   homepage: https://github.com/kspalaiologos/bzip3
   license: LGPL-3.0-or-later
   source:

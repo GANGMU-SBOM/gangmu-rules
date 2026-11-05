@@ -6,6 +6,11 @@ component:
   - '**/ofono'
 upstream:
   name: ofono
+  purl: pkg:generic/git.kernel.org/pub/scm/network/ofono/ofono
+  identifiers:
+  - pkg:deb/debian/ofono
+  - pkg:deb/ubuntu/ofono
+  - pkg:generic/ofono
   homepage: https://git.kernel.org/pub/scm/network/ofono/ofono
   license: GPL-2.0-only
   source:

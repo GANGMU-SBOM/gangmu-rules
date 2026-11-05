@@ -11,7 +11,10 @@ upstream:
   purl: pkg:github/OpenAMP/open-amp
   identifiers:
   - pkg:generic/open-amp
-  cpe_status: 'none-in-nvd: NVD CPE dictionary API read 2026-10-04 has no product open-amp or libmetal under vendors openamp or openamp_project (cpeMatchString cpe:2.3:a:<vendor>:open-amp:*).'
+  cpe: cpe:2.3:a:linaro:openamp:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2026-37540
   supplier: OpenAMP project (Linux Foundation / Zephyr, Xilinx and contributors)
   homepage: https://www.openampproject.org/
   license: BSD-3-Clause

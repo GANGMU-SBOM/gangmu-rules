@@ -6,6 +6,13 @@ component:
   - '**/libidn'
 upstream:
   name: libidn
+  purl: pkg:gitlab/libidn/libidn
+  identifiers:
+  - pkg:generic/cgit.git.savannah.gnu.org/cgit/libidn
+  - pkg:deb/debian/libidn
+  - pkg:deb/ubuntu/libidn
+  - pkg:apk/alpine/libidn
+  - pkg:generic/libidn
   homepage: https://gitlab.com/libidn/libidn
   license: LGPL-2.1-or-later OR GPL-2.0-or-later
   source:

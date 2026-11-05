@@ -6,6 +6,9 @@ component:
   - '**/libnfnetlink'
 upstream:
   name: libnfnetlink
+  purl: pkg:generic/git.netfilter.org/libnfnetlink
+  identifiers:
+  - pkg:generic/libnfnetlink
   homepage: https://git.netfilter.org/libnfnetlink
   license: GPL-2.0-or-later
   source:

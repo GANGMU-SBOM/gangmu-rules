@@ -11,7 +11,7 @@ upstream:
   - pkg:deb/debian/optee-os
   - pkg:deb/ubuntu/optee-os
   - pkg:generic/optee_os
-  cpe: cpe:2.3:a:trustedfirmware:op-tee:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:trustedfirmware:op-tee:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2019-1010293
   homepage: https://github.com/OP-TEE/optee_os

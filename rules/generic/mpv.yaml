@@ -11,13 +11,18 @@ upstream:
   - pkg:deb/debian/mpv
   - pkg:deb/ubuntu/mpv
   - pkg:apk/alpine/mpv
+  cpe: cpe:2.3:a:mpv:mpv:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2018-6360
+  - CVE-2020-19824
+  - CVE-2021-30145
   homepage: https://github.com/mpv-player/mpv
   license: GPL-2.0-or-later
   source:
     kind: git
     url: https://github.com/mpv-player/mpv
     ref: v0.41.0
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

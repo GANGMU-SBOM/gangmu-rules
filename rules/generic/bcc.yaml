@@ -7,13 +7,16 @@ component:
 upstream:
   name: bcc
   purl: pkg:github/iovisor/bcc
+  cpe: cpe:2.3:a:iovisor:bpf_compiler_collection:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2024-2314
   homepage: https://github.com/iovisor/bcc
   license: Apache-2.0
   source:
     kind: git
     url: https://github.com/iovisor/bcc
     ref: v0.37.0
-  cpe_status: 'none-in-nvd: the keyword hits name the Linux kernel and unrelated products, no BCC CPE (CVE API keyword search, read 2026-10-22).'
 identity:
   include:
   - '**/*.c'

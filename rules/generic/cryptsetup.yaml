@@ -6,6 +6,12 @@ component:
   - '**/cryptsetup'
 upstream:
   name: cryptsetup
+  purl: pkg:gitlab/cryptsetup/cryptsetup
+  identifiers:
+  - pkg:deb/debian/cryptsetup
+  - pkg:deb/ubuntu/cryptsetup
+  - pkg:apk/alpine/cryptsetup
+  - pkg:generic/cryptsetup
   homepage: https://gitlab.com/cryptsetup/cryptsetup
   license: GPL-2.0-or-later
   source:

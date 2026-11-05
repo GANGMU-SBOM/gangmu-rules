@@ -7,13 +7,16 @@ component:
 upstream:
   name: jose
   purl: pkg:github/latchset/jose
+  cpe: cpe:2.3:a:latchset:jose:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2023-50967
   homepage: https://github.com/latchset/jose
   license: Apache-2.0
   source:
     kind: git
     url: https://github.com/latchset/jose
     ref: v15
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

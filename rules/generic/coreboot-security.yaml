@@ -16,7 +16,7 @@ upstream:
     url: https://github.com/coreboot/coreboot
     ref: '26.09'
     subdir: src/security
-  cpe: cpe:2.3:a:coreboot:coreboot:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:coreboot:coreboot:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2022-29264
   advisory_scope: subsystem

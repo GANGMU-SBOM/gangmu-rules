@@ -12,7 +12,7 @@ upstream:
   cpe: cpe:2.3:o:arm:mbed_os:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:o:arm:mbed-os:*:*:*:*:*:*:*:*
-  - cpe:2.3:a:arm:mbed_os:*:*:*:*:*:*:*:*
+  - cpe:2.3:o:arm:mbed_os:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on CVE-2020-12883, CVE-2020-12884 and CVE-2020-12885 among seven; CVE-2019-17210 uses the mbed-os product name and CVE-2024-22905 the application part, kept as aliases.
   cpe_evidence:
   - CVE-2020-12883

@@ -6,6 +6,7 @@ component:
   - '**/ell'
 upstream:
   name: ell
+  purl: pkg:generic/git.kernel.org/pub/scm/libs/ell/ell
   homepage: https://git.kernel.org/pub/scm/libs/ell/ell
   license: LGPL-2.1-or-later
   source:

@@ -7,13 +7,16 @@ component:
 upstream:
   name: exif
   purl: pkg:github/libexif/exif
+  cpe: cpe:2.3:a:libexif_project:exif:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2021-27815
   homepage: https://github.com/libexif/exif
   license: LGPL-2.1-or-later
   source:
     kind: git
     url: https://github.com/libexif/exif
     ref: exif-0_6_22-release
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

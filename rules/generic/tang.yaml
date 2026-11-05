@@ -10,13 +10,17 @@ upstream:
   identifiers:
   - pkg:deb/debian/tang
   - pkg:deb/ubuntu/tang
+  cpe: cpe:2.3:a:tang_project:tang:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2021-4076
+  - CVE-2023-1672
   homepage: https://github.com/latchset/tang
   license: GPL-3.0-or-later
   source:
     kind: git
     url: https://github.com/latchset/tang
     ref: v15
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

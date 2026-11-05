@@ -14,6 +14,8 @@ component:
 upstream:
   name: hostap (wpa_supplicant / hostapd)
   purl: pkg:generic/hostap
+  identifiers:
+  - pkg:generic/git.w1.fi/cgit/hostap
   cpe: cpe:2.3:a:w1.fi:hostapd:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:w1.fi:wpa_supplicant:*:*:*:*:*:*:*:*

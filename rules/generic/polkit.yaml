@@ -6,6 +6,13 @@ component:
   - '**/polkit'
 upstream:
   name: polkit
+  purl: pkg:generic/gitlab.freedesktop.org/polkit/polkit
+  identifiers:
+  - pkg:github/polkit-org/polkit
+  - pkg:deb/debian/policykit-1
+  - pkg:deb/ubuntu/policykit-1
+  - pkg:apk/alpine/polkit
+  - pkg:generic/polkit
   homepage: https://gitlab.freedesktop.org/polkit/polkit
   license: LGPL-2.0-or-later
   source:

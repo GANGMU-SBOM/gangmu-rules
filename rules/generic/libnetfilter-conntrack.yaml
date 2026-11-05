@@ -8,6 +8,9 @@ component:
   - '**/libnetfilter_conntrack'
 upstream:
   name: libnetfilter-conntrack
+  purl: pkg:generic/git.netfilter.org/libnetfilter_conntrack
+  identifiers:
+  - pkg:generic/libnetfilter-conntrack
   homepage: https://git.netfilter.org/libnetfilter_conntrack
   license: GPL-2.0-or-later
   source:

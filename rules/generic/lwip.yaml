@@ -18,6 +18,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/lwip
   - pkg:deb/ubuntu/lwip
+  - pkg:github/lwip-tcpip/lwip
   cpe: cpe:2.3:a:lwip_project:lwip:*:*:*:*:*:*:*:*
   supplier: lwIP Project (non-GNU)
   homepage: https://savannah.nongnu.org/projects/lwip/

@@ -7,6 +7,8 @@ component:
 upstream:
   name: blynk-library
   purl: pkg:github/blynkkk/blynk-library
+  identifiers:
+  - pkg:github/blynk-technologies/blynk-library
   homepage: https://github.com/blynkkk/blynk-library
   license: MIT
   source:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: libssh
   purl: pkg:github/libssh/libssh-mirror
+  identifiers:
+  - pkg:gitlab/libssh/libssh-mirror
   homepage: https://github.com/libssh/libssh-mirror
   license: LGPL-2.1-or-later
   source:

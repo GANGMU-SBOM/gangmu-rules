@@ -7,6 +7,8 @@ component:
 upstream:
   name: monkey
   purl: pkg:github/monkey-project/monkey
+  identifiers:
+  - pkg:github/monkey/monkey
   homepage: https://github.com/monkey-project/monkey
   license: Apache-2.0
   source:

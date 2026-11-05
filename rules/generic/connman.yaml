@@ -6,6 +6,12 @@ component:
   - '**/connman'
 upstream:
   name: connman
+  purl: pkg:generic/git.kernel.org/pub/scm/network/connman/connman
+  identifiers:
+  - pkg:deb/debian/connman
+  - pkg:deb/ubuntu/connman
+  - pkg:apk/alpine/connman
+  - pkg:generic/connman
   homepage: https://git.kernel.org/pub/scm/network/connman/connman
   license: GPL-2.0-only
   source:

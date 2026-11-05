@@ -9,7 +9,17 @@ component:
 upstream:
   name: OpENer
   purl: pkg:github/EIPStackGroup/OpENer
-  cpe_status: 'none-in-nvd: no CPE for EIPStackGroup OpENer in the NVD CPE dictionary (cpeMatchString eipstackgroup:opener returned 0, read 2026-10-21).'
+  cpe: cpe:2.3:a:opener_project:opener:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2021-27478
+  - CVE-2021-27482
+  - CVE-2021-27498
+  - CVE-2021-27500
+  - CVE-2022-32434
+  - CVE-2026-51536
+  - CVE-2026-51537
+  - CVE-2026-51538
   homepage: https://github.com/EIPStackGroup/OpENer
   license: BSD-3-Clause-like
   source:

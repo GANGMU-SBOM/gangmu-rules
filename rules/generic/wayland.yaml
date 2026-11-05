@@ -6,13 +6,21 @@ component:
   - '**/wayland'
 upstream:
   name: wayland
+  purl: pkg:generic/gitlab.freedesktop.org/wayland/wayland
+  identifiers:
+  - pkg:deb/debian/wayland
+  - pkg:deb/ubuntu/wayland
+  - pkg:generic/wayland
+  cpe: cpe:2.3:a:wayland:wayland:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2021-3782
   homepage: https://gitlab.freedesktop.org/wayland/wayland
   license: MIT
   source:
     kind: git
     url: https://gitlab.freedesktop.org/wayland/wayland
     ref: 1.26.0
-  cpe_status: 'none-found: NVD lists wayland:wayland in its CPE dictionary but no CVE record names it (CVE API keyword and virtualMatchString searches, read 2026-11-01).'
 identity:
   include:
   - '**/*.c'

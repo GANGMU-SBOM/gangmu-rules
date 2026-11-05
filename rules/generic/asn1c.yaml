@@ -9,6 +9,7 @@ upstream:
   purl: pkg:github/mouse07410/asn1c
   identifiers:
   - pkg:generic/asn1c
+  - pkg:github/vlm/asn1c
   homepage: https://github.com/mouse07410/asn1c
   license: BSD-2-Clause
   source:

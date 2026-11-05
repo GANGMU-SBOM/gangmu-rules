@@ -6,6 +6,9 @@ component:
   - '**/libmnl'
 upstream:
   name: libmnl
+  purl: pkg:generic/git.netfilter.org/libmnl
+  identifiers:
+  - pkg:generic/libmnl
   homepage: https://git.netfilter.org/libmnl
   license: LGPL-2.1-or-later
   source:

@@ -9,13 +9,16 @@ upstream:
   purl: pkg:github/OpenPrinting/cups-browsed
   identifiers:
   - pkg:generic/cups-browsed
+  cpe: cpe:2.3:a:openprinting:cups-browsed:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2024-47176
   homepage: https://github.com/OpenPrinting/cups-browsed
   license: Apache-2.0
   source:
     kind: git
     url: https://github.com/OpenPrinting/cups-browsed
     ref: 2.1.1
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

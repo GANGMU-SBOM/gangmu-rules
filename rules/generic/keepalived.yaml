@@ -12,13 +12,20 @@ upstream:
   - pkg:deb/ubuntu/keepalived
   - pkg:apk/alpine/keepalived
   - pkg:generic/keepalived
+  cpe: cpe:2.3:a:keepalived:keepalived:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2018-19044
+  - CVE-2018-19045
+  - CVE-2018-19046
+  - CVE-2018-19115
+  - CVE-2021-44225
   homepage: https://github.com/acassen/keepalived
   license: GPL-2.0-or-later
   source:
     kind: git
     url: https://github.com/acassen/keepalived
     ref: v2.4.3
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

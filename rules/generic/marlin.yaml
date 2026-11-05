@@ -15,7 +15,7 @@ upstream:
     kind: git
     url: https://github.com/MarlinFirmware/Marlin
     ref: 2.1.2.9
-  cpe: cpe:2.3:a:marlinfw:marlin_firmware:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:marlinfw:marlin_firmware:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2018-1000537
 identity:

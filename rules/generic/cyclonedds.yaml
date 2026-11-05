@@ -17,6 +17,9 @@ upstream:
     url: https://github.com/eclipse-cyclonedds/cyclonedds
     ref: 11.0.1
   cpe: cpe:2.3:a:eclipse:cyclonedds:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) also files CVE-2020-18734, CVE-2020-18735, CVE-2024-10838 and CVE-2025-67109, which cite this repository, under this name.
+  cpe_aliases:
+  - cpe:2.3:a:eclipse:cyclone_data_distribution_service:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2021-38441
   - CVE-2021-38443

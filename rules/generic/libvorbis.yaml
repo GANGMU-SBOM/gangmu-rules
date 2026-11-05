@@ -11,6 +11,8 @@ component:
 upstream:
   name: libvorbis
   purl: pkg:github/xiph/vorbis
+  identifiers:
+  - pkg:generic/gitlab.xiph.org/xiph/vorbis
   cpe: cpe:2.3:a:xiph.org:libvorbis:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on seven CVEs; three are cited.
   cpe_evidence:

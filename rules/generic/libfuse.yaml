@@ -9,13 +9,17 @@ upstream:
   purl: pkg:github/libfuse/libfuse
   identifiers:
   - pkg:generic/libfuse
+  cpe: cpe:2.3:a:libfuse_project:libfuse:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2026-33150
+  - CVE-2026-33179
   homepage: https://github.com/libfuse/libfuse
   license: LGPL-2.1-only
   source:
     kind: git
     url: https://github.com/libfuse/libfuse
     ref: fuse-3.18.3
-  cpe_status: 'none-in-nvd: no CPE is registered for libfuse; the keyword results name ntfs-3g (CVE API keyword search, read 2026-10-21).'
 identity:
   include:
   - '**/*.c'

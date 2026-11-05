@@ -7,6 +7,8 @@ component:
 upstream:
   name: wget2
   purl: pkg:github/rockdaboot/wget2
+  identifiers:
+  - pkg:gitlab/gnuwget/wget2
   homepage: https://github.com/rockdaboot/wget2
   license: GPL-3.0-or-later
   source:

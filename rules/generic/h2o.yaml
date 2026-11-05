@@ -16,11 +16,17 @@ upstream:
     kind: git
     url: https://github.com/h2o/h2o
     ref: v2.2.6
-  cpe: cpe:2.3:a:h2o:h2o:*:*:*:*:*:*:*:*
+  # h2o:h2o in NVD is mostly H2O.ai (h2o-3), a different product; the HTTP server's CVEs are filed under dena:h2o (fkie-cad feed read 2026-11-05).
+  cpe: cpe:2.3:a:dena:h2o:*:*:*:*:*:*:*:*
   cpe_evidence:
-  - CVE-2023-6013
-  - CVE-2023-6016
-  - CVE-2023-6017
+  - CVE-2016-1133
+  - CVE-2016-4817
+  - CVE-2016-4864
+  - CVE-2017-10868
+  - CVE-2021-43848
+  - CVE-2023-41337
+  - CVE-2024-25622
+  - CVE-2024-45397
 identity:
   include:
   - '**/*.c'

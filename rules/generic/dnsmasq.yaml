@@ -6,6 +6,13 @@ component:
   - '**/dnsmasq'
 upstream:
   name: dnsmasq
+  purl: pkg:generic/thekelleys.org.uk/git/dnsmasq
+  identifiers:
+  - pkg:github/infrastructureservices/dnsmasq
+  - pkg:deb/debian/dnsmasq
+  - pkg:deb/ubuntu/dnsmasq
+  - pkg:apk/alpine/dnsmasq
+  - pkg:generic/dnsmasq
   homepage: https://thekelleys.org.uk/git/dnsmasq
   license: GPL-2.0-only OR GPL-3.0-only
   source:

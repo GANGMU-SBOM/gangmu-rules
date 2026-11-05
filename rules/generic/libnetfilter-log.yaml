@@ -8,6 +8,9 @@ component:
   - '**/libnetfilter_log'
 upstream:
   name: libnetfilter-log
+  purl: pkg:generic/git.netfilter.org/libnetfilter_log
+  identifiers:
+  - pkg:generic/libnetfilter-log
   homepage: https://git.netfilter.org/libnetfilter_log
   license: GPL-2.0-or-later
   source:

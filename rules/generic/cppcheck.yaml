@@ -7,6 +7,8 @@ component:
 upstream:
   name: cppcheck
   purl: pkg:github/danmar/cppcheck
+  identifiers:
+  - pkg:github/cppcheck-opensource/cppcheck
   homepage: https://github.com/danmar/cppcheck
   license: GPL-3.0-or-later
   source:

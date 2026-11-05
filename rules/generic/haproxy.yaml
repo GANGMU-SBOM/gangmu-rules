@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/haproxy
   - pkg:deb/ubuntu/haproxy
   - pkg:generic/haproxy
+  - pkg:generic/git.haproxy.org/git/haproxy
   homepage: https://github.com/haproxy/haproxy
   license: GPL-2.0-or-later
   source:

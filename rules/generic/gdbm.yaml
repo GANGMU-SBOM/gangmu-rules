@@ -6,6 +6,9 @@ component:
   - '**/gdbm'
 upstream:
   name: gdbm
+  purl: pkg:generic/git.savannah.gnu.org/git/gdbm
+  identifiers:
+  - pkg:generic/gdbm
   homepage: https://git.savannah.gnu.org/git/gdbm
   license: GPL-3.0-or-later
   source:
