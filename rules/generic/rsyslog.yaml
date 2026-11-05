@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/rsyslog
   - pkg:deb/ubuntu/rsyslog
   - pkg:apk/alpine/rsyslog
+  - pkg:generic/rsyslog
   homepage: https://github.com/rsyslog/rsyslog
   license: Apache-2.0 AND GPL-3.0-or-later
   source:

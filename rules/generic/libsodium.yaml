@@ -11,6 +11,8 @@ component:
 upstream:
   name: libsodium
   purl: pkg:github/jedisct1/libsodium
+  identifiers:
+  - pkg:generic/libsodium
   cpe_status: 'none-found: searched the NVD CPE dictionary (keyword libsodium, 2026-10-09); no product is registered. The CVE API (keyword libsodium) returns CVE-2025-69277 for libsodium itself, with no CPE configuration yet (Deferred). Match by purl via OSV.'
   supplier: Frank Denis and libsodium contributors
   homepage: https://libsodium.org/

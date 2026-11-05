@@ -9,6 +9,8 @@ component:
 upstream:
   name: moddable-xs
   purl: pkg:github/Moddable-OpenSource/moddable
+  identifiers:
+  - pkg:generic/moddable-xs
   homepage: https://github.com/Moddable-OpenSource/moddable
   license: Apache-2.0
   source:

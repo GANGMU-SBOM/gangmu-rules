@@ -15,6 +15,7 @@ upstream:
   - pkg:deb/ubuntu/ruby2.5
   - pkg:deb/ubuntu/ruby1.9.1
   - pkg:apk/alpine/ruby
+  - pkg:generic/ruby
   homepage: https://github.com/ruby/ruby
   license: Ruby OR BSD-2-Clause
   source:

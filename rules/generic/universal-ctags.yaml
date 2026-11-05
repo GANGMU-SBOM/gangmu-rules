@@ -9,6 +9,8 @@ component:
 upstream:
   name: universal-ctags
   purl: pkg:github/universal-ctags/ctags
+  identifiers:
+  - pkg:generic/universal-ctags
   homepage: https://github.com/universal-ctags/ctags
   license: GPL-2.0-or-later
   source:

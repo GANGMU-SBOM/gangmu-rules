@@ -7,6 +7,8 @@ component:
 upstream:
   name: cryptopp
   purl: pkg:github/weidai11/cryptopp
+  identifiers:
+  - pkg:generic/cryptopp
   homepage: https://github.com/weidai11/cryptopp
   license: BSL-1.0
   source:

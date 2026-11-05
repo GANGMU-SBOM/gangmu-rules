@@ -11,6 +11,8 @@ component:
 upstream:
   name: wolfMQTT
   purl: pkg:github/wolfSSL/wolfMQTT
+  identifiers:
+  - pkg:generic/wolfmqtt
   cpe: cpe:2.3:a:wolfssl:wolfmqtt:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2021-45932

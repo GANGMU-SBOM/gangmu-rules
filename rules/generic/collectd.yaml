@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/collectd
   - pkg:deb/ubuntu/collectd
   - pkg:apk/alpine/collectd
+  - pkg:generic/collectd
   homepage: https://github.com/collectd/collectd
   license: GPL-2.0-only
   source:

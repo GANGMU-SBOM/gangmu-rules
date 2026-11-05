@@ -11,6 +11,8 @@ component:
 upstream:
   name: Azure uMQTT C library
   purl: pkg:github/Azure/azure-umqtt-c
+  identifiers:
+  - pkg:generic/azure-umqtt-c
   cpe_status: 'none-in-nvd: no record in an NVD mirror (fkie-cad feeds, CVE years 2010 to 2026, read 2026-10-17) cites github.com/Azure/azure-umqtt-c or has a CPE for it.'
   homepage: https://github.com/Azure/azure-umqtt-c
   license: MIT

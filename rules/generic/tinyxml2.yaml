@@ -7,6 +7,10 @@ component:
 upstream:
   name: tinyxml2
   purl: pkg:github/leethomason/tinyxml2
+  identifiers:
+  - pkg:deb/debian/tinyxml2
+  - pkg:deb/ubuntu/tinyxml2
+  - pkg:generic/tinyxml2
   cpe: cpe:2.3:a:tinyxml2_project:tinyxml2:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2018-11210

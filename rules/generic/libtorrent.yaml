@@ -7,6 +7,10 @@ component:
 upstream:
   name: libtorrent
   purl: pkg:github/arvidn/libtorrent
+  identifiers:
+  - pkg:deb/debian/libtorrent-rasterbar
+  - pkg:deb/ubuntu/libtorrent-rasterbar
+  - pkg:generic/libtorrent
   homepage: https://github.com/arvidn/libtorrent
   license: BSD-3-Clause
   source:

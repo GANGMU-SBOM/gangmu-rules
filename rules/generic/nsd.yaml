@@ -7,6 +7,10 @@ component:
 upstream:
   name: nsd
   purl: pkg:github/NLnetLabs/nsd
+  identifiers:
+  - pkg:deb/debian/nsd
+  - pkg:deb/ubuntu/nsd
+  - pkg:apk/alpine/nsd
   homepage: https://github.com/NLnetLabs/nsd
   license: BSD-3-Clause
   source:

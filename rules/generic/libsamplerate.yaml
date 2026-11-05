@@ -7,6 +7,8 @@ component:
 upstream:
   name: libsamplerate
   purl: pkg:github/libsndfile/libsamplerate
+  identifiers:
+  - pkg:generic/libsamplerate
   homepage: https://github.com/libsndfile/libsamplerate
   license: BSD-2-Clause
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/nginx
   - pkg:deb/ubuntu/nginx
   - pkg:apk/alpine/nginx
+  - pkg:generic/nginx
   homepage: https://github.com/nginx/nginx
   license: BSD-2-Clause
   source:

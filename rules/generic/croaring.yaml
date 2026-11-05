@@ -9,6 +9,8 @@ component:
 upstream:
   name: croaring
   purl: pkg:github/RoaringBitmap/CRoaring
+  identifiers:
+  - pkg:generic/croaring
   homepage: https://github.com/RoaringBitmap/CRoaring
   license: Apache-2.0 OR MIT
   source:

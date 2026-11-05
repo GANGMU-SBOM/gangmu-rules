@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/mujs
   - pkg:deb/ubuntu/mujs
+  - pkg:generic/mujs
   homepage: https://github.com/ccxvii/mujs
   license: ISC
   source:

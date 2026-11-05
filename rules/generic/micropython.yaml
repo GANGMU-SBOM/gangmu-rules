@@ -14,6 +14,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/micropython
   - pkg:deb/ubuntu/micropython
+  - pkg:generic/micropython
   cpe: cpe:2.3:a:micropython:micropython:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2023-7152

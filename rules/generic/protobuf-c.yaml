@@ -10,6 +10,10 @@ component:
 upstream:
   name: protobuf-c
   purl: pkg:github/protobuf-c/protobuf-c
+  identifiers:
+  - pkg:deb/debian/protobuf-c
+  - pkg:deb/ubuntu/protobuf-c
+  - pkg:generic/protobuf-c
   cpe: cpe:2.3:a:protobuf-c_project:protobuf-c:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2022-33070

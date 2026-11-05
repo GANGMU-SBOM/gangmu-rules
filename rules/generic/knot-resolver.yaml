@@ -7,6 +7,11 @@ component:
 upstream:
   name: knot-resolver
   purl: pkg:github/CZ-NIC/knot-resolver
+  identifiers:
+  - pkg:deb/debian/knot-resolver
+  - pkg:deb/ubuntu/knot-resolver
+  - pkg:apk/alpine/knot-resolver
+  - pkg:generic/knot-resolver
   homepage: https://github.com/CZ-NIC/knot-resolver
   license: GPL-3.0-or-later
   source:

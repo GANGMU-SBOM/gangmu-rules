@@ -7,6 +7,8 @@ component:
 upstream:
   name: drogon
   purl: pkg:github/drogonframework/drogon
+  identifiers:
+  - pkg:generic/drogon
   homepage: https://github.com/drogonframework/drogon
   license: MIT
   source:

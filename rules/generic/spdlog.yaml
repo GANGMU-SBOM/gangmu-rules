@@ -7,6 +7,8 @@ component:
 upstream:
   name: spdlog
   purl: pkg:github/gabime/spdlog
+  identifiers:
+  - pkg:generic/spdlog
   homepage: https://github.com/gabime/spdlog
   license: MIT
   source:

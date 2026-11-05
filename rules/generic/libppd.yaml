@@ -7,6 +7,9 @@ component:
 upstream:
   name: libppd
   purl: pkg:github/OpenPrinting/libppd
+  identifiers:
+  - pkg:deb/ubuntu/libppd
+  - pkg:generic/libppd
   homepage: https://github.com/OpenPrinting/libppd
   license: Apache-2.0
   source:

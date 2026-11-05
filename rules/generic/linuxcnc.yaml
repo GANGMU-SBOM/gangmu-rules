@@ -7,6 +7,8 @@ component:
 upstream:
   name: linuxcnc
   purl: pkg:github/linuxcnc/linuxcnc
+  identifiers:
+  - pkg:generic/linuxcnc
   homepage: https://github.com/linuxcnc/linuxcnc
   license: GPL-2.0-or-later
   source:

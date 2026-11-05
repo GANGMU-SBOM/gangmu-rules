@@ -7,6 +7,8 @@ component:
 upstream:
   name: proxychains-ng
   purl: pkg:github/rofl0r/proxychains-ng
+  identifiers:
+  - pkg:generic/proxychains-ng
   homepage: https://github.com/rofl0r/proxychains-ng
   license: GPL-2.0-or-later
   source:

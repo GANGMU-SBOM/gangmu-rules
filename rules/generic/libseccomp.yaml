@@ -7,6 +7,8 @@ component:
 upstream:
   name: libseccomp
   purl: pkg:github/seccomp/libseccomp
+  identifiers:
+  - pkg:generic/libseccomp
   homepage: https://github.com/seccomp/libseccomp
   license: LGPL-2.1-only
   source:

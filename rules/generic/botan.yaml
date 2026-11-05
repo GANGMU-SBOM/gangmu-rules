@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/botan
   - pkg:deb/ubuntu/botan
   - pkg:deb/ubuntu/botan1.10
+  - pkg:generic/botan
   homepage: https://github.com/randombit/botan
   license: BSD-2-Clause
   source:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: fnet
   purl: pkg:github/butok/FNET
+  identifiers:
+  - pkg:generic/fnet
   homepage: https://github.com/butok/FNET
   license: Apache-2.0
   source:

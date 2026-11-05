@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/aide
   - pkg:deb/ubuntu/aide
+  - pkg:generic/aide
   homepage: https://github.com/aide/aide
   license: GPL-2.0-or-later
   source:

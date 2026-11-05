@@ -12,6 +12,7 @@ upstream:
   - pkg:deb/debian/gnutls28
   - pkg:deb/ubuntu/gnutls28
   - pkg:apk/alpine/gnutls
+  - pkg:generic/gnutls
   homepage: https://github.com/gnutls/gnutls
   license: LGPL-2.1-or-later
   source:

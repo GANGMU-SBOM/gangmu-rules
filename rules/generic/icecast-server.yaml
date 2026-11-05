@@ -7,6 +7,8 @@ component:
 upstream:
   name: icecast-server
   purl: pkg:github/xiph/icecast-server
+  identifiers:
+  - pkg:generic/icecast-server
   homepage: https://github.com/xiph/icecast-server
   license: GPL-2.0-only
   source:

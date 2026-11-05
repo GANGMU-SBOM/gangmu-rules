@@ -9,6 +9,8 @@ component:
 upstream:
   name: OpenAMP
   purl: pkg:github/OpenAMP/open-amp
+  identifiers:
+  - pkg:generic/open-amp
   cpe_status: 'none-in-nvd: NVD CPE dictionary API read 2026-10-04 has no product open-amp or libmetal under vendors openamp or openamp_project (cpeMatchString cpe:2.3:a:<vendor>:open-amp:*).'
   supplier: OpenAMP project (Linux Foundation / Zephyr, Xilinx and contributors)
   homepage: https://www.openampproject.org/

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/firejail
   - pkg:deb/ubuntu/firejail
+  - pkg:generic/firejail
   homepage: https://github.com/netblue30/firejail
   license: GPL-2.0-or-later
   source:

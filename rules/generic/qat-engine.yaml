@@ -9,6 +9,9 @@ component:
 upstream:
   name: qat-engine
   purl: pkg:github/intel/QAT_Engine
+  identifiers:
+  - pkg:generic/qat-engine
+  - pkg:generic/qat_engine
   homepage: https://github.com/intel/QAT_Engine
   license: Apache-2.0
   source:

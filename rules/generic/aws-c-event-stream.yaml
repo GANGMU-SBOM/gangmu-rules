@@ -7,6 +7,8 @@ component:
 upstream:
   name: aws-c-event-stream
   purl: pkg:github/awslabs/aws-c-event-stream
+  identifiers:
+  - pkg:generic/aws-c-event-stream
   homepage: https://github.com/awslabs/aws-c-event-stream
   license: Apache-2.0
   source:

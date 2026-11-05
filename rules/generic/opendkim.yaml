@@ -9,6 +9,10 @@ component:
 upstream:
   name: opendkim
   purl: pkg:github/trusteddomainproject/OpenDKIM
+  identifiers:
+  - pkg:deb/debian/opendkim
+  - pkg:deb/ubuntu/opendkim
+  - pkg:generic/opendkim
   homepage: https://github.com/trusteddomainproject/OpenDKIM
   license: BSD-3-Clause
   source:

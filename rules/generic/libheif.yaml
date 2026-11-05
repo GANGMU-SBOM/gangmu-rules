@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libheif
   - pkg:deb/ubuntu/libheif
+  - pkg:generic/libheif
   homepage: https://github.com/strukturag/libheif
   license: LGPL-3.0-or-later
   source:

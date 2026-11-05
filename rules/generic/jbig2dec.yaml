@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/jbig2dec
   - pkg:deb/ubuntu/jbig2dec
+  - pkg:generic/jbig2dec
   homepage: https://github.com/ArtifexSoftware/jbig2dec
   license: AGPL-3.0-or-later
   source:

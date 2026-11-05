@@ -9,6 +9,8 @@ component:
 upstream:
   name: abseil
   purl: pkg:github/abseil/abseil-cpp
+  identifiers:
+  - pkg:generic/abseil
   homepage: https://github.com/abseil/abseil-cpp
   license: Apache-2.0
   source:

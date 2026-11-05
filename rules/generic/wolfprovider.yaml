@@ -9,6 +9,8 @@ component:
 upstream:
   name: wolfprovider
   purl: pkg:github/wolfSSL/wolfProvider
+  identifiers:
+  - pkg:generic/wolfprovider
   homepage: https://github.com/wolfSSL/wolfProvider
   license: GPL-3.0-or-later
   source:

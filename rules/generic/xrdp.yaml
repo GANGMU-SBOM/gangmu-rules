@@ -7,6 +7,11 @@ component:
 upstream:
   name: xrdp
   purl: pkg:github/neutrinolabs/xrdp
+  identifiers:
+  - pkg:deb/debian/xrdp
+  - pkg:deb/ubuntu/xrdp
+  - pkg:apk/alpine/xrdp
+  - pkg:generic/xrdp
   homepage: https://github.com/neutrinolabs/xrdp
   license: Apache-2.0
   source:

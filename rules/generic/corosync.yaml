@@ -7,6 +7,10 @@ component:
 upstream:
   name: corosync
   purl: pkg:github/corosync/corosync
+  identifiers:
+  - pkg:deb/debian/corosync
+  - pkg:deb/ubuntu/corosync
+  - pkg:generic/corosync
   homepage: https://github.com/corosync/corosync
   license: BSD-3-Clause
   source:

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/alsa-lib
   - pkg:deb/ubuntu/alsa-lib
+  - pkg:generic/alsa-lib
   homepage: https://github.com/alsa-project/alsa-lib
   license: LGPL-2.1-or-later
   source:

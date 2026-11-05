@@ -7,6 +7,8 @@ component:
 upstream:
   name: kore
   purl: pkg:github/jorisvink/kore
+  identifiers:
+  - pkg:generic/kore
   homepage: https://github.com/jorisvink/kore
   license: ISC
   source:

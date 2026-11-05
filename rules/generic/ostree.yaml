@@ -7,6 +7,8 @@ component:
 upstream:
   name: ostree
   purl: pkg:github/ostreedev/ostree
+  identifiers:
+  - pkg:generic/ostree
   cpe: cpe:2.3:a:ostree_project:ostree:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2022-47085

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/ndpi
   - pkg:deb/ubuntu/ndpi
+  - pkg:generic/ndpi
   homepage: https://github.com/ntop/ndpi
   license: LGPL-3.0-or-later
   source:

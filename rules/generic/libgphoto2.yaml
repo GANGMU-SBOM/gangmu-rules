@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libgphoto2
   - pkg:deb/ubuntu/libgphoto2
+  - pkg:generic/libgphoto2
   homepage: https://github.com/gphoto/libgphoto2
   license: LGPL-2.1-or-later
   source:

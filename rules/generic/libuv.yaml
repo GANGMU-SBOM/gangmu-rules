@@ -11,6 +11,8 @@ component:
 upstream:
   name: libuv
   purl: pkg:github/libuv/libuv
+  identifiers:
+  - pkg:generic/libuv
   cpe: cpe:2.3:a:libuv:libuv:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:libuv_project:libuv:*:*:*:*:*:*:*:*

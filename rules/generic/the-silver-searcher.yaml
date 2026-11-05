@@ -9,6 +9,9 @@ component:
 upstream:
   name: the-silver-searcher
   purl: pkg:github/ggreer/the_silver_searcher
+  identifiers:
+  - pkg:generic/the-silver-searcher
+  - pkg:generic/the_silver_searcher
   homepage: https://github.com/ggreer/the_silver_searcher
   license: Apache-2.0
   source:

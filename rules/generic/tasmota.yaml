@@ -9,6 +9,8 @@ component:
 upstream:
   name: tasmota
   purl: pkg:github/arendst/Tasmota
+  identifiers:
+  - pkg:generic/tasmota
   homepage: https://github.com/arendst/Tasmota
   license: GPL-3.0-only
   source:

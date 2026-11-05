@@ -7,6 +7,8 @@ component:
 upstream:
   name: radvd
   purl: pkg:github/radvd-project/radvd
+  identifiers:
+  - pkg:generic/radvd
   homepage: https://github.com/radvd-project/radvd
   license: BSD-4-Clause
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: rapidjson
   purl: pkg:github/Tencent/rapidjson
+  identifiers:
+  - pkg:deb/debian/rapidjson
+  - pkg:deb/ubuntu/rapidjson
+  - pkg:generic/rapidjson
   homepage: https://github.com/Tencent/rapidjson
   license: MIT
   source:

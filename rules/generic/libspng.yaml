@@ -7,6 +7,8 @@ component:
 upstream:
   name: libspng
   purl: pkg:github/randy408/libspng
+  identifiers:
+  - pkg:generic/libspng
   homepage: https://github.com/randy408/libspng
   license: BSD-2-Clause
   source:

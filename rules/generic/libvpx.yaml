@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/libvpx
   - pkg:deb/ubuntu/libvpx
   - pkg:apk/alpine/libvpx
+  - pkg:generic/libvpx
   homepage: https://github.com/webmproject/libvpx
   license: BSD-3-Clause
   source:

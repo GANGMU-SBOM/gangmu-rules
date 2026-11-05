@@ -7,6 +7,10 @@ component:
 upstream:
   name: nbd
   purl: pkg:github/NetworkBlockDevice/nbd
+  identifiers:
+  - pkg:deb/debian/nbd
+  - pkg:deb/ubuntu/nbd
+  - pkg:apk/alpine/nbd
   homepage: https://github.com/NetworkBlockDevice/nbd
   license: GPL-2.0-only
   source:

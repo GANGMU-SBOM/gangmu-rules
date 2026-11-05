@@ -9,6 +9,8 @@ component:
 upstream:
   name: px4-src
   purl: pkg:github/PX4/PX4-Autopilot
+  identifiers:
+  - pkg:generic/px4-src
   homepage: https://github.com/PX4/PX4-Autopilot
   license: BSD-3-Clause
   source:

@@ -7,6 +7,11 @@ component:
 upstream:
   name: cyrus-sasl
   purl: pkg:github/cyrusimap/cyrus-sasl
+  identifiers:
+  - pkg:deb/debian/cyrus-sasl2
+  - pkg:deb/ubuntu/cyrus-sasl2
+  - pkg:apk/alpine/cyrus-sasl
+  - pkg:generic/cyrus-sasl
   homepage: https://github.com/cyrusimap/cyrus-sasl
   license: BSD-4-Clause-UC
   source:

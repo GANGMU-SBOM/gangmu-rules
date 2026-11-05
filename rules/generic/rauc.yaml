@@ -7,6 +7,10 @@ component:
 upstream:
   name: rauc
   purl: pkg:github/rauc/rauc
+  identifiers:
+  - pkg:deb/debian/rauc
+  - pkg:deb/ubuntu/rauc
+  - pkg:generic/rauc
   cpe: cpe:2.3:a:pengutronix:rauc:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2020-25860

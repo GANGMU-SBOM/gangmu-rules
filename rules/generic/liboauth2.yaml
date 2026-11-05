@@ -7,6 +7,10 @@ component:
 upstream:
   name: liboauth2
   purl: pkg:github/OpenIDC/liboauth2
+  identifiers:
+  - pkg:deb/debian/liboauth2
+  - pkg:deb/ubuntu/liboauth2
+  - pkg:generic/liboauth2
   homepage: https://github.com/OpenIDC/liboauth2
   license: Apache-2.0
   source:

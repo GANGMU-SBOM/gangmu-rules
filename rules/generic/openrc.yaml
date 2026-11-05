@@ -7,6 +7,9 @@ component:
 upstream:
   name: openrc
   purl: pkg:github/OpenRC/openrc
+  identifiers:
+  - pkg:apk/alpine/openrc
+  - pkg:generic/openrc
   homepage: https://github.com/OpenRC/openrc
   license: BSD-2-Clause
   source:

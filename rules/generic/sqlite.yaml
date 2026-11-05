@@ -12,6 +12,8 @@ upstream:
   identifiers:
   - pkg:deb/debian/sqlite3
   - pkg:apk/alpine/sqlite
+  - pkg:deb/ubuntu/sqlite3
+  - pkg:generic/sqlite
   cpe: cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2019-19242

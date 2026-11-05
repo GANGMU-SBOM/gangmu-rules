@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/fribidi
   - pkg:deb/ubuntu/fribidi
   - pkg:apk/alpine/fribidi
+  - pkg:generic/fribidi
   homepage: https://github.com/fribidi/fribidi
   license: LGPL-2.1-or-later
   source:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: opendoas
   purl: pkg:github/Duncaen/OpenDoas
+  identifiers:
+  - pkg:generic/opendoas
   homepage: https://github.com/Duncaen/OpenDoas
   license: ISC
   source:

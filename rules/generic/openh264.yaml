@@ -7,6 +7,8 @@ component:
 upstream:
   name: openh264
   purl: pkg:github/cisco/openh264
+  identifiers:
+  - pkg:generic/openh264
   homepage: https://github.com/cisco/openh264
   license: BSD-2-Clause
   source:

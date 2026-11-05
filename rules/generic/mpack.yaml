@@ -11,6 +11,8 @@ component:
 upstream:
   name: MPack (MessagePack encoder and decoder)
   purl: pkg:github/ludocode/mpack
+  identifiers:
+  - pkg:deb/ubuntu/mpack
   cpe_status: 'none-in-nvd: no record in an NVD mirror (fkie-cad feeds, CVE years 2010 to 2026, read 2026-10-17 with gangmu rules cpe-evidence, and a search by product name) cites github.com/ludocode/mpack or names it.'
   supplier: Nicholas Fraser and the MPack contributors
   homepage: https://github.com/ludocode/mpack

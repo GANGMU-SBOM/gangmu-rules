@@ -10,6 +10,8 @@ component:
 upstream:
   name: flatcc (FlatBuffers in C)
   purl: pkg:github/dvidelabs/flatcc
+  identifiers:
+  - pkg:generic/flatcc
   cpe: cpe:2.3:a:dvidelabs:flatcc:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:flatcc_project:flatcc:*:*:*:*:*:*:*:*

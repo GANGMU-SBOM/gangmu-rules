@@ -11,6 +11,8 @@ component:
 upstream:
   name: OpenThread
   purl: pkg:github/openthread/openthread
+  identifiers:
+  - pkg:generic/openthread
   supplier: The OpenThread Authors (Google)
   homepage: https://openthread.io/
   license: BSD-3-Clause

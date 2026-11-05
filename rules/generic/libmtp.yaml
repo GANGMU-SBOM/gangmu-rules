@@ -7,6 +7,10 @@ component:
 upstream:
   name: libmtp
   purl: pkg:github/libmtp/libmtp
+  identifiers:
+  - pkg:deb/debian/libmtp
+  - pkg:deb/ubuntu/libmtp
+  - pkg:generic/libmtp
   homepage: https://github.com/libmtp/libmtp
   license: LGPL-2.1-or-later
   source:

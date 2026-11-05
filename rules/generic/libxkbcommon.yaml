@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libxkbcommon
   - pkg:deb/ubuntu/libxkbcommon
+  - pkg:generic/libxkbcommon
   homepage: https://github.com/xkbcommon/libxkbcommon
   license: MIT
   source:

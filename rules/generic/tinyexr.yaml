@@ -9,6 +9,7 @@ upstream:
   purl: pkg:github/syoyo/tinyexr
   identifiers:
   - pkg:deb/ubuntu/tinyexr
+  - pkg:generic/tinyexr
   homepage: https://github.com/syoyo/tinyexr
   license: BSD-3-Clause
   source:

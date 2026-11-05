@@ -130,7 +130,7 @@ GENERIC_STOP = frozenset("""core common util utils tool tools base test tests sd
 files app apps main driver drivers kernel system components component hal bsp os src
 source module modules plugin plugins server client library firmware boot loader
 crypto network net http json xml image audio video portable zephyr opener neuron onion
-shadow tang jose janet ninja transmission marlin arduino nimble httpd""".split())
+shadow tang jose janet ninja transmission marlin arduino nimble httpd guix unicorn mpack""".split())
 
 
 def name_owners(rule_meta):

@@ -13,6 +13,8 @@ upstream:
     url: https://github.com/zephyrproject-rtos/zephyr
     ref: v4.1.0
   purl: pkg:github/zephyrproject-rtos/zephyr
+  identifiers:
+  - pkg:generic/zephyr-kernel
   cpe: cpe:2.3:o:zephyrproject:zephyr:*:*:*:*:*:*:*:*
   supplier: Zephyr Project
   advisory_scope: subsystem

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/rdesktop
   - pkg:deb/ubuntu/rdesktop
   - pkg:apk/alpine/rdesktop
+  - pkg:generic/rdesktop
   homepage: https://github.com/rdesktop/rdesktop
   license: GPL-3.0-or-later
   source:

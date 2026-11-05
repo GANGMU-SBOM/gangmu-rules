@@ -7,6 +7,8 @@ component:
 upstream:
   name: simdjson
   purl: pkg:github/simdjson/simdjson
+  identifiers:
+  - pkg:generic/simdjson
   homepage: https://github.com/simdjson/simdjson
   license: Apache-2.0
   source:

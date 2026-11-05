@@ -11,6 +11,8 @@ component:
 upstream:
   name: libmosquitto (Eclipse Mosquitto client library)
   purl: pkg:github/eclipse/mosquitto
+  identifiers:
+  - pkg:generic/mosquitto-lib
   cpe_status: 'ambiguous: NVD has eclipse:mosquitto (26 CVEs) and eclipse_foundation:mosquitto, but they cover the broker as well as the client library, so no CPE is applied to the library-only rule. Read 2026-10-17 from the fkie-cad feeds, CVE years 2010 to 2026.'
   homepage: https://github.com/eclipse-mosquitto/mosquitto
   license: EPL-2.0 OR BSD-3-Clause

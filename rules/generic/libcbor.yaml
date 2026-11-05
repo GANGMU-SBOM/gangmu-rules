@@ -10,6 +10,8 @@ component:
 upstream:
   name: libcbor
   purl: pkg:github/PJK/libcbor
+  identifiers:
+  - pkg:generic/libcbor
   cpe_status: 'none-in-nvd: no record in an NVD mirror (fkie-cad feeds, CVE years 2010 to 2026, read 2026-10-17) cites github.com/PJK/libcbor or has a CPE for it.'
   homepage: https://github.com/PJK/libcbor
   license: MIT

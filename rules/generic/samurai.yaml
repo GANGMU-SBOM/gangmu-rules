@@ -9,6 +9,7 @@ upstream:
   purl: pkg:github/michaelforney/samurai
   identifiers:
   - pkg:apk/alpine/samurai
+  - pkg:generic/samurai
   homepage: https://github.com/michaelforney/samurai
   license: ISC AND Apache-2.0
   source:

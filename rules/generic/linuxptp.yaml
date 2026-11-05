@@ -7,6 +7,10 @@ component:
 upstream:
   name: linuxptp
   purl: pkg:github/richardcochran/linuxptp
+  identifiers:
+  - pkg:deb/debian/linuxptp
+  - pkg:deb/ubuntu/linuxptp
+  - pkg:generic/linuxptp
   homepage: https://github.com/richardcochran/linuxptp
   license: GPL-2.0-or-later
   source:

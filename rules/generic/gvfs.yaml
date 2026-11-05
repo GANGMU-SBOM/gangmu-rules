@@ -7,6 +7,12 @@ component:
 upstream:
   name: gvfs
   purl: pkg:github/GNOME/gvfs
+  identifiers:
+  - pkg:deb/debian/gvfs
+  - pkg:deb/ubuntu/gvfs
+  - pkg:apk/alpine/gvfs
+  - pkg:generic/gitlab.gnome.org/gnome/gvfs
+  - pkg:generic/gvfs
   homepage: https://github.com/GNOME/gvfs
   license: LGPL-2.0-or-later
   source:

@@ -11,6 +11,8 @@ component:
 upstream:
   name: Eclipse ThreadX NetX Duo (Azure RTOS NetX Duo)
   purl: pkg:github/eclipse-threadx/netxduo
+  identifiers:
+  - pkg:generic/netxduo
   cpe: cpe:2.3:a:eclipse:threadx_netx_duo:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2024-2452

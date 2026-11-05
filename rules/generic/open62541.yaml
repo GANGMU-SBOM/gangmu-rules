@@ -14,6 +14,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/open62541
   - pkg:deb/ubuntu/open62541
+  - pkg:generic/open62541
   cpe: cpe:2.3:a:open62541:open62541:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2020-36429

@@ -14,6 +14,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libwebp
   - pkg:deb/ubuntu/libwebp
+  - pkg:generic/libwebp
   cpe: cpe:2.3:a:webmproject:libwebp:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on 15 CVEs; three are cited.
   cpe_evidence:

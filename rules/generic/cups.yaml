@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/cups
   - pkg:deb/ubuntu/cups
   - pkg:apk/alpine/cups
+  - pkg:generic/cups
   homepage: https://github.com/OpenPrinting/cups
   license: Apache-2.0
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/libebml
   - pkg:deb/ubuntu/libebml
   - pkg:apk/alpine/libebml
+  - pkg:generic/libebml
   homepage: https://github.com/Matroska-Org/libebml
   license: LGPL-2.1-or-later
   source:

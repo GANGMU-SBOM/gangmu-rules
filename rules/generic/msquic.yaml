@@ -7,6 +7,8 @@ component:
 upstream:
   name: msquic
   purl: pkg:github/microsoft/msquic
+  identifiers:
+  - pkg:generic/msquic
   homepage: https://github.com/microsoft/msquic
   license: MIT
   source:

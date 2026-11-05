@@ -7,6 +7,10 @@ component:
 upstream:
   name: cmark-gfm
   purl: pkg:github/github/cmark-gfm
+  identifiers:
+  - pkg:deb/debian/cmark-gfm
+  - pkg:deb/ubuntu/cmark-gfm
+  - pkg:generic/cmark-gfm
   homepage: https://github.com/github/cmark-gfm
   license: BSD-2-Clause
   source:

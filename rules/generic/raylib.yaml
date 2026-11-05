@@ -7,6 +7,8 @@ component:
 upstream:
   name: raylib
   purl: pkg:github/raysan5/raylib
+  identifiers:
+  - pkg:generic/raylib
   homepage: https://github.com/raysan5/raylib
   license: Zlib
   source:

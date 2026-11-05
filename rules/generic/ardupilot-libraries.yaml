@@ -9,6 +9,8 @@ component:
 upstream:
   name: ardupilot-libraries
   purl: pkg:github/ArduPilot/ardupilot
+  identifiers:
+  - pkg:generic/ardupilot-libraries
   homepage: https://github.com/ArduPilot/ardupilot
   license: GPL-3.0-or-later
   source:

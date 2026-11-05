@@ -7,6 +7,8 @@ component:
 upstream:
   name: exfatprogs
   purl: pkg:github/exfatprogs/exfatprogs
+  identifiers:
+  - pkg:generic/exfatprogs
   homepage: https://github.com/exfatprogs/exfatprogs
   license: GPL-2.0-only
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: dosfstools
   purl: pkg:github/dosfstools/dosfstools
+  identifiers:
+  - pkg:generic/dosfstools
   homepage: https://github.com/dosfstools/dosfstools
   license: GPL-3.0-or-later
   source:

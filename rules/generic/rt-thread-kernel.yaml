@@ -9,6 +9,8 @@ component:
 upstream:
   name: RT-Thread
   purl: pkg:github/rt-thread/rt-thread
+  identifiers:
+  - pkg:generic/rt-thread-kernel
   cpe: cpe:2.3:a:rt-thread:rt-thread:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:o:rt-thread:rt-thread:*:*:*:*:*:*:*:*

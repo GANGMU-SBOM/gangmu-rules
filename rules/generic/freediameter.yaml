@@ -9,6 +9,8 @@ component:
 upstream:
   name: freediameter
   purl: pkg:github/freeDiameter/freeDiameter
+  identifiers:
+  - pkg:generic/freediameter
   homepage: https://github.com/freeDiameter/freeDiameter
   license: BSD-3-Clause
   source:

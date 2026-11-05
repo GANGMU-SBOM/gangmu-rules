@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/mongo-c-driver
   - pkg:deb/ubuntu/mongo-c-driver
   - pkg:apk/alpine/mongo-c-driver
+  - pkg:generic/mongo-c-driver
   homepage: https://github.com/mongodb/mongo-c-driver
   license: Apache-2.0
   source:

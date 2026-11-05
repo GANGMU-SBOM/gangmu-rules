@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/harfbuzz
   - pkg:deb/ubuntu/harfbuzz
+  - pkg:generic/harfbuzz
   homepage: https://github.com/harfbuzz/harfbuzz
   license: MIT
   source:

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/janus
   - pkg:deb/ubuntu/janus
+  - pkg:generic/janus-gateway
   homepage: https://github.com/meetecho/janus-gateway
   license: GPL-3.0-only
   source:

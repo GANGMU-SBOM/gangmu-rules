@@ -7,6 +7,10 @@ component:
 upstream:
   name: trafficserver
   purl: pkg:github/apache/trafficserver
+  identifiers:
+  - pkg:deb/debian/trafficserver
+  - pkg:deb/ubuntu/trafficserver
+  - pkg:generic/trafficserver
   homepage: https://github.com/apache/trafficserver
   license: Apache-2.0
   source:

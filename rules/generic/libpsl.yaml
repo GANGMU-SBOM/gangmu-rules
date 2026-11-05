@@ -7,6 +7,8 @@ component:
 upstream:
   name: libpsl
   purl: pkg:github/rockdaboot/libpsl
+  identifiers:
+  - pkg:generic/libpsl
   homepage: https://github.com/rockdaboot/libpsl
   license: MIT
   source:

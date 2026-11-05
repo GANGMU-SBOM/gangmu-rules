@@ -7,6 +7,8 @@ component:
 upstream:
   name: cgif
   purl: pkg:github/dloebl/cgif
+  identifiers:
+  - pkg:generic/cgif
   homepage: https://github.com/dloebl/cgif
   license: MIT
   source:

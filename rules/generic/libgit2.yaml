@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/libgit2
   - pkg:deb/ubuntu/libgit2
   - pkg:apk/alpine/libgit2
+  - pkg:generic/libgit2
   homepage: https://github.com/libgit2/libgit2
   license: GPL-2.0-only WITH GCC-exception-2.0
   source:

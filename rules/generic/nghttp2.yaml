@@ -12,6 +12,7 @@ upstream:
   - pkg:deb/debian/nghttp2
   - pkg:deb/ubuntu/nghttp2
   - pkg:apk/alpine/nghttp2
+  - pkg:generic/nghttp2
   supplier: Tatsuhiro Tsujikawa and nghttp2 contributors
   homepage: https://nghttp2.org/
   license: MIT

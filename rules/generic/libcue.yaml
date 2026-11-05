@@ -7,6 +7,8 @@ component:
 upstream:
   name: libcue
   purl: pkg:github/lipnitsk/libcue
+  identifiers:
+  - pkg:generic/libcue
   homepage: https://github.com/lipnitsk/libcue
   license: GPL-2.0-only OR BSD-2-Clause
   source:

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/protobuf
   - pkg:deb/ubuntu/protobuf
+  - pkg:generic/protobuf
   homepage: https://github.com/protocolbuffers/protobuf
   license: BSD-3-Clause
   source:

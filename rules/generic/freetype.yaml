@@ -14,6 +14,8 @@ upstream:
   - pkg:deb/debian/freetype
   - pkg:deb/ubuntu/freetype
   - pkg:apk/alpine/freetype
+  - pkg:generic/gitlab.freedesktop.org/freetype/freetype
+  - pkg:generic/freetype
   cpe: cpe:2.3:a:freetype:freetype:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2012-5668

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libgd2
   - pkg:deb/ubuntu/libgd2
+  - pkg:generic/libgd
   homepage: https://github.com/libgd/libgd
   license: BSD-like
   source:

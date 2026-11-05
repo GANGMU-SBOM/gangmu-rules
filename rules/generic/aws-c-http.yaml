@@ -7,6 +7,8 @@ component:
 upstream:
   name: aws-c-http
   purl: pkg:github/awslabs/aws-c-http
+  identifiers:
+  - pkg:generic/aws-c-http
   homepage: https://github.com/awslabs/aws-c-http
   license: Apache-2.0
   source:

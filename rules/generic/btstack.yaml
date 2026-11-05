@@ -11,6 +11,8 @@ component:
 upstream:
   name: BTstack (BlueKitchen Bluetooth stack)
   purl: pkg:github/bluekitchen/btstack
+  identifiers:
+  - pkg:generic/btstack
   cpe: cpe:2.3:a:bluekitchen-gmbh:btstack:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2026-28526

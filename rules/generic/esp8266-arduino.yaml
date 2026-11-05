@@ -9,6 +9,8 @@ component:
 upstream:
   name: esp8266-arduino
   purl: pkg:github/esp8266/Arduino
+  identifiers:
+  - pkg:generic/esp8266-arduino
   homepage: https://github.com/esp8266/Arduino
   license: LGPL-2.1-or-later
   source:

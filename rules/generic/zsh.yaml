@@ -7,6 +7,10 @@ component:
 upstream:
   name: zsh
   purl: pkg:github/zsh-users/zsh
+  identifiers:
+  - pkg:deb/debian/zsh
+  - pkg:deb/ubuntu/zsh
+  - pkg:apk/alpine/zsh
   homepage: https://github.com/zsh-users/zsh
   license: MIT-Modern-Variant
   source:

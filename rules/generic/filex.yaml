@@ -11,6 +11,8 @@ component:
 upstream:
   name: Eclipse ThreadX FileX (Azure RTOS FileX)
   purl: pkg:github/eclipse-threadx/filex
+  identifiers:
+  - pkg:generic/filex
   cpe: cpe:2.3:a:eclipse:threadx_filex:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2025-55089

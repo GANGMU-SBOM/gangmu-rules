@@ -7,6 +7,8 @@ component:
 upstream:
   name: 4diac-forte
   purl: pkg:github/eclipse-4diac/4diac-forte
+  identifiers:
+  - pkg:generic/4diac-forte
   homepage: https://github.com/eclipse-4diac/4diac-forte
   license: EPL-2.0
   source:

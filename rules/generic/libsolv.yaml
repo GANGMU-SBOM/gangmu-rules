@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libsolv
   - pkg:deb/ubuntu/libsolv
+  - pkg:generic/libsolv
   homepage: https://github.com/openSUSE/libsolv
   license: BSD-3-Clause
   source:

@@ -12,6 +12,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/zfs-linux
   - pkg:deb/ubuntu/zfs-linux
+  - pkg:generic/openzfs
   homepage: https://github.com/openzfs/zfs
   license: CDDL-1.0
   source:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: hamlib
   purl: pkg:github/Hamlib/Hamlib
+  identifiers:
+  - pkg:generic/hamlib
   homepage: https://github.com/Hamlib/Hamlib
   license: LGPL-2.1-or-later
   source:

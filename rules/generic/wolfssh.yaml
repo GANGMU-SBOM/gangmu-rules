@@ -13,6 +13,7 @@ upstream:
   purl: pkg:github/wolfSSL/wolfSSH
   identifiers:
   - pkg:apk/alpine/wolfssh
+  - pkg:generic/wolfssh
   cpe: cpe:2.3:a:wolfssh:wolfssh:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2022-32073

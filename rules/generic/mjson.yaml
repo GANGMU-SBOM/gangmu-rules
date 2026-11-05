@@ -7,6 +7,8 @@ component:
 upstream:
   name: mjson
   purl: pkg:github/cesanta/mjson
+  identifiers:
+  - pkg:generic/mjson
   homepage: https://github.com/cesanta/mjson
   license: MIT
   source:

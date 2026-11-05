@@ -7,6 +7,10 @@ component:
 upstream:
   name: espeak-ng
   purl: pkg:github/espeak-ng/espeak-ng
+  identifiers:
+  - pkg:deb/debian/espeak-ng
+  - pkg:deb/ubuntu/espeak-ng
+  - pkg:generic/espeak-ng
   homepage: https://github.com/espeak-ng/espeak-ng
   license: GPL-3.0-or-later
   source:

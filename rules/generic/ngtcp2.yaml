@@ -7,6 +7,9 @@ component:
 upstream:
   name: ngtcp2
   purl: pkg:github/ngtcp2/ngtcp2
+  identifiers:
+  - pkg:deb/ubuntu/ngtcp2
+  - pkg:generic/ngtcp2
   homepage: https://github.com/ngtcp2/ngtcp2
   license: MIT
   source:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: softethervpn
   purl: pkg:github/SoftEtherVPN/SoftEtherVPN
+  identifiers:
+  - pkg:generic/softethervpn
   homepage: https://github.com/SoftEtherVPN/SoftEtherVPN
   license: Apache-2.0
   source:

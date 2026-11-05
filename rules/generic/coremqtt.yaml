@@ -12,6 +12,8 @@ component:
 upstream:
   name: coreMQTT
   purl: pkg:github/FreeRTOS/coreMQTT
+  identifiers:
+  - pkg:generic/coremqtt
   cpe: cpe:2.3:a:freertos:coremqtt:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2026-8686

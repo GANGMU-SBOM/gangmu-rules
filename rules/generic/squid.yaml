@@ -13,6 +13,7 @@ upstream:
   - pkg:deb/ubuntu/squid3
   - pkg:deb/ubuntu/squid
   - pkg:apk/alpine/squid
+  - pkg:generic/squid
   homepage: https://github.com/squid-cache/squid
   license: GPL-2.0-or-later
   source:

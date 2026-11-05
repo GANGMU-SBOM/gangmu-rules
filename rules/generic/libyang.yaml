@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libyang
   - pkg:deb/ubuntu/libyang
+  - pkg:generic/libyang
   homepage: https://github.com/CESNET/libyang
   license: BSD-3-Clause
   source:

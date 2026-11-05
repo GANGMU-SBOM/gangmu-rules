@@ -9,6 +9,8 @@ component:
 upstream:
   name: openfpgaloader
   purl: pkg:github/trabucayre/openFPGALoader
+  identifiers:
+  - pkg:generic/openfpgaloader
   homepage: https://github.com/trabucayre/openFPGALoader
   license: Apache-2.0
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: speex
   purl: pkg:github/xiph/speex
+  identifiers:
+  - pkg:deb/debian/speex
+  - pkg:deb/ubuntu/speex
+  - pkg:generic/speex
   homepage: https://github.com/xiph/speex
   license: BSD-3-Clause
   source:

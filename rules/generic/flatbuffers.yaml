@@ -7,6 +7,8 @@ component:
 upstream:
   name: flatbuffers
   purl: pkg:github/google/flatbuffers
+  identifiers:
+  - pkg:generic/flatbuffers
   homepage: https://github.com/google/flatbuffers
   license: Apache-2.0
   source:

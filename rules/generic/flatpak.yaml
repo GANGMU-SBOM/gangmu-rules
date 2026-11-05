@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/flatpak
   - pkg:deb/ubuntu/flatpak
   - pkg:apk/alpine/flatpak
+  - pkg:generic/flatpak
   homepage: https://github.com/flatpak/flatpak
   license: LGPL-2.1-or-later
   source:

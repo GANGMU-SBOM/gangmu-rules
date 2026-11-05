@@ -11,6 +11,8 @@ component:
 upstream:
   name: Azure C shared utility
   purl: pkg:github/Azure/azure-c-shared-utility
+  identifiers:
+  - pkg:generic/azure-c-shared-utility
   cpe: cpe:2.3:a:microsoft:azure_c_shared_utility:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on CVE-2024-29195, whose references are the Azure/azure-c-shared-utility advisory and fix commit.
   cpe_evidence:

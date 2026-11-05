@@ -7,6 +7,8 @@ component:
 upstream:
   name: iso14229
   purl: pkg:github/driftregion/iso14229
+  identifiers:
+  - pkg:generic/iso14229
   homepage: https://github.com/driftregion/iso14229
   license: MIT
   source:

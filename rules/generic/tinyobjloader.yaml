@@ -7,6 +7,8 @@ component:
 upstream:
   name: tinyobjloader
   purl: pkg:github/tinyobjloader/tinyobjloader
+  identifiers:
+  - pkg:generic/tinyobjloader
   homepage: https://github.com/tinyobjloader/tinyobjloader
   license: MIT
   source:

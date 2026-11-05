@@ -7,6 +7,8 @@ component:
 upstream:
   name: librepo
   purl: pkg:github/rpm-software-management/librepo
+  identifiers:
+  - pkg:generic/librepo
   homepage: https://github.com/rpm-software-management/librepo
   license: LGPL-2.1-or-later
   source:

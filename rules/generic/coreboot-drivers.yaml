@@ -9,6 +9,8 @@ component:
 upstream:
   name: coreboot-drivers
   purl: pkg:github/coreboot/coreboot
+  identifiers:
+  - pkg:generic/coreboot-drivers
   homepage: https://github.com/coreboot/coreboot
   license: GPL-2.0-only
   source:

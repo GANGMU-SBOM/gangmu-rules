@@ -7,6 +7,13 @@ component:
 upstream:
   name: libsoup
   purl: pkg:github/GNOME/libsoup
+  identifiers:
+  - pkg:deb/debian/libsoup3
+  - pkg:deb/debian/libsoup2.4
+  - pkg:deb/ubuntu/libsoup2.4
+  - pkg:deb/ubuntu/libsoup3
+  - pkg:generic/gitlab.gnome.org/gnome/libsoup
+  - pkg:generic/libsoup
   homepage: https://github.com/GNOME/libsoup
   license: LGPL-2.1-or-later
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/tpm2-tools
   - pkg:deb/ubuntu/tpm2-tools
   - pkg:apk/alpine/tpm2-tools
+  - pkg:generic/tpm2-tools
   homepage: https://github.com/tpm2-software/tpm2-tools
   license: BSD-3-Clause
   source:

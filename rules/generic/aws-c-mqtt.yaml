@@ -7,6 +7,8 @@ component:
 upstream:
   name: aws-c-mqtt
   purl: pkg:github/awslabs/aws-c-mqtt
+  identifiers:
+  - pkg:generic/aws-c-mqtt
   homepage: https://github.com/awslabs/aws-c-mqtt
   license: Apache-2.0
   source:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: nanoMODBUS
   purl: pkg:github/debevv/nanoMODBUS
+  identifiers:
+  - pkg:generic/nanomodbus
   cpe_status: 'none-in-nvd: no CPE in the NVD CPE dictionary (read 2026-10-21); CVE-2026-29972, CVE-2026-54410, CVE-2026-71254, CVE-2026-71255 and CVE-2026-71256 name nanoMODBUS but carry no CPE configuration.'
   homepage: https://github.com/debevv/nanoMODBUS
   license: MIT

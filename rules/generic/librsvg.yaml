@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/librsvg
   - pkg:deb/ubuntu/librsvg
   - pkg:apk/alpine/librsvg
+  - pkg:generic/librsvg
   homepage: https://github.com/GNOME/librsvg
   license: LGPL-2.1-or-later
   source:

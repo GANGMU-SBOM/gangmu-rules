@@ -13,6 +13,8 @@ component:
 upstream:
   name: p-net
   purl: pkg:github/rtlabs-com/p-net
+  identifiers:
+  - pkg:generic/p-net
   cpe: cpe:2.3:a:rt-labs:p-net:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2025-32396

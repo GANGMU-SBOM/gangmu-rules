@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/lldpd
   - pkg:deb/ubuntu/lldpd
   - pkg:apk/alpine/lldpd
+  - pkg:generic/lldpd
   homepage: https://github.com/lldpd/lldpd
   license: ISC
   source:

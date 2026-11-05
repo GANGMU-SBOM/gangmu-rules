@@ -7,6 +7,10 @@ component:
 upstream:
   name: aria2
   purl: pkg:github/aria2/aria2
+  identifiers:
+  - pkg:deb/debian/aria2
+  - pkg:deb/ubuntu/aria2
+  - pkg:generic/aria2
   homepage: https://github.com/aria2/aria2
   license: GPL-2.0-or-later
   source:

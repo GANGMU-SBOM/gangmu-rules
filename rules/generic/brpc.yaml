@@ -7,6 +7,8 @@ component:
 upstream:
   name: brpc
   purl: pkg:github/apache/brpc
+  identifiers:
+  - pkg:generic/brpc
   homepage: https://github.com/apache/brpc
   license: Apache-2.0
   source:

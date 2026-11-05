@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/mupdf
   - pkg:deb/ubuntu/mupdf
+  - pkg:generic/mupdf
   homepage: https://github.com/ArtifexSoftware/mupdf
   license: AGPL-3.0-or-later
   source:

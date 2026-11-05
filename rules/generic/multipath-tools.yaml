@@ -7,6 +7,10 @@ component:
 upstream:
   name: multipath-tools
   purl: pkg:github/opensvc/multipath-tools
+  identifiers:
+  - pkg:deb/debian/multipath-tools
+  - pkg:deb/ubuntu/multipath-tools
+  - pkg:generic/multipath-tools
   homepage: https://github.com/opensvc/multipath-tools
   license: GPL-2.0-only
   source:

@@ -11,6 +11,10 @@ component:
 upstream:
   name: LibTomCrypt
   purl: pkg:github/libtom/libtomcrypt
+  identifiers:
+  - pkg:deb/debian/libtomcrypt
+  - pkg:deb/ubuntu/libtomcrypt
+  - pkg:generic/libtomcrypt
   cpe: cpe:2.3:a:libtom:libtomcrypt:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2016-6129

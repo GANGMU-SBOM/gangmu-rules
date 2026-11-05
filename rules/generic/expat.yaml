@@ -15,6 +15,7 @@ upstream:
   - pkg:deb/debian/expat
   - pkg:deb/ubuntu/expat
   - pkg:apk/alpine/expat
+  - pkg:generic/expat
   cpe: cpe:2.3:a:libexpat_project:libexpat:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2009-3720

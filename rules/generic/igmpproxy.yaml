@@ -7,6 +7,8 @@ component:
 upstream:
   name: igmpproxy
   purl: pkg:github/pali/igmpproxy
+  identifiers:
+  - pkg:generic/igmpproxy
   homepage: https://github.com/pali/igmpproxy
   license: GPL-2.0-or-later
   source:

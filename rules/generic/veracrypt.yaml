@@ -9,6 +9,8 @@ component:
 upstream:
   name: veracrypt
   purl: pkg:github/veracrypt/VeraCrypt
+  identifiers:
+  - pkg:generic/veracrypt
   homepage: https://github.com/veracrypt/VeraCrypt
   license: Apache-2.0 AND TrueCrypt-3.0
   source:

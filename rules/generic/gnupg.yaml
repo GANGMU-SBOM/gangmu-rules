@@ -7,6 +7,10 @@ component:
 upstream:
   name: gnupg
   purl: pkg:github/gpg/gnupg
+  identifiers:
+  - pkg:deb/debian/gnupg2
+  - pkg:deb/ubuntu/gnupg2
+  - pkg:generic/gnupg
   homepage: https://github.com/gpg/gnupg
   license: GPL-3.0-or-later
   source:

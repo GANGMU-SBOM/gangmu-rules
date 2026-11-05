@@ -7,6 +7,8 @@ component:
 upstream:
   name: qatlib
   purl: pkg:github/intel/qatlib
+  identifiers:
+  - pkg:generic/qatlib
   homepage: https://github.com/intel/qatlib
   license: BSD-3-Clause AND GPL-2.0-only
   source:

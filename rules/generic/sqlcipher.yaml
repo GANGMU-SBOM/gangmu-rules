@@ -7,6 +7,8 @@ component:
 upstream:
   name: sqlcipher
   purl: pkg:github/sqlcipher/sqlcipher
+  identifiers:
+  - pkg:generic/sqlcipher
   homepage: https://github.com/sqlcipher/sqlcipher
   license: BSD-3-Clause
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: basicstation
   purl: pkg:github/lorabasics/basicstation
+  identifiers:
+  - pkg:generic/basicstation
   homepage: https://github.com/lorabasics/basicstation
   license: BSD-3-Clause
   source:

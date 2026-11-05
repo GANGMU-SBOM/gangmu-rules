@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/tpm2-tss
   - pkg:deb/ubuntu/tpm2-tss
+  - pkg:generic/tpm2-tss
   homepage: https://github.com/tpm2-software/tpm2-tss
   license: BSD-2-Clause
   source:

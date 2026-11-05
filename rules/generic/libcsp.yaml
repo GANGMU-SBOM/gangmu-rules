@@ -10,6 +10,9 @@ component:
 upstream:
   name: libcsp (Cubesat Space Protocol)
   purl: pkg:github/libcsp/libcsp
+  identifiers:
+  - pkg:deb/ubuntu/libcsp
+  - pkg:generic/libcsp
   cpe: cpe:2.3:a:libcsp:libcsp:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2016-8596

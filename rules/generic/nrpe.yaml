@@ -7,6 +7,9 @@ component:
 upstream:
   name: nrpe
   purl: pkg:github/NagiosEnterprises/nrpe
+  identifiers:
+  - pkg:apk/alpine/nrpe
+  - pkg:generic/nrpe
   homepage: https://github.com/NagiosEnterprises/nrpe
   license: GPL-2.0-or-later
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: libhv
   purl: pkg:github/ithewei/libhv
+  identifiers:
+  - pkg:generic/libhv
   homepage: https://github.com/ithewei/libhv
   license: BSD-3-Clause
   source:

@@ -13,6 +13,7 @@ upstream:
   - pkg:deb/ubuntu/dhcpcd5
   - pkg:deb/ubuntu/dhcpcd
   - pkg:apk/alpine/dhcpcd
+  - pkg:generic/dhcpcd
   homepage: https://github.com/NetworkConfiguration/dhcpcd
   license: BSD-2-Clause
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: libsrtp
   purl: pkg:github/cisco/libsrtp
+  identifiers:
+  - pkg:generic/libsrtp
   supplier: Cisco Systems
   homepage: https://github.com/cisco/libsrtp
   license: BSD-3-Clause

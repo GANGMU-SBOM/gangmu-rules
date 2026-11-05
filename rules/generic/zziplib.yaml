@@ -7,6 +7,11 @@ component:
 upstream:
   name: zziplib
   purl: pkg:github/gdraheim/zziplib
+  identifiers:
+  - pkg:deb/debian/zziplib
+  - pkg:deb/ubuntu/zziplib
+  - pkg:apk/alpine/zziplib
+  - pkg:generic/zziplib
   homepage: https://github.com/gdraheim/zziplib
   license: LGPL-2.0-or-later OR MPL-1.1
   source:

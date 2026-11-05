@@ -7,6 +7,10 @@ component:
 upstream:
   name: hiredis
   purl: pkg:github/redis/hiredis
+  identifiers:
+  - pkg:deb/debian/hiredis
+  - pkg:deb/ubuntu/hiredis
+  - pkg:generic/hiredis
   homepage: https://github.com/redis/hiredis
   license: BSD-3-Clause
   source:

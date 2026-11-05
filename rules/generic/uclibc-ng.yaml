@@ -7,6 +7,9 @@ component:
 upstream:
   name: uclibc-ng
   purl: pkg:github/wbx-github/uclibc-ng
+  identifiers:
+  - pkg:deb/debian/uclibc
+  - pkg:generic/uclibc-ng
   homepage: https://github.com/wbx-github/uclibc-ng
   license: LGPL-2.1-or-later
   source:

@@ -13,6 +13,7 @@ upstream:
   - pkg:deb/debian/libraw
   - pkg:deb/ubuntu/libraw
   - pkg:apk/alpine/libraw
+  - pkg:generic/libraw
   homepage: https://github.com/LibRaw/LibRaw
   license: LGPL-2.1-only OR CDDL-1.0
   source:

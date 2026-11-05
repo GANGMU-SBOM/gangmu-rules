@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/util-linux
   - pkg:deb/ubuntu/util-linux
   - pkg:apk/alpine/util-linux
+  - pkg:generic/util-linux
   homepage: https://github.com/util-linux/util-linux
   license: GPL-2.0-or-later
   source:
