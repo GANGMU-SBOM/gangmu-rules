@@ -7,6 +7,11 @@ component:
 upstream:
   name: zbar
   purl: pkg:github/mchehab/zbar
+  identifiers:
+  - pkg:deb/debian/zbar
+  - pkg:deb/ubuntu/zbar
+  - pkg:apk/alpine/zbar
+  - pkg:generic/zbar
   homepage: https://github.com/mchehab/zbar
   license: LGPL-2.1-or-later
   source:

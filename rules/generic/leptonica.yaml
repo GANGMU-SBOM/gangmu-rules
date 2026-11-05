@@ -7,6 +7,8 @@ component:
 upstream:
   name: leptonica
   purl: pkg:github/DanBloomberg/leptonica
+  identifiers:
+  - pkg:generic/leptonica
   homepage: https://github.com/DanBloomberg/leptonica
   license: BSD-2-Clause
   source:

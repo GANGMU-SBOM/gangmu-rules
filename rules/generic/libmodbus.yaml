@@ -14,6 +14,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libmodbus
   - pkg:deb/ubuntu/libmodbus
+  - pkg:generic/libmodbus
   cpe: cpe:2.3:a:libmodbus:libmodbus:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2019-14462

@@ -7,6 +7,8 @@ component:
 upstream:
   name: jsmn
   purl: pkg:github/zserge/jsmn
+  identifiers:
+  - pkg:generic/jsmn
   cpe_status: 'none-in-nvd: no CPE exists in the NVD CPE dictionary (keyword search, read 2026-10-21); CVE-2026-88369 and CVE-2026-95117 cite zserge/jsmn commit 25647e6 but carry no CPE configuration.'
   homepage: https://github.com/zserge/jsmn
   license: MIT

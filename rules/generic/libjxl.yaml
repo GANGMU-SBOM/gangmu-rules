@@ -7,6 +7,8 @@ component:
 upstream:
   name: libjxl
   purl: pkg:github/libjxl/libjxl
+  identifiers:
+  - pkg:generic/libjxl
   homepage: https://github.com/libjxl/libjxl
   license: BSD-3-Clause
   source:

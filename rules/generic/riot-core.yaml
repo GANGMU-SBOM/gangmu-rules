@@ -11,6 +11,8 @@ component:
 upstream:
   name: RIOT OS core
   purl: pkg:github/RIOT-OS/RIOT
+  identifiers:
+  - pkg:generic/riot-core
   cpe: cpe:2.3:o:riot-os:riot:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:riot_project:riot:*:*:*:*:*:*:*:*

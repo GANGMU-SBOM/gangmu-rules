@@ -12,6 +12,7 @@ upstream:
   - pkg:deb/debian/openssl
   - pkg:deb/ubuntu/openssl
   - pkg:apk/alpine/openssl
+  - pkg:generic/openssl
   cpe: cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*
   supplier: OpenSSL Foundation and OpenSSL Corporation
   homepage: https://www.openssl.org/

@@ -7,6 +7,10 @@ component:
 upstream:
   name: miniaudio
   purl: pkg:github/mackron/miniaudio
+  identifiers:
+  - pkg:deb/debian/miniaudio
+  - pkg:deb/ubuntu/miniaudio
+  - pkg:generic/miniaudio
   homepage: https://github.com/mackron/miniaudio
   license: Unlicense OR MIT-0
   source:

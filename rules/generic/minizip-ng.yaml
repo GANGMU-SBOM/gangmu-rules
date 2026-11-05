@@ -7,6 +7,8 @@ component:
 upstream:
   name: minizip-ng
   purl: pkg:github/zlib-ng/minizip-ng
+  identifiers:
+  - pkg:generic/minizip-ng
   homepage: https://github.com/zlib-ng/minizip-ng
   license: Zlib
   source:

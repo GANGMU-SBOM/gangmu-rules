@@ -7,6 +7,8 @@ component:
 upstream:
   name: ulfius
   purl: pkg:github/babelouest/ulfius
+  identifiers:
+  - pkg:generic/ulfius
   homepage: https://github.com/babelouest/ulfius
   license: LGPL-2.1-or-later
   source:

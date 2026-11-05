@@ -13,6 +13,7 @@ upstream:
   - pkg:deb/debian/opensc
   - pkg:deb/ubuntu/opensc
   - pkg:apk/alpine/opensc
+  - pkg:generic/opensc
   homepage: https://github.com/OpenSC/OpenSC
   license: LGPL-2.1-or-later
   source:

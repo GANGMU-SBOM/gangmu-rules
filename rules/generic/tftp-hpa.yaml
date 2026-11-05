@@ -9,6 +9,7 @@ upstream:
   purl: pkg:generic/tftp-hpa
   identifiers:
   - pkg:deb/debian/tftp-hpa
+  - pkg:generic/git.kernel.org/pub/scm/network/tftp/tftp-hpa
   cpe: cpe:2.3:a:h_peter_anvin:tftp-hpa:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2011-2199

@@ -12,6 +12,7 @@ upstream:
   - pkg:deb/debian/glib2.0
   - pkg:deb/ubuntu/glib2.0
   - pkg:apk/alpine/glib
+  - pkg:generic/glib
   homepage: https://github.com/GNOME/glib
   license: LGPL-2.1-or-later
   source:

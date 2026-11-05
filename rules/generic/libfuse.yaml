@@ -7,6 +7,8 @@ component:
 upstream:
   name: libfuse
   purl: pkg:github/libfuse/libfuse
+  identifiers:
+  - pkg:generic/libfuse
   homepage: https://github.com/libfuse/libfuse
   license: LGPL-2.1-only
   source:

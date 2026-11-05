@@ -12,6 +12,8 @@ component:
 upstream:
   name: Contiki-NG operating system
   purl: pkg:github/contiki-ng/contiki-ng
+  identifiers:
+  - pkg:generic/contiki-ng
   cpe: cpe:2.3:a:contiki-ng:contiki-ng:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2018-19417

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libcupsfilters
   - pkg:deb/ubuntu/libcupsfilters
+  - pkg:generic/libcupsfilters
   homepage: https://github.com/OpenPrinting/libcupsfilters
   license: Apache-2.0
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: belle-sip
   purl: pkg:github/BelledonneCommunications/belle-sip
+  identifiers:
+  - pkg:generic/belle-sip
   homepage: https://github.com/BelledonneCommunications/belle-sip
   license: GPL-3.0-or-later
   source:

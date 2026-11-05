@@ -7,6 +7,11 @@ component:
 upstream:
   name: apr-util
   purl: pkg:github/apache/apr-util
+  identifiers:
+  - pkg:deb/debian/apr-util
+  - pkg:deb/ubuntu/apr-util
+  - pkg:apk/alpine/apr-util
+  - pkg:generic/apr-util
   homepage: https://github.com/apache/apr-util
   license: Apache-2.0
   source:

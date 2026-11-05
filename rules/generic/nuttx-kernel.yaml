@@ -11,6 +11,8 @@ component:
 upstream:
   name: Apache NuttX RTOS kernel
   purl: pkg:github/apache/nuttx
+  identifiers:
+  - pkg:generic/nuttx-kernel
   cpe: cpe:2.3:a:apache:nuttx:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2020-17528

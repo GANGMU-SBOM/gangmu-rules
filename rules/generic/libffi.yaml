@@ -11,6 +11,8 @@ component:
 upstream:
   name: libffi
   purl: pkg:github/libffi/libffi
+  identifiers:
+  - pkg:generic/libffi
   cpe: cpe:2.3:a:libffi_project:libffi:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on CVE-2017-1000376 only.
   cpe_evidence:

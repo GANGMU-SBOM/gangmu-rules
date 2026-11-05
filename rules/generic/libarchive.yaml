@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/libarchive
   - pkg:deb/ubuntu/libarchive
   - pkg:apk/alpine/libarchive
+  - pkg:generic/libarchive
   homepage: https://github.com/libarchive/libarchive
   license: BSD-2-Clause
   source:

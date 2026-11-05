@@ -9,6 +9,8 @@ component:
 upstream:
   name: matter-src
   purl: pkg:github/project-chip/connectedhomeip
+  identifiers:
+  - pkg:generic/matter-src
   homepage: https://github.com/project-chip/connectedhomeip
   license: Apache-2.0
   source:

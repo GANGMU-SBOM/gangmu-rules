@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/valkey
   - pkg:deb/ubuntu/valkey
   - pkg:apk/alpine/valkey
+  - pkg:generic/valkey
   homepage: https://github.com/valkey-io/valkey
   license: BSD-3-Clause
   source:

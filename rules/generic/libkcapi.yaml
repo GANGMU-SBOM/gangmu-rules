@@ -7,6 +7,11 @@ component:
 upstream:
   name: libkcapi
   purl: pkg:github/smuellerDD/libkcapi
+  identifiers:
+  - pkg:deb/debian/libkcapi
+  - pkg:deb/ubuntu/libkcapi
+  - pkg:apk/alpine/libkcapi
+  - pkg:generic/libkcapi
   homepage: https://github.com/smuellerDD/libkcapi
   license: BSD-3-Clause OR GPL-2.0-only
   source:

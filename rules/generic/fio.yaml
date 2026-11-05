@@ -7,6 +7,9 @@ component:
 upstream:
   name: fio
   purl: pkg:github/axboe/fio
+  identifiers:
+  - pkg:deb/debian/fio
+  - pkg:deb/ubuntu/fio
   homepage: https://github.com/axboe/fio
   license: GPL-2.0-only
   source:

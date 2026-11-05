@@ -12,6 +12,8 @@ component:
 upstream:
   name: micro-ecc
   purl: pkg:github/kmackay/micro-ecc
+  identifiers:
+  - pkg:generic/micro-ecc
   cpe: cpe:2.3:a:micro-ecc_project:micro-ecc:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2020-27209

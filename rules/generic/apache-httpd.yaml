@@ -9,6 +9,8 @@ component:
 upstream:
   name: apache-httpd
   purl: pkg:github/apache/httpd
+  identifiers:
+  - pkg:generic/apache-httpd
   homepage: https://github.com/apache/httpd
   license: Apache-2.0
   source:

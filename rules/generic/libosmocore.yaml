@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libosmocore
   - pkg:deb/ubuntu/libosmocore
+  - pkg:generic/libosmocore
   homepage: https://github.com/osmocom/libosmocore
   license: GPL-2.0-or-later
   source:

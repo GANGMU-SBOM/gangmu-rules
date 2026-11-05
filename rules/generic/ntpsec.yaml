@@ -7,6 +7,11 @@ component:
 upstream:
   name: ntpsec
   purl: pkg:github/ntpsec/ntpsec
+  identifiers:
+  - pkg:deb/debian/ntpsec
+  - pkg:deb/ubuntu/ntpsec
+  - pkg:apk/alpine/ntpsec
+  - pkg:generic/ntpsec
   homepage: https://github.com/ntpsec/ntpsec
   license: BSD-2-Clause
   source:

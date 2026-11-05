@@ -10,6 +10,8 @@ component:
 upstream:
   name: Mongoose
   purl: pkg:github/cesanta/mongoose
+  identifiers:
+  - pkg:generic/mongoose
   cpe: cpe:2.3:a:cesanta:mongoose:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:cesanta:mongoose_embedded_web_server_library:*:*:*:*:*:*:*:*

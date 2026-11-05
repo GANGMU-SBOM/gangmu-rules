@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/dropbear
   - pkg:deb/ubuntu/dropbear
   - pkg:apk/alpine/dropbear
+  - pkg:generic/dropbear
   cpe: cpe:2.3:a:dropbear_ssh_project:dropbear_ssh:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2004-2486

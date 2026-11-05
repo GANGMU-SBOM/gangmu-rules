@@ -13,6 +13,7 @@ upstream:
   - pkg:deb/ubuntu/libcoap2
   - pkg:deb/ubuntu/libcoap3
   - pkg:deb/ubuntu/libcoap
+  - pkg:generic/libcoap
   supplier: Olaf Bergmann and libcoap contributors
   homepage: https://libcoap.net/
   license: BSD-2-Clause

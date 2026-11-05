@@ -10,6 +10,8 @@ component:
 upstream:
   name: FreeRTOS-Kernel
   purl: pkg:github/freertos/freertos-kernel
+  identifiers:
+  - pkg:generic/freertos-kernel
   cpe: cpe:2.3:o:amazon:freertos:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2021-31571

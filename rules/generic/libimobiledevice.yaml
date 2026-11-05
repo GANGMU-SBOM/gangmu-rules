@@ -7,6 +7,8 @@ component:
 upstream:
   name: libimobiledevice
   purl: pkg:github/libimobiledevice/libimobiledevice
+  identifiers:
+  - pkg:generic/libimobiledevice
   homepage: https://github.com/libimobiledevice/libimobiledevice
   license: LGPL-2.1-or-later
   source:

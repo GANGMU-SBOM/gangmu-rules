@@ -7,6 +7,8 @@ component:
 upstream:
   name: libzmq
   purl: pkg:github/zeromq/libzmq
+  identifiers:
+  - pkg:generic/libzmq
   homepage: https://github.com/zeromq/libzmq
   license: MPL-2.0
   source:

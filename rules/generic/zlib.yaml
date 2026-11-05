@@ -15,6 +15,7 @@ upstream:
   - pkg:deb/debian/zlib
   - pkg:deb/ubuntu/zlib
   - pkg:apk/alpine/zlib
+  - pkg:generic/zlib
   cpe: cpe:2.3:a:zlib:zlib:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2002-0059

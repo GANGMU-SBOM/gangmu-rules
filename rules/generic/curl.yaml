@@ -16,6 +16,7 @@ upstream:
   - pkg:deb/debian/curl
   - pkg:deb/ubuntu/curl
   - pkg:apk/alpine/curl
+  - pkg:generic/curl
   cpe: cpe:2.3:a:haxx:curl:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:curl:curl:*:*:*:*:*:*:*:*

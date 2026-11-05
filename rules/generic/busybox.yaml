@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/busybox
   - pkg:deb/ubuntu/busybox
   - pkg:apk/alpine/busybox
+  - pkg:generic/busybox
   homepage: https://github.com/mirror/busybox
   license: GPL-2.0-only
   source:

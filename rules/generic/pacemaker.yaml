@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/pacemaker
   - pkg:deb/ubuntu/pacemaker
+  - pkg:generic/pacemaker
   homepage: https://github.com/ClusterLabs/pacemaker
   license: GPL-2.0-or-later
   source:

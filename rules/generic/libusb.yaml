@@ -11,6 +11,10 @@ component:
 upstream:
   name: libusb
   purl: pkg:github/libusb/libusb
+  identifiers:
+  - pkg:deb/debian/libusb-1.0
+  - pkg:deb/ubuntu/libusb
+  - pkg:generic/libusb
   cpe: cpe:2.3:a:libusb:libusb:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on two CVEs.
   cpe_evidence:

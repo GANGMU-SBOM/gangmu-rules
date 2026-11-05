@@ -12,6 +12,7 @@ upstream:
   - pkg:deb/ubuntu/libgcrypt20
   - pkg:deb/ubuntu/libgcrypt11
   - pkg:apk/alpine/libgcrypt
+  - pkg:generic/libgcrypt
   homepage: https://github.com/gpg/libgcrypt
   license: LGPL-2.1-or-later
   source:

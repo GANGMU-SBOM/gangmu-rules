@@ -11,6 +11,10 @@ component:
 upstream:
   name: Jansson
   purl: pkg:github/akheron/jansson
+  identifiers:
+  - pkg:deb/debian/jansson
+  - pkg:deb/ubuntu/jansson
+  - pkg:generic/jansson
   cpe: cpe:2.3:a:jansson_project:jansson:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2013-6401

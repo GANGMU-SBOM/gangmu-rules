@@ -11,6 +11,8 @@ component:
 upstream:
   name: FreeRTOS-Plus-TCP
   purl: pkg:github/FreeRTOS/FreeRTOS-Plus-TCP
+  identifiers:
+  - pkg:generic/freertos-plus-tcp
   cpe: cpe:2.3:a:amazon:freertos-plus-tcp:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2024-38373

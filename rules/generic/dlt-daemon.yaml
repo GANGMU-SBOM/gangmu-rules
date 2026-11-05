@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/dlt-daemon
   - pkg:deb/ubuntu/dlt-daemon
+  - pkg:generic/dlt-daemon
   homepage: https://github.com/COVESA/dlt-daemon
   license: MPL-2.0
   source:

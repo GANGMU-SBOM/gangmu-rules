@@ -7,6 +7,8 @@ component:
 upstream:
   name: kvazaar
   purl: pkg:github/ultravideo/kvazaar
+  identifiers:
+  - pkg:generic/kvazaar
   homepage: https://github.com/ultravideo/kvazaar
   license: BSD-3-Clause
   source:

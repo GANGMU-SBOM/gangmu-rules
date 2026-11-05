@@ -7,6 +7,10 @@ component:
 upstream:
   name: wabt
   purl: pkg:github/WebAssembly/wabt
+  identifiers:
+  - pkg:deb/debian/wabt
+  - pkg:deb/ubuntu/wabt
+  - pkg:generic/wabt
   homepage: https://github.com/WebAssembly/wabt
   license: Apache-2.0
   source:

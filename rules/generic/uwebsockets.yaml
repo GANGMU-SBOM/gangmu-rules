@@ -9,6 +9,8 @@ component:
 upstream:
   name: uwebsockets
   purl: pkg:github/uNetworking/uWebSockets
+  identifiers:
+  - pkg:generic/uwebsockets
   homepage: https://github.com/uNetworking/uWebSockets
   license: Apache-2.0
   source:

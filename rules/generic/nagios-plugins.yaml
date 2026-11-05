@@ -7,6 +7,8 @@ component:
 upstream:
   name: nagios-plugins
   purl: pkg:github/nagios-plugins/nagios-plugins
+  identifiers:
+  - pkg:generic/nagios-plugins
   homepage: https://github.com/nagios-plugins/nagios-plugins
   license: GPL-3.0-or-later
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: lua-nginx-module
   purl: pkg:github/openresty/lua-nginx-module
+  identifiers:
+  - pkg:generic/lua-nginx-module
   homepage: https://github.com/openresty/lua-nginx-module
   license: BSD-2-Clause
   source:

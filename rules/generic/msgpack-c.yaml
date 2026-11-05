@@ -11,6 +11,8 @@ component:
 upstream:
   name: msgpack-c (MessagePack for C)
   purl: pkg:github/msgpack/msgpack-c
+  identifiers:
+  - pkg:generic/msgpack-c
   cpe_status: 'none-in-nvd: no record in an NVD mirror (fkie-cad feeds, CVE years 2010 to 2026, read 2026-10-17 with gangmu rules cpe-evidence, and a search by product name) cites github.com/msgpack/msgpack-c or names it.'
   supplier: Sadayuki Furuhashi and the msgpack-c contributors
   homepage: https://msgpack.org/

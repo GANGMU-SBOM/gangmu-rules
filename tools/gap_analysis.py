@@ -40,19 +40,33 @@ HOSTS = {"github.com": "github", "gitlab.com": "gitlab", "bitbucket.org": "bitbu
 URL_RE = re.compile(r"^(?:https?|git|ssh)://(?:[^@/]+@)?(?:www\.)?([^/:]+)(?::\d+)?/(.+?)(?:\.git)?/*$", re.I)
 
 
+GENERIC_HOSTS = ("gitee.com", "gitcode.com", "atomgit.com")
+MIRRORED_OWNERS = {("github.com", "openharmony")}
+
+
 def repo_key(url):
-    """URL -> ``pkg:github/o/r`` or ``pkg:generic/host/path`` (lower-case)."""
+    """URL -> the purl key gangmu files an OSV GIT range under (gangmu.vuln.match.
+    purl_from_repo): ``pkg:github/o/r``; ``pkg:generic/o/r`` for Gitee, GitCode, AtomGit and
+    the openharmony GitHub mirror; ``pkg:gitlab/<group>/.../<project>``; and
+    ``pkg:generic/<host>/<path>`` for any other host."""
     m = URL_RE.match((url or "").strip())
     if not m:
         return None
     host, path = m.group(1).lower(), m.group(2).strip("/")
-    kind = HOSTS.get(host)
-    if kind:
-        parts = path.split("/")
-        if len(parts) < 2:
-            return None
-        return f"pkg:{kind}/{parts[0]}/{parts[1]}".lower()
-    return f"pkg:generic/{host}/{path}".lower()
+    parts = [p for p in path.split("/") if p]
+    if not parts:
+        return None
+    if len(parts) == 2:
+        owner, repo = parts
+        if host in GENERIC_HOSTS or (host, owner.lower()) in MIRRORED_OWNERS:
+            return f"pkg:generic/{owner}/{repo}".lower()
+        if host in HOSTS:
+            return f"pkg:{HOSTS[host]}/{owner}/{repo}".lower()
+    elif host in HOSTS or host in GENERIC_HOSTS:
+        if host == "gitlab.com" and len(parts) > 2:
+            return f"pkg:gitlab/{'/'.join(parts)}".lower()
+        return None
+    return f"pkg:generic/{host}/{'/'.join(parts)}".lower()
 
 
 def purl_key(purl):
@@ -98,10 +112,34 @@ def load_rule_meta(rules_dir):
         if up.get("purl"):
             names = {str(doc["id"]).rsplit("/", 1)[-1], (doc.get("component") or {}).get("ships_as"),
                      up.get("name"), str(up["purl"]).split("@")[0].rsplit("/", 1)[-1]}
+            idents = list(up.get("identifiers") or [])
+            own_names = {str(doc["id"]).rsplit("/", 1)[-1].lower(),
+                         str((doc.get("component") or {}).get("ships_as") or "").lower()} - {""}
+            raw = {str(n).lower() for n in names if n}
+            raw |= {str(i).split("?")[0].rstrip("/").rsplit("/", 1)[-1].lower() for i in idents}
             meta[doc["id"]] = {"purl": up["purl"], "path": str(path),
                                "names": {norm_name(n) for n in names if n},
-                               "identifiers": list(up.get("identifiers") or [])}
+                               "raw_names": raw,
+                               "own_names": own_names,
+                               "identifiers": idents}
     return meta
+
+
+# Names too common to stand for one project in a pkg:generic/<name> purl.
+GENERIC_STOP = frozenset("""core common util utils tool tools base test tests sdk lib libs file
+files app apps main driver drivers kernel system components component hal bsp os src
+source module modules plugin plugins server client library firmware boot loader
+crypto network net http json xml image audio video portable zephyr opener neuron onion
+shadow tang jose janet ninja transmission marlin arduino nimble httpd guix unicorn mpack""".split())
+
+
+def name_owners(rule_meta):
+    """normalised name -> the rule ids that go by it, over the whole rule base."""
+    owners = defaultdict(set)
+    for rid, m in rule_meta.items():
+        for n in m["raw_names"]:
+            owners[norm_name(n)].add(rid)
+    return owners
 
 
 def norm_name(text):
@@ -198,6 +236,7 @@ def alias_candidates(rows, deb_like, rule_meta, rule_keys):
     its name matches a name the rule goes by, ``review`` otherwise.
     """
     by_id = {rid: m for rid, m in rule_meta.items()}
+    owners = name_owners(rule_meta)
     result = []
     for x in rows:
         rid = x["covered_by"]
@@ -226,6 +265,35 @@ def alias_candidates(rows, deb_like, rule_meta, rule_keys):
                 confidence = "name" if same_name and n * 10 >= x["cves"] * 3 else "review"
                 proposals.append({"purl": purl, "shared_cves": n, "of": x["cves"],
                                   "confidence": confidence})
+        own = purl_key(meta["purl"])
+        taken = have | {own} | {p["purl"].lower() for p in proposals}
+        # The repository OSV files this upstream under, when gangmu keys it as
+        # pkg:generic/<host>/<path> (kernel.org, savannah, sourceware ...): the same
+        # repository the rule cites, or a mirror of it by shared CVEs.
+        for key in [x["purl"], *x.get("mirrors", [])]:
+            if key.startswith("pkg:generic/") and "." in key.split("/")[1] and key not in taken:
+                proposals.append({"purl": key, "shared_cves": x["cves"], "of": x["cves"],
+                                  "confidence": "name", "kind": "repository"})
+                taken.add(key)
+        # pkg:generic/<name>: what SBOM tools write for a component they cannot place.
+        # Applied only where nothing else in the rule base goes by that name.
+        bases = {k.rsplit("/", 1)[-1] for k in [x["purl"], *x.get("mirrors", [])]}
+        bases |= {str(rid).rsplit("/", 1)[-1].lower()}
+        for base in sorted(bases):
+            purl = f"pkg:generic/{base}"
+            if purl in taken:
+                continue
+            unique = owners.get(norm_name(base), {rid}) <= {rid}
+            # The rule's own name (id or ships_as), not only its repository's: LibreSSL's
+            # repository is libressl/portable, and pkg:generic/portable is not LibreSSL.
+            own = norm_name(base) in {norm_name(n) for n in meta["own_names"]}
+            ok = unique and own and len(base) >= 4 and base not in GENERIC_STOP
+            proposals.append({"purl": purl, "shared_cves": x["cves"], "of": x["cves"],
+                              "confidence": "name" if ok else "review", "kind": "generic-name",
+                              **({} if ok else {"why": "not unique in the rule base" if not unique
+                                                else "not the rule's own name" if not own
+                                                else "too short or too common a name"})})
+            taken.add(purl)
         if proposals:
             result.append({"rule": rid, "file": meta["path"], "upstream": meta["purl"],
                            "existing": meta["identifiers"], "add": proposals})
@@ -274,9 +342,12 @@ def main():
 
     rows = []
     for key, r in repos.items():
-        if r["c_sigs"] == 0 or len(r["cves"]) < a.min_cves:
-            continue
         rule = rule_keys.get(key)
+        # A rule exists for it: its aliases matter whatever the language filter or the
+        # CVE count says (tftp-hpa has one GIT record). Only when building aliases.
+        keep_for_alias = bool(rule) and bool(a.alias_candidates or a.alias_md)
+        if (r["c_sigs"] == 0 or len(r["cves"]) < a.min_cves) and not keep_for_alias:
+            continue
         base = key.rsplit("/", 1)[-1]
         by_name = rule_names.get(norm_name(base))
         pk = sorted(deb.get(key, {}).items(), key=lambda kv: -kv[1])

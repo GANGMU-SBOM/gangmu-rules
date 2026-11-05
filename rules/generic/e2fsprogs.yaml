@@ -7,6 +7,11 @@ component:
 upstream:
   name: e2fsprogs
   purl: pkg:github/tytso/e2fsprogs
+  identifiers:
+  - pkg:deb/debian/e2fsprogs
+  - pkg:deb/ubuntu/e2fsprogs
+  - pkg:apk/alpine/e2fsprogs
+  - pkg:generic/e2fsprogs
   homepage: https://github.com/tytso/e2fsprogs
   license: GPL-2.0-only
   source:

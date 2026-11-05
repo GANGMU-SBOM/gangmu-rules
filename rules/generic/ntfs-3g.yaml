@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/ntfs-3g
   - pkg:deb/ubuntu/ntfs-3g
+  - pkg:generic/ntfs-3g
   homepage: https://github.com/tuxera/ntfs-3g
   license: GPL-2.0-or-later
   source:

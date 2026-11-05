@@ -11,6 +11,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libwebsockets
   - pkg:deb/ubuntu/libwebsockets
+  - pkg:generic/libwebsockets
   supplier: Andy Green and libwebsockets contributors
   homepage: https://libwebsockets.org/
   license: MIT

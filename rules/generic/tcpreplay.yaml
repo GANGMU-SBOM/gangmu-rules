@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/tcpreplay
   - pkg:deb/ubuntu/tcpreplay
+  - pkg:generic/tcpreplay
   homepage: https://github.com/appneta/tcpreplay
   license: GPL-3.0-or-later
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/libsndfile
   - pkg:deb/ubuntu/libsndfile
   - pkg:apk/alpine/libsndfile
+  - pkg:generic/libsndfile
   homepage: https://github.com/libsndfile/libsndfile
   license: LGPL-2.1-or-later
   source:

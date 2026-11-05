@@ -7,6 +7,11 @@ component:
 upstream:
   name: yaml-cpp
   purl: pkg:github/jbeder/yaml-cpp
+  identifiers:
+  - pkg:deb/debian/yaml-cpp
+  - pkg:deb/ubuntu/yaml-cpp0.3
+  - pkg:deb/ubuntu/yaml-cpp
+  - pkg:generic/yaml-cpp
   homepage: https://github.com/jbeder/yaml-cpp
   license: MIT
   source:

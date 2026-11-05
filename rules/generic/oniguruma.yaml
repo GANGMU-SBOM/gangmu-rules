@@ -7,6 +7,8 @@ component:
 upstream:
   name: oniguruma
   purl: pkg:github/kkos/oniguruma
+  identifiers:
+  - pkg:generic/oniguruma
   homepage: https://github.com/kkos/oniguruma
   license: BSD-2-Clause
   source:

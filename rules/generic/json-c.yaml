@@ -11,6 +11,10 @@ component:
 upstream:
   name: json-c
   purl: pkg:github/json-c/json-c
+  identifiers:
+  - pkg:deb/debian/json-c
+  - pkg:deb/ubuntu/json-c
+  - pkg:generic/json-c
   cpe: cpe:2.3:a:json-c:json-c:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on four CVEs.
   cpe_evidence:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: avro-c
   purl: pkg:github/apache/avro
+  identifiers:
+  - pkg:generic/avro-c
   homepage: https://github.com/apache/avro
   license: Apache-2.0
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: thrift
   purl: pkg:github/apache/thrift
+  identifiers:
+  - pkg:deb/debian/thrift
+  - pkg:deb/ubuntu/thrift
+  - pkg:generic/thrift
   homepage: https://github.com/apache/thrift
   license: Apache-2.0
   source:

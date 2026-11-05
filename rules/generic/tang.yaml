@@ -7,6 +7,9 @@ component:
 upstream:
   name: tang
   purl: pkg:github/latchset/tang
+  identifiers:
+  - pkg:deb/debian/tang
+  - pkg:deb/ubuntu/tang
   homepage: https://github.com/latchset/tang
   license: GPL-3.0-or-later
   source:

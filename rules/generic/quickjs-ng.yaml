@@ -13,6 +13,7 @@ upstream:
   - pkg:deb/debian/quickjs
   - pkg:deb/ubuntu/quickjs
   - pkg:apk/alpine/quickjs-ng
+  - pkg:generic/quickjs-ng
   homepage: https://github.com/quickjs-ng/quickjs
   license: MIT
   source:

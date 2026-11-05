@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/cpp-httplib
   - pkg:deb/ubuntu/cpp-httplib
+  - pkg:generic/cpp-httplib
   homepage: https://github.com/yhirose/cpp-httplib
   license: MIT
   source:

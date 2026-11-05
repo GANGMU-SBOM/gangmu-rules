@@ -7,6 +7,11 @@ component:
 upstream:
   name: sshfs
   purl: pkg:github/libfuse/sshfs
+  identifiers:
+  - pkg:deb/debian/sshfs-fuse
+  - pkg:deb/ubuntu/sshfs-fuse
+  - pkg:apk/alpine/sshfs
+  - pkg:generic/sshfs
   homepage: https://github.com/libfuse/sshfs
   license: GPL-2.0-or-later
   source:

@@ -9,6 +9,8 @@ component:
 upstream:
   name: wazuh-src
   purl: pkg:github/wazuh/wazuh
+  identifiers:
+  - pkg:generic/wazuh-src
   homepage: https://github.com/wazuh/wazuh
   license: GPL-2.0-only
   source:

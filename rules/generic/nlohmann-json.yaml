@@ -9,6 +9,8 @@ component:
 upstream:
   name: nlohmann-json
   purl: pkg:github/nlohmann/json
+  identifiers:
+  - pkg:generic/nlohmann-json
   homepage: https://github.com/nlohmann/json
   license: MIT
   source:

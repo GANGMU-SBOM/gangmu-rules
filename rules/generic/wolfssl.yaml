@@ -10,6 +10,7 @@ upstream:
   - pkg:deb/debian/wolfssl
   - pkg:deb/ubuntu/wolfssl
   - pkg:apk/alpine/wolfssl
+  - pkg:generic/wolfssl
   supplier: wolfSSL Inc.
   homepage: https://www.wolfssl.com/
   license: GPL-2.0-or-later

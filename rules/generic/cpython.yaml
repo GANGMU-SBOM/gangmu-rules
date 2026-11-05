@@ -7,6 +7,8 @@ component:
 upstream:
   name: cpython
   purl: pkg:github/python/cpython
+  identifiers:
+  - pkg:generic/cpython
   homepage: https://github.com/python/cpython
   license: PSF-2.0
   source:

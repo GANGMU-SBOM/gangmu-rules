@@ -7,6 +7,10 @@ component:
 upstream:
   name: kissfft
   purl: pkg:github/mborgerding/kissfft
+  identifiers:
+  - pkg:deb/debian/kissfft
+  - pkg:deb/ubuntu/kissfft
+  - pkg:generic/kissfft
   homepage: https://github.com/mborgerding/kissfft
   license: BSD-3-Clause
   source:

@@ -11,6 +11,10 @@ component:
 upstream:
   name: FLAC (libFLAC)
   purl: pkg:github/xiph/flac
+  identifiers:
+  - pkg:deb/debian/flac
+  - pkg:deb/ubuntu/flac
+  - pkg:generic/flac
   cpe: cpe:2.3:a:flac_project:flac:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on two CVEs.
   cpe_evidence:

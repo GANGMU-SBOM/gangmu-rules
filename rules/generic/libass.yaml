@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/libass
   - pkg:deb/ubuntu/libass
   - pkg:apk/alpine/libass
+  - pkg:generic/libass
   homepage: https://github.com/libass/libass
   license: ISC
   source:

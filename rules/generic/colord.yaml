@@ -7,6 +7,8 @@ component:
 upstream:
   name: colord
   purl: pkg:github/hughsie/colord
+  identifiers:
+  - pkg:generic/colord
   homepage: https://github.com/hughsie/colord
   license: GPL-2.0-or-later AND LGPL-2.1-or-later
   source:

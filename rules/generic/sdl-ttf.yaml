@@ -9,6 +9,9 @@ component:
 upstream:
   name: sdl-ttf
   purl: pkg:github/libsdl-org/SDL_ttf
+  identifiers:
+  - pkg:generic/sdl-ttf
+  - pkg:generic/sdl_ttf
   homepage: https://github.com/libsdl-org/SDL_ttf
   license: Zlib
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: lsquic
   purl: pkg:github/litespeedtech/lsquic
+  identifiers:
+  - pkg:generic/lsquic
   homepage: https://github.com/litespeedtech/lsquic
   license: MIT
   source:

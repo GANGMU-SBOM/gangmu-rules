@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libtpms
   - pkg:deb/ubuntu/libtpms
+  - pkg:generic/libtpms
   homepage: https://github.com/stefanberger/libtpms
   license: BSD-3-Clause
   source:

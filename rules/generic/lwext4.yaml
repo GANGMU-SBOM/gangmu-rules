@@ -10,6 +10,8 @@ component:
 upstream:
   name: lwext4 (ext2, ext3 and ext4 library)
   purl: pkg:github/gkostka/lwext4
+  identifiers:
+  - pkg:generic/lwext4
   cpe: cpe:2.3:a:gkostka:lwext4:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2025-70100

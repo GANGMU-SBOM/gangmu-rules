@@ -7,6 +7,8 @@ component:
 upstream:
   name: unqlite
   purl: pkg:github/symisc/unqlite
+  identifiers:
+  - pkg:generic/unqlite
   homepage: https://github.com/symisc/unqlite
   license: BSD-2-Clause
   source:

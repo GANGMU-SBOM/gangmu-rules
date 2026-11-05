@@ -9,6 +9,7 @@ upstream:
   purl: pkg:github/linux-pam/linux-pam
   identifiers:
   - pkg:apk/alpine/linux-pam
+  - pkg:generic/linux-pam
   homepage: https://github.com/linux-pam/linux-pam
   license: BSD-3-Clause OR GPL-2.0-or-later
   source:

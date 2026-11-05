@@ -7,6 +7,8 @@ component:
 upstream:
   name: mariadb-connector-c
   purl: pkg:github/mariadb-corporation/mariadb-connector-c
+  identifiers:
+  - pkg:generic/mariadb-connector-c
   homepage: https://github.com/mariadb-corporation/mariadb-connector-c
   license: LGPL-2.1-or-later
   source:

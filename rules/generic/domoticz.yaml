@@ -7,6 +7,8 @@ component:
 upstream:
   name: domoticz
   purl: pkg:github/Domoticz/domoticz
+  identifiers:
+  - pkg:generic/domoticz
   homepage: https://github.com/Domoticz/domoticz
   license: GPL-3.0-or-later
   source:

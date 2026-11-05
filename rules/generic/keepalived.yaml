@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/keepalived
   - pkg:deb/ubuntu/keepalived
   - pkg:apk/alpine/keepalived
+  - pkg:generic/keepalived
   homepage: https://github.com/acassen/keepalived
   license: GPL-2.0-or-later
   source:

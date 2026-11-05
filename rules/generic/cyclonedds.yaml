@@ -7,6 +7,9 @@ component:
 upstream:
   name: cyclonedds
   purl: pkg:github/eclipse-cyclonedds/cyclonedds
+  identifiers:
+  - pkg:deb/ubuntu/cyclonedds
+  - pkg:generic/cyclonedds
   homepage: https://github.com/eclipse-cyclonedds/cyclonedds
   license: EPL-2.0 OR BSD-3-Clause
   source:

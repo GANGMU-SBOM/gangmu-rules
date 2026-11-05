@@ -7,6 +7,8 @@ component:
 upstream:
   name: nanomsg
   purl: pkg:github/nanomsg/nanomsg
+  identifiers:
+  - pkg:generic/nanomsg
   homepage: https://github.com/nanomsg/nanomsg
   license: MIT
   source:

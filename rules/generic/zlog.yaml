@@ -7,6 +7,8 @@ component:
 upstream:
   name: zlog
   purl: pkg:github/HardySimpson/zlog
+  identifiers:
+  - pkg:generic/zlog
   homepage: https://github.com/HardySimpson/zlog
   license: LGPL-2.1-or-later
   source:

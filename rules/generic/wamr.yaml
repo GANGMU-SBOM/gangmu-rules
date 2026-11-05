@@ -11,6 +11,8 @@ component:
 upstream:
   name: WebAssembly Micro Runtime (WAMR)
   purl: pkg:github/bytecodealliance/wasm-micro-runtime
+  identifiers:
+  - pkg:generic/wamr
   cpe: cpe:2.3:a:bytecodealliance:webassembly_micro_runtime:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2023-48105

@@ -7,6 +7,8 @@ component:
 upstream:
   name: jerryscript
   purl: pkg:github/jerryscript-project/jerryscript
+  identifiers:
+  - pkg:generic/jerryscript
   homepage: https://github.com/jerryscript-project/jerryscript
   license: Apache-2.0
   source:

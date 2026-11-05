@@ -8,6 +8,10 @@ component:
 upstream:
   name: LibYAML
   purl: pkg:github/yaml/libyaml
+  identifiers:
+  - pkg:deb/ubuntu/libyaml-libyaml-perl
+  - pkg:deb/ubuntu/libyaml
+  - pkg:generic/libyaml
   supplier: Ingy dot Net and LibYAML contributors
   homepage: https://pyyaml.org/wiki/LibYAML
   license: MIT

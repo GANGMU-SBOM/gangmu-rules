@@ -7,6 +7,8 @@ component:
 upstream:
   name: libuvc
   purl: pkg:github/libuvc/libuvc
+  identifiers:
+  - pkg:generic/libuvc
   homepage: https://github.com/libuvc/libuvc
   license: BSD-3-Clause
   source:

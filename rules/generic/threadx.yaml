@@ -11,6 +11,8 @@ component:
 upstream:
   name: Eclipse ThreadX (Azure RTOS ThreadX)
   purl: pkg:github/eclipse-threadx/threadx
+  identifiers:
+  - pkg:generic/threadx
   cpe: cpe:2.3:a:eclipse:threadx:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2024-2212

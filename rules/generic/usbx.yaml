@@ -10,6 +10,8 @@ component:
 upstream:
   name: Eclipse ThreadX USBX (Azure RTOS USBX)
   purl: pkg:github/eclipse-threadx/usbx
+  identifiers:
+  - pkg:generic/usbx
   cpe: cpe:2.3:a:eclipse:threadx_usbx:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2022-29223

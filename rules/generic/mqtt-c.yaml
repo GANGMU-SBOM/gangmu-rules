@@ -8,6 +8,8 @@ component:
 upstream:
   name: MQTT-C
   purl: pkg:github/liambindle/mqtt-c
+  identifiers:
+  - pkg:generic/mqtt-c
   supplier: Liam Bindle
   homepage: https://github.com/LiamBindle/MQTT-C
   license: MIT

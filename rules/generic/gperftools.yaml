@@ -7,6 +7,8 @@ component:
 upstream:
   name: gperftools
   purl: pkg:github/gperftools/gperftools
+  identifiers:
+  - pkg:generic/gperftools
   homepage: https://github.com/gperftools/gperftools
   license: BSD-3-Clause
   source:

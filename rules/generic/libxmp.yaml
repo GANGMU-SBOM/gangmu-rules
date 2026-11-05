@@ -7,6 +7,10 @@ component:
 upstream:
   name: libxmp
   purl: pkg:github/libxmp/libxmp
+  identifiers:
+  - pkg:deb/debian/libxmp
+  - pkg:deb/ubuntu/libxmp
+  - pkg:generic/libxmp
   homepage: https://github.com/libxmp/libxmp
   license: MIT
   source:

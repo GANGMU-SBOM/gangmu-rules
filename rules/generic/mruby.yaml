@@ -14,6 +14,7 @@ upstream:
   - pkg:deb/debian/mruby
   - pkg:deb/ubuntu/mruby
   - pkg:apk/alpine/mruby
+  - pkg:generic/mruby
   cpe: cpe:2.3:a:mruby:mruby:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on CVEs that cite github.com/mruby/mruby; four are listed.
   cpe_evidence:

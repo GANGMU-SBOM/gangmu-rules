@@ -7,6 +7,11 @@ component:
 upstream:
   name: luajit2
   purl: pkg:github/openresty/luajit2
+  identifiers:
+  - pkg:deb/debian/luajit
+  - pkg:deb/ubuntu/luajit
+  - pkg:apk/alpine/luajit
+  - pkg:generic/luajit2
   homepage: https://github.com/openresty/luajit2
   license: MIT
   source:

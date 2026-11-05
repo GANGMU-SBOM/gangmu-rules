@@ -9,6 +9,8 @@ component:
 upstream:
   name: ArduinoJson
   purl: pkg:github/bblanchon/ArduinoJson
+  identifiers:
+  - pkg:generic/arduinojson
   cpe_status: 'none-in-nvd: no CPE and no CVE mentioning ArduinoJson in NVD (CVE API keyword search, read 2026-10-21).'
   homepage: https://github.com/bblanchon/ArduinoJson
   license: MIT

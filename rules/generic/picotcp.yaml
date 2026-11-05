@@ -7,6 +7,8 @@ component:
 upstream:
   name: picotcp
   purl: pkg:github/tass-belgium/picotcp
+  identifiers:
+  - pkg:generic/picotcp
   homepage: https://github.com/tass-belgium/picotcp
   license: GPL-2.0-only
   source:

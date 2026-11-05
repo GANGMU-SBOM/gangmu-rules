@@ -11,6 +11,8 @@ upstream:
   - pkg:deb/debian/rsync
   - pkg:deb/ubuntu/rsync
   - pkg:apk/alpine/rsync
+  - pkg:generic/git.samba.org/rsync
+  - pkg:generic/rsync
   homepage: https://github.com/RsyncProject/rsync
   license: GPL-3.0-or-later
   source:

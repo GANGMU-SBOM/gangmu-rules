@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/memcached
   - pkg:deb/ubuntu/memcached
+  - pkg:generic/memcached
   homepage: https://github.com/memcached/memcached
   license: BSD-3-Clause
   source:

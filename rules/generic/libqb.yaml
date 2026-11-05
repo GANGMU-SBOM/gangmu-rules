@@ -7,6 +7,10 @@ component:
 upstream:
   name: libqb
   purl: pkg:github/ClusterLabs/libqb
+  identifiers:
+  - pkg:deb/debian/libqb
+  - pkg:deb/ubuntu/libqb
+  - pkg:generic/libqb
   homepage: https://github.com/ClusterLabs/libqb
   license: LGPL-2.1-or-later
   source:

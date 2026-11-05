@@ -7,6 +7,8 @@ component:
 upstream:
   name: snappy
   purl: pkg:github/google/snappy
+  identifiers:
+  - pkg:generic/snappy
   homepage: https://github.com/google/snappy
   license: BSD-3-Clause
   source:

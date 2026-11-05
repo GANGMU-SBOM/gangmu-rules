@@ -13,6 +13,7 @@ upstream:
   identifiers:
   - pkg:deb/ubuntu/libzip
   - pkg:apk/alpine/libzip
+  - pkg:generic/libzip
   cpe: cpe:2.3:a:libzip:libzip:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:nih:libzip:*:*:*:*:*:*:*:*

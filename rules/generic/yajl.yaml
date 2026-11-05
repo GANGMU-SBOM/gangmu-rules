@@ -7,6 +7,8 @@ component:
 upstream:
   name: yajl
   purl: pkg:github/lloyd/yajl
+  identifiers:
+  - pkg:generic/yajl
   homepage: https://github.com/lloyd/yajl
   license: ISC
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/sudo
   - pkg:deb/ubuntu/sudo
   - pkg:apk/alpine/sudo
+  - pkg:generic/sudo
   homepage: https://github.com/sudo-project/sudo
   license: ISC
   source:

@@ -7,6 +7,11 @@ component:
 upstream:
   name: p11-kit
   purl: pkg:github/p11-glue/p11-kit
+  identifiers:
+  - pkg:deb/debian/p11-kit
+  - pkg:deb/ubuntu/p11-kit
+  - pkg:apk/alpine/p11-kit
+  - pkg:generic/p11-kit
   homepage: https://github.com/p11-glue/p11-kit
   license: BSD-3-Clause
   source:

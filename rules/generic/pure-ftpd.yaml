@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/pure-ftpd
   - pkg:deb/ubuntu/pure-ftpd
   - pkg:apk/alpine/pure-ftpd
+  - pkg:generic/pure-ftpd
   homepage: https://github.com/jedisct1/pure-ftpd
   license: ISC
   source:

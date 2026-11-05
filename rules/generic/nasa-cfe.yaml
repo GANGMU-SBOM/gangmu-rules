@@ -9,6 +9,8 @@ component:
 upstream:
   name: nasa-cfe
   purl: pkg:github/nasa/cFE
+  identifiers:
+  - pkg:generic/nasa-cfe
   homepage: https://github.com/nasa/cFE
   license: Apache-2.0
   source:

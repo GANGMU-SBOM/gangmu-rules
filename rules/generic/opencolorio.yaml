@@ -9,6 +9,10 @@ component:
 upstream:
   name: opencolorio
   purl: pkg:github/AcademySoftwareFoundation/OpenColorIO
+  identifiers:
+  - pkg:deb/debian/opencolorio
+  - pkg:deb/ubuntu/opencolorio
+  - pkg:generic/opencolorio
   homepage: https://github.com/AcademySoftwareFoundation/OpenColorIO
   license: BSD-3-Clause
   source:

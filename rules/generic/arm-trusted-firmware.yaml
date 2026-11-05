@@ -7,6 +7,8 @@ component:
 upstream:
   name: arm-trusted-firmware
   purl: pkg:github/ARM-software/arm-trusted-firmware
+  identifiers:
+  - pkg:generic/arm-trusted-firmware
   cpe: cpe:2.3:a:trustedfirmware:trusted_firmware-a:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:arm:trusted_firmware-a:*:*:*:*:*:*:*:*

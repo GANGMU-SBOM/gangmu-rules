@@ -9,6 +9,8 @@ component:
 upstream:
   name: aws-nitro-sdk
   purl: pkg:github/aws/aws-nitro-enclaves-sdk-c
+  identifiers:
+  - pkg:generic/aws-nitro-sdk
   homepage: https://github.com/aws/aws-nitro-enclaves-sdk-c
   license: Apache-2.0
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: opusfile
   purl: pkg:github/xiph/opusfile
+  identifiers:
+  - pkg:generic/opusfile
   homepage: https://github.com/xiph/opusfile
   license: BSD-3-Clause
   source:

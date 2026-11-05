@@ -10,6 +10,8 @@ component:
 upstream:
   name: yyjson
   purl: pkg:github/ibireme/yyjson
+  identifiers:
+  - pkg:generic/yyjson
   cpe: cpe:2.3:a:ibireme:yyjson:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:yyjson:yyjson:*:*:*:*:*:*:*:*

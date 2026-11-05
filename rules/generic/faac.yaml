@@ -7,6 +7,10 @@ component:
 upstream:
   name: faac
   purl: pkg:github/knik0/faac
+  identifiers:
+  - pkg:deb/debian/faac
+  - pkg:deb/ubuntu/faac
+  - pkg:generic/faac
   homepage: https://github.com/knik0/faac
   license: LGPL-2.1-or-later
   source:

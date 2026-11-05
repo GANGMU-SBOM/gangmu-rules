@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/pupnp
   - pkg:deb/ubuntu/pupnp-1.8
   - pkg:deb/ubuntu/pupnp
+  - pkg:generic/pupnp
   homepage: https://github.com/pupnp/pupnp
   license: BSD-3-Clause
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/suricata
   - pkg:deb/ubuntu/suricata
   - pkg:apk/alpine/suricata
+  - pkg:generic/suricata
   homepage: https://github.com/OISF/suricata
   license: GPL-2.0-only
   source:

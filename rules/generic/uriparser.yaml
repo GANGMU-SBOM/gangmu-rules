@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/uriparser
   - pkg:deb/ubuntu/uriparser
   - pkg:apk/alpine/uriparser
+  - pkg:generic/uriparser
   homepage: https://github.com/uriparser/uriparser
   license: BSD-3-Clause
   source:

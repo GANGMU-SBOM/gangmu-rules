@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/qpdf
   - pkg:deb/ubuntu/qpdf
   - pkg:apk/alpine/qpdf
+  - pkg:generic/qpdf
   homepage: https://github.com/qpdf/qpdf
   license: Apache-2.0
   source:

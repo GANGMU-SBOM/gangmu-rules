@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/openexr
   - pkg:deb/ubuntu/openexr
   - pkg:apk/alpine/openexr
+  - pkg:generic/openexr
   homepage: https://github.com/AcademySoftwareFoundation/openexr
   license: BSD-3-Clause
   source:

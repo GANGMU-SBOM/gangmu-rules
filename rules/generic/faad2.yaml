@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/faad2
   - pkg:deb/ubuntu/faad2
   - pkg:apk/alpine/faad2
+  - pkg:generic/faad2
   homepage: https://github.com/knik0/faad2
   license: GPL-2.0-or-later
   source:

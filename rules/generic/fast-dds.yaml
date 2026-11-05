@@ -12,6 +12,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/fastdds
   - pkg:deb/ubuntu/fastdds
+  - pkg:generic/fast-dds
   homepage: https://github.com/eProsima/Fast-DDS
   license: Apache-2.0
   source:

@@ -10,6 +10,8 @@ component:
 upstream:
   name: lib60870 (IEC 60870-5-101/104)
   purl: pkg:github/mz-automation/lib60870
+  identifiers:
+  - pkg:generic/lib60870
   cpe: cpe:2.3:a:mz-automation:lib60870:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on four CVEs.
   cpe_evidence:

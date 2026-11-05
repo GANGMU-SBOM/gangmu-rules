@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/gpac
   - pkg:deb/ubuntu/gpac
+  - pkg:generic/gpac
   homepage: https://github.com/gpac/gpac
   license: LGPL-2.1-or-later
   source:

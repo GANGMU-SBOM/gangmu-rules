@@ -7,6 +7,8 @@ component:
 upstream:
   name: libplctag
   purl: pkg:github/libplctag/libplctag
+  identifiers:
+  - pkg:generic/libplctag
   cpe_status: 'none-in-nvd: no CPE in the NVD CPE dictionary (keyword search, read 2026-10-21); CVE-2025-1399 and CVE-2025-1400 name libplctag but carry no CPE configuration.'
   homepage: https://github.com/libplctag/libplctag
   license: MPL-2.0 OR LGPL-2.0-or-later

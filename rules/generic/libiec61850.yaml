@@ -10,6 +10,8 @@ component:
 upstream:
   name: libIEC61850
   purl: pkg:github/mz-automation/libiec61850
+  identifiers:
+  - pkg:generic/libiec61850
   cpe: cpe:2.3:a:mz-automation:libiec61850:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:mz_automation:libiec61850:*:*:*:*:*:*:*:*

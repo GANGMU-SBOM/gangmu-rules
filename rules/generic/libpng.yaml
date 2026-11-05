@@ -16,6 +16,7 @@ upstream:
   - pkg:deb/ubuntu/libpng1.6
   - pkg:deb/ubuntu/libpng
   - pkg:apk/alpine/libpng
+  - pkg:generic/libpng
   cpe: cpe:2.3:a:libpng:libpng:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2004-0421

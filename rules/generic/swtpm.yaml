@@ -7,6 +7,9 @@ component:
 upstream:
   name: swtpm
   purl: pkg:github/stefanberger/swtpm
+  identifiers:
+  - pkg:deb/ubuntu/swtpm
+  - pkg:generic/swtpm
   homepage: https://github.com/stefanberger/swtpm
   license: BSD-3-Clause
   source:

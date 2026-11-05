@@ -7,6 +7,8 @@ component:
 upstream:
   name: libocpp
   purl: pkg:github/EVerest/libocpp
+  identifiers:
+  - pkg:generic/libocpp
   homepage: https://github.com/EVerest/libocpp
   license: Apache-2.0
   source:

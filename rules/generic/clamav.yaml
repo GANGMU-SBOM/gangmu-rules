@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/clamav
   - pkg:deb/ubuntu/clamav
   - pkg:apk/alpine/clamav
+  - pkg:generic/clamav
   homepage: https://github.com/Cisco-Talos/clamav
   license: GPL-2.0-only
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/avahi
   - pkg:deb/ubuntu/avahi
   - pkg:apk/alpine/avahi
+  - pkg:generic/avahi
   homepage: https://github.com/avahi/avahi
   license: LGPL-2.1-or-later
   source:

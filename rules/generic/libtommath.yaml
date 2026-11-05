@@ -11,6 +11,8 @@ component:
 upstream:
   name: LibTomMath
   purl: pkg:github/libtom/libtommath
+  identifiers:
+  - pkg:generic/libtommath
   cpe: cpe:2.3:a:libtom:libtommath:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on CVE-2023-36328 only.
   cpe_evidence:

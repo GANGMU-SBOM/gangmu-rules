@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/libreswan
   - pkg:deb/ubuntu/libreswan
   - pkg:apk/alpine/libreswan
+  - pkg:generic/libreswan
   homepage: https://github.com/libreswan/libreswan
   license: GPL-2.0-or-later
   source:

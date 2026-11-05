@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/strongswan
   - pkg:deb/ubuntu/strongswan
   - pkg:apk/alpine/strongswan
+  - pkg:generic/strongswan
   homepage: https://github.com/strongswan/strongswan
   license: GPL-2.0-or-later
   source:

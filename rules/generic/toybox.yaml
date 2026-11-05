@@ -7,6 +7,8 @@ component:
 upstream:
   name: toybox
   purl: pkg:github/landley/toybox
+  identifiers:
+  - pkg:generic/toybox
   homepage: https://github.com/landley/toybox
   license: 0BSD
   source:

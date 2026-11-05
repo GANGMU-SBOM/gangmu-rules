@@ -11,6 +11,8 @@ upstream:
   - pkg:deb/debian/openldap
   - pkg:deb/ubuntu/openldap
   - pkg:apk/alpine/openldap
+  - pkg:generic/git.openldap.org/openldap/openldap
+  - pkg:generic/openldap
   homepage: https://github.com/openldap/openldap
   license: OLDAP-2.8
   source:

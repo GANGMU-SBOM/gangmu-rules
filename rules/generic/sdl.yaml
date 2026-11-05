@@ -9,6 +9,9 @@ component:
 upstream:
   name: sdl
   purl: pkg:github/libsdl-org/SDL
+  identifiers:
+  - pkg:apk/alpine/sdl
+  - pkg:apk/alpine/sdl2
   homepage: https://github.com/libsdl-org/SDL
   license: Zlib
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: libbpf
   purl: pkg:github/libbpf/libbpf
+  identifiers:
+  - pkg:deb/debian/libbpf
+  - pkg:deb/ubuntu/libbpf
+  - pkg:generic/libbpf
   homepage: https://github.com/libbpf/libbpf
   license: LGPL-2.1-only OR BSD-2-Clause
   source:

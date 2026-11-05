@@ -11,6 +11,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/cjson
   - pkg:deb/ubuntu/cjson
+  - pkg:generic/cjson
   cpe: cpe:2.3:a:cjson_project:cjson:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:davegamble:cjson:*:*:*:*:*:*:*:*

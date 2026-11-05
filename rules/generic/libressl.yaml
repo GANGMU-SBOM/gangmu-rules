@@ -9,6 +9,8 @@ component:
 upstream:
   name: libressl
   purl: pkg:github/libressl/portable
+  identifiers:
+  - pkg:generic/libressl
   homepage: https://github.com/libressl/portable
   license: ISC AND OpenSSL
   source:

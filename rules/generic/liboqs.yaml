@@ -7,6 +7,8 @@ component:
 upstream:
   name: liboqs
   purl: pkg:github/open-quantum-safe/liboqs
+  identifiers:
+  - pkg:generic/liboqs
   homepage: https://github.com/open-quantum-safe/liboqs
   license: MIT
   source:

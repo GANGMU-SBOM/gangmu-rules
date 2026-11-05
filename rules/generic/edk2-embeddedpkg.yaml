@@ -9,6 +9,10 @@ component:
 upstream:
   name: edk2-embeddedpkg
   purl: pkg:github/tianocore/edk2
+  identifiers:
+  - pkg:deb/debian/edk2
+  - pkg:deb/ubuntu/edk2
+  - pkg:generic/edk2-embeddedpkg
   homepage: https://github.com/tianocore/edk2
   license: BSD-2-Clause-Patent
   source:

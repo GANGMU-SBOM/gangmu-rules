@@ -15,6 +15,7 @@ upstream:
   - pkg:deb/debian/brotli
   - pkg:deb/ubuntu/brotli
   - pkg:apk/alpine/brotli
+  - pkg:generic/brotli
   cpe: cpe:2.3:a:google:brotli:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on CVE-2020-8927 only.
   cpe_evidence:

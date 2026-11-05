@@ -9,6 +9,8 @@ component:
 upstream:
   name: qatzip
   purl: pkg:github/intel/QATzip
+  identifiers:
+  - pkg:generic/qatzip
   homepage: https://github.com/intel/QATzip
   license: BSD-3-Clause
   source:

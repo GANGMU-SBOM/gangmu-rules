@@ -12,6 +12,7 @@ upstream:
   - pkg:deb/ubuntu/openjpeg2
   - pkg:deb/ubuntu/openjpeg
   - pkg:apk/alpine/openjpeg
+  - pkg:generic/openjpeg
   homepage: https://github.com/uclouvain/openjpeg
   license: BSD-2-Clause
   source:

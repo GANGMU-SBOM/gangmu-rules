@@ -7,6 +7,11 @@ component:
 upstream:
   name: squashfs-tools
   purl: pkg:github/plougher/squashfs-tools
+  identifiers:
+  - pkg:deb/debian/squashfs-tools
+  - pkg:deb/ubuntu/squashfs-tools
+  - pkg:apk/alpine/squashfs-tools
+  - pkg:generic/squashfs-tools
   homepage: https://github.com/plougher/squashfs-tools
   license: GPL-2.0-or-later
   source:

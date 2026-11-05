@@ -9,6 +9,8 @@ component:
 upstream:
   name: arduinoble
   purl: pkg:github/arduino-libraries/ArduinoBLE
+  identifiers:
+  - pkg:generic/arduinoble
   homepage: https://github.com/arduino-libraries/ArduinoBLE
   license: LGPL-2.1-or-later
   source:

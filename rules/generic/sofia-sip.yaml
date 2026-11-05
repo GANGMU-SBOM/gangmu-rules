@@ -7,6 +7,11 @@ component:
 upstream:
   name: sofia-sip
   purl: pkg:github/FreeSWITCH/sofia-sip
+  identifiers:
+  - pkg:deb/debian/sofia-sip
+  - pkg:deb/ubuntu/sofia-sip
+  - pkg:apk/alpine/sofia-sip
+  - pkg:generic/sofia-sip
   homepage: https://github.com/FreeSWITCH/sofia-sip
   license: LGPL-2.1-or-later
   source:

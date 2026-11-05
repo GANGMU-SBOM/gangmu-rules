@@ -12,6 +12,8 @@ component:
 upstream:
   name: LoRaMac-node
   purl: pkg:github/Lora-net/LoRaMac-node
+  identifiers:
+  - pkg:generic/loramac-node
   cpe: cpe:2.3:a:semtech:loramac-node:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2020-11068

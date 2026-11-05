@@ -7,6 +7,9 @@ component:
 upstream:
   name: tinyssh
   purl: pkg:github/janmojzis/tinyssh
+  identifiers:
+  - pkg:deb/debian/tinyssh
+  - pkg:generic/tinyssh
   homepage: https://github.com/janmojzis/tinyssh
   license: CC0-1.0
   source:

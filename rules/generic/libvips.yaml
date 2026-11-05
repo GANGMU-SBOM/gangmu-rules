@@ -7,6 +7,8 @@ component:
 upstream:
   name: libvips
   purl: pkg:github/libvips/libvips
+  identifiers:
+  - pkg:generic/libvips
   homepage: https://github.com/libvips/libvips
   license: LGPL-2.1-or-later
   source:

@@ -7,6 +7,8 @@ component:
 upstream:
   name: qpid-proton
   purl: pkg:github/apache/qpid-proton
+  identifiers:
+  - pkg:generic/qpid-proton
   homepage: https://github.com/apache/qpid-proton
   license: Apache-2.0
   source:

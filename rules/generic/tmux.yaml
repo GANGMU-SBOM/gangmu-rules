@@ -7,6 +7,10 @@ component:
 upstream:
   name: tmux
   purl: pkg:github/tmux/tmux
+  identifiers:
+  - pkg:deb/debian/tmux
+  - pkg:deb/ubuntu/tmux
+  - pkg:generic/tmux
   homepage: https://github.com/tmux/tmux
   license: ISC
   source:

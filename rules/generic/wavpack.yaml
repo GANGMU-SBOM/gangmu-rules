@@ -13,6 +13,7 @@ upstream:
   - pkg:deb/debian/wavpack
   - pkg:deb/ubuntu/wavpack
   - pkg:apk/alpine/wavpack
+  - pkg:generic/wavpack
   homepage: https://github.com/dbry/WavPack
   license: BSD-3-Clause
   source:

@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/tinyproxy
   - pkg:deb/ubuntu/tinyproxy
+  - pkg:generic/tinyproxy
   homepage: https://github.com/tinyproxy/tinyproxy
   license: GPL-2.0-or-later
   source:

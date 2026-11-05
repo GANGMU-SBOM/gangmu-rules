@@ -7,6 +7,8 @@ component:
 upstream:
   name: miniz
   purl: pkg:github/richgel999/miniz
+  identifiers:
+  - pkg:generic/miniz
   supplier: Rich Geldreich
   homepage: https://github.com/richgel999/miniz
   license: MIT

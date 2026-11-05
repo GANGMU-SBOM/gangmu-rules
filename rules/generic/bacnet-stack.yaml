@@ -7,6 +7,8 @@ component:
 upstream:
   name: bacnet-stack
   purl: pkg:github/bacnet-stack/bacnet-stack
+  identifiers:
+  - pkg:generic/bacnet-stack
   cpe: cpe:2.3:a:bacnetstack:bacnet_stack:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2026-41475

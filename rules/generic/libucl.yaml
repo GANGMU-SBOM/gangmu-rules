@@ -7,6 +7,8 @@ component:
 upstream:
   name: libucl
   purl: pkg:github/vstakhov/libucl
+  identifiers:
+  - pkg:generic/libucl
   homepage: https://github.com/vstakhov/libucl
   license: BSD-2-Clause
   source:

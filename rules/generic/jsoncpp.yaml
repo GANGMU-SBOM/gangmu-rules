@@ -7,6 +7,8 @@ component:
 upstream:
   name: jsoncpp
   purl: pkg:github/open-source-parsers/jsoncpp
+  identifiers:
+  - pkg:generic/jsoncpp
   homepage: https://github.com/open-source-parsers/jsoncpp
   license: MIT
   source:

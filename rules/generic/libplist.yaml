@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/libplist
   - pkg:deb/ubuntu/libplist
+  - pkg:generic/libplist
   homepage: https://github.com/libimobiledevice/libplist
   license: LGPL-2.1-or-later
   source:

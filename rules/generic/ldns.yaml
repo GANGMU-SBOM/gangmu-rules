@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/ldns
   - pkg:deb/ubuntu/ldns
   - pkg:apk/alpine/ldns
+  - pkg:generic/ldns
   homepage: https://github.com/NLnetLabs/ldns
   license: BSD-3-Clause
   source:

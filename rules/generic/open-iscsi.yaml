@@ -10,6 +10,7 @@ upstream:
   identifiers:
   - pkg:deb/debian/open-iscsi
   - pkg:deb/ubuntu/open-iscsi
+  - pkg:generic/open-iscsi
   homepage: https://github.com/open-iscsi/open-iscsi
   license: GPL-2.0-or-later
   source:

@@ -11,6 +11,7 @@ upstream:
   - pkg:deb/debian/openvpn
   - pkg:deb/ubuntu/openvpn
   - pkg:apk/alpine/openvpn
+  - pkg:generic/openvpn
   homepage: https://github.com/OpenVPN/openvpn
   license: GPL-2.0-only
   source:
