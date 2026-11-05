@@ -11,6 +11,14 @@ upstream:
   purl: pkg:github/project-chip/connectedhomeip
   identifiers:
   - pkg:generic/matter-src
+  cpe: cpe:2.3:a:csa-iot:matter:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2025-56361
+  - CVE-2025-56362
+  - CVE-2025-56363
+  - CVE-2025-56364
+  - CVE-2025-56365
   homepage: https://github.com/project-chip/connectedhomeip
   license: Apache-2.0
   source:
@@ -18,7 +26,6 @@ upstream:
     url: https://github.com/project-chip/connectedhomeip
     ref: v1.6.1.0
     subdir: src
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

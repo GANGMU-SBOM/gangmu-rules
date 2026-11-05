@@ -6,6 +6,9 @@ component:
   - '**/conntrack-tools'
 upstream:
   name: conntrack-tools
+  purl: pkg:generic/git.netfilter.org/conntrack-tools
+  identifiers:
+  - pkg:generic/conntrack-tools
   homepage: https://git.netfilter.org/conntrack-tools
   license: GPL-2.0-or-later
   source:

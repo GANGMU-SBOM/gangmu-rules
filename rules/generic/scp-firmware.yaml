@@ -15,7 +15,7 @@ upstream:
     kind: git
     url: https://github.com/ARM-software/SCP-firmware
     ref: v2.14.0
-  cpe: cpe:2.3:a:arm:scp_firmware:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:arm:scp_firmware:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2024-9413
   - CVE-2024-11863

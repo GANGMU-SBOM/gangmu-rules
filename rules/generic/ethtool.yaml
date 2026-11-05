@@ -6,6 +6,9 @@ component:
   - '**/ethtool'
 upstream:
   name: ethtool
+  purl: pkg:generic/git.kernel.org/pub/scm/network/ethtool/ethtool
+  identifiers:
+  - pkg:generic/ethtool
   homepage: https://git.kernel.org/pub/scm/network/ethtool/ethtool
   license: GPL-2.0-only
   source:

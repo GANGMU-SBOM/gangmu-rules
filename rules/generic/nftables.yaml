@@ -6,6 +6,9 @@ component:
   - '**/nftables'
 upstream:
   name: nftables
+  purl: pkg:generic/git.netfilter.org/nftables
+  identifiers:
+  - pkg:generic/nftables
   homepage: https://git.netfilter.org/nftables
   license: GPL-2.0-only
   source:

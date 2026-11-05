@@ -11,13 +11,17 @@ upstream:
   - pkg:deb/debian/multipath-tools
   - pkg:deb/ubuntu/multipath-tools
   - pkg:generic/multipath-tools
+  cpe: cpe:2.3:a:opensvc:multipath-tools:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2022-41973
+  - CVE-2022-41974
   homepage: https://github.com/opensvc/multipath-tools
   license: GPL-2.0-only
   source:
     kind: git
     url: https://github.com/opensvc/multipath-tools
     ref: 0.15.1
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

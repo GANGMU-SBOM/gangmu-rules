@@ -9,13 +9,18 @@ upstream:
   purl: pkg:github/awslabs/aws-c-io
   identifiers:
   - pkg:generic/aws-c-io
+  cpe: cpe:2.3:a:amazon:amazon_web_services_aws-c-io:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2021-40828
+  - CVE-2021-40830
+  - CVE-2021-40831
   homepage: https://github.com/awslabs/aws-c-io
   license: Apache-2.0
   source:
     kind: git
     url: https://github.com/awslabs/aws-c-io
     ref: v1.1.0
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

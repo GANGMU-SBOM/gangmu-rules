@@ -6,6 +6,9 @@ component:
   - '**/readline'
 upstream:
   name: readline
+  purl: pkg:generic/git.savannah.gnu.org/git/readline
+  identifiers:
+  - pkg:generic/readline
   homepage: https://git.savannah.gnu.org/git/readline
   license: GPL-3.0-or-later
   source:

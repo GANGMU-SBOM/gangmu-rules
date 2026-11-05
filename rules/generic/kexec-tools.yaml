@@ -6,6 +6,9 @@ component:
   - '**/kexec-tools'
 upstream:
   name: kexec-tools
+  purl: pkg:generic/git.kernel.org/pub/scm/utils/kernel/kexec/kexec-tools
+  identifiers:
+  - pkg:generic/kexec-tools
   homepage: https://git.kernel.org/pub/scm/utils/kernel/kexec/kexec-tools
   license: GPL-2.0-only
   source:

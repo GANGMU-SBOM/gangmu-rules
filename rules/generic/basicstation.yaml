@@ -9,13 +9,16 @@ upstream:
   purl: pkg:github/lorabasics/basicstation
   identifiers:
   - pkg:generic/basicstation
+  cpe: cpe:2.3:a:semtech:lora_basics_station:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2020-4060
   homepage: https://github.com/lorabasics/basicstation
   license: BSD-3-Clause
   source:
     kind: git
     url: https://github.com/lorabasics/basicstation
     ref: v2.0.6
-  cpe_status: 'none-in-nvd: no CPE is registered for LoRa Basics Station; CVE-2026-79697 names it but carries no CPE configuration (CVE API keyword search, read 2026-10-21).'
 identity:
   include:
   - '**/*.c'

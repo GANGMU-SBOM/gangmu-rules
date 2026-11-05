@@ -7,13 +7,16 @@ component:
 upstream:
   name: srt
   purl: pkg:github/Haivision/srt
+  cpe: cpe:2.3:a:srtalliance:secure_reliable_transport:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2019-15784
   homepage: https://github.com/Haivision/srt
   license: MPL-2.0
   source:
     kind: git
     url: https://github.com/Haivision/srt
     ref: v1.5.7
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

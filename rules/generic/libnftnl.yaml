@@ -6,6 +6,9 @@ component:
   - '**/libnftnl'
 upstream:
   name: libnftnl
+  purl: pkg:generic/git.netfilter.org/libnftnl
+  identifiers:
+  - pkg:generic/libnftnl
   homepage: https://git.netfilter.org/libnftnl
   license: GPL-2.0-or-later
   source:

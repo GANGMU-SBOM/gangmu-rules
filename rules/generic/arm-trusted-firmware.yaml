@@ -9,9 +9,9 @@ upstream:
   purl: pkg:github/ARM-software/arm-trusted-firmware
   identifiers:
   - pkg:generic/arm-trusted-firmware
-  cpe: cpe:2.3:a:trustedfirmware:trusted_firmware-a:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:trustedfirmware:trusted_firmware-a:*:*:*:*:*:*:*:*
   cpe_aliases:
-  - cpe:2.3:a:arm:trusted_firmware-a:*:*:*:*:*:*:*:*
+  - cpe:2.3:o:arm:trusted_firmware-a:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2017-7563
   - CVE-2017-9607

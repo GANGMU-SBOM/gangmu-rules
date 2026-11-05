@@ -18,6 +18,9 @@ upstream:
     url: https://github.com/knik0/faac
     ref: ver_1_16
   cpe: cpe:2.3:a:freeware_advanced_audio_coder_project:freeware_advanced_audio_coder:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files CVE-2018-19886 to CVE-2018-19891, which cite this repository, under this name.
+  cpe_aliases:
+  - cpe:2.3:a:audiocoding:freeware_advanced_audio_coder:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2017-9130
 identity:

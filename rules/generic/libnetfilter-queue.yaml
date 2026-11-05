@@ -8,6 +8,9 @@ component:
   - '**/libnetfilter_queue'
 upstream:
   name: libnetfilter-queue
+  purl: pkg:generic/git.netfilter.org/libnetfilter_queue
+  identifiers:
+  - pkg:generic/libnetfilter-queue
   homepage: https://git.netfilter.org/libnetfilter_queue
   license: GPL-2.0-or-later
   source:

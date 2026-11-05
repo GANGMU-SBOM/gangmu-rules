@@ -13,7 +13,7 @@ upstream:
     kind: git
     url: https://github.com/alpinelinux/apk-tools
     ref: v3.0.8
-  cpe: cpe:2.3:a:alpinelinux:apk-tools:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:alpinelinux:apk-tools:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2021-30139
 identity:

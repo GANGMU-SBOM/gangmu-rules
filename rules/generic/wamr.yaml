@@ -13,6 +13,7 @@ upstream:
   purl: pkg:github/bytecodealliance/wasm-micro-runtime
   identifiers:
   - pkg:generic/wamr
+  - pkg:github/wasm-micro-runtime/wasm-micro-runtime
   cpe: cpe:2.3:a:bytecodealliance:webassembly_micro_runtime:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2023-48105

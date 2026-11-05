@@ -13,7 +13,7 @@ upstream:
     kind: git
     url: https://github.com/contiki-os/contiki
     ref: '3.0'
-  cpe: cpe:2.3:a:contiki-os:contiki:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:contiki-os:contiki:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2017-7295
 identity:

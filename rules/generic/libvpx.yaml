@@ -12,13 +12,17 @@ upstream:
   - pkg:deb/ubuntu/libvpx
   - pkg:apk/alpine/libvpx
   - pkg:generic/libvpx
+  cpe: cpe:2.3:a:webmproject:libvpx:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2023-44488
+  - CVE-2023-5217
   homepage: https://github.com/webmproject/libvpx
   license: BSD-3-Clause
   source:
     kind: git
     url: https://github.com/webmproject/libvpx
     ref: v1.17.0
-  cpe_status: 'none-in-nvd: the keyword results name Chrome, Firefox and Android, none of which is this standalone library; no libvpx CPE is registered (CVE API keyword search, read 2026-10-21).'
 identity:
   include:
   - '**/*.c'

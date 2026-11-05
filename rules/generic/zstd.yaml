@@ -14,6 +14,7 @@ upstream:
   purl: pkg:github/facebook/zstd
   identifiers:
   - pkg:generic/zstd
+  - pkg:github/meta/zstd
   cpe: cpe:2.3:a:facebook:zstandard:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2019-11922

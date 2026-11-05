@@ -7,6 +7,8 @@ component:
 upstream:
   name: apparmor
   purl: pkg:github/apparmor/apparmor
+  identifiers:
+  - pkg:gitlab/apparmor/apparmor
   homepage: https://github.com/apparmor/apparmor
   license: GPL-2.0-only
   source:

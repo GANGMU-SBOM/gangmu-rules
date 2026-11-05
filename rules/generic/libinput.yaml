@@ -6,6 +6,12 @@ component:
   - '**/libinput'
 upstream:
   name: libinput
+  purl: pkg:generic/gitlab.freedesktop.org/libinput/libinput
+  identifiers:
+  - pkg:deb/debian/libinput
+  - pkg:deb/ubuntu/libinput
+  - pkg:apk/alpine/libinput
+  - pkg:generic/libinput
   homepage: https://gitlab.freedesktop.org/libinput/libinput
   license: MIT
   source:

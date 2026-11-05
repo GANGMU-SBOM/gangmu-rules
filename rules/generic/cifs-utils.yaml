@@ -6,6 +6,13 @@ component:
   - '**/cifs-utils'
 upstream:
   name: cifs-utils
+  purl: pkg:generic/git.samba.org/cifs-utils
+  identifiers:
+  - pkg:github/piastry/cifs-utils
+  - pkg:deb/debian/cifs-utils
+  - pkg:deb/ubuntu/cifs-utils
+  - pkg:apk/alpine/cifs-utils
+  - pkg:generic/cifs-utils
   homepage: https://git.samba.org/cifs-utils
   license: GPL-3.0-or-later
   source:

@@ -12,6 +12,8 @@ component:
 upstream:
   name: Eclipse Paho Embedded C (MQTTPacket and MQTTClient-C)
   purl: pkg:github/eclipse/paho.mqtt.embedded-c
+  identifiers:
+  - pkg:github/eclipse-paho/paho.mqtt.embedded-c
   cpe: cpe:2.3:a:eclipse:paho_mqtt_c\/c\+\+_client:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2021-41036

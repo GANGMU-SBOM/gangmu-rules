@@ -11,13 +11,16 @@ upstream:
   - pkg:deb/debian/jbig2dec
   - pkg:deb/ubuntu/jbig2dec
   - pkg:generic/jbig2dec
+  cpe: cpe:2.3:a:artifex:jbig2dec:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2020-12268
   homepage: https://github.com/ArtifexSoftware/jbig2dec
   license: AGPL-3.0-or-later
   source:
     kind: git
     url: https://github.com/ArtifexSoftware/jbig2dec
     ref: '0.20'
-  cpe_status: 'none-in-nvd: the keyword results name image viewers (XnView) that embed a JBIG2 decoder, not this library (CVE API keyword search, read 2026-10-22).'
 identity:
   include:
   - '**/*.c'

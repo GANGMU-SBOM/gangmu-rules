@@ -6,6 +6,9 @@ component:
   - '**/ipset'
 upstream:
   name: ipset
+  purl: pkg:generic/git.netfilter.org/ipset
+  identifiers:
+  - pkg:generic/ipset
   homepage: https://git.netfilter.org/ipset
   license: GPL-2.0-only
   source:

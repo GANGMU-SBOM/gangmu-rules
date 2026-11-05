@@ -6,6 +6,9 @@ component:
   - '**/cmocka'
 upstream:
   name: cmocka
+  purl: pkg:gitlab/cmocka/cmocka
+  identifiers:
+  - pkg:generic/cmocka
   homepage: https://gitlab.com/cmocka/cmocka
   license: Apache-2.0
   source:

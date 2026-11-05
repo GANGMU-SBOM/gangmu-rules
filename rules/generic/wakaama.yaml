@@ -7,6 +7,8 @@ component:
 upstream:
   name: wakaama
   purl: pkg:github/eclipse/wakaama
+  identifiers:
+  - pkg:github/eclipse-wakaama/wakaama
   homepage: https://github.com/eclipse/wakaama
   license: EPL-2.0 OR BSD-3-Clause
   source:

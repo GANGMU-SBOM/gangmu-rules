@@ -9,6 +9,7 @@ upstream:
   purl: pkg:github/libidn/libidn2
   identifiers:
   - pkg:generic/libidn2
+  - pkg:gitlab/libidn/libidn2
   homepage: https://github.com/libidn/libidn2
   license: LGPL-3.0-or-later
   source:

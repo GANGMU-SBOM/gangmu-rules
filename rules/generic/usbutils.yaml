@@ -6,6 +6,9 @@ component:
   - '**/usbutils'
 upstream:
   name: usbutils
+  purl: pkg:generic/git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils
+  identifiers:
+  - pkg:generic/usbutils
   homepage: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils
   license: GPL-2.0-only
   source:

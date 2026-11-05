@@ -15,6 +15,7 @@ upstream:
   - pkg:apk/alpine/ffmpeg
   - pkg:generic/git.ffmpeg.org/ffmpeg
   - pkg:generic/ffmpeg
+  - pkg:generic/code.ffmpeg.org/ffmpeg/ffmpeg
   homepage: https://github.com/FFmpeg/FFmpeg
   license: LGPL-2.1-or-later
   source:

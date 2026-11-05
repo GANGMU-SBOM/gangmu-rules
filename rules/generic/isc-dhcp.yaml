@@ -9,6 +9,8 @@ component:
 upstream:
   name: isc-dhcp
   purl: pkg:github/isc-projects/dhcp
+  identifiers:
+  - pkg:generic/gitlab.isc.org/isc-projects/dhcp
   homepage: https://github.com/isc-projects/dhcp
   license: MPL-2.0
   source:

@@ -10,6 +10,8 @@ component:
 upstream:
   name: Eclipse ThreadX GUIX (Azure RTOS GUIX)
   purl: pkg:github/eclipse-threadx/guix
+  identifiers:
+  - pkg:generic/cgit.git.savannah.gnu.org/cgit/guix
   cpe_status: 'none-in-nvd: no record in an NVD mirror (fkie-cad feeds, CVE years 2010 to 2026, read 2026-10-17 with gangmu rules cpe-evidence) cites github.com/eclipse-threadx/guix or names it.'
   supplier: Eclipse Foundation, previously Microsoft (Azure RTOS) and Express Logic
   homepage: https://threadx.io/

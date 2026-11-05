@@ -18,7 +18,7 @@ upstream:
     url: https://github.com/arendst/Tasmota
     ref: v16.0.0
     subdir: tasmota
-  cpe: cpe:2.3:a:tasmota_project:tasmota:*:*:*:*:*:*:*:*
+  cpe: cpe:2.3:o:tasmota_project:tasmota:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2021-36603
   - CVE-2022-43294

@@ -7,6 +7,8 @@ component:
 upstream:
   name: pipewire
   purl: pkg:github/PipeWire/pipewire
+  identifiers:
+  - pkg:generic/gitlab.freedesktop.org/pipewire/pipewire
   homepage: https://github.com/PipeWire/pipewire
   license: MIT
   source:

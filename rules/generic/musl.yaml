@@ -6,6 +6,12 @@ component:
   - '**/musl'
 upstream:
   name: musl
+  purl: pkg:generic/git.musl-libc.org/git/musl
+  identifiers:
+  - pkg:deb/debian/musl
+  - pkg:deb/ubuntu/musl
+  - pkg:apk/alpine/musl
+  - pkg:generic/musl
   homepage: https://git.musl-libc.org/git/musl
   license: MIT
   source:

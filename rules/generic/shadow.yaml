@@ -11,13 +11,19 @@ upstream:
   - pkg:deb/debian/shadow
   - pkg:deb/ubuntu/shadow
   - pkg:apk/alpine/shadow
+  cpe: cpe:2.3:a:shadow_project:shadow:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2016-6252
+  - CVE-2017-12424
+  - CVE-2019-19882
+  - CVE-2023-29383
   homepage: https://github.com/shadow-maint/shadow
   license: BSD-3-Clause
   source:
     kind: git
     url: https://github.com/shadow-maint/shadow
     ref: v4.11.1
-  cpe_status: 'none-in-nvd: the NVD CVE keyword search for shadow-utils timed out and returned only generic records; no CPE was confirmed for shadow-maint/shadow (read 2026-10-21).'
 identity:
   include:
   - '**/*.c'

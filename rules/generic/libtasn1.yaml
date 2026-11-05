@@ -7,6 +7,8 @@ component:
 upstream:
   name: libtasn1
   purl: pkg:github/gnutls/libtasn1
+  identifiers:
+  - pkg:gitlab/gnutls/libtasn1
   homepage: https://github.com/gnutls/libtasn1
   license: LGPL-2.1-or-later
   source:

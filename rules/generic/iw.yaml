@@ -6,6 +6,7 @@ component:
   - '**/iw'
 upstream:
   name: iw
+  purl: pkg:generic/git.kernel.org/pub/scm/linux/kernel/git/jberg/iw
   homepage: https://git.kernel.org/pub/scm/linux/kernel/git/jberg/iw
   license: ISC
   source:

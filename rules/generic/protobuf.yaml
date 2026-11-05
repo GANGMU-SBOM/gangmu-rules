@@ -11,13 +11,19 @@ upstream:
   - pkg:deb/debian/protobuf
   - pkg:deb/ubuntu/protobuf
   - pkg:generic/protobuf
+  cpe: cpe:2.3:a:google:protobuf:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2021-22570
+  - CVE-2024-2410
+  - CVE-2024-7254
+  - CVE-2026-0994
   homepage: https://github.com/protocolbuffers/protobuf
   license: BSD-3-Clause
   source:
     kind: git
     url: https://github.com/protocolbuffers/protobuf
     ref: v36.2
-  cpe_status: 'none-in-nvd: the NVD CPEs for protobuf cover the Java and JavaScript packages (google:protobuf-java, protobufjs_project:protobufjs), not the C++ runtime (CVE API keyword search, read 2026-10-22).'
 identity:
   include:
   - '**/*.c'

@@ -6,6 +6,11 @@ component:
   - '**/iptables'
 upstream:
   name: iptables
+  purl: pkg:generic/git.netfilter.org/iptables
+  identifiers:
+  - pkg:deb/debian/iptables
+  - pkg:deb/ubuntu/iptables
+  - pkg:generic/iptables
   homepage: https://git.netfilter.org/iptables
   license: GPL-2.0-only
   source:

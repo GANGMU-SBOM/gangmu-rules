@@ -7,13 +7,17 @@ component:
 upstream:
   name: neuron
   purl: pkg:github/emqx/neuron
+  cpe: cpe:2.3:a:emqx:neuron:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2024-10964
+  - CVE-2024-10965
   homepage: https://github.com/emqx/neuron
   license: LGPL-3.0-only
   source:
     kind: git
     url: https://github.com/emqx/neuron
     ref: 2.15.0
-  cpe_status: 'none-in-nvd: the keyword hits are Ivanti Neurons products, not EMQX Neuron (CVE API keyword search, read 2026-10-22).'
 identity:
   include:
   - '**/*.c'

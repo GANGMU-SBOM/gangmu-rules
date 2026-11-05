@@ -7,6 +7,8 @@ component:
 upstream:
   name: finit
   purl: pkg:github/troglobit/finit
+  identifiers:
+  - pkg:github/finit-project/finit
   homepage: https://github.com/troglobit/finit
   license: MIT
   source:

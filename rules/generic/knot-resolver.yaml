@@ -12,13 +12,16 @@ upstream:
   - pkg:deb/ubuntu/knot-resolver
   - pkg:apk/alpine/knot-resolver
   - pkg:generic/knot-resolver
+  cpe: cpe:2.3:a:nic:knot_resolver:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2022-32983
   homepage: https://github.com/CZ-NIC/knot-resolver
   license: GPL-3.0-or-later
   source:
     kind: git
     url: https://github.com/CZ-NIC/knot-resolver
     ref: v6.5.1
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-22).'
 identity:
   include:
   - '**/*.c'

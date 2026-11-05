@@ -11,13 +11,23 @@ upstream:
   - pkg:deb/debian/jq
   - pkg:deb/ubuntu/jq
   - pkg:apk/alpine/jq
+  cpe: cpe:2.3:a:jqlang:jq:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2023-49355
+  - CVE-2023-50246
+  - CVE-2023-50268
+  - CVE-2024-23337
+  - CVE-2024-53427
+  - CVE-2025-48060
+  - CVE-2025-9403
+  - CVE-2026-32316
   homepage: https://github.com/jqlang/jq
   license: MIT
   source:
     kind: git
     url: https://github.com/jqlang/jq
     ref: jq-1.8.2
-  cpe_status: 'none-in-nvd: no CPE is registered for the jq JSON processor; a keyword search for jq returns only jQuery records (CVE API, read 2026-10-21).'
 identity:
   include:
   - '**/*.c'

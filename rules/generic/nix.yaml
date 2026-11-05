@@ -10,13 +10,18 @@ upstream:
   identifiers:
   - pkg:deb/debian/nix
   - pkg:deb/ubuntu/nix
+  cpe: cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2024-27297
+  - CVE-2024-45593
+  - CVE-2026-39860
   homepage: https://github.com/NixOS/nix
   license: LGPL-2.1-or-later
   source:
     kind: git
     url: https://github.com/NixOS/nix
     ref: 2.35.4
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

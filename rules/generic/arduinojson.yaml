@@ -11,7 +11,10 @@ upstream:
   purl: pkg:github/bblanchon/ArduinoJson
   identifiers:
   - pkg:generic/arduinojson
-  cpe_status: 'none-in-nvd: no CPE and no CVE mentioning ArduinoJson in NVD (CVE API keyword search, read 2026-10-21).'
+  cpe: cpe:2.3:a:arduino_json_project:arduino_json:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2015-4590
   homepage: https://github.com/bblanchon/ArduinoJson
   license: MIT
   source:

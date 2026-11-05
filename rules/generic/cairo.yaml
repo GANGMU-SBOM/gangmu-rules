@@ -6,6 +6,12 @@ component:
   - '**/cairo'
 upstream:
   name: cairo
+  purl: pkg:generic/gitlab.freedesktop.org/cairo/cairo
+  identifiers:
+  - pkg:deb/debian/cairo
+  - pkg:deb/ubuntu/cairo
+  - pkg:apk/alpine/cairo
+  - pkg:generic/cairo
   homepage: https://gitlab.freedesktop.org/cairo/cairo
   license: LGPL-2.1-only OR MPL-1.1
   source:

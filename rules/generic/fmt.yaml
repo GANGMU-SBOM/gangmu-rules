@@ -7,13 +7,16 @@ component:
 upstream:
   name: fmt
   purl: pkg:github/fmtlib/fmt
+  cpe: cpe:2.3:a:fmt:fmt:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2018-1000052
   homepage: https://github.com/fmtlib/fmt
   license: MIT
   source:
     kind: git
     url: https://github.com/fmtlib/fmt
     ref: 12.2.0
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
 identity:
   include:
   - '**/*.c'

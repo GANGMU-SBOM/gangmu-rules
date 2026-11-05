@@ -12,6 +12,7 @@ upstream:
   - pkg:deb/ubuntu/ntpsec
   - pkg:apk/alpine/ntpsec
   - pkg:generic/ntpsec
+  - pkg:gitlab/ntpsec/ntpsec
   homepage: https://github.com/ntpsec/ntpsec
   license: BSD-2-Clause
   source:

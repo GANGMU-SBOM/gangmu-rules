@@ -9,13 +9,16 @@ upstream:
   purl: pkg:github/mariadb-corporation/mariadb-connector-c
   identifiers:
   - pkg:generic/mariadb-connector-c
+  cpe: cpe:2.3:a:mariadb:connector\/c:*:*:*:*:*:*:*:*
+  # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
+  cpe_evidence:
+  - CVE-2020-13249
   homepage: https://github.com/mariadb-corporation/mariadb-connector-c
   license: LGPL-2.1-or-later
   source:
     kind: git
     url: https://github.com/mariadb-corporation/mariadb-connector-c
     ref: v3.4.11
-  cpe_status: 'none-found: NVD CVE records for MariaDB Connector/C are filed under oracle:mysql and mariadb:mariadb, not a Connector/C CPE (CVE API keyword search, read 2026-11-01).'
 identity:
   include:
   - '**/*.c'

@@ -6,6 +6,12 @@ component:
   - '**/pixman'
 upstream:
   name: pixman
+  purl: pkg:generic/gitlab.freedesktop.org/pixman/pixman
+  identifiers:
+  - pkg:deb/debian/pixman
+  - pkg:deb/ubuntu/pixman
+  - pkg:apk/alpine/pixman
+  - pkg:generic/pixman
   homepage: https://gitlab.freedesktop.org/pixman/pixman
   license: MIT
   source:
