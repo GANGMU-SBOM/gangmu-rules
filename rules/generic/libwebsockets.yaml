@@ -46,8 +46,8 @@ identity:
   - include/**/*.h
   functions:
     file: libwebsockets.fnsig
-    sha256: 64d11d940ec548a4fcb11e7cddf68b921a8d85269695f56b71df52f835455646
-    count: 7012
+    sha256: 51124e1ef0ea47195bc83475339aba558302ffb2d0aab57e0182d22a228dab51
+    count: 6903
     versions:
     - 3.0.0
     - 3.0.1
