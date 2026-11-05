@@ -113,11 +113,14 @@ def load_rule_meta(rules_dir):
             names = {str(doc["id"]).rsplit("/", 1)[-1], (doc.get("component") or {}).get("ships_as"),
                      up.get("name"), str(up["purl"]).split("@")[0].rsplit("/", 1)[-1]}
             idents = list(up.get("identifiers") or [])
+            own_names = {str(doc["id"]).rsplit("/", 1)[-1].lower(),
+                         str((doc.get("component") or {}).get("ships_as") or "").lower()} - {""}
             raw = {str(n).lower() for n in names if n}
             raw |= {str(i).split("?")[0].rstrip("/").rsplit("/", 1)[-1].lower() for i in idents}
             meta[doc["id"]] = {"purl": up["purl"], "path": str(path),
                                "names": {norm_name(n) for n in names if n},
                                "raw_names": raw,
+                               "own_names": own_names,
                                "identifiers": idents}
     return meta
 
@@ -126,7 +129,8 @@ def load_rule_meta(rules_dir):
 GENERIC_STOP = frozenset("""core common util utils tool tools base test tests sdk lib libs file
 files app apps main driver drivers kernel system components component hal bsp os src
 source module modules plugin plugins server client library firmware boot loader
-crypto network net http json xml image audio video""".split())
+crypto network net http json xml image audio video portable zephyr opener neuron onion
+shadow tang jose janet ninja transmission marlin arduino nimble httpd""".split())
 
 
 def name_owners(rule_meta):
@@ -280,10 +284,14 @@ def alias_candidates(rows, deb_like, rule_meta, rule_keys):
             if purl in taken:
                 continue
             unique = owners.get(norm_name(base), {rid}) <= {rid}
-            ok = unique and len(base) >= 4 and base not in GENERIC_STOP
+            # The rule's own name (id or ships_as), not only its repository's: LibreSSL's
+            # repository is libressl/portable, and pkg:generic/portable is not LibreSSL.
+            own = norm_name(base) in {norm_name(n) for n in meta["own_names"]}
+            ok = unique and own and len(base) >= 4 and base not in GENERIC_STOP
             proposals.append({"purl": purl, "shared_cves": x["cves"], "of": x["cves"],
                               "confidence": "name" if ok else "review", "kind": "generic-name",
                               **({} if ok else {"why": "not unique in the rule base" if not unique
+                                                else "not the rule's own name" if not own
                                                 else "too short or too common a name"})})
             taken.add(purl)
         if proposals:
