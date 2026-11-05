@@ -67,6 +67,6 @@ identity:
       4.3.5b: 8f6e9fae9fb7a94300e9779ef9612b52e52b12c3e12cc4f339c5de3d9a3835a4
   functions:
     file: libcoap.fnsig
-    sha256: eff64030d14b0f736428733cf11de9cae3930f1fc8f9ce8b0eacc9e955b40f62
-    count: 3031
+    sha256: 7b0f457d2aa3a441b01dbd6e73e88e927b42dcc91e5078fb9ce5f021aaa813f4
+    count: 3301
     versions: [4.1.1, 4.1.2, 4.2.0, 4.2.1, 4.3.0, 4.3.1, 4.3.2, 4.3.3, 4.3.4, 4.3.5, 4.3.4a, 4.3.5a, 4.3.5b]

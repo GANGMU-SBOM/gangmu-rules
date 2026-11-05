@@ -105,8 +105,8 @@ identity:
       9.5.0: bfd10da864777a7c44afd4c7de6ec4ededef6e7371a4108b64b80d5161a84400
   functions:
     file: lvgl.fnsig
-    sha256: 690edc73bb82b39c3419440f7eb2818e8cfd6690dddf263e47d0baa905e5f7c5
-    count: 24146
+    sha256: 5ac4529656181a403816ae88d79bb2120d5c7f4f0b17abd97273b85f6e00935c
+    count: 24436
     versions:
     - '6.0'
     - 6.0.1
