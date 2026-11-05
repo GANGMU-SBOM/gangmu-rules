@@ -7,6 +7,10 @@ component:
 upstream:
   name: nginx
   purl: pkg:github/nginx/nginx
+  identifiers:
+  - pkg:deb/debian/nginx
+  - pkg:deb/ubuntu/nginx
+  - pkg:apk/alpine/nginx
   homepage: https://github.com/nginx/nginx
   license: BSD-2-Clause
   source:

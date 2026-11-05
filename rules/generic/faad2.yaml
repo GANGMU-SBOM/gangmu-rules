@@ -7,6 +7,10 @@ component:
 upstream:
   name: faad2
   purl: pkg:github/knik0/faad2
+  identifiers:
+  - pkg:deb/debian/faad2
+  - pkg:deb/ubuntu/faad2
+  - pkg:apk/alpine/faad2
   homepage: https://github.com/knik0/faad2
   license: GPL-2.0-or-later
   source:

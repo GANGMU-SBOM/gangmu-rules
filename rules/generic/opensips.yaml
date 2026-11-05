@@ -7,6 +7,8 @@ component:
 upstream:
   name: opensips
   purl: pkg:github/OpenSIPS/opensips
+  identifiers:
+  - pkg:deb/ubuntu/opensips
   homepage: https://github.com/OpenSIPS/opensips
   license: GPL-2.0-or-later
   source:

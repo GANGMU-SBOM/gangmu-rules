@@ -7,6 +7,10 @@ component:
 upstream:
   name: pure-ftpd
   purl: pkg:github/jedisct1/pure-ftpd
+  identifiers:
+  - pkg:deb/debian/pure-ftpd
+  - pkg:deb/ubuntu/pure-ftpd
+  - pkg:apk/alpine/pure-ftpd
   homepage: https://github.com/jedisct1/pure-ftpd
   license: ISC
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: net-snmp
   purl: pkg:github/net-snmp/net-snmp
+  identifiers:
+  - pkg:deb/debian/net-snmp
+  - pkg:deb/ubuntu/net-snmp
+  - pkg:apk/alpine/net-snmp
   homepage: https://github.com/net-snmp/net-snmp
   license: BSD-3-Clause
   source:

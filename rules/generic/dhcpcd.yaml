@@ -7,6 +7,12 @@ component:
 upstream:
   name: dhcpcd
   purl: pkg:github/NetworkConfiguration/dhcpcd
+  identifiers:
+  - pkg:deb/debian/dhcpcd5
+  - pkg:deb/debian/dhcpcd
+  - pkg:deb/ubuntu/dhcpcd5
+  - pkg:deb/ubuntu/dhcpcd
+  - pkg:apk/alpine/dhcpcd
   homepage: https://github.com/NetworkConfiguration/dhcpcd
   license: BSD-2-Clause
   source:

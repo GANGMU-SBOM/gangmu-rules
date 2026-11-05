@@ -7,6 +7,10 @@ component:
 upstream:
   name: capstone
   purl: pkg:github/capstone-engine/capstone
+  identifiers:
+  - pkg:deb/debian/capstone
+  - pkg:deb/ubuntu/capstone
+  - pkg:apk/alpine/capstone
   homepage: https://github.com/capstone-engine/capstone
   license: BSD-3-Clause
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: libarchive
   purl: pkg:github/libarchive/libarchive
+  identifiers:
+  - pkg:deb/debian/libarchive
+  - pkg:deb/ubuntu/libarchive
+  - pkg:apk/alpine/libarchive
   homepage: https://github.com/libarchive/libarchive
   license: BSD-2-Clause
   source:

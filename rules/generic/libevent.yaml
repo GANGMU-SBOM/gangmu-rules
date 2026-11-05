@@ -11,6 +11,9 @@ component:
 upstream:
   name: libevent
   purl: pkg:github/libevent/libevent
+  identifiers:
+  - pkg:deb/debian/libevent
+  - pkg:deb/ubuntu/libevent
   cpe: cpe:2.3:a:libevent_project:libevent:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on five CVEs; four are cited.
   cpe_evidence:

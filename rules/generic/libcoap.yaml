@@ -8,6 +8,11 @@ component:
 upstream:
   name: libcoap
   purl: pkg:github/obgm/libcoap
+  identifiers:
+  - pkg:deb/debian/libcoap3
+  - pkg:deb/ubuntu/libcoap2
+  - pkg:deb/ubuntu/libcoap3
+  - pkg:deb/ubuntu/libcoap
   supplier: Olaf Bergmann and libcoap contributors
   homepage: https://libcoap.net/
   license: BSD-2-Clause

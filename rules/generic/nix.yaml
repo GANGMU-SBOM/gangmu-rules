@@ -7,6 +7,9 @@ component:
 upstream:
   name: nix
   purl: pkg:github/NixOS/nix
+  identifiers:
+  - pkg:deb/debian/nix
+  - pkg:deb/ubuntu/nix
   homepage: https://github.com/NixOS/nix
   license: LGPL-2.1-or-later
   source:

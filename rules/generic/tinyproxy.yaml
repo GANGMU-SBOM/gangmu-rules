@@ -7,6 +7,9 @@ component:
 upstream:
   name: tinyproxy
   purl: pkg:github/tinyproxy/tinyproxy
+  identifiers:
+  - pkg:deb/debian/tinyproxy
+  - pkg:deb/ubuntu/tinyproxy
   homepage: https://github.com/tinyproxy/tinyproxy
   license: GPL-2.0-or-later
   source:

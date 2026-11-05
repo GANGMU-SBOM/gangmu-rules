@@ -9,6 +9,10 @@ component:
 upstream:
   name: iperf3
   purl: pkg:github/esnet/iperf
+  identifiers:
+  - pkg:deb/debian/iperf3
+  - pkg:deb/ubuntu/iperf3
+  - pkg:apk/alpine/iperf3
   homepage: https://github.com/esnet/iperf
   license: BSD-3-Clause
   source:

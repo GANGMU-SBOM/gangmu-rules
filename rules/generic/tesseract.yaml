@@ -7,6 +7,9 @@ component:
 upstream:
   name: tesseract
   purl: pkg:github/tesseract-ocr/tesseract
+  identifiers:
+  - pkg:deb/debian/tesseract
+  - pkg:deb/ubuntu/tesseract
   homepage: https://github.com/tesseract-ocr/tesseract
   license: Apache-2.0
   source:

@@ -9,6 +9,10 @@ component:
 upstream:
   name: lcms2
   purl: pkg:github/mm2/Little-CMS
+  identifiers:
+  - pkg:deb/debian/lcms2
+  - pkg:deb/ubuntu/lcms2
+  - pkg:apk/alpine/lcms2
   homepage: https://github.com/mm2/Little-CMS
   license: MIT
   source:

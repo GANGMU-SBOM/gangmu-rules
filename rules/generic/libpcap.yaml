@@ -7,6 +7,10 @@ component:
 upstream:
   name: libpcap
   purl: pkg:github/the-tcpdump-group/libpcap
+  identifiers:
+  - pkg:deb/debian/libpcap
+  - pkg:deb/ubuntu/libpcap
+  - pkg:apk/alpine/libpcap
   cpe: cpe:2.3:a:tcpdump:libpcap:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2011-1935

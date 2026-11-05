@@ -7,6 +7,9 @@ component:
 upstream:
   name: h2o
   purl: pkg:github/h2o/h2o
+  identifiers:
+  - pkg:deb/debian/h2o
+  - pkg:deb/ubuntu/h2o
   homepage: https://github.com/h2o/h2o
   license: MIT
   source:

@@ -7,6 +7,10 @@ component:
 upstream:
   name: avahi
   purl: pkg:github/avahi/avahi
+  identifiers:
+  - pkg:deb/debian/avahi
+  - pkg:deb/ubuntu/avahi
+  - pkg:apk/alpine/avahi
   homepage: https://github.com/avahi/avahi
   license: LGPL-2.1-or-later
   source:

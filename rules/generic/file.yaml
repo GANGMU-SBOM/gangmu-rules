@@ -7,6 +7,10 @@ component:
 upstream:
   name: file
   purl: pkg:github/file/file
+  identifiers:
+  - pkg:deb/debian/file
+  - pkg:deb/ubuntu/file
+  - pkg:apk/alpine/file
   homepage: https://github.com/file/file
   license: BSD-2-Clause-Darwin
   source:

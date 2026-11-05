@@ -11,6 +11,12 @@ component:
 upstream:
   name: LibTIFF
   purl: pkg:github/libsdl-org/libtiff
+  identifiers:
+  - pkg:gitlab/libtiff/libtiff
+  - pkg:github/vadz/libtiff
+  - pkg:deb/debian/tiff
+  - pkg:deb/ubuntu/tiff
+  - pkg:apk/alpine/tiff
   cpe: cpe:2.3:a:libtiff:libtiff:*:*:*:*:*:*:*:*
   # NVD (read 2026-10-17, fkie-cad feeds 2010 to 2026) lists this CPE on 235 CVEs; three are cited.
   cpe_evidence:

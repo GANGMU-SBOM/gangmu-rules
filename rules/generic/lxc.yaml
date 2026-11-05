@@ -7,6 +7,10 @@ component:
 upstream:
   name: lxc
   purl: pkg:github/lxc/lxc
+  identifiers:
+  - pkg:deb/debian/lxc
+  - pkg:deb/ubuntu/lxc
+  - pkg:apk/alpine/lxc
   homepage: https://github.com/lxc/lxc
   license: LGPL-2.1-or-later
   source:

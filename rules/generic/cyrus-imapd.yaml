@@ -7,6 +7,9 @@ component:
 upstream:
   name: cyrus-imapd
   purl: pkg:github/cyrusimap/cyrus-imapd
+  identifiers:
+  - pkg:deb/debian/cyrus-imapd
+  - pkg:deb/ubuntu/cyrus-imapd
   homepage: https://github.com/cyrusimap/cyrus-imapd
   license: BSD-3-Clause-Attribution
   source:

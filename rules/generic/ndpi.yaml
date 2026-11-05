@@ -7,6 +7,9 @@ component:
 upstream:
   name: ndpi
   purl: pkg:github/ntop/ndpi
+  identifiers:
+  - pkg:deb/debian/ndpi
+  - pkg:deb/ubuntu/ndpi
   homepage: https://github.com/ntop/ndpi
   license: LGPL-3.0-or-later
   source:

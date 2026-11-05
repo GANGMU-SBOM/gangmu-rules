@@ -7,6 +7,10 @@ component:
 upstream:
   name: keepalived
   purl: pkg:github/acassen/keepalived
+  identifiers:
+  - pkg:deb/debian/keepalived
+  - pkg:deb/ubuntu/keepalived
+  - pkg:apk/alpine/keepalived
   homepage: https://github.com/acassen/keepalived
   license: GPL-2.0-or-later
   source:

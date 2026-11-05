@@ -7,6 +7,10 @@ component:
 upstream:
   name: rpm
   purl: pkg:github/rpm-software-management/rpm
+  identifiers:
+  - pkg:deb/debian/rpm
+  - pkg:deb/ubuntu/rpm
+  - pkg:apk/alpine/rpm
   homepage: https://github.com/rpm-software-management/rpm
   license: GPL-2.0-or-later
   source:

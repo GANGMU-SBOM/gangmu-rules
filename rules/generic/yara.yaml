@@ -7,6 +7,9 @@ component:
 upstream:
   name: yara
   purl: pkg:github/VirusTotal/yara
+  identifiers:
+  - pkg:deb/debian/yara
+  - pkg:deb/ubuntu/yara
   homepage: https://github.com/VirusTotal/yara
   license: BSD-3-Clause
   source:

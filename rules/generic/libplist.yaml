@@ -7,6 +7,9 @@ component:
 upstream:
   name: libplist
   purl: pkg:github/libimobiledevice/libplist
+  identifiers:
+  - pkg:deb/debian/libplist
+  - pkg:deb/ubuntu/libplist
   homepage: https://github.com/libimobiledevice/libplist
   license: LGPL-2.1-or-later
   source:

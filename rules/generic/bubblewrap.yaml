@@ -7,6 +7,10 @@ component:
 upstream:
   name: bubblewrap
   purl: pkg:github/containers/bubblewrap
+  identifiers:
+  - pkg:deb/debian/bubblewrap
+  - pkg:deb/ubuntu/bubblewrap
+  - pkg:apk/alpine/bubblewrap
   homepage: https://github.com/containers/bubblewrap
   license: LGPL-2.0-or-later
   source:

@@ -10,6 +10,9 @@ component:
 upstream:
   name: libzip
   purl: pkg:github/nih-at/libzip
+  identifiers:
+  - pkg:deb/ubuntu/libzip
+  - pkg:apk/alpine/libzip
   cpe: cpe:2.3:a:libzip:libzip:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:nih:libzip:*:*:*:*:*:*:*:*

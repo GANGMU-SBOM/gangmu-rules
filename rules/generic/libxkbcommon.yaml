@@ -7,6 +7,9 @@ component:
 upstream:
   name: libxkbcommon
   purl: pkg:github/xkbcommon/libxkbcommon
+  identifiers:
+  - pkg:deb/debian/libxkbcommon
+  - pkg:deb/ubuntu/libxkbcommon
   homepage: https://github.com/xkbcommon/libxkbcommon
   license: MIT
   source:

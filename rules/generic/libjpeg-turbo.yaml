@@ -10,6 +10,10 @@ component:
 upstream:
   name: libjpeg-turbo
   purl: pkg:github/libjpeg-turbo/libjpeg-turbo
+  identifiers:
+  - pkg:deb/debian/libjpeg-turbo
+  - pkg:deb/ubuntu/libjpeg-turbo
+  - pkg:apk/alpine/libjpeg-turbo
   cpe: cpe:2.3:a:libjpeg-turbo:libjpeg-turbo:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2017-15232

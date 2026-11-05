@@ -7,6 +7,9 @@ component:
 upstream:
   name: bluez
   purl: pkg:github/bluez/bluez
+  identifiers:
+  - pkg:deb/debian/bluez
+  - pkg:deb/ubuntu/bluez
   homepage: https://github.com/bluez/bluez
   license: GPL-2.0-or-later
   source:

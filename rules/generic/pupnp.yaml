@@ -7,6 +7,10 @@ component:
 upstream:
   name: pupnp
   purl: pkg:github/pupnp/pupnp
+  identifiers:
+  - pkg:deb/debian/pupnp
+  - pkg:deb/ubuntu/pupnp-1.8
+  - pkg:deb/ubuntu/pupnp
   homepage: https://github.com/pupnp/pupnp
   license: BSD-3-Clause
   source:

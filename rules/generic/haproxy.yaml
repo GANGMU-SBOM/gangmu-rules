@@ -7,6 +7,9 @@ component:
 upstream:
   name: haproxy
   purl: pkg:github/haproxy/haproxy
+  identifiers:
+  - pkg:deb/debian/haproxy
+  - pkg:deb/ubuntu/haproxy
   homepage: https://github.com/haproxy/haproxy
   license: GPL-2.0-or-later
   source:

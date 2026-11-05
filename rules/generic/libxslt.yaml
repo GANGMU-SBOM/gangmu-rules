@@ -7,6 +7,11 @@ component:
 upstream:
   name: libxslt
   purl: pkg:github/GNOME/libxslt
+  identifiers:
+  - pkg:generic/gitlab.gnome.org/gnome/libxslt
+  - pkg:deb/debian/libxslt
+  - pkg:deb/ubuntu/libxslt
+  - pkg:apk/alpine/libxslt
   homepage: https://github.com/GNOME/libxslt
   license: MIT
   source:

@@ -7,6 +7,9 @@ component:
 upstream:
   name: libtpms
   purl: pkg:github/stefanberger/libtpms
+  identifiers:
+  - pkg:deb/debian/libtpms
+  - pkg:deb/ubuntu/libtpms
   homepage: https://github.com/stefanberger/libtpms
   license: BSD-3-Clause
   source:

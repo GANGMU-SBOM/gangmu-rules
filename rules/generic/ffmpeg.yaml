@@ -9,6 +9,10 @@ component:
 upstream:
   name: ffmpeg
   purl: pkg:github/FFmpeg/FFmpeg
+  identifiers:
+  - pkg:deb/debian/ffmpeg
+  - pkg:deb/ubuntu/ffmpeg
+  - pkg:apk/alpine/ffmpeg
   homepage: https://github.com/FFmpeg/FFmpeg
   license: LGPL-2.1-or-later
   source:

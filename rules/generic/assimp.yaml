@@ -7,6 +7,9 @@ component:
 upstream:
   name: assimp
   purl: pkg:github/assimp/assimp
+  identifiers:
+  - pkg:deb/debian/assimp
+  - pkg:deb/ubuntu/assimp
   homepage: https://github.com/assimp/assimp
   license: BSD-3-Clause
   source:

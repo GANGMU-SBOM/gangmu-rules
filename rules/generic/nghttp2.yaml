@@ -8,6 +8,10 @@ component:
 upstream:
   name: nghttp2
   purl: pkg:github/nghttp2/nghttp2
+  identifiers:
+  - pkg:deb/debian/nghttp2
+  - pkg:deb/ubuntu/nghttp2
+  - pkg:apk/alpine/nghttp2
   supplier: Tatsuhiro Tsujikawa and nghttp2 contributors
   homepage: https://nghttp2.org/
   license: MIT

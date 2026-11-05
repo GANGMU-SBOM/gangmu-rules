@@ -9,6 +9,10 @@ component:
 upstream:
   name: quickjs-ng
   purl: pkg:github/quickjs-ng/quickjs
+  identifiers:
+  - pkg:deb/debian/quickjs
+  - pkg:deb/ubuntu/quickjs
+  - pkg:apk/alpine/quickjs-ng
   homepage: https://github.com/quickjs-ng/quickjs
   license: MIT
   source:

@@ -9,6 +9,10 @@ component:
 upstream:
   name: freeradius
   purl: pkg:github/FreeRADIUS/freeradius-server
+  identifiers:
+  - pkg:deb/debian/freeradius
+  - pkg:deb/ubuntu/freeradius
+  - pkg:apk/alpine/freeradius
   homepage: https://github.com/FreeRADIUS/freeradius-server
   license: GPL-2.0-only
   source:

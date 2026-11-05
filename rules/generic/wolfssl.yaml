@@ -6,6 +6,10 @@ component:
 upstream:
   name: wolfSSL
   purl: pkg:github/wolfssl/wolfssl
+  identifiers:
+  - pkg:deb/debian/wolfssl
+  - pkg:deb/ubuntu/wolfssl
+  - pkg:apk/alpine/wolfssl
   supplier: wolfSSL Inc.
   homepage: https://www.wolfssl.com/
   license: GPL-2.0-or-later

@@ -9,6 +9,9 @@ component:
 upstream:
   name: lighttpd
   purl: pkg:github/lighttpd/lighttpd1.4
+  identifiers:
+  - pkg:deb/debian/lighttpd
+  - pkg:deb/ubuntu/lighttpd
   homepage: https://github.com/lighttpd/lighttpd1.4
   license: BSD-3-Clause
   source:

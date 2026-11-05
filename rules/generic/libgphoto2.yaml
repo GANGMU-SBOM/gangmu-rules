@@ -7,6 +7,9 @@ component:
 upstream:
   name: libgphoto2
   purl: pkg:github/gphoto/libgphoto2
+  identifiers:
+  - pkg:deb/debian/libgphoto2
+  - pkg:deb/ubuntu/libgphoto2
   homepage: https://github.com/gphoto/libgphoto2
   license: LGPL-2.1-or-later
   source:

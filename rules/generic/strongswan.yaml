@@ -7,6 +7,10 @@ component:
 upstream:
   name: strongswan
   purl: pkg:github/strongswan/strongswan
+  identifiers:
+  - pkg:deb/debian/strongswan
+  - pkg:deb/ubuntu/strongswan
+  - pkg:apk/alpine/strongswan
   homepage: https://github.com/strongswan/strongswan
   license: GPL-2.0-or-later
   source:

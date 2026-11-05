@@ -11,6 +11,11 @@ component:
 upstream:
   name: libxml2
   purl: pkg:github/GNOME/libxml2
+  identifiers:
+  - pkg:generic/gitlab.gnome.org/gnome/libxml2
+  - pkg:deb/debian/libxml2
+  - pkg:deb/ubuntu/libxml2
+  - pkg:apk/alpine/libxml2
   cpe: cpe:2.3:a:xmlsoft:libxml2:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2003-1564

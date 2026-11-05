@@ -7,6 +7,10 @@ component:
 upstream:
   name: exiv2
   purl: pkg:github/Exiv2/exiv2
+  identifiers:
+  - pkg:deb/debian/exiv2
+  - pkg:deb/ubuntu/exiv2
+  - pkg:apk/alpine/exiv2
   homepage: https://github.com/Exiv2/exiv2
   license: GPL-2.0-or-later
   source:

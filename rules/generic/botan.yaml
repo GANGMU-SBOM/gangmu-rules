@@ -7,6 +7,10 @@ component:
 upstream:
   name: botan
   purl: pkg:github/randombit/botan
+  identifiers:
+  - pkg:deb/debian/botan
+  - pkg:deb/ubuntu/botan
+  - pkg:deb/ubuntu/botan1.10
   homepage: https://github.com/randombit/botan
   license: BSD-2-Clause
   source:

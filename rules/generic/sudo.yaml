@@ -7,6 +7,10 @@ component:
 upstream:
   name: sudo
   purl: pkg:github/sudo-project/sudo
+  identifiers:
+  - pkg:deb/debian/sudo
+  - pkg:deb/ubuntu/sudo
+  - pkg:apk/alpine/sudo
   homepage: https://github.com/sudo-project/sudo
   license: ISC
   source:

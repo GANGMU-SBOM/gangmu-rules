@@ -7,6 +7,10 @@ component:
 upstream:
   name: libass
   purl: pkg:github/libass/libass
+  identifiers:
+  - pkg:deb/debian/libass
+  - pkg:deb/ubuntu/libass
+  - pkg:apk/alpine/libass
   homepage: https://github.com/libass/libass
   license: ISC
   source:

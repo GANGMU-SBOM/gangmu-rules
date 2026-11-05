@@ -9,6 +9,9 @@ component:
 upstream:
   name: imagemagick
   purl: pkg:github/ImageMagick/ImageMagick
+  identifiers:
+  - pkg:deb/debian/imagemagick
+  - pkg:deb/ubuntu/imagemagick
   homepage: https://github.com/ImageMagick/ImageMagick
   license: ImageMagick
   source:

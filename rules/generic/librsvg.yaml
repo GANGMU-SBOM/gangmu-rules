@@ -7,6 +7,10 @@ component:
 upstream:
   name: librsvg
   purl: pkg:github/GNOME/librsvg
+  identifiers:
+  - pkg:deb/debian/librsvg
+  - pkg:deb/ubuntu/librsvg
+  - pkg:apk/alpine/librsvg
   homepage: https://github.com/GNOME/librsvg
   license: LGPL-2.1-or-later
   source:

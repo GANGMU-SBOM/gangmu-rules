@@ -9,6 +9,10 @@ component:
 upstream:
   name: modsecurity
   purl: pkg:github/owasp-modsecurity/ModSecurity
+  identifiers:
+  - pkg:deb/debian/modsecurity
+  - pkg:deb/debian/modsecurity-apache
+  - pkg:deb/ubuntu/modsecurity
   homepage: https://github.com/owasp-modsecurity/ModSecurity
   license: Apache-2.0
   source:

@@ -11,6 +11,10 @@ component:
 upstream:
   name: LZ4
   purl: pkg:github/lz4/lz4
+  identifiers:
+  - pkg:deb/debian/lz4
+  - pkg:deb/ubuntu/lz4
+  - pkg:apk/alpine/lz4
   cpe: cpe:2.3:a:lz4_project:lz4:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2019-17543

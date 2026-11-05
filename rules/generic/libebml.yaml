@@ -7,6 +7,10 @@ component:
 upstream:
   name: libebml
   purl: pkg:github/Matroska-Org/libebml
+  identifiers:
+  - pkg:deb/debian/libebml
+  - pkg:deb/ubuntu/libebml
+  - pkg:apk/alpine/libebml
   homepage: https://github.com/Matroska-Org/libebml
   license: LGPL-2.1-or-later
   source:

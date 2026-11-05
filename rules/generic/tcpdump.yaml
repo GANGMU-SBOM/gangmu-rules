@@ -7,6 +7,10 @@ component:
 upstream:
   name: tcpdump
   purl: pkg:github/the-tcpdump-group/tcpdump
+  identifiers:
+  - pkg:deb/debian/tcpdump
+  - pkg:deb/ubuntu/tcpdump
+  - pkg:apk/alpine/tcpdump
   homepage: https://github.com/the-tcpdump-group/tcpdump
   license: BSD-3-Clause
   source:

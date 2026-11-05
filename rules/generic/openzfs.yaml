@@ -9,6 +9,9 @@ component:
 upstream:
   name: openzfs
   purl: pkg:github/openzfs/zfs
+  identifiers:
+  - pkg:deb/debian/zfs-linux
+  - pkg:deb/ubuntu/zfs-linux
   homepage: https://github.com/openzfs/zfs
   license: CDDL-1.0
   source:

@@ -9,6 +9,10 @@ component:
 upstream:
   name: miniupnpc
   purl: pkg:github/miniupnp/miniupnp
+  identifiers:
+  - pkg:deb/debian/miniupnpd
+  - pkg:deb/ubuntu/miniupnpd
+  - pkg:apk/alpine/miniupnpd
   cpe: cpe:2.3:a:miniupnp_project:miniupnpc:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2015-6031

@@ -7,6 +7,9 @@ component:
 upstream:
   name: libnfs
   purl: pkg:github/sahlberg/libnfs
+  identifiers:
+  - pkg:deb/debian/libnfs
+  - pkg:deb/ubuntu/libnfs
   homepage: https://github.com/sahlberg/libnfs
   license: LGPL-2.1-or-later
   source:

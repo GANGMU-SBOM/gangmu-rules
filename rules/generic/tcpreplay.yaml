@@ -7,6 +7,9 @@ component:
 upstream:
   name: tcpreplay
   purl: pkg:github/appneta/tcpreplay
+  identifiers:
+  - pkg:deb/debian/tcpreplay
+  - pkg:deb/ubuntu/tcpreplay
   homepage: https://github.com/appneta/tcpreplay
   license: GPL-3.0-or-later
   source:

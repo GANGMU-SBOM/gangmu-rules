@@ -7,6 +7,8 @@ component:
 upstream:
   name: unicorn
   purl: pkg:github/unicorn-engine/unicorn
+  identifiers:
+  - pkg:apk/alpine/unicorn
   homepage: https://github.com/unicorn-engine/unicorn
   license: GPL-2.0-only
   source:

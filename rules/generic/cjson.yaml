@@ -8,6 +8,9 @@ component:
 upstream:
   name: cJSON
   purl: pkg:github/DaveGamble/cJSON
+  identifiers:
+  - pkg:deb/debian/cjson
+  - pkg:deb/ubuntu/cjson
   cpe: cpe:2.3:a:cjson_project:cjson:*:*:*:*:*:*:*:*
   cpe_aliases:
   - cpe:2.3:a:davegamble:cjson:*:*:*:*:*:*:*:*
