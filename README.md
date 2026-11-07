@@ -30,7 +30,7 @@ gangmu rules lint            # 查看当前加载了哪些规则
 | `rules/zephyrproject/` | Zephyr 及其 HAL 与库模块（Zephyr 4.4 的 west 清单里除测试和仿真外的全部模块，含 ADI、Ambiq、Atmel、Espressif、Microchip、Nuvoton、树莓派 Pico、ST 等厂商 HAL，以及 picolibc、CMSIS 6、LC3、MCTP、SEGGER RTT 等） |
 | `rules/patches/` | 补丁记录：某条公告的修复改了哪些函数。`gangmu vuln --source ROOT` 据此判断厂商那份代码里**修复本身**在不在，而不是只看版本号去猜（目前覆盖 128 个组件的 564 条公告，如 OpenSSL、curl、wolfSSL、Mbed TLS、nanopb、NimBLE、libjpeg-turbo）。每条记录在 CI 里都从它写明的上游提交重新生成并比对，见 [CONTRIBUTING.md](CONTRIBUTING.md#adding-a-patch-record) |
 
-共 1100 多条规则（`rules/generic/` 1128 条、`rules/zephyrproject/` 50 条，2026-11），全部免费，欢迎社区贡献。
+共 1100 多条规则（`rules/generic/` 1148 条、`rules/zephyrproject/` 50 条，2026-11），全部免费，欢迎社区贡献。
 
 ## 厂商专属的规则
 
