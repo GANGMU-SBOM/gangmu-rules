@@ -15,7 +15,8 @@ upstream:
     kind: git
     url: https://git.netfilter.org/libnfnetlink
     ref: libnfnetlink-1.0.2
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword and virtualMatchString searches, read 2026-11-01).'
+  # NVD's CPE dictionary (read 2026-11-07) lists this product under the upstream's own vendor; no CVE carries it yet, so it matches nothing until NVD files one.
+  cpe: cpe:2.3:a:netfilter:libnfnetlink:*:*:*:*:*:*:*:*
 identity:
   include:
   - '**/*.c'

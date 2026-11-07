@@ -17,7 +17,12 @@ upstream:
     kind: git
     url: https://git.kernel.org/pub/scm/network/wireless/iwd
     ref: '3.12'
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword and virtualMatchString searches, read 2026-11-01).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:intel:inet_wireless_daemon:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2020-17497
+  - CVE-2023-52161
+  - CVE-2024-28084
 identity:
   include:
   - '**/*.c'

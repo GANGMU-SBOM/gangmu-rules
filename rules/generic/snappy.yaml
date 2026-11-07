@@ -15,7 +15,10 @@ upstream:
     kind: git
     url: https://github.com/google/snappy
     ref: 1.3.1
-  cpe_status: 'none-in-nvd: the keyword hits are snappy-java and other language bindings, not the C++ library (CVE API keyword search, read 2026-10-22).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:google:snappy:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2018-7577
 identity:
   include:
   - '**/*.c'

@@ -13,7 +13,13 @@ upstream:
     kind: git
     url: https://github.com/lvmteam/lvm2
     ref: v2_03_43
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-22).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:heinz_mauelshagen:lvm2:*:*:*:*:*:*:*:*
+  cpe_aliases:
+  - cpe:2.3:a:redhat:lvm2:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2010-2526
+  - CVE-2020-8991
 identity:
   include:
   - '**/*.c'

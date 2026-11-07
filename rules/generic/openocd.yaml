@@ -13,7 +13,10 @@ upstream:
     kind: git
     url: https://github.com/openocd-org/openocd
     ref: v0.12.0
-  cpe_status: 'none-in-nvd: no CPE and no CVE mentioning openocd in NVD (CVE API keyword search, read 2026-10-21).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:openocd:open_on-chip_debugger:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2018-5704
 identity:
   include:
   - '**/*.c'

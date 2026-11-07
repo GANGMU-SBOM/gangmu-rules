@@ -15,7 +15,12 @@ upstream:
     kind: git
     url: https://github.com/ithewei/libhv
     ref: v1.3.4
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-26).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:ithewei:libhv:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2023-26146
+  - CVE-2023-26147
+  - CVE-2023-26148
 identity:
   include:
   - '**/*.c'

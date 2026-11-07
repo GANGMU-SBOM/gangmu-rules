@@ -15,7 +15,8 @@ upstream:
     kind: git
     url: https://github.com/P-H-C/phc-winner-argon2
     ref: '20190702'
-  cpe_status: 'none-in-nvd: no CPE is registered for the Argon2 reference implementation; the keyword results name unrelated web applications (CVE API keyword search, read 2026-10-21).'
+  # NVD's CPE dictionary (read 2026-11-07) lists this product under the upstream's own vendor; no CVE carries it yet, so it matches nothing until NVD files one.
+  cpe: cpe:2.3:a:argon2_project:argon2:*:*:*:*:*:*:*:*
 identity:
   include:
   - '**/*.c'

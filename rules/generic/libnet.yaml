@@ -13,7 +13,8 @@ upstream:
     kind: git
     url: https://github.com/libnet/libnet
     ref: v1.3
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
+  # NVD's CPE dictionary (read 2026-11-07) lists this product under the upstream's own vendor; no CVE carries it yet, so it matches nothing until NVD files one.
+  cpe: cpe:2.3:a:libnet_project:libnet:*:*:*:*:*:*:*:*
 identity:
   include:
   - '**/*.c'

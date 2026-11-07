@@ -17,7 +17,13 @@ upstream:
     kind: git
     url: https://github.com/open-iscsi/open-iscsi
     ref: 2.1.13
-  cpe_status: 'none-in-nvd: the keyword results name Red Hat Enterprise Linux packaging; no open-iscsi CPE is registered (CVE API keyword search, read 2026-10-22).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:open-iscsi_project:open-iscsi:*:*:*:*:*:*:*:*
+  cpe_aliases:
+  - cpe:2.3:a:redhat:open_iscsi:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2007-3100
+  - CVE-2017-17840
 identity:
   include:
   - '**/*.c'

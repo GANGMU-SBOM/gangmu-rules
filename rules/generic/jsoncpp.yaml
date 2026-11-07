@@ -15,7 +15,8 @@ upstream:
     kind: git
     url: https://github.com/open-source-parsers/jsoncpp
     ref: 1.9.8
-  cpe_status: 'none-in-nvd: no CPE and no CVE mentioning jsoncpp in NVD (CVE API keyword search, read 2026-10-21).'
+  # NVD's CPE dictionary (read 2026-11-07) lists this product under the upstream's own vendor; no CVE carries it yet, so it matches nothing until NVD files one.
+  cpe: cpe:2.3:a:jsoncpp_project:jsoncpp:*:*:*:*:*:*:*:*
 identity:
   include:
   - '**/*.c'

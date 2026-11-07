@@ -15,7 +15,10 @@ upstream:
     kind: git
     url: https://github.com/blynkkk/blynk-library
     ref: v1.4.0
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword and virtualMatchString searches, read 2026-11-01).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:blynk:blynk-library:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2019-5065
 identity:
   include:
   - '**/*.c'

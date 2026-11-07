@@ -15,7 +15,8 @@ upstream:
     kind: git
     url: https://github.com/rhash/RHash
     ref: v1.4.6
-  cpe_status: 'none-in-nvd: no CPE is registered for RHash; the keyword results name the Linux kernel''s rhashtable (CVE API keyword search, read 2026-10-22).'
+  # NVD's CPE dictionary (read 2026-11-07) lists this product under the upstream's own vendor; no CVE carries it yet, so it matches nothing until NVD files one.
+  cpe: cpe:2.3:a:rhash_project:rhash:*:*:*:*:*:*:*:*
 identity:
   include:
   - '**/*.c'

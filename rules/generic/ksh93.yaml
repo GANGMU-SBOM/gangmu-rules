@@ -15,7 +15,10 @@ upstream:
     kind: git
     url: https://github.com/ksh93/ksh
     ref: v1.0.10
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-26).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:ksh_project:ksh:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2019-14868
 identity:
   include:
   - '**/*.c'
