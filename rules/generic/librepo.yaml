@@ -15,7 +15,10 @@ upstream:
     kind: git
     url: https://github.com/rpm-software-management/librepo
     ref: librepo-1.7.20
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword search, read 2026-10-23).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:redhat:librepo:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2020-14352
 identity:
   include:
   - '**/*.c'

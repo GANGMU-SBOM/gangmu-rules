@@ -13,7 +13,8 @@ upstream:
     kind: git
     url: https://github.com/thkukuk/libnsl
     ref: v2.0.1
-  cpe_status: 'none-in-nvd: the keyword hits are Solaris/AIX NIS CVEs, not this library (CVE API keyword search, read 2026-10-22).'
+  # NVD's CPE dictionary (read 2026-11-07) lists this product under the upstream's own vendor; no CVE carries it yet, so it matches nothing until NVD files one.
+  cpe: cpe:2.3:a:libnsl_project:libnsl:*:*:*:*:*:*:*:*
 identity:
   include:
   - '**/*.c'

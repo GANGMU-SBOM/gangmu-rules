@@ -15,7 +15,10 @@ upstream:
     kind: git
     url: https://github.com/tinyobjloader/tinyobjloader
     ref: v1.0.7
-  cpe_status: 'none-found: NVD lists tinyobjloader_project:tinyobjloader but no CVE record citing the tinyobjloader repository names it (CVE API keyword and virtualMatchString searches, read 2026-11-01).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:tinyobjloader_project:tinyobjloader:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2020-28589
 identity:
   include:
   - '**/*.c'

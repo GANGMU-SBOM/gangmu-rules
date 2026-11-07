@@ -13,7 +13,8 @@ upstream:
     kind: git
     url: https://github.com/troglobit/smcroute
     ref: 2.6.0
-  cpe_status: 'none-in-nvd: no CPE and no CVE mentioning smcroute in NVD (CVE API keyword search, read 2026-10-21).'
+  # NVD's CPE dictionary (read 2026-11-07) lists this product under the upstream's own vendor; no CVE carries it yet, so it matches nothing until NVD files one.
+  cpe: cpe:2.3:a:troglobit:smcroute:*:*:*:*:*:*:*:*
 identity:
   include:
   - '**/*.c'

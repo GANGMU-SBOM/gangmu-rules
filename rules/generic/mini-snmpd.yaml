@@ -15,7 +15,12 @@ upstream:
     kind: git
     url: https://github.com/troglobit/mini-snmpd
     ref: v2.1
-  cpe_status: 'none-in-nvd: no CPE for this project in NVD (CVE API keyword and virtualMatchString searches, read 2026-11-01).'
+  # NVD (fkie-cad feed read 2026-11-07) files these CVEs, whose descriptions name this project, under this CPE.
+  cpe: cpe:2.3:a:minisnmpd_project:minisnmpd:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2020-6058
+  - CVE-2020-6059
+  - CVE-2020-6060
 identity:
   include:
   - '**/*.c'
