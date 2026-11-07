@@ -24,12 +24,13 @@ Air-gapped: download `gangmu-rules-offline-<version>.tar.gz` from Releases, chec
 
 ## What is in it
 
-223 rules, all free: `rules/generic/` (lwIP, Mbed TLS, FreeRTOS, RT-Thread, LiteOS, GmSSL, Tongsuo, wolfSSL and the other
-upstream components SDKs copy most) and `rules/zephyrproject/` (Zephyr and its HAL modules). Contributions welcome.
+1100+ rules, all free: `rules/generic/` (1148 rules: lwIP, Mbed TLS, FreeRTOS, RT-Thread, LiteOS, GmSSL, Tongsuo, wolfSSL and the other
+upstream components SDKs copy most, plus the upstream projects embedded Linux firmware ships, such as U-Boot, BusyBox, OpenSSL,
+Dropbear, dnsmasq, systemd, curl, SQLite and FFmpeg) and `rules/zephyrproject/` (50 rules: Zephyr and its HAL modules). Contributions welcome.
 
 `rules/patches/` holds **patch records**: for an advisory, the functions its fix changed, so `gangmu vuln --source ROOT` can
-tell whether the *fix* is in a vendor's copy instead of guessing from the version (9 records so far: nanopb, nimble, wolfSSL,
-libjpeg-turbo). Every record is rebuilt from its upstream commits in CI. See
+tell whether the *fix* is in a vendor's copy instead of guessing from the version (564 advisories across 128
+components so far, among them OpenSSL, curl, wolfSSL, Mbed TLS, nanopb, NimBLE and libjpeg-turbo). Every record is rebuilt from its upstream commits in CI. See
 [CONTRIBUTING.md](CONTRIBUTING.md#adding-a-patch-record).
 
 ## Vendor-specific rules
