@@ -13,6 +13,15 @@ upstream:
   purl: pkg:github/lua/lua
   identifiers:
   - pkg:deb/debian/lua5.4
+  - pkg:deb/debian/lua5.1
+  - pkg:deb/debian/lua5.2
+  - pkg:deb/debian/lua5.3
+  - pkg:deb/ubuntu/lua5.1
+  - pkg:deb/ubuntu/lua5.2
+  - pkg:deb/ubuntu/lua5.3
+  - pkg:deb/ubuntu/lua5.4
+  - pkg:apk/alpine/lua5.3
+  - pkg:apk/alpine/lua5.4
   cpe: cpe:2.3:a:lua:lua:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2014-5461

@@ -9,6 +9,8 @@ component:
 upstream:
   name: LPeg
   purl: pkg:github/roberto-ieru/LPeg
+  identifiers:
+  - pkg:generic/lpeg
   cpe_status: 'none-in-nvd: no CPE for this project in NVD (fkie-cad NVD mirror read with gangmu rules cpe-evidence, 2026-11-04).'
   homepage: https://github.com/roberto-ieru/LPeg
   license: MIT

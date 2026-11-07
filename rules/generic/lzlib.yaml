@@ -9,6 +9,8 @@ component:
 upstream:
   name: lzlib (Lua zlib binding)
   purl: pkg:github/LuaDist/lzlib
+  identifiers:
+  - pkg:generic/lzlib
   cpe_status: 'none-in-nvd: no CPE for this project in NVD (fkie-cad NVD mirror read with gangmu rules cpe-evidence, 2026-11-04).'
   homepage: https://github.com/LuaDist/lzlib
   license: MIT
