@@ -9,6 +9,9 @@ component:
 upstream:
   name: LuaSocket
   purl: pkg:github/lunarmodules/luasocket
+  identifiers:
+  - pkg:github/diegonehab/luasocket
+  - pkg:generic/luasocket
   cpe_status: 'none-in-nvd: no CPE for LuaSocket in NVD (fkie-cad NVD mirror read with gangmu rules cpe-evidence, 2026-11-04); CVE-2017-18265 names it but is filed under prosody:prosody.'
   homepage: https://github.com/lunarmodules/luasocket
   license: MIT

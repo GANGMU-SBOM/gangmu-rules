@@ -9,6 +9,9 @@ component:
 upstream:
   name: LuaFileSystem
   purl: pkg:github/lunarmodules/luafilesystem
+  identifiers:
+  - pkg:github/keplerproject/luafilesystem
+  - pkg:generic/luafilesystem
   cpe_status: 'none-in-nvd: no CPE for this project in NVD (fkie-cad NVD mirror read with gangmu rules cpe-evidence, 2026-11-04).'
   homepage: https://github.com/lunarmodules/luafilesystem
   license: MIT

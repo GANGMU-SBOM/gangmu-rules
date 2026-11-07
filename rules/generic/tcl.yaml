@@ -7,6 +7,9 @@ component:
 upstream:
   name: tcl
   purl: pkg:github/tcltk/tcl
+  identifiers:
+  - pkg:deb/debian/tcl8.6
+  - pkg:generic/tcl
   cpe: cpe:2.3:a:tcl:tcl:*:*:*:*:*:*:*:*
   # NVD (fkie-cad feed read 2026-11-05) files these CVEs, whose references point at the upstream repository, under this CPE.
   cpe_evidence:

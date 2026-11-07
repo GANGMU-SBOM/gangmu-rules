@@ -9,6 +9,8 @@ upstream:
   purl: pkg:github/UweOhse/lrzsz
   identifiers:
   - pkg:deb/debian/lrzsz
+  - pkg:generic/lrzsz
+  - pkg:deb/ubuntu/lrzsz
   cpe: cpe:2.3:a:lrzsz_project:lrzsz:*:*:*:*:*:*:*:*
   cpe_evidence:
   - CVE-2018-10195

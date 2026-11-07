@@ -11,6 +11,8 @@ component:
 upstream:
   name: tolua++
   purl: pkg:github/LuaDist/toluapp
+  identifiers:
+  - pkg:generic/tolua++
   cpe_status: 'none-in-nvd: no CPE for this project in NVD (fkie-cad NVD mirror read with gangmu rules cpe-evidence, 2026-11-04).'
   homepage: https://github.com/LuaDist/toluapp
   license: MIT
