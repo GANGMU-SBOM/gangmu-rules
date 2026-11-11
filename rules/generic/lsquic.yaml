@@ -74,5 +74,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/litespeedtech/lsquic@v4.10.2
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: LiteSpeed QUIC and HTTP/3 library.

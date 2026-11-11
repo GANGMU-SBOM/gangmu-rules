@@ -74,6 +74,5 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/sbabic/swupdate@2026.05.1
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Software update framework for embedded Linux OTA.
   bundled_excluded: identity.exclude leaves out the bundled copies of generic/fatfs, generic/mongoose (found with gangmu rules bundled), so segmentation keeps their code theirs

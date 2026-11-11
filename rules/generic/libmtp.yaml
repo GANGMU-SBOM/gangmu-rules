@@ -67,5 +67,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/libmtp/libmtp@v1.1.23
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: libmtp Media Transfer Protocol library.

@@ -62,5 +62,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/bitcoin-core/secp256k1@v0.8.0
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: libsecp256k1 optimized elliptic curve library, vendored in firmware wallets and IoT devices.

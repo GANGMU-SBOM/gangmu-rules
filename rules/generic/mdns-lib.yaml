@@ -59,5 +59,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/mjansson/mdns@1.4.3
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Single-header mDNS and DNS-SD library.

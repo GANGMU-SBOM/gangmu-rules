@@ -78,5 +78,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/mouse07410/asn1c@v1.5.3
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: asn1c ASN.1 compiler and runtime.

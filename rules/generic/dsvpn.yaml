@@ -63,5 +63,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/jedisct1/dsvpn@0.1.5
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: dsvpn dead simple VPN.

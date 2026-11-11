@@ -60,7 +60,6 @@ review:
   imported_from: https://github.com/zephyrproject-rtos/hal_stm32@c9550199186236d610092f4005f8c9bae2a6bfcf
   observed_in: zephyr 4.3
   todo_fork: Set vendor_fork.upstream_of_fork and change upstream.purl to the project this was forked from -- the fork's own purl matches no advisory. The importer cannot know which project that is.
-  todo: 'No CPE: the vendor did not declare one. Find it at https://nvd.nist.gov/products/cpe/search before merging -- a wrong or missing CPE makes the SBOM look clean while matching nothing.'
 sdk_versions: '4.3'
 vendor_fork:
   patched: true

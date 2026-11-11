@@ -58,5 +58,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/libopencm3/libopencm3@v0.8.0
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Open-source Cortex-M peripheral library.

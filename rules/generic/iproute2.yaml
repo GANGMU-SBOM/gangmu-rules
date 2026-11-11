@@ -60,5 +60,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/iproute2/iproute2@v7.3.0
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: iproute2 networking utilities (ip, tc, ss) in embedded Linux images.

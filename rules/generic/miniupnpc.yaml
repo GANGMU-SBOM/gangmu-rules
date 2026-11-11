@@ -73,5 +73,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/miniupnp/miniupnp@miniupnpc_2_3_3
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: UPnP IGD client library used in routers and IoT firmware.

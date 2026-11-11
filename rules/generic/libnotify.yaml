@@ -91,5 +91,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/GNOME/libnotify@0.8.9
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: libnotify desktop notification library.

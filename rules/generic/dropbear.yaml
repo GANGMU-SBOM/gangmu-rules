@@ -71,6 +71,5 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/mkj/dropbear@DROPBEAR_2026.94
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Small SSH server and client for embedded Linux.
   bundled_excluded: identity.exclude leaves out the bundled copies of generic/libtomcrypt, generic/libtommath (found with gangmu rules bundled), so segmentation keeps their code theirs

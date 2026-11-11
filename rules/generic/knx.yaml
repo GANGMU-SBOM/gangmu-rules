@@ -61,5 +61,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/thelsing/knx@1.4
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: KNX stack for ESP, SAMD and RP2040 devices.

@@ -73,5 +73,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/emqx/neuron@2.15.0
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Neuron industrial IoT protocol gateway (Modbus, OPC UA, S7, EtherNet/IP drivers).

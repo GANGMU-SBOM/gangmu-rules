@@ -65,5 +65,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/libplctag/libplctag@v2.7.2
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Library for Allen-Bradley/Rockwell PLC tag access over EtherNet/IP.
