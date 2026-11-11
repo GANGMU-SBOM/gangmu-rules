@@ -24,7 +24,7 @@ Air-gapped: download `gangmu-rules-offline-<version>.tar.gz` from Releases, chec
 
 ## What is in it
 
-1100+ rules, all free: `rules/generic/` (1148 rules: lwIP, Mbed TLS, FreeRTOS, RT-Thread, LiteOS, GmSSL, Tongsuo, wolfSSL and the other
+1100+ rules, all free: `rules/generic/` (1149 rules: lwIP, Mbed TLS, FreeRTOS, RT-Thread, LiteOS, GmSSL, Tongsuo, wolfSSL and the other
 upstream components SDKs copy most, plus the upstream projects embedded Linux firmware ships, such as U-Boot, BusyBox, OpenSSL,
 Dropbear, dnsmasq, systemd, curl, SQLite and FFmpeg) and `rules/zephyrproject/` (50 rules: Zephyr and its HAL modules). Contributions welcome.
 
