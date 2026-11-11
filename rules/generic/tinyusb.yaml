@@ -12,6 +12,8 @@ upstream:
   purl: pkg:github/hathach/tinyusb
   identifiers:
   - pkg:generic/tinyusb
+  - pkg:deb/debian/tinyusb
+  - pkg:deb/ubuntu/tinyusb
   cpe_status: 'none-found: searched the NVD CPE dictionary (keyword tinyusb, 2026-10-09) and the CVE API (keyword tinyusb); nothing is registered. Match by purl via OSV.'
   supplier: Ha Thach and TinyUSB contributors
   homepage: https://www.tinyusb.org/

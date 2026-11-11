@@ -11,7 +11,10 @@ component:
 upstream:
   name: Weston Embedded uC/LIB
   purl: pkg:github/weston-embedded/uC-LIB
-  cpe_status: 'none-in-nvd: no record in an NVD mirror (fkie-cad feeds, CVE years 2010 to 2026, read 2026-10-17 with gangmu rules cpe-evidence) cites github.com/weston-embedded/uC-LIB or names it.'
+  # NVD (fkie-cad feed read 2026-11-11) files these CVEs under this CPE; Weston Embedded's uC-LIB is Micrium's uC/LIB, open-sourced.
+  cpe: cpe:2.3:a:micrium:uc\/lib:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2021-26706
   supplier: Weston Embedded Solutions (formerly Micrium)
   homepage: https://weston-embedded.com/
   license: Apache-2.0

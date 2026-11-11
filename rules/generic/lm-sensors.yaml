@@ -13,7 +13,10 @@ upstream:
     kind: git
     url: https://github.com/lm-sensors/lm-sensors
     ref: V3-6-2
-  cpe_status: 'none-in-nvd: no CPE and no CVE mentioning lm-sensors in NVD (CVE API keyword search, read 2026-10-21).'
+  # NVD (fkie-cad feed read 2026-11-11) files these CVEs under this CPE.
+  cpe: cpe:2.3:a:lm_sensors:lm_sensors:*:*:*:*:*:*:*:*
+  cpe_evidence:
+  - CVE-2005-2672
 identity:
   include:
   - '**/*.c'

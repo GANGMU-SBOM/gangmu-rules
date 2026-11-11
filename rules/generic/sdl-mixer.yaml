@@ -9,6 +9,9 @@ component:
 upstream:
   name: sdl-mixer
   purl: pkg:github/libsdl-org/SDL_mixer
+  identifiers:
+  - pkg:generic/sdl-mixer
+  - pkg:generic/sdl_mixer
   homepage: https://github.com/libsdl-org/SDL_mixer
   license: Zlib
   source:
