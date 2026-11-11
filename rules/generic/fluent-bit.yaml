@@ -78,8 +78,6 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/fluent/fluent-bit@v4.2.8
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or
-    record why there is none -- a missing CPE matches no CVE.'
   note: Fluent Bit log and metrics processor for embedded Linux and containers.
   bundled_excluded: identity.exclude leaves out the bundled copies of generic/avro-c, generic/c-ares, generic/jansson, generic/jemalloc,
     generic/jsmn, generic/libevent, generic/llhttp, generic/luajit2, generic/lwrb, generic/lz4, generic/mbedtls, generic/miniz,

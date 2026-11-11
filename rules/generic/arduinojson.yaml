@@ -67,5 +67,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/bblanchon/ArduinoJson@v7.4.3
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: C++ JSON library for embedded, header-only; vendored across Arduino-style firmware.

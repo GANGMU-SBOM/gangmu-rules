@@ -63,5 +63,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/laurencelundblade/t_cose@v1.2.0
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: COSE_Sign1/Mac0 library used for SUIT manifests and attestation tokens.

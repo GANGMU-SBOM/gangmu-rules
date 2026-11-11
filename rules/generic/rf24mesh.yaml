@@ -84,5 +84,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/nRF24/RF24Mesh@v2.1.1
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: RF24Mesh mesh layer for nRF24L01 radios.

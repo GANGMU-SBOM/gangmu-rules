@@ -77,5 +77,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/ARMmbed/DAPLink@v0258
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Arm debug probe firmware with USB MSC drag-and-drop firmware update.

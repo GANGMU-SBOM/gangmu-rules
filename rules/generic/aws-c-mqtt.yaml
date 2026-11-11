@@ -71,5 +71,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/awslabs/aws-c-mqtt@v1.1.2
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: AWS Common Runtime aws-c-mqtt library.

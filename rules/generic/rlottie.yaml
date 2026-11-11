@@ -71,8 +71,6 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/Samsung/rlottie@v0.2
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or
-    record why there is none -- a missing CPE matches no CVE.'
   note: Samsung rlottie Lottie animation renderer (used by LVGL and embedded UIs).
   bundled_excluded: identity.exclude leaves out the bundled copies of generic/rapidjson (found with gangmu rules bundled),
     so segmentation keeps their code theirs

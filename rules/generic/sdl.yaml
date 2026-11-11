@@ -69,5 +69,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/libsdl-org/SDL@release-3.4.18
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: SDL Simple DirectMedia Layer, used on embedded Linux displays.

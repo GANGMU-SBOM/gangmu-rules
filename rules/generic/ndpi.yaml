@@ -69,6 +69,5 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/ntop/ndpi@6.0
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: nDPI deep packet inspection library used in routers and gateways.
   bundled_excluded: identity.exclude leaves out the bundled copies of generic/croaring (found with gangmu rules bundled), so segmentation keeps their code theirs

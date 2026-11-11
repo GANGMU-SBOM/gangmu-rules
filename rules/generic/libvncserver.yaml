@@ -85,5 +85,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/LibVNC/libvncserver@LibVNCServer-0.9.15
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: LibVNCServer/LibVNCClient VNC libraries.

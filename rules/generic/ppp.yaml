@@ -83,5 +83,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/ppp-project/ppp@v2.5.5
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: pppd, the Point-to-Point Protocol daemon (ppp-2.4.x, then v2.5.x tags).

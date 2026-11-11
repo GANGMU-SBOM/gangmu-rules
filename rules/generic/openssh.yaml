@@ -69,5 +69,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/openssh/openssh-portable@V_10_6_P1
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: OpenSSH portable, shipped in embedded Linux images.

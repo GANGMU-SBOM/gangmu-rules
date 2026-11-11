@@ -69,5 +69,4 @@ review:
   by:
   - gangmu rules import --manifest candidates
   imported_from: https://github.com/the-tcpdump-group/libpcap@libpcap-1.11.0
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Packet capture library, common in embedded Linux gateways.

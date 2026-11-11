@@ -66,5 +66,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/gnutls/nettle@nettle_4.0_release_20260205
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: Nettle low-level cryptographic library used by GnuTLS and embedded Linux.

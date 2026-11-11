@@ -59,5 +59,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/wolfSSL/wolfCLU@v0.2.0-stable
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: wolfCLU command line utility for wolfSSL.

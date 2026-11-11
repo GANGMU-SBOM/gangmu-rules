@@ -64,5 +64,4 @@ review:
   by:
   - '@gangmu'
   imported_from: https://github.com/aws/aws-nitro-enclaves-sdk-c@v0.4.5
-  todo: 'No CPE: find it with `gangmu rules cpe-evidence` or at https://nvd.nist.gov/products/cpe/search before merging, or record why there is none -- a missing CPE matches no CVE.'
   note: AWS Nitro Enclaves SDK for C.
